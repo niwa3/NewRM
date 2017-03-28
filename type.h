@@ -5,6 +5,7 @@
 #include <vector>
 #include "./define.h"
 
+//Consumer is the user who has sensor or actuator
 class Consumer{
   private:
     Consumer_id cid;
