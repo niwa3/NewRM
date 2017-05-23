@@ -1,0 +1,13 @@
+//create Login_Info table
+CREATE TABLE Login_Info(id integer primary key not null auto_increment, created_at timestamp not null default current_timestamp,updated_at timestamp not null default current_timestamp, login varchar(64) not null unique, passwd varchar(64) not null, salt varchar(64) not null);
+
+//create function that automatically sets update time
+create function set_update_time() returns opaque as '
+  begin
+  new.updated_at := "now";
+  return new;
+  end;
+' language 'plpgsql';
+
+create trigger update_tri before update on Login_Info for each row execute procedure set_update_time();
+
