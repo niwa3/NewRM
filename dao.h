@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include <pqxx/pqxx>
+#include <pqxx/except>
 #include <memory>
 #include <vector>
 #include <cryptopp/osrng.h>
@@ -14,8 +15,21 @@
 #include "sha256.h"
 
 class DataBase{
-  private:
-    std::unique_ptr<pqxx::connection> conn;
+  protected:
+    std::unique_ptr<pqxx::connection> _conn;
+    std::unique_ptr<pqxx::work> _T;
+
+  public:
+    DataBase(std::string, std::string, std::string);
+    ~DataBase();
+    bool put_login_info_dao();
+};
+
+class LoginInfoDao: public DataBase{
+  public:
+    LoginInfoDao(std::string dbname, std::string user, std::string password);
+    ~LoginInfoDao(){};
+    bool put(std::string login, std::string hasded_pass, std::string salt);
 
 };
 

@@ -1,7 +1,43 @@
 #include "dao.h"
+//===========class DataBase===========
+DataBase::DataBase(std::string dbname, std::string user, std::string password){
+  try{
+  std::string CONNECT_CONF="dbname='"+dbname+"' user='"+user+"' password='"+password+"'";
+  _conn.reset(new pqxx::connection(CONNECT_CONF));
+  if(_conn.get()->is_open()){
+      std::cout<<"Database "<<_conn.get()->dbname()<<" opened." <<std::endl;
+  }
+  }catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+  }
+}
 
-//===========class Database===========
+DataBase::~DataBase(){ 
+  if(_conn){
+    if(_conn.get()->is_open()) _conn.get()->disconnect();
+  }
+}
+//====================================
+//===========class LoginInfoDao=======
+LoginInfoDao::LoginInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
+  //_T.reset(new pqxx::work(*_conn.get()))
+  
+}
 
+bool LoginInfoDao::put(std::string login, std::string hasded_pass, std::string salt){
+  std::string INSERT_LOGIN_INFO;
+  INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt) VALUES (" + T.get()->quote(login) + "," + T.get()->quote(hashed_pass)+ "," + T.get()->quote(salt) + ");";
+
+  return true;
+}
+//====================================
+int main(){
+  LoginInfoDao login_db("test","testuser","testpass");
+
+  return 0;
+}
+
+/*
 int main(){
   try{
     std::unique_ptr<pqxx::connection> conn(new pqxx::connection("dbname='test' user='testuser' password='testpass'"));
@@ -67,4 +103,4 @@ int main(){
     return 1;
   }
   return 0;
-}
+}*/
