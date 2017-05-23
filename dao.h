@@ -7,7 +7,16 @@
 #include <pqxx/pqxx>
 #include <memory>
 #include <vector>
+#include <cryptopp/osrng.h>
+#include <iomanip>
+#include <unistd.h>
 //#include "type.h"
-//#include "sha256.h"
+#include "sha256.h"
+
+class DataBase{
+  private:
+    std::unique_ptr<pqxx::connection> conn;
+
+};
 
 #endif
