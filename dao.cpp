@@ -24,15 +24,34 @@ LoginInfoDao::LoginInfoDao(std::string dbname, std::string user, std::string pas
   
 }
 
-bool LoginInfoDao::put(std::string login, std::string hasded_pass, std::string salt){
-  std::string INSERT_LOGIN_INFO;
-  INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt) VALUES (" + T.get()->quote(login) + "," + T.get()->quote(hashed_pass)+ "," + T.get()->quote(salt) + ");";
-
-  return true;
+bool LoginInfoDao::put(std::string login, std::string hashed_pass, std::string salt){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_LOGIN_INFO;
+    INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt) VALUES (" + _T.get()->quote(login) + "," + _T.get()->quote(hashed_pass)+ "," + _T.get()->quote(salt) + ");";
+    _T.get()->exec(INSERT_LOGIN_INFO);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
 }
 //====================================
 int main(){
   LoginInfoDao login_db("test","testuser","testpass");
+  std::string NAME;
+  std::cout<< "Enter login ID: ";
+  std::cin>> NAME;
+  std::string PASS;
+  PASS=getpass("Enter password: ");
+  std::string salt;
+  salt=myhash::genSalt();
+  std::string hashed_pass;
+  hashed_pass=myhash::mySha256(PASS+salt);
+
+  login_db.put(NAME,hashed_pass,salt);
 
   return 0;
 }

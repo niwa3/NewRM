@@ -22,7 +22,6 @@ class DataBase{
   public:
     DataBase(std::string, std::string, std::string);
     ~DataBase();
-    bool put_login_info_dao();
 };
 
 class LoginInfoDao: public DataBase{
