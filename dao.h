@@ -14,6 +14,14 @@
 //#include "type.h"
 #include "sha256.h"
 
+class LoginInfo{
+  public:
+    std::string login;
+    std::string hashed_pass;
+    std::string salt;
+    std::string user_id;
+};
+
 class DataBase{
   protected:
     std::unique_ptr<pqxx::connection> _conn;
@@ -28,8 +36,12 @@ class LoginInfoDao: public DataBase{
   public:
     LoginInfoDao(std::string dbname, std::string user, std::string password);
     ~LoginInfoDao(){};
-    bool put(std::string login, std::string hasded_pass, std::string salt);
+    bool put(std::string login, std::string hashed_pass, std::string salt);
+    bool fetch(std::string login, LoginInfo &info_from_db);
+    bool update_pass(std::string login, std::string hashed_new_pass, std::string new_salt);
+    bool update_login(std::string login, std::string new_login);
 
 };
+
 
 #endif
