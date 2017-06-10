@@ -1,4 +1,6 @@
 #include "dao.h"
+
+
 //===========class DataBase===========
 DataBase::DataBase(std::string dbname, std::string user, std::string password){
   try{
@@ -18,17 +20,18 @@ DataBase::~DataBase(){
   }
 }
 //====================================
+
+
+
 //===========class LoginInfoDao=======
 LoginInfoDao::LoginInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
-  //_T.reset(new pqxx::work(*_conn.get()))
-  
 }
 
-bool LoginInfoDao::put(std::string login, std::string hashed_pass, std::string salt){
+bool LoginInfoDao::put(std::string login, std::string hashed_pass, std::string salt, USERTYPE user_type){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_LOGIN_INFO;
-    INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt) VALUES (" + _T.get()->quote(login) + "," + _T.get()->quote(hashed_pass)+ "," + _T.get()->quote(salt) + ");";
+    INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt, user_type) VALUES (" + _T.get()->quote(login) + "," + _T.get()->quote(hashed_pass)+ "," + _T.get()->quote(salt) + ", " + std::to_string(user_type) + ");";
     _T.get()->exec(INSERT_LOGIN_INFO);
     _T.get()->commit();
     return true;
@@ -43,7 +46,7 @@ bool LoginInfoDao::fetch(std::string login, LoginInfo &info_from_db){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_LOGIN_INFO;
-    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt FROM login_info WHERE login=" + _T.get()->quote(login) + ";";
+    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt, user_type FROM login_info WHERE login=" + _T.get()->quote(login) + ";";
     pqxx::result login_info_from_db;
     login_info_from_db=_T.get()->exec(SELECT_LOGIN_INFO);
     if(login_info_from_db.empty()){
@@ -56,6 +59,8 @@ bool LoginInfoDao::fetch(std::string login, LoginInfo &info_from_db){
     info_from_db.login = itr_login_info["login"].as<std::string>();
     info_from_db.salt = itr_login_info["salt"].as<std::string>();
     info_from_db.hashed_pass = itr_login_info["passwd"].as<std::string>();
+    //std::stoi(itr_login_info["user_type"].as<std::string>()) == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
+    itr_login_info["user_type"].as<int>() == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
     _T.get()->commit();
     return true;
   }
@@ -95,6 +100,65 @@ bool LoginInfoDao::update_login(std::string login, std::string new_login){
   }
 }
 //====================================
+
+
+
+//========class ConsumerInfoDao=======
+ConsumerInfoDao::ConsumerInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
+}
+
+bool ConsumerInfoDao::put(std::string l_id, std::string c_id, std::string last_name, std::string first_name, std::tm birthday, int phone_num, std::string e_mail_addr){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_CONSUMER_INFO;
+    INSERT_CONSUMER_INFO = "INSERT INTO consumer_info"
+      "(l_id, last_name, first_name, birthday, phone_num, e_mail_addr)"
+      " VALUES (" + _T.get()->quote(l_id) + 
+      "," + _T.get()->quote(last_name)+ 
+      "," + _T.get()->quote(first_name) + 
+      ", " + _T.get()->quote(std::ctime(birthday)) + 
+      "," + std::to_string(phone_num) + 
+      "," + _T.get()->quote(e_mail_addr) + 
+      ");";
+    _T.get()->exec(INSERT_CONSUMER_INFO);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+bool ConsumerInfoDao::fetch(std::string l_id, ConsumerInfo &consumer_info_from_db){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string SELECT_CONSUMER_INFO;
+    SELECT_CONSUMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM consumer_info WHERE login=" + _T.get()->quote(login) + ";";
+    //whereの条件どうしよ
+    pqxx::result login_info_from_db;
+    login_info_from_db=_T.get()->exec(SELECT_CONSUMER_INFO);
+    if(login_info_from_db.empty()){
+      std::cerr<<"the login ID: " + login + " does not exist.\n";
+      return false;
+    }
+    pqxx::result::iterator itr_login_info;
+    itr_login_info = login_info_from_db.begin();
+    info_from_db.user_id = itr_login_info["id"].as<std::string>();
+    info_from_db.login = itr_login_info["login"].as<std::string>();
+    info_from_db.salt = itr_login_info["salt"].as<std::string>();
+    info_from_db.hashed_pass = itr_login_info["passwd"].as<std::string>();
+    //std::stoi(itr_login_info["user_type"].as<std::string>()) == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
+    itr_login_info["user_type"].as<int>() == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+};
+//====================================
 int main(){
   LoginInfoDao login_db("test","testuser","testpass");
   char menu;
@@ -116,7 +180,13 @@ int main(){
       salt=myhash::genSalt();
       std::string hashed_pass;
       hashed_pass=myhash::mySha256(PASS+salt);
-      login_db.put(NAME,hashed_pass,salt);
+      char con_type;
+      std::cout<< "Consumer of Vender (please enter 'c' or 'v'): ";
+      std::cin>> con_type;
+      if(con_type=='c')
+        login_db.put(NAME,hashed_pass,salt, CONSUMER);
+      else
+        login_db.put(NAME,hashed_pass,salt, VENDER);
       break;
              }
     case 'b':{
@@ -130,7 +200,9 @@ int main(){
       std::string hashed_in_pass;
       hashed_in_pass = myhash::mySha256(PASS+info_from_db.salt);
       if(hashed_in_pass == info_from_db.hashed_pass){
-        std::cout<<"Hello, "<<info_from_db.login<<std::endl;
+        std::cout<<"Hello, "<<info_from_db.login<<"!"<<std::endl;
+        std::cout<<"You are ";
+        info_from_db.user_type == CONSUMER ? (std::cout<<"a consumer."<<std::endl) : (std::cout<<"a vender."<<std::endl);
       }
       else{
         std::cerr<<"invalid password\n";
