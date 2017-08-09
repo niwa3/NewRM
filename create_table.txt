@@ -11,5 +11,5 @@ create function set_update_time() returns opaque as '
 
 create trigger update_tri before update on Login_Info for each row execute procedure set_update_time();
 
-//create Consumer_Info table
-CREATE TABLE Consumer_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, l_id integer not null unique reference Login_Info(id), last_name varchar(64) not null, first_name varchar(64) not null, birthday timestamp not null, phone_num integer not null, e_mail_addr not null)
+//create Custmer_Info table
+CREATE TABLE Couster_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, l_id integer not null unique reference Login_Info(id), last_name varchar(64) not null, first_name varchar(64) not null, birthday timestamp not null, phone_num integer not null, e_mail_addr not null)

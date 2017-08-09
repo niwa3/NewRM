@@ -17,5 +17,17 @@ const int DataType::CO2=3;
 const int DataType::WIND=4;
 const int DataType::NONE=0;
 
+const std::string SOCKET_NAME="/tmp/unix-socket";
+//==========RelationshipManager==============
+
+RelationshipManager::RelationshipManager(){
+  socketName_=SOCKET_NAME;
+  endflag=false;
+}
+
+RelationshipManager::~RelationshipManager(){
+  close(server_);
+}
+
 int main(int argc, char* argv[]){
 }

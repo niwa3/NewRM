@@ -55,12 +55,12 @@ bool LoginInfoDao::fetch(std::string login, LoginInfo &info_from_db){
     }
     pqxx::result::iterator itr_login_info;
     itr_login_info = login_info_from_db.begin();
-    info_from_db.user_id = itr_login_info["id"].as<std::string>();
+    info_from_db.user_id = itr_login_info["id"].as<int>();
     info_from_db.login = itr_login_info["login"].as<std::string>();
     info_from_db.salt = itr_login_info["salt"].as<std::string>();
     info_from_db.hashed_pass = itr_login_info["passwd"].as<std::string>();
-    //std::stoi(itr_login_info["user_type"].as<std::string>()) == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
-    itr_login_info["user_type"].as<int>() == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
+    //std::stoi(itr_login_info["user_type"].as<std::string>()) == 0 ? (info_from_db.user_type = CUSTOMER) : (info_from_db.user_type = VENDER);
+    itr_login_info["user_type"].as<int>() == 0 ? (info_from_db.user_type = CUSTOMER) : (info_from_db.user_type = VENDER);
     _T.get()->commit();
     return true;
   }
@@ -103,24 +103,24 @@ bool LoginInfoDao::update_login(std::string login, std::string new_login){
 
 
 
-//========class ConsumerInfoDao=======
-ConsumerInfoDao::ConsumerInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
+//========class CustomerInfoDao=======
+CustomerInfoDao::CustomerInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
 }
 
-bool ConsumerInfoDao::put(std::string l_id, std::string c_id, std::string last_name, std::string first_name, std::tm birthday, int phone_num, std::string e_mail_addr){
+bool CustomerInfoDao::put(int l_id, std::string last_name, std::string first_name, std::string birthday, unsigned int phone_num, std::string e_mail_addr){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
-    std::string INSERT_CONSUMER_INFO;
-    INSERT_CONSUMER_INFO = "INSERT INTO consumer_info"
+    std::string INSERT_CUSTOMER_INFO;
+    INSERT_CUSTOMER_INFO = "INSERT INTO customer_info"
       "(l_id, last_name, first_name, birthday, phone_num, e_mail_addr)"
-      " VALUES (" + _T.get()->quote(l_id) + 
-      "," + _T.get()->quote(last_name)+ 
+      " VALUES (" + std::to_string(l_id) + 
+      "," + _T.get()->quote(last_name) + 
       "," + _T.get()->quote(first_name) + 
-      ", " + _T.get()->quote(std::ctime(birthday)) + 
-      "," + std::to_string(phone_num) + 
+      ", " + _T.get()->quote(birthday) + 
+      "," + _T.get()->quote(std::to_string(phone_num)) + 
       "," + _T.get()->quote(e_mail_addr) + 
       ");";
-    _T.get()->exec(INSERT_CONSUMER_INFO);
+    _T.get()->exec(INSERT_CUSTOMER_INFO);
     _T.get()->commit();
     return true;
   }
@@ -130,26 +130,26 @@ bool ConsumerInfoDao::put(std::string l_id, std::string c_id, std::string last_n
   }
 }
 
-bool ConsumerInfoDao::fetch(std::string l_id, ConsumerInfo &consumer_info_from_db){
+bool CustomerInfoDao::fetch(int l_id, CustomerInfo &customer_info_from_db){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
-    std::string SELECT_CONSUMER_INFO;
-    SELECT_CONSUMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM consumer_info WHERE login=" + _T.get()->quote(login) + ";";
-    //whereの条件どうしよ
-    pqxx::result login_info_from_db;
-    login_info_from_db=_T.get()->exec(SELECT_CONSUMER_INFO);
-    if(login_info_from_db.empty()){
-      std::cerr<<"the login ID: " + login + " does not exist.\n";
+    std::string SELECT_CUSTOMER_INFO;
+    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info WHERE l_id=" + std::to_string(l_id) + ";";
+    pqxx::result result_from_db;
+    result_from_db =_T.get()->exec(SELECT_CUSTOMER_INFO);
+    if(result_from_db.empty()){
+      std::cerr<<"no customer info\n";
       return false;
     }
-    pqxx::result::iterator itr_login_info;
-    itr_login_info = login_info_from_db.begin();
-    info_from_db.user_id = itr_login_info["id"].as<std::string>();
-    info_from_db.login = itr_login_info["login"].as<std::string>();
-    info_from_db.salt = itr_login_info["salt"].as<std::string>();
-    info_from_db.hashed_pass = itr_login_info["passwd"].as<std::string>();
-    //std::stoi(itr_login_info["user_type"].as<std::string>()) == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
-    itr_login_info["user_type"].as<int>() == 0 ? (info_from_db.user_type = CONSUMER) : (info_from_db.user_type = VENDER);
+    pqxx::result::iterator itr_result_info;
+    itr_result_info = result_from_db.begin();
+    customer_info_from_db.l_id = itr_result_info["l_id"].as<int>();
+    customer_info_from_db.c_id = itr_result_info["id"].as<int>();
+    customer_info_from_db.last_name = itr_result_info["last_name"].as<std::string>();
+    customer_info_from_db.first_name = itr_result_info["first_name"].as<std::string>();
+    customer_info_from_db.birthday = itr_result_info["birthday"].as<std::string>();
+    customer_info_from_db.phone_num = itr_result_info["phone_num"].as<long>();
+    customer_info_from_db.e_mail_addr = itr_result_info["e_mail_addr"].as<std::string>();
     _T.get()->commit();
     return true;
   }
@@ -158,76 +158,122 @@ bool ConsumerInfoDao::fetch(std::string l_id, ConsumerInfo &consumer_info_from_d
     return false;
   }
 };
+
 //====================================
 int main(){
   LoginInfoDao login_db("test","testuser","testpass");
+  CustomerInfoDao customer_db("test","testuser","testpass");
   char menu;
   std::cout<<"MENU\n";
   std::cout<<"a. register your account\n";
   std::cout<<"b. login\n";
   std::cout<<"c. change password\n";
   std::cout<<"d. change login\n";
+  std::cout<<"e. put customerinfo\n";
+  std::cout<<"f. fetch customerinfo\n";
   std::cout<<"Enter a menu char: ";
   std::cin>> menu;
   std::string NAME;
   std::string PASS;
   switch(menu){
     case 'a':{
-      std::cout<< "Enter new login ID: ";
-      std::cin>> NAME;
-      PASS=getpass("Enter new password: ");
-      std::string salt;
-      salt=myhash::genSalt();
-      std::string hashed_pass;
-      hashed_pass=myhash::mySha256(PASS+salt);
-      char con_type;
-      std::cout<< "Consumer of Vender (please enter 'c' or 'v'): ";
-      std::cin>> con_type;
-      if(con_type=='c')
-        login_db.put(NAME,hashed_pass,salt, CONSUMER);
-      else
-        login_db.put(NAME,hashed_pass,salt, VENDER);
-      break;
+                std::cout<< "Enter new login ID: ";
+                std::cin>> NAME;
+                PASS=getpass("Enter new password: ");
+                std::string salt;
+                salt=myhash::genSalt();
+                std::string hashed_pass;
+                hashed_pass=myhash::mySha256(PASS+salt);
+                char con_type;
+                std::cout<< "Customer of Vender (please enter 'c' or 'v'): ";
+                std::cin>> con_type;
+                if(con_type=='c')
+                  login_db.put(NAME,hashed_pass,salt, CUSTOMER);
+                else
+                  login_db.put(NAME,hashed_pass,salt, VENDER);
+                break;
              }
     case 'b':{
-      std::cout<< "Enter your login ID: ";
-      std::cin>> NAME;
-      LoginInfo info_from_db;
-      if(!login_db.fetch(NAME, info_from_db)){
-        break;
-      }
-      PASS=getpass("Enter your password: ");
-      std::string hashed_in_pass;
-      hashed_in_pass = myhash::mySha256(PASS+info_from_db.salt);
-      if(hashed_in_pass == info_from_db.hashed_pass){
-        std::cout<<"Hello, "<<info_from_db.login<<"!"<<std::endl;
-        std::cout<<"You are ";
-        info_from_db.user_type == CONSUMER ? (std::cout<<"a consumer."<<std::endl) : (std::cout<<"a vender."<<std::endl);
-      }
-      else{
-        std::cerr<<"invalid password\n";
-      }
-      break;
+                std::cout<< "Enter your login ID: ";
+                std::cin>> NAME;
+                LoginInfo info_from_db;
+                if(!login_db.fetch(NAME, info_from_db)){
+                  break;
+                }
+                PASS=getpass("Enter your password: ");
+                std::string hashed_in_pass;
+                hashed_in_pass = myhash::mySha256(PASS+info_from_db.salt);
+                if(hashed_in_pass == info_from_db.hashed_pass){
+                  std::cout<<"Hello, "<<info_from_db.login<<"!"<<std::endl;
+                  std::cout<<"You are ";
+                  info_from_db.user_type == CUSTOMER ? (std::cout<<"a customer."<<std::endl) : (std::cout<<"a vender."<<std::endl);
+                }
+                else{
+                  std::cerr<<"invalid password\n";
+                }
+                break;
              }
     case 'c':{
-      std::cout<< "Enter your login ID: ";
-      std::cin>> NAME;
-      PASS=getpass("Enter new password: ");
-      std::string new_salt;
-      new_salt=myhash::genSalt();
-      std::string hashed_new_pass;
-      hashed_new_pass=myhash::mySha256(PASS+new_salt);
-      login_db.update_pass(NAME,hashed_new_pass,new_salt);
-      break;
+                std::cout<< "Enter your login ID: ";
+                std::cin>> NAME;
+                PASS=getpass("Enter new password: ");
+                std::string new_salt;
+                new_salt=myhash::genSalt();
+                std::string hashed_new_pass;
+                hashed_new_pass=myhash::mySha256(PASS+new_salt);
+                login_db.update_pass(NAME,hashed_new_pass,new_salt);
+                break;
              }
     case 'd':{
-      std::cout<< "Enter your login ID: ";
-      std::cin>> NAME;
-      std::string new_login;
-      std::cout<< "Enter new login ID: ";
-      std::cin>> new_login;
-      login_db.update_login(NAME,new_login);
-      break;
+                std::cout<< "Enter your login ID: ";
+                std::cin>> NAME;
+                std::string new_login;
+                std::cout<< "Enter new login ID: ";
+                std::cin>> new_login;
+                login_db.update_login(NAME,new_login);
+                break;
+             }
+    case 'e':{
+               std::cout<<"Enter your l_id: ";
+               int l_id;
+               std::cin>> l_id;
+               std::cout<<"Enter your first name: ";
+               std::string first_name;
+               std::cin>> first_name;
+               std::cout<<"Enter your last name: ";
+               std::string last_name;
+               std::cin>> last_name;
+               std::cout<<"Enter your birthday\nMonth(1-12): ";
+               std::string birthday;
+               int mon;
+               std::cin>> mon;
+               std::cout<<"Day(1-31): ";
+               int day;
+               std::cin>> day;
+               std::cout<<"Year: ";
+               int year;
+               std::cin>> year;
+               birthday=std::to_string(year)+"-"+std::to_string(mon)+"-"+std::to_string(day);
+               std::cout<<"Enter your phone number: ";
+               unsigned int phone_num;
+               std::cin>> phone_num;
+               std::cout<<"Enter your e mail addres: ";
+               std::string e_mail_addr;
+               std::cin>> e_mail_addr;
+
+               std::cout<<"Registering\n";
+
+               customer_db.put(l_id,last_name,first_name,birthday,phone_num,e_mail_addr);
+               std::cout<<"ok\n";
+               break;
+             }
+    case 'f':{
+               std::cout<<"Enter your longin id: ";
+               int l_id;
+               std::cin>> l_id;
+               CustomerInfo c_info;
+               customer_db.fetch(l_id, c_info);
+               std::cout<<c_info.c_id<<c_info.last_name<<c_info.first_name<<c_info.birthday<<c_info.phone_num<<c_info.e_mail_addr<<std::endl;
              }
    default:
       break;

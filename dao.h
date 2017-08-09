@@ -8,32 +8,32 @@
 #include <pqxx/except>
 #include <memory>
 #include <vector>
+#include <unistd.h>
 #include <cryptopp/osrng.h>
 #include <iomanip>
-#include <unkstd.h>
 #include <ctime>
 //#include "type.h"
 #include "sha256.h"
 
-enum USERTYPE { CONSUMER, VENDER };
+enum USERTYPE { CUSTOMER, VENDER };
 
 class LoginInfo{
   public:
     std::string login;
     std::string hashed_pass;
     std::string salt;
-    std::string user_id;
+    int user_id;
     USERTYPE    user_type;
 };
 
-class ConsumerInfo{
+class CustomerInfo{
   public:
-    std::string l_id;
-    std::string c_id;
+    int l_id;
+    int c_id;
     std::string last_name;
     std::string first_name;
-    std::tm     birthday;
-    int         phone_num;
+    std::string birthday;
+    long phone_num;
     std::string e_mail_addr;
 };
 
@@ -75,18 +75,16 @@ class LoginInfoDao: public DataBase{
  *first_name
  *birthday
  *phone_num
- *e_mail_addr
- *
- *
+ *e_mail_addr*
  */
-class ConsumerInfoDao: public DataBase{
+class CustomerInfoDao: public DataBase{
   public:
-    ConsumerInfoDao(std::string dbname, std::string user, std::string password);
-    ~ConsumerInfoDao(){};
-    bool put(std::string l_id, std::string c_id, std::string last_name, std::string first_name, std::tm birthday, int phone_num, std::string e_mail_addr);
-    bool fetch(std::string l_id, ConsumerInfo &consumer_info_from_db);
-    bool update_name(std::string c_id, std::string last_name, std::string first_name){};
-    bool update_e_mail(std::string c_id, std::string e_mail_addr){};
+    CustomerInfoDao(std::string dbname, std::string user, std::string password);
+    ~CustomerInfoDao(){};
+    bool put(int l_id, std::string last_name, std::string first_name, std::string birthday, unsigned int phone_num, std::string e_mail_addr);
+    bool fetch(int l_id, CustomerInfo &customer_info_from_db);
+    bool update_name(int c_id, std::string last_name, std::string first_name){};
+    bool update_e_mail(int c_id, std::string e_mail_addr){};
 };
 
 #endif
