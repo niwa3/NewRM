@@ -17,16 +17,38 @@ const int DataType::CO2=3;
 const int DataType::WIND=4;
 const int DataType::NONE=0;
 
+const sig_atomic_t eflag=0;
 const std::string SOCKET_NAME="/tmp/unix-socket";
+
+void sigpipe_handle(int x){
+  std::cerr<<"sigerr\n";
+  eflag=1;
+}
 //==========RelationshipManager==============
 
 RelationshipManager::RelationshipManager(){
   socketName_=SOCKET_NAME;
-  endflag=false;
+
+  unlink(socketName_.c_str());
 }
 
 RelationshipManager::~RelationshipManager(){
-  close(server_);
+}
+
+void RelationshipManager::run(){
+  create();
+  serve();
+}
+
+void RelationshipManager::create(){
+  try{
+    struct sockaddr_un server_addr;
+    int soval = 1;
+
+    server_addr.sun_family = AF_UNIX;
+    strncpy(server_addr.sun_path, socketName_.c_str(), sizeof(server_addr.sun_path) -1);
+  
+  }
 }
 
 int main(int argc, char* argv[]){
