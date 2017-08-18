@@ -1,5 +1,5 @@
-#ifndef __INCLUDED_DAO_H_
-#define __INCLUDED_DAO_H_
+#ifndef __INCLUDED_DAO_H__
+#define __INCLUDED_DAO_H__
 
 #include <iostream>
 #include <string>
@@ -33,7 +33,7 @@ class CustomerInfo{
     std::string last_name;
     std::string first_name;
     std::string birthday;
-    long phone_num;
+    std::string  phone_num;
     std::string e_mail_addr;
 };
 
@@ -69,7 +69,7 @@ class LoginInfoDao: public DataBase{
 /*
  *コンシューマの情報にアクセス
  *属性：
- *l_id 
+ *l_id
  *id
  *last_name
  *first_name
@@ -81,7 +81,7 @@ class CustomerInfoDao: public DataBase{
   public:
     CustomerInfoDao(std::string dbname, std::string user, std::string password);
     ~CustomerInfoDao(){};
-    bool put(int l_id, std::string last_name, std::string first_name, std::string birthday, unsigned int phone_num, std::string e_mail_addr);
+    bool put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
     bool fetch(int l_id, CustomerInfo &customer_info_from_db);
     bool update_name(int c_id, std::string last_name, std::string first_name){};
     bool update_e_mail(int c_id, std::string e_mail_addr){};

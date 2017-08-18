@@ -107,18 +107,18 @@ bool LoginInfoDao::update_login(std::string login, std::string new_login){
 CustomerInfoDao::CustomerInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
 }
 
-bool CustomerInfoDao::put(int l_id, std::string last_name, std::string first_name, std::string birthday, unsigned int phone_num, std::string e_mail_addr){
+bool CustomerInfoDao::put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_CUSTOMER_INFO;
     INSERT_CUSTOMER_INFO = "INSERT INTO customer_info"
       "(l_id, last_name, first_name, birthday, phone_num, e_mail_addr)"
-      " VALUES (" + std::to_string(l_id) + 
-      "," + _T.get()->quote(last_name) + 
-      "," + _T.get()->quote(first_name) + 
-      ", " + _T.get()->quote(birthday) + 
-      "," + _T.get()->quote(std::to_string(phone_num)) + 
-      "," + _T.get()->quote(e_mail_addr) + 
+      " VALUES (" + std::to_string(l_id) +
+      "," + _T.get()->quote(last_name) +
+      "," + _T.get()->quote(first_name) +
+      ", " + _T.get()->quote(birthday) +
+      "," + _T.get()->quote(phone_num) +
+      "," + _T.get()->quote(e_mail_addr) +
       ");";
     _T.get()->exec(INSERT_CUSTOMER_INFO);
     _T.get()->commit();
@@ -148,7 +148,7 @@ bool CustomerInfoDao::fetch(int l_id, CustomerInfo &customer_info_from_db){
     customer_info_from_db.last_name = itr_result_info["last_name"].as<std::string>();
     customer_info_from_db.first_name = itr_result_info["first_name"].as<std::string>();
     customer_info_from_db.birthday = itr_result_info["birthday"].as<std::string>();
-    customer_info_from_db.phone_num = itr_result_info["phone_num"].as<long>();
+    customer_info_from_db.phone_num = itr_result_info["phone_num"].as<std::string>();
     customer_info_from_db.e_mail_addr = itr_result_info["e_mail_addr"].as<std::string>();
     _T.get()->commit();
     return true;
@@ -160,7 +160,7 @@ bool CustomerInfoDao::fetch(int l_id, CustomerInfo &customer_info_from_db){
 };
 
 //====================================
-int main(){
+/*int main(){
   LoginInfoDao login_db("test","testuser","testpass");
   CustomerInfoDao customer_db("test","testuser","testpass");
   char menu;
@@ -280,7 +280,7 @@ int main(){
   }
   return 0;
 }
-
+*/
 /*
 int main(){
   try{

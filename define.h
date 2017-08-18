@@ -84,5 +84,4 @@ class RelationshipManager{
     std::mutex mtx;
 };
 
-
 #endif
