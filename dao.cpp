@@ -42,15 +42,15 @@ bool LoginInfoDao::put(std::string login, std::string hashed_pass, std::string s
   }
 }
 
-bool LoginInfoDao::fetch(std::string login, LoginInfo &info_from_db){
+bool LoginInfoDao::fetch(std::string where, LoginInfo &info_from_db){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_LOGIN_INFO;
-    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt, user_type FROM login_info WHERE login=" + _T.get()->quote(login) + ";";
+    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt, user_type FROM login_info WHERE " + where + ";";
     pqxx::result login_info_from_db;
     login_info_from_db=_T.get()->exec(SELECT_LOGIN_INFO);
     if(login_info_from_db.empty()){
-      std::cerr<<"the login ID: " + login + " does not exist.\n";
+      std::cerr<< where + " does not exist.\n";
       return false;
     }
     pqxx::result::iterator itr_login_info;
@@ -99,6 +99,23 @@ bool LoginInfoDao::update_login(std::string login, std::string new_login){
     return false;
   }
 }
+
+bool LoginInfoDao::update(std::string set, std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string UPDATE;
+    UPDATE = "UPDATE login_info SET " + set + " WHERE login=" + where + ";";
+    _T.get()->exec(UPDATE);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+
 //====================================
 
 
@@ -130,11 +147,11 @@ bool CustomerInfoDao::put(int l_id, std::string last_name, std::string first_nam
   }
 }
 
-bool CustomerInfoDao::fetch(int l_id, CustomerInfo &customer_info_from_db){
+bool CustomerInfoDao::fetch(std::string where, CustomerInfo &customer_info_from_db){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_CUSTOMER_INFO;
-    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info WHERE l_id=" + std::to_string(l_id) + ";";
+    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info WHERE " + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_CUSTOMER_INFO);
     if(result_from_db.empty()){

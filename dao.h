@@ -15,10 +15,17 @@
 //#include "type.h"
 #include "sha256.h"
 
-enum USERTYPE { CUSTOMER, VENDER };
+enum USERTYPE { CUSTOMER, VENDER, NONE };
 
 class LoginInfo{
   public:
+    LoginInfo(){
+      this->login = {0};
+      this->hashed_pass = {0};
+      this->salt = {0};
+      this->user_id = 0;
+      this->user_type = USERTYPE::NONE;
+    }
     std::string login;
     std::string hashed_pass;
     std::string salt;
@@ -28,6 +35,14 @@ class LoginInfo{
 
 class CustomerInfo{
   public:
+    CustomerInfo(){
+      this->l_id = 0;
+      this->c_id = 0;
+      this->last_name = {0};
+      this->first_name = {0};
+      this->phone_num = {0};
+      this->e_mail_addr = {0};
+    }
     int l_id;
     int c_id;
     std::string last_name;
@@ -61,9 +76,10 @@ class LoginInfoDao: public DataBase{
     LoginInfoDao(std::string dbname, std::string user, std::string password);
     ~LoginInfoDao(){};
     bool put(std::string login, std::string hashed_pass, std::string salt, USERTYPE user_type );
-    bool fetch(std::string login, LoginInfo &log_info_from_db);
+    bool fetch(std::string where, LoginInfo &login_info_from_db);
     bool update_pass(std::string login, std::string hashed_new_pass, std::string new_salt);
     bool update_login(std::string login, std::string new_login);
+    bool update(std::string set, std::string where);
 };
 
 /*
@@ -82,7 +98,7 @@ class CustomerInfoDao: public DataBase{
     CustomerInfoDao(std::string dbname, std::string user, std::string password);
     ~CustomerInfoDao(){};
     bool put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
-    bool fetch(int l_id, CustomerInfo &customer_info_from_db);
+    bool fetch(std::string where, CustomerInfo &customer_info_from_db);
     bool update_name(int c_id, std::string last_name, std::string first_name){};
     bool update_e_mail(int c_id, std::string e_mail_addr){};
 };
