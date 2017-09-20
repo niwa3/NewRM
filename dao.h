@@ -30,7 +30,7 @@ class LoginInfo{
     std::string hashed_pass;
     std::string salt;
     int user_id;
-    USERTYPE    user_type;
+    USERTYPE user_type;
 };
 
 class CustomerInfo{
@@ -48,7 +48,23 @@ class CustomerInfo{
     std::string last_name;
     std::string first_name;
     std::string birthday;
-    std::string  phone_num;
+    std::string phone_num;
+    std::string e_mail_addr;
+};
+
+class VenderInfo{
+  public:
+    VenderInfo(){
+      this->l_id = 0;
+      this->v_id = 0;
+      this->name = {0};
+      this->phone_num = {0};
+      this->e_mail_addr = {0};
+    }
+    int l_id;
+    int v_id;
+    std::string name;
+    std::string phone_num;
     std::string e_mail_addr;
 };
 
@@ -77,9 +93,7 @@ class LoginInfoDao: public DataBase{
     ~LoginInfoDao(){};
     bool put(std::string login, std::string hashed_pass, std::string salt, USERTYPE user_type );
     bool fetch(std::string where, LoginInfo &login_info_from_db);
-    bool update_pass(std::string login, std::string hashed_new_pass, std::string new_salt);
-    bool update_login(std::string login, std::string new_login);
-    bool update(std::string set, std::string where);
+    bool update(std::string set_attr, std::string where);
 };
 
 /*
@@ -99,8 +113,26 @@ class CustomerInfoDao: public DataBase{
     ~CustomerInfoDao(){};
     bool put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
     bool fetch(std::string where, CustomerInfo &customer_info_from_db);
-    bool update_name(int c_id, std::string last_name, std::string first_name){};
-    bool update_e_mail(int c_id, std::string e_mail_addr){};
+    bool update(std::string set_attr, std::string where);
 };
+
+/*
+ *venderの情報にアクセス
+ *属性：
+ *l_id
+ *id
+ *name
+ *phone_num
+ *e_mail_addr
+ */
+class VenderInfoDao: public DataBase{
+  public:
+    VenderInfoDao(std::string dbname, std::string user, std::string password);
+    ~VenderInfoDao(){};
+    bool put(int l_id, std::string name, std::string phone_num, std::string e_mail_addr);
+    bool fetch(std::string where, VenderInfo &vender_info_from_db);
+    bool update(std::string set_attr, std::string where);
+};
+
 
 #endif

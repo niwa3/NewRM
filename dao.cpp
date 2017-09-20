@@ -2,7 +2,12 @@
 
 
 //===========class DataBase===========
-DataBase::DataBase(std::string dbname, std::string user, std::string password){
+DataBase::DataBase(
+    std::string dbname,
+    std::string user,
+    std::string password
+    )
+{
   try{
   std::string CONNECT_CONF="dbname='"+dbname+"' user='"+user+"' password='"+password+"'";
   _conn.reset(new pqxx::connection(CONNECT_CONF));
@@ -24,14 +29,30 @@ DataBase::~DataBase(){
 
 
 //===========class LoginInfoDao=======
-LoginInfoDao::LoginInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
+LoginInfoDao::LoginInfoDao(
+    std::string dbname, 
+    std::string user, 
+    std::string password
+    )
+  : DataBase(dbname, user, password){
 }
 
-bool LoginInfoDao::put(std::string login, std::string hashed_pass, std::string salt, USERTYPE user_type){
+bool LoginInfoDao::put(
+    std::string login,
+    std::string hashed_pass,
+    std::string salt,
+    USERTYPE user_type)
+{
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_LOGIN_INFO;
-    INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt, user_type) VALUES (" + _T.get()->quote(login) + "," + _T.get()->quote(hashed_pass)+ "," + _T.get()->quote(salt) + ", " + std::to_string(user_type) + ");";
+
+    INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt, user_type) VALUES ("
+      + _T.get()->quote(login) + ","
+      + _T.get()->quote(hashed_pass)+ ","
+      + _T.get()->quote(salt) + ", "
+      + std::to_string(user_type) + ");";
+
     _T.get()->exec(INSERT_LOGIN_INFO);
     _T.get()->commit();
     return true;
@@ -42,11 +63,15 @@ bool LoginInfoDao::put(std::string login, std::string hashed_pass, std::string s
   }
 }
 
-bool LoginInfoDao::fetch(std::string where, LoginInfo &info_from_db){
+bool LoginInfoDao::fetch(
+    std::string where, 
+    LoginInfo &info_from_db)
+{
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_LOGIN_INFO;
-    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt, user_type FROM login_info WHERE " + where + ";";
+    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt, user_type FROM login_info WHERE "
+      + where + ";";
     pqxx::result login_info_from_db;
     login_info_from_db=_T.get()->exec(SELECT_LOGIN_INFO);
     if(login_info_from_db.empty()){
@@ -59,7 +84,6 @@ bool LoginInfoDao::fetch(std::string where, LoginInfo &info_from_db){
     info_from_db.login = itr_login_info["login"].as<std::string>();
     info_from_db.salt = itr_login_info["salt"].as<std::string>();
     info_from_db.hashed_pass = itr_login_info["passwd"].as<std::string>();
-    //std::stoi(itr_login_info["user_type"].as<std::string>()) == 0 ? (info_from_db.user_type = CUSTOMER) : (info_from_db.user_type = VENDER);
     itr_login_info["user_type"].as<int>() == 0 ? (info_from_db.user_type = CUSTOMER) : (info_from_db.user_type = VENDER);
     _T.get()->commit();
     return true;
@@ -70,41 +94,14 @@ bool LoginInfoDao::fetch(std::string where, LoginInfo &info_from_db){
   }
 }
 
-bool LoginInfoDao::update_pass(std::string login, std::string hashed_new_pass, std::string new_salt){
-  try{
-    _T.reset(new pqxx::work(*_conn.get()));
-    std::string UPDATE_PASSWORD;
-    UPDATE_PASSWORD = "UPDATE login_info SET passwd=" + _T.get()->quote(hashed_new_pass) + ", salt=" + _T.get()->quote(new_salt) + " WHERE login=" + _T.get()->quote(login) + ";";
-    _T.get()->exec(UPDATE_PASSWORD);
-    _T.get()->commit();
-    return true;
-  }
-  catch(const pqxx::pqxx_exception &e){
-    std::cerr<<e.base().what()<<std::endl;
-    return false;
-  }
-}
-
-bool LoginInfoDao::update_login(std::string login, std::string new_login){
-   try{
-    _T.reset(new pqxx::work(*_conn.get()));
-    std::string UPDATE_LOGIN;
-    UPDATE_LOGIN = "UPDATE login_info SET login=" + _T.get()->quote(new_login) + " WHERE login=" + _T.get()->quote(login) + ";";
-    _T.get()->exec(UPDATE_LOGIN);
-    _T.get()->commit();
-    return true;
-  }
-  catch(const pqxx::pqxx_exception &e){
-    std::cerr<<e.base().what()<<std::endl;
-    return false;
-  }
-}
-
-bool LoginInfoDao::update(std::string set, std::string where){
+bool LoginInfoDao::update(std::string set_attr, std::string where)
+{
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string UPDATE;
-    UPDATE = "UPDATE login_info SET " + set + " WHERE login=" + where + ";";
+    UPDATE = "UPDATE login_info SET "
+      + set_attr + " WHERE "
+      + where + ";";
     _T.get()->exec(UPDATE);
     _T.get()->commit();
     return true;
@@ -114,17 +111,26 @@ bool LoginInfoDao::update(std::string set, std::string where){
     return false;
   }
 }
-
-
 //====================================
 
 
 
 //========class CustomerInfoDao=======
-CustomerInfoDao::CustomerInfoDao(std::string dbname, std::string user, std::string password) : DataBase(dbname, user, password){
+CustomerInfoDao::CustomerInfoDao(
+    std::string dbname,
+    std::string user,
+    std::string password)
+: DataBase(dbname, user, password){
 }
 
-bool CustomerInfoDao::put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr){
+bool CustomerInfoDao::put(
+    int l_id,
+    std::string last_name,
+    std::string first_name,
+    std::string birthday,
+    std::string phone_num,
+    std::string e_mail_addr
+    ){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_CUSTOMER_INFO;
@@ -147,11 +153,15 @@ bool CustomerInfoDao::put(int l_id, std::string last_name, std::string first_nam
   }
 }
 
-bool CustomerInfoDao::fetch(std::string where, CustomerInfo &customer_info_from_db){
+bool CustomerInfoDao::fetch(
+    std::string where,
+    CustomerInfo &customer_info_from_db){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_CUSTOMER_INFO;
-    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info WHERE " + where + ";";
+    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr "
+      "FROM customer_info WHERE "
+      + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_CUSTOMER_INFO);
     if(result_from_db.empty()){
@@ -176,7 +186,109 @@ bool CustomerInfoDao::fetch(std::string where, CustomerInfo &customer_info_from_
   }
 };
 
+bool CustomerInfoDao::update(
+    std::string set_attr,
+    std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string UPDATE;
+    UPDATE = "UPDATE customer_info SET " + set_attr + " WHERE " + where + ";";
+    _T.get()->exec(UPDATE);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
 //====================================
+
+//========class VenderInfoDao=======
+VenderInfoDao::VenderInfoDao(
+    std::string dbname,
+    std::string user,
+    std::string password)
+: DataBase(dbname, user, password){
+}
+
+bool VenderInfoDao::put(
+    int l_id,
+    std::string name,
+    std::string phone_num,
+    std::string e_mail_addr
+    ){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_VENDER_INFO;
+    INSERT_VENDER_INFO = "INSERT INTO vender_info"
+      "(l_id, name, phone_num, e_mail_addr)"
+      " VALUES (" + std::to_string(l_id) +
+      "," + _T.get()->quote(name) +
+      "," + _T.get()->quote(phone_num) +
+      "," + _T.get()->quote(e_mail_addr) +
+      ");";
+    _T.get()->exec(INSERT_VENDER_INFO);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+bool VenderInfoDao::fetch(
+    std::string where,
+    VenderInfo &vender_info_from_db){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string SELECT_VENDER_INFO;
+    SELECT_VENDER_INFO = "SELECT id, l_id, name, phone_num, e_mail_addr "
+      "FROM vender_info WHERE "
+      + where + ";";
+    pqxx::result result_from_db;
+    result_from_db =_T.get()->exec(SELECT_VENDER_INFO);
+    if(result_from_db.empty()){
+      std::cerr<<"no vender info\n";
+      return false;
+    }
+    pqxx::result::iterator itr_result_info;
+    itr_result_info = result_from_db.begin();
+    vender_info_from_db.l_id = itr_result_info["l_id"].as<int>();
+    vender_info_from_db.v_id = itr_result_info["id"].as<int>();
+    vender_info_from_db.name = itr_result_info["name"].as<std::string>();
+    vender_info_from_db.phone_num = itr_result_info["phone_num"].as<std::string>();
+    vender_info_from_db.e_mail_addr = itr_result_info["e_mail_addr"].as<std::string>();
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+};
+
+bool VenderInfoDao::update(
+    std::string set_attr,
+    std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string UPDATE;
+    UPDATE = "UPDATE vender_info SET " + set_attr + " WHERE " + where + ";";
+    _T.get()->exec(UPDATE);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+//====================================
+
+
 /*int main(){
   LoginInfoDao login_db("test","testuser","testpass");
   CustomerInfoDao customer_db("test","testuser","testpass");

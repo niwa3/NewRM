@@ -5,19 +5,35 @@
 #include <fstream>
 #include <memory>
 
-class Manager{
+class LoginManager{
   public:
-    Manager(std::string filename);
-    ~Manager(){};
+    LoginManager(std::string filename);
+    ~LoginManager(){};
     bool register_Linfo(std::string login, std::string password, USERTYPE user_type);
-    bool register_Cinfo(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
     LoginInfo fetch_Linfo_by_login(std::string login);
     LoginInfo fetch_Linfo_by_l_id(int l_id);
-    CustomerInfo fetch_Cinfo_by_l_id(int l_id);
   private:
     std::unique_ptr<LoginInfoDao> l_dao;
+};
+
+class CustomerManager{
+  public:
+    CustomerManager(std::string filename);
+    ~CustomerManager(){};
+    bool register_Cinfo(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
+    CustomerInfo fetch_Cinfo_by_l_id(int l_id);
+  private:
     std::unique_ptr<CustomerInfoDao> c_dao;
 };
 
+class VenderManager{
+  public:
+    VenderManager(std::string filename);
+    ~VenderManager(){};
+    bool register_Vinfo(int l_id, std::string name, std::string phone_num, std::string e_mail_addr);
+    VenderInfo fetch_Vinfo_by_l_id(int l_id);
+  private:
+    std::unique_ptr<VenderInfoDao> v_dao;
+};
 
 #endif
