@@ -15,8 +15,11 @@
 //#include "type.h"
 #include "sha256.h"
 
-enum USERTYPE { CUSTOMER, VENDER, NONE };
+enum USERTYPE { NONE, CUSTOMER, VENDER };
+enum DEVICETYPE { NONE, SENSOR, ACTUATOR };
+enum DATATYPE { NONE, POWER, CO2, TEMP };
 
+//login情報データモデル
 class LoginInfo{
   public:
     LoginInfo(){
@@ -33,6 +36,7 @@ class LoginInfo{
     USERTYPE user_type;
 };
 
+//Customer情報データモデル
 class CustomerInfo{
   public:
     CustomerInfo(){
@@ -52,6 +56,30 @@ class CustomerInfo{
     std::string e_mail_addr;
 };
 
+//Device情報データモデル
+class DeviceInfo{
+  public:
+    DeviceInfo(){
+      this->c_id = 0;
+      this->d_id = 0;
+      this->device_name = {0};
+      this->default_privacy_standard = 0;
+      this->device_type = DEVICETYPE::NONE;
+      this->data_type = DATATYPE::NONE;
+      this->interval = 0;
+      this->location = {0};
+    }
+    int c_id;
+    int d_id;
+    std::string device_name;
+    int default_privacy_standard;
+    DEVICETYPE device_type;
+    DATATYPE data_type;
+    int interval;
+    std::string location;
+}
+
+//Vender情報データモデル
 class VenderInfo{
   public:
     VenderInfo(){
@@ -68,6 +96,24 @@ class VenderInfo{
     std::string e_mail_addr;
 };
 
+class ServiceInfo{
+  public:
+    ServiceInfo(){
+      this->v_id = 0;
+      this->s_id = 0;
+      this->service_name = {0};
+      this->required_privacy_standard = 0;
+      this->data_type = DATATYPE::NONE;
+      this->interval = 0;
+    }
+    int v_id;
+    int s_id;
+    std::string service_name;
+    int required_privacy_standard;
+    DATATYPE data_type;
+    int interval;
+}
+
 class DataBase{
   protected:
     std::unique_ptr<pqxx::connection> _conn;
@@ -79,13 +125,13 @@ class DataBase{
 };
 
 /*
- *ログイン用の情報にアクセス
- *属性：
- *id
- *login
- *hashed_pass
- *slat
- *user_type
+ * ログイン用の情報にアクセス
+ * 属性：
+ * int id
+ * std::string login
+ * std::string hashed_pass
+ * std::string slat
+ * USERTYPE user_type
  */
 class LoginInfoDao: public DataBase{
   public:
@@ -97,15 +143,15 @@ class LoginInfoDao: public DataBase{
 };
 
 /*
- *コンシューマの情報にアクセス
- *属性：
- *l_id
- *id
- *last_name
- *first_name
- *birthday
- *phone_num
- *e_mail_addr*
+ * コンシューマの情報にアクセス
+ * 属性：
+ * int l_id
+ * int id
+ * std::string last_name
+ * std::string first_name
+ * std::string birthday
+ * std::string phone_num
+ * std::string e_mail_addr
  */
 class CustomerInfoDao: public DataBase{
   public:
@@ -117,13 +163,34 @@ class CustomerInfoDao: public DataBase{
 };
 
 /*
- *venderの情報にアクセス
- *属性：
- *l_id
- *id
- *name
- *phone_num
- *e_mail_addr
+ * コンシューマの所有するデバイスに関する情報にアクセス
+ * 属性：
+ * int c_id
+ * int id
+ * std::string device_name;
+ * int default_privacy_standard
+ * DEVICETYPE device_type
+ * DATATYPE data_type
+ * int interval
+ * std::string location
+ */
+class DeviceInfoDao: public DataBase{
+  public:
+    DeviceInfoDao(std::string dbname, std::string user, std::string password);
+    ~DeviceInfoDao(){};
+    bool put(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
+    bool fetch(std::string where, DeviceInfo &device_info_from_db);
+    bool update(std::string set_attr, std::string where);
+}
+
+/*
+ * venderの情報にアクセス
+ * 属性：
+ * int l_id
+ * int id
+ * std::string name
+ * std::string phone_num
+ * std::string e_mail_addr
  */
 class VenderInfoDao: public DataBase{
   public:
@@ -133,6 +200,24 @@ class VenderInfoDao: public DataBase{
     bool fetch(std::string where, VenderInfo &vender_info_from_db);
     bool update(std::string set_attr, std::string where);
 };
+
+/*
+ * venderの提供するサービスに関する情報にアクセス
+ * int v_id;
+ * int id;
+ * std::string service_name;
+ * int required_privacy_standard;
+ * DATATYPE data_type;
+ * int interval;
+ */
+class ServiceInfoDao: public DataBase{
+  public:
+    ServiceInfoDao(std::string dbname, std::string user, std::string password);
+    ~ServiceInfoDao(){};
+    bool put(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
+    bool fetch(std::string where, ServiceInfo &service_info_from_db);
+    bool update(std::string set_attr, std::string where);
+}
 
 
 #endif

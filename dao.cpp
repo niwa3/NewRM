@@ -95,15 +95,7 @@ bool LoginInfoDao::fetch(
 }
 
 bool LoginInfoDao::update(std::string set_attr, std::string where)
-{
-  try{
-    _T.reset(new pqxx::work(*_conn.get()));
-    std::string UPDATE;
-    UPDATE = "UPDATE login_info SET "
-      + set_attr + " WHERE "
-      + where + ";";
-    _T.get()->exec(UPDATE);
-    _T.get()->commit();
+{ try{ _T.reset(new pqxx::work(*_conn.get())); std::string UPDATE; UPDATE = "UPDATE login_info SET " + set_attr + " WHERE " + where + ";"; _T.get()->exec(UPDATE); _T.get()->commit();
     return true;
   }
   catch(const pqxx::pqxx_exception &e){
@@ -147,6 +139,7 @@ bool CustomerInfoDao::put(
     _T.get()->commit();
     return true;
   }
+
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
     return false;
