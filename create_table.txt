@@ -12,7 +12,21 @@ create function set_update_time() returns opaque as '
 create trigger update_tri before update on Login_Info for each row execute procedure set_update_time();
 
 //create Custmer_Info table
-CREATE TABLE Couster_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, l_id integer not null unique reference Login_Info(id), last_name varchar(64) not null, first_name varchar(64) not null, birthday timestamp not null, phone_num varchar(255) not null, e_mail_addr not null)
+CREATE TABLE Customer_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, l_id integer not null unique references Login_Info(id), last_name varchar(64) not null, first_name varchar(64) not null, birthday timestamp not null, phone_num varchar(255) not null, e_mail_addr not null)
+
+create trigger update_tri before update on Customer_Info for each row execute procedure set_update_time();
 
 //create Vender_Info table
-CREATE TABLE Couster_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, l_id integer not null unique reference Login_Info(id), name varchar(64) not null, phone_num varchar(255) not null, e_mail_addr varchar(64) not null)
+CREATE TABLE Vender_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, l_id integer not null unique references Login_Info(id), name varchar(64) not null, phone_num varchar(255) not null, e_mail_addr varchar(64) not null)
+
+create trigger update_tri before update on Vender_Info for each row execute procedure set_update_time();
+
+//create device_info table
+CREATE TABLE Device_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, c_id integer not null unique references Custmer_Info(id), device_name varchar(64) not null, default_privacy_standard integer not null, device_type integer not null, data_type integer not null, interval integer not null, location varchar(255) not null)
+
+create trigger update_tri before update on Device_Info for each row execute procedure set_update_time();
+
+//create service_info table
+CREATE TABLE Service_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, v_id integer not null unique references Vender_Info(id), service_name varchar(64) not null, required_privacy_standard integer not null, data_type integer not null, interval integer not null)
+
+create trigger update_tri before update on Service_Info for each row execute procedure set_update_time();

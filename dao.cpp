@@ -9,7 +9,9 @@ DataBase::DataBase(
     )
 {
   try{
-  std::string CONNECT_CONF="dbname='"+dbname+"' user='"+user+"' password='"+password+"'";
+  std::string CONNECT_CONF="dbname='"+dbname;
+  CONNECT_CONF+="' user='"+user;
+  CONNECT_CONF+="' password='"+password+"'";
   _conn.reset(new pqxx::connection(CONNECT_CONF));
   if(_conn.get()->is_open()){
       std::cout<<"Database "<<_conn.get()->dbname()<<" opened." <<std::endl;
@@ -51,7 +53,7 @@ bool LoginInfoDao::put(
       + _T.get()->quote(login) + ","
       + _T.get()->quote(hashed_pass)+ ","
       + _T.get()->quote(salt) + ", "
-      + std::to_string(user_type) + ");";
+      + std::to_string((int)user_type) + ");";
 
     _T.get()->exec(INSERT_LOGIN_INFO);
     _T.get()->commit();
@@ -84,7 +86,7 @@ bool LoginInfoDao::fetch(
     info_from_db.login = itr_login_info["login"].as<std::string>();
     info_from_db.salt = itr_login_info["salt"].as<std::string>();
     info_from_db.hashed_pass = itr_login_info["passwd"].as<std::string>();
-    itr_login_info["user_type"].as<int>() == 0 ? (info_from_db.user_type = CUSTOMER) : (info_from_db.user_type = VENDER);
+    info_from_db.user_type = static_cast<USERTYPE>(itr_login_info["user_type"].as<int>());
     _T.get()->commit();
     return true;
   }
@@ -197,6 +199,100 @@ bool CustomerInfoDao::update(
 }
 //====================================
 
+//===========DeviceInfoDao============
+DeviceInfoDao::DeviceInfoDao(
+    std::string dbname,
+    std::string user,
+    std::string password)
+: DataBase(dbname, user, password){
+}
+
+bool DeviceInfoDao::put(
+    int c_id,
+    std::string device_name,
+    int default_privacy_standard,
+    DEVICETYPE device_type,
+    DATATYPE data_type,
+    int interval,
+    std::string location
+    ){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_DEVICE_INFO;
+    INSERT_DEVICE_INFO = "INSERT INTO device_info"
+      "(c_id, device_name, device_type, data_type, default_privacy_standard, interval, location)"
+      " VALUES (" + std::to_string(c_id) +
+      "," + _T.get()->quote(device_name) +
+      "," + std::to_string(static_cast<int>(device_type)) +
+      "," + std::to_string(static_cast<int>(data_type)) +
+      "," + std::to_string(default_privacy_standard) +
+      "," + std::to_string(interval) +
+      "," + _T.get()->quote(location) +
+      ");";
+    _T.get()->exec(INSERT_DEVICE_INFO);
+    _T.get()->commit();
+    return true;
+  }
+
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+bool DeviceInfoDao::fetch(
+    std::string where,
+    DeviceInfo &device_info_from_db){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string SELECT_DEVICE_INFO;
+    SELECT_DEVICE_INFO = "SELECT id, c_id, device_name, device_type, data_type, default_privacy_standard, interval, location"
+      "FROM device_info WHERE "
+      + where + ";";
+    pqxx::result result_from_db;
+    result_from_db =_T.get()->exec(SELECT_DEVICE_INFO);
+    if(result_from_db.empty()){
+      std::cerr<<"no device info\n";
+      return false;
+    }
+    pqxx::result::iterator itr_result_info;
+    itr_result_info = result_from_db.begin();
+    device_info_from_db.c_id = itr_result_info["c_id"].as<int>();
+    device_info_from_db.d_id = itr_result_info["id"].as<int>();
+    device_info_from_db.device_name = itr_result_info["device_name"].as<std::string>();
+    device_info_from_db.device_type = static_cast<DEVICETYPE>(itr_result_info["device_type"].as<int>());
+    device_info_from_db.data_type = static_cast<DATATYPE>(itr_result_info["data_type"].as<int>());
+    device_info_from_db.default_privacy_standard = itr_result_info["default_privacy_standard"].as<int>();
+    device_info_from_db.interval = itr_result_info["interval"].as<int>();
+    device_info_from_db.location = itr_result_info["location"].as<std::string>();
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+};
+
+bool DeviceInfoDao::update(
+    std::string set_attr,
+    std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string UPDATE;
+    UPDATE = "UPDATE device_info SET " + set_attr + " WHERE " + where + ";";
+    _T.get()->exec(UPDATE);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+//====================================
+
+
 //========class VenderInfoDao=======
 VenderInfoDao::VenderInfoDao(
     std::string dbname,
@@ -279,6 +375,94 @@ bool VenderInfoDao::update(
   }
 }
 
+//====================================
+
+
+//===========ServiceInfoDao============
+ServiceInfoDao::ServiceInfoDao(
+    std::string dbname,
+    std::string user,
+    std::string password)
+: DataBase(dbname, user, password){
+}
+
+bool ServiceInfoDao::put(
+    int v_id,
+    std::string service_name,
+    int required_privacy_standard,
+    DATATYPE data_type,
+    int interval
+    ){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_SERVICE_INFO;
+    INSERT_SERVICE_INFO = "INSERT INTO service_info"
+      "(v_id, service_name, data_type, required_privacy_standard, interval)"
+      " VALUES (" + std::to_string(v_id) +
+      "," + _T.get()->quote(service_name) +
+      "," + std::to_string(static_cast<int>(data_type)) +
+      "," + std::to_string(required_privacy_standard) +
+      "," + std::to_string(interval) +
+      ");";
+    _T.get()->exec(INSERT_SERVICE_INFO);
+    _T.get()->commit();
+    return true;
+  }
+
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+bool ServiceInfoDao::fetch(
+    std::string where,
+    ServiceInfo &service_info_from_db){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string SELECT_SERVICE_INFO;
+    SELECT_SERVICE_INFO = "SELECT id, v_id, service_name, data_type, required_privacy_standard, interval"
+      "FROM service_info WHERE "
+      + where + ";";
+    pqxx::result result_from_db;
+    result_from_db =_T.get()->exec(SELECT_SERVICE_INFO);
+    if(result_from_db.empty()){
+      std::cerr<<"no service info\n";
+      return false;
+    }
+    pqxx::result::iterator itr_result_info;
+    itr_result_info = result_from_db.begin();
+    service_info_from_db.v_id = itr_result_info["v_id"].as<int>();
+    service_info_from_db.s_id = itr_result_info["id"].as<int>();
+    service_info_from_db.service_name = itr_result_info["service_name"].as<std::string>();
+    service_info_from_db.data_type = static_cast<DATATYPE>(itr_result_info["data_type"].as<int>());
+    service_info_from_db.required_privacy_standard = itr_result_info["required_privacy_standard"].as<int>();
+    service_info_from_db.interval = itr_result_info["interval"].as<int>();
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+};
+
+bool ServiceInfoDao::update(
+    std::string set_attr,
+    std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string UPDATE;
+    UPDATE = "UPDATE service_info SET " + set_attr + " WHERE " + where + ";";
+    _T.get()->exec(UPDATE);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
 //====================================
 
 
@@ -403,70 +587,4 @@ bool VenderInfoDao::update(
   return 0;
 }
 */
-/*
-int main(){
-  try{
-    std::unique_ptr<pqxx::connection> conn(new pqxx::connection("dbname='test' user='testuser' password='testpass'"));
-    if(conn.get()->is_open()){
-      std::cout<<"Database "<<conn.get()->dbname()<<" opened." <<std::endl;
-    }
-    else{
-      std::cout<<"Cannot Open Database."<<std::endl;
-      return 1;
-    }
-    std::string NAME;
-    std::cout<< "Enter login ID: ";
-    std::cin>> NAME;
-    std::cout<< std::endl;
-    std::string PASS;
-    PASS=getpass("Enter password: ");
 
-    std::string QUERY;
-    std::string salt;
-    salt=myhash::genSalt();
-    std::string hashPass;
-    hashPass=myhash::mySha256(PASS+salt);
-
-    std::unique_ptr<pqxx::work> T(new pqxx::work(*conn.get()));
-    QUERY = "INSERT INTO login_info(login, passwd, salt) VALUES (" + T.get()->quote(NAME) + "," + T.get()->quote(hashPass)+ "," + T.get()->quote(salt) + ");";
-    pqxx::result result = T.get()->exec("select relname from pg_stat_user_tables where relname = 'login_info'");
-    if(result.empty()){
-      T.get()->exec("CREATE TABLE login_info(id serial primary key not null, created_at timestamp not null default current_timestamp,updated_at timestamp not null default current_timestamp, login varchar(64) not null unique, passwd varchar(64) not null, salt varchar(64) not null)");
-    }
-
-    T.get()->exec(QUERY);
-    T.get()->commit();
-
-    T.reset(new pqxx::work(*conn.get()));
-
-    std::cout<< "Enter login ID: ";
-    std::cin>> NAME;
-    std::cout<< std::endl;
-    PASS.clear();
-    PASS=getpass("Enter password: ");
-    std::cout<< std::endl;
-
-    QUERY.clear();
-    QUERY = "SELECT login,salt,passwd FROM login_info WHERE login=" + T.get()->quote(NAME) + ";";
-    std::cout<<QUERY<<std::endl;
-    result = T.get()->exec(QUERY);
-    pqxx::result::iterator result_itr;
-    result_itr = result.begin();
-    salt = result_itr["salt"].as<std::string>();
-    hashPass = myhash::mySha256(PASS+salt);
-    if(hashPass == result_itr["passwd"].as<std::string>()){
-      std::cout<<result_itr["login"].as<std::string>()<<std::endl;
-    }
-    else{
-      std::cout<<"error";
-    }
-    T.get()->commit();
-
-    conn.get()->disconnect();
-    }
-  catch(const std::exception &e){
-    std::cerr<<e.what();
-    return 1;
-  }
-  return 0;
-}*/

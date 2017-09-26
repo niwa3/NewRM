@@ -15,9 +15,9 @@
 //#include "type.h"
 #include "sha256.h"
 
-enum USERTYPE { NONE, CUSTOMER, VENDER };
-enum DEVICETYPE { NONE, SENSOR, ACTUATOR };
-enum DATATYPE { NONE, POWER, CO2, TEMP };
+enum class USERTYPE { NONE, CUSTOMER, VENDER };
+enum class DEVICETYPE { NONE, SENSOR, ACTUATOR };
+enum class DATATYPE { NONE, POWER, CO2, TEMP };
 
 //login情報データモデル
 class LoginInfo{
@@ -77,7 +77,7 @@ class DeviceInfo{
     DATATYPE data_type;
     int interval;
     std::string location;
-}
+};
 
 //Vender情報データモデル
 class VenderInfo{
@@ -112,7 +112,7 @@ class ServiceInfo{
     int required_privacy_standard;
     DATATYPE data_type;
     int interval;
-}
+};
 
 class DataBase{
   protected:
@@ -181,7 +181,7 @@ class DeviceInfoDao: public DataBase{
     bool put(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
     bool fetch(std::string where, DeviceInfo &device_info_from_db);
     bool update(std::string set_attr, std::string where);
-}
+};
 
 /*
  * venderの情報にアクセス
@@ -217,7 +217,7 @@ class ServiceInfoDao: public DataBase{
     bool put(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
     bool fetch(std::string where, ServiceInfo &service_info_from_db);
     bool update(std::string set_attr, std::string where);
-}
+};
 
 
 #endif
