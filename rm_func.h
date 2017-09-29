@@ -1,15 +1,18 @@
-#ifndef __INCLUDED_PPM_FUNC_H__
-#define __INCLUDED_PPM_FUNC_H__
-/* プライバシマネージャ内の関数を定義するファイル
+#ifndef __INCLUDED_RM_FUNC_H__
+#define __INCLUDED_RM_FUNC_H__
+
+#include "manage.h"
+
+/* リレーションシップマネージャ内の関数を定義するファイル
  * CustomerとVendorに分けてそれぞれの関数を定義する．
  */
-namespace PrivacyPolicyManager{
+namespace RelationshipManager{
 
 class CustomerFunc{
   public:
     CustomerFunc(){};
     ~CustomerFunc(){};
-    bool reg_device();
+    bool reg_new_device(int c_id, std::string device_name, int default_pricacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
     bool show_device();
     bool del_device();
     bool show_relationship();

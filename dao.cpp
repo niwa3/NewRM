@@ -465,6 +465,96 @@ bool ServiceInfoDao::update(
 }
 //====================================
 
+//===========RelationshipDao============
+RelationshipDao::RelationshipDao(
+    std::string dbname,
+    std::string user,
+    std::string password)
+: DataBase(dbname, user, password){
+}
+
+bool RelationshipDao::put(
+    int d_id,
+    int s_id,
+    ANONYMITYMETHOD anonymity_method,
+    int privacy_standard,
+    int interval,
+    std::string location
+    ){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_RELATIONSHIP;
+    INSERT_RELATIONSHIP = "INSERT INTO relationship"
+      "(d_id, s_id, anonymity_method, privacy_standard, interval, location)"
+      " VALUES (" + std::to_string(d_id) +
+      "," + std::to_string(s_id) +
+      "," + std::to_string(static_cast<int>(anonymity_method)) +
+      "," + std::to_string(privacy_standard) +
+      "," + std::to_string(interval) +
+      "," + _T->quote(location) +
+      ");";
+    _T.get()->exec(INSERT_RELATIONSHIP);
+    _T.get()->commit();
+    return true;
+  }
+
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+bool RelationshipDao::fetch(
+    std::string where,
+    Relationship &relationship_from_db){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string SELECT_RELATIONSHIP;
+    SELECT_RELATIONSHIP = "SELECT id, d_id, s_id, anonymity_method, privacy_standard, interval, location"
+      "FROM relationship WHERE "
+      + where + ";";
+    pqxx::result result_from_db;
+    result_from_db =_T.get()->exec(SELECT_RELATIONSHIP);
+    if(result_from_db.empty()){
+      std::cerr<<"no service info\n";
+      return false;
+    }
+    pqxx::result::iterator itr_result_info;
+    itr_result_info = result_from_db.begin();
+    relationship_from_db.d_id = itr_result_info["d_id"].as<int>();
+    relationship_from_db.s_id = itr_result_info["s_id"].as<int>();
+    relationship_from_db.r_id = itr_result_info["id"].as<int>();
+    relationship_from_db.anonymity_method = static_cast<ANONYMITYMETHOD>(itr_result_info["anonymity_method"].as<int>());
+    relationship_from_db.privacy_standard = itr_result_info["privacy_standard"].as<int>();
+    relationship_from_db.interval = itr_result_info["interval"].as<int>();
+    relationship_from_db.location = itr_result_info["location"].as<std::string>();
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+};
+
+bool RelationshipDao::update(
+    std::string set_attr,
+    std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string UPDATE;
+    UPDATE = "UPDATE relationship SET " + set_attr + " WHERE " + where + ";";
+    _T.get()->exec(UPDATE);
+    _T.get()->commit();
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+//====================================
+
 
 /*int main(){
   LoginInfoDao login_db("test","testuser","testpass");

@@ -18,6 +18,7 @@
 enum class USERTYPE { NONE, CUSTOMER, VENDER };
 enum class DEVICETYPE { NONE, SENSOR, ACTUATOR };
 enum class DATATYPE { NONE, POWER, CO2, TEMP };
+enum class ANONYMITYMETHOD { NONE, NOISE, FLAT };
 
 //login情報データモデル
 class LoginInfo{
@@ -96,6 +97,7 @@ class VenderInfo{
     std::string e_mail_addr;
 };
 
+//Service情報用データモデル
 class ServiceInfo{
   public:
     ServiceInfo(){
@@ -113,6 +115,27 @@ class ServiceInfo{
     DATATYPE data_type;
     int interval;
 };
+
+class Relationship{
+  public:
+    Relaionship(){
+      this->r_id = 0;
+      this->d_id = 0;
+      this->s_id = 0;
+      this->anonymity_method = ANONYMITYMETHOD::NONE;
+      this->privacy_standard = 0;
+      this->interval = 0;
+      this->location = 0;
+    }
+    ~Relaionship(){};
+    int r_id;
+    int d_id;
+    int s_id;
+    ANONYMITYMETHOD anonymity_method;
+    int privacy_standard;
+    int interval;
+    std::string location;
+}
 
 class DataBase{
   protected:
@@ -219,5 +242,23 @@ class ServiceInfoDao: public DataBase{
     bool update(std::string set_attr, std::string where);
 };
 
+/*
+ * relationshipデータベースにアクセス
+ * int r_id;
+ * int d_id;
+ * int s_id;
+ * ANONYMITYMETHOD anonymity_method;
+ * int privacy_standard;
+ * int interval;
+ * std::string location;
+ */
+class RelationshipDao: public DataBase{
+  public:
+    RelationshipDao(std::string dbname, std::string user, std::string password);
+    ~RelationshipDao(){};
+    bool put(int d_id, int s_id, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
+    bool fetch(std::string where, Relationship &relationship_from_db);
+    bool update(std::string set_attr, std::string where)
+}
 
 #endif

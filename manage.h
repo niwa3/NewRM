@@ -64,4 +64,18 @@ class ServiceManager{
   private:
     std::unique_ptr<ServiceInfoDao> s_dao;
 };
+
+class RelationshipManager{
+  public:
+    RelationshipManager(std::string filename);
+    ~RelationshipManager(){};
+    bool register_Relation(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
+    Relationship fetch_Relation_by_d_id(int d_id);
+    Relationship fetch_Relation_by_s_id(int s_id);
+    bool update_Relation_by_r_id(int r_id, std::string set_attr);
+
+  private:
+    std::unique_ptr<ServiceInfoDao> s_dao;
+};
+
 #endif
