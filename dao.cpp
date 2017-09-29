@@ -1,6 +1,5 @@
 #include "dao.h"
 
-
 //===========class DataBase===========
 DataBase::DataBase(
     std::string dbname,

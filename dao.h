@@ -118,16 +118,16 @@ class ServiceInfo{
 
 class Relationship{
   public:
-    Relaionship(){
+    Relationship(){
       this->r_id = 0;
       this->d_id = 0;
       this->s_id = 0;
       this->anonymity_method = ANONYMITYMETHOD::NONE;
       this->privacy_standard = 0;
       this->interval = 0;
-      this->location = 0;
+      this->location = {0};
     }
-    ~Relaionship(){};
+    ~Relationship(){};
     int r_id;
     int d_id;
     int s_id;
@@ -135,7 +135,7 @@ class Relationship{
     int privacy_standard;
     int interval;
     std::string location;
-}
+};
 
 class DataBase{
   protected:
@@ -258,7 +258,6 @@ class RelationshipDao: public DataBase{
     ~RelationshipDao(){};
     bool put(int d_id, int s_id, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
     bool fetch(std::string where, Relationship &relationship_from_db);
-    bool update(std::string set_attr, std::string where)
-}
-
+    bool update(std::string set_attr, std::string where);
+};
 #endif
