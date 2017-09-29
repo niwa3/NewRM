@@ -5,10 +5,10 @@
 #include <vector>
 #include "./define.h"
 
-//Consumer is the user who has sensor or actuator
-class Consumer{
+//Customer is the user who has sensor or actuator
+class Customer{
   private:
-    Consumer_id cid;
+    Customer_id cid;
     Device_id did;
     Privacy_lvl plvl;
     Device_type ntype;
@@ -17,22 +17,22 @@ class Consumer{
     Address address;
 
   public:
-    int setConsumerid(Consumer_id);
+    int setCustomerid(Customer_id);
     int setDeviceid(Device_id);
     int setPrivacyLvl(Privacy_lvl);
     int setDeviceType(Device_type);
     int setDataType(Data_type);
     int setInterval(Interval);
     int setAddress(Address);
-    Consumer_id getConsumerid();
+    Customer_id getCustomerid();
     Device_id getDeviceid();
     Privacy_lvl getPrivacyLvl(Privacy_lvl);
     Device_type getDviceType();
     Data_type getDataType();
     Interval getInterval();
     Address getAddress();
-    Consumer();
-    ~Consumer();
+    Customer();
+    ~Customer();
 };
 
 
