@@ -5,10 +5,10 @@
 #include <fstream>
 #include <memory>
 
-class LoginManager{
+class LoginManageFuncs{
   public:
-    LoginManager(std::string filename);
-    ~LoginManager(){};
+    LoginManageFuncs(std::string filename);
+    ~LoginManageFuncs(){};
     bool register_Linfo(std::string login, std::string password, USERTYPE user_type);
     //fetchの条件は必要になったら随時追加する
     //ここでは，とりあえず，外部キーになっているidから検索できる関数を用意する．
@@ -20,10 +20,10 @@ class LoginManager{
     std::unique_ptr<LoginInfoDao> l_dao;
 };
 
-class CustomerManager{
+class CustomerManageFuncs{
   public:
-    CustomerManager(std::string filename);
-    ~CustomerManager(){};
+    CustomerManageFuncs(std::string filename);
+    ~CustomerManageFuncs(){};
     bool register_Cinfo(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
     CustomerInfo fetch_Cinfo_by_l_id(int l_id);
     bool update_Cinfo_by_c_id(int c_id, std::string set_attr);
@@ -31,10 +31,10 @@ class CustomerManager{
     std::unique_ptr<CustomerInfoDao> c_dao;
 };
 
-class DeviceManager{
+class DeviceManageFuncs{
   public:
-    DeviceManager(std::string filename);
-    ~DeviceManager(){};
+    DeviceManageFuncs(std::string filename);
+    ~DeviceManageFuncs(){};
     bool register_Dinfo(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
     DeviceInfo fetch_Dinfo_by_c_id(int c_id);
     bool update_Dinfo_by_d_id(int d_id, std::string set_attr);
@@ -42,10 +42,10 @@ class DeviceManager{
     std::unique_ptr<DeviceInfoDao> d_dao;
 };
 
-class VenderManager{
+class VenderManageFuncs{
   public:
-    VenderManager(std::string filename);
-    ~VenderManager(){};
+    VenderManageFuncs(std::string filename);
+    ~VenderManageFuncs(){};
     bool register_Vinfo(int l_id, std::string name, std::string phone_num, std::string e_mail_addr);
     VenderInfo fetch_Vinfo_by_l_id(int l_id);
     bool update_Vinfo_by_v_id(int v_id, std::string set_attr);
@@ -53,10 +53,10 @@ class VenderManager{
     std::unique_ptr<VenderInfoDao> v_dao;
 };
 
-class ServiceManager{
+class ServiceManageFuncs{
   public:
-    ServiceManager(std::string filename);
-    ~ServiceManager(){};
+    ServiceManageFuncs(std::string filename);
+    ~ServiceManageFuncs(){};
     bool register_Sinfo(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
     ServiceInfo fetch_Sinfo_by_v_id(int v_id);
     bool update_Sinfo_by_s_id(int s_id, std::string set_attr);
@@ -65,17 +65,17 @@ class ServiceManager{
     std::unique_ptr<ServiceInfoDao> s_dao;
 };
 
-class RelationshipManager{
+class RelationshipManageFuncs{
   public:
-    RelationshipManager(std::string filename);
-    ~RelationshipManager(){};
-    bool register_Relation(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
+    RelationshipManageFuncs(std::string filename);
+    ~RelationshipManageFuncs(){};
+    bool register_Relation(int d_id, int s_id, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
     Relationship fetch_Relation_by_d_id(int d_id);
     Relationship fetch_Relation_by_s_id(int s_id);
     bool update_Relation_by_r_id(int r_id, std::string set_attr);
 
   private:
-    std::unique_ptr<ServiceInfoDao> s_dao;
+    std::unique_ptr<RelationshipDao> r_dao;
 };
 
 #endif
