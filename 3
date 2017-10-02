@@ -47,6 +47,7 @@ bool LoginInfoDao::put(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_LOGIN_INFO;
+    string s;
 
     INSERT_LOGIN_INFO = "INSERT INTO login_info(login, passwd, salt, user_type) VALUES ("
       + _T.get()->quote(login) + ","
@@ -153,7 +154,8 @@ bool CustomerInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_CUSTOMER_INFO;
-    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info WHERE "
+    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr "
+      "FROM customer_info WHERE "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_CUSTOMER_INFO);
@@ -244,7 +246,8 @@ bool DeviceInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_DEVICE_INFO;
-    SELECT_DEVICE_INFO = "SELECT id, c_id, device_name, device_type, data_type, default_privacy_standard, interval, location FROM device_info WHERE "
+    SELECT_DEVICE_INFO = "SELECT id, c_id, device_name, device_type, data_type, default_privacy_standard, interval, location"
+      "FROM device_info WHERE "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_DEVICE_INFO);
@@ -330,7 +333,8 @@ bool VenderInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_VENDER_INFO;
-    SELECT_VENDER_INFO = "SELECT id, l_id, name, phone_num, e_mail_addr FROM vender_info WHERE "
+    SELECT_VENDER_INFO = "SELECT id, l_id, name, phone_num, e_mail_addr "
+      "FROM vender_info WHERE "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_VENDER_INFO);
@@ -416,7 +420,8 @@ bool ServiceInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_SERVICE_INFO;
-    SELECT_SERVICE_INFO = "SELECT id, v_id, service_name, data_type, required_privacy_standard, interval FROM service_info WHERE "
+    SELECT_SERVICE_INFO = "SELECT id, v_id, service_name, data_type, required_privacy_standard, interval"
+      "FROM service_info WHERE "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_SERVICE_INFO);
@@ -504,7 +509,8 @@ bool RelationshipDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_RELATIONSHIP;
-    SELECT_RELATIONSHIP = "SELECT id, d_id, s_id, anonymity_method, privacy_standard, interval, location FROM relationship WHERE "
+    SELECT_RELATIONSHIP = "SELECT id, d_id, s_id, anonymity_method, privacy_standard, interval, location"
+      "FROM relationship WHERE "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_RELATIONSHIP);
