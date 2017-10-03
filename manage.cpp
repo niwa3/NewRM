@@ -105,9 +105,9 @@ bool CustomerManageFuncs::register_Cinfo(
   else return false;
 }
 
-CustomerInfo CustomerManageFuncs::fetch_Cinfo_by_l_id(int l_id)
+std::vector<CustomerInfo> CustomerManageFuncs::fetch_Cinfo_by_l_id(int l_id)
 {
-  CustomerInfo cus_info_from_db = CustomerInfo();
+  std::vector<CustomerInfo> cus_info_from_db;
   if (c_dao->fetch("l_id="+std::to_string(l_id), cus_info_from_db)){return cus_info_from_db;}
   else return cus_info_from_db;
 }
@@ -162,9 +162,9 @@ bool DeviceManageFuncs::register_Dinfo(
   else return false;
 }
 
-DeviceInfo DeviceManageFuncs::fetch_Dinfo_by_c_id(int c_id)
+std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_c_id(int c_id)
 {
-  DeviceInfo dev_info_from_db = DeviceInfo();
+  std::vector<DeviceInfo> dev_info_from_db;
   if (d_dao->fetch("c_id="+std::to_string(c_id), dev_info_from_db)){return dev_info_from_db;}
   else return dev_info_from_db;
 }
@@ -215,9 +215,9 @@ bool VenderManageFuncs::register_Vinfo(
   else return false;
 }
 
-VenderInfo VenderManageFuncs::fetch_Vinfo_by_l_id(int l_id)
+std::vector<VenderInfo> VenderManageFuncs::fetch_Vinfo_by_l_id(int l_id)
 {
-  VenderInfo ven_info_from_db = VenderInfo();
+  std::vector<VenderInfo> ven_info_from_db;
   if (v_dao->fetch("l_id="+std::to_string(l_id), ven_info_from_db)){return ven_info_from_db;}
   else return ven_info_from_db;
 }
@@ -269,10 +269,17 @@ bool ServiceManageFuncs::register_Sinfo(
   else return false;
 }
 
-ServiceInfo ServiceManageFuncs::fetch_Sinfo_by_v_id(int v_id)
+std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_v_id(int v_id)
 {
-  ServiceInfo ser_info_from_db = ServiceInfo();
+  std::vector<ServiceInfo> ser_info_from_db;
   if (s_dao->fetch("v_id="+std::to_string(v_id), ser_info_from_db)){return ser_info_from_db;}
+  else return ser_info_from_db;
+}
+
+std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_for_matching(DATATYPE data_type, int privacy_standard, int interval)
+{
+  std::vector<ServiceInfo> ser_info_from_db;
+  if (s_dao->fetch("data_type="+std::to_string((int)data_type)+" and required_privacy_standard>="+std::to_string(privacy_standard)+" and interval>="+std::to_string(interval), ser_info_from_db)){return ser_info_from_db;}
   else return ser_info_from_db;
 }
 
@@ -326,29 +333,20 @@ bool RelationshipManageFuncs::register_Relation(
   else return false;
 }
 
-Relationship RelationshipManageFuncs::fetch_Relation_by_d_id(int d_id)
+std::vector<Relationship> RelationshipManageFuncs::fetch_Relation_by_d_id(int d_id)
 {
-  Relationship relation_from_db = Relationship();
+  std::vector<Relationship> relation_from_db;
   if (r_dao->fetch("d_id="+std::to_string(d_id), relation_from_db)){return relation_from_db;}
   else return relation_from_db;
 }
 
-Relationship RelationshipManageFuncs::fetch_Relation_by_s_id(int s_id)
+std::vector<Relationship> RelationshipManageFuncs::fetch_Relation_by_s_id(int s_id)
 {
-  Relationship relation_from_db = Relationship();
+  std::vector<Relationship> relation_from_db;
   if (r_dao->fetch("s_id="+std::to_string(s_id), relation_from_db)){return relation_from_db;}
   else return relation_from_db;
 }
 
 bool RelationshipManageFuncs::update_Relation_by_r_id(int r_id, std::string set_attr){
   return r_dao->update(set_attr, "id = " + std::to_string(r_id));
-}
-
-
-int main(){
-  RelationshipManageFuncs r("db.conf");
-  if(r.update_Relation_by_r_id(1, "anonymity_method=1"))std::cout<<"ok\n";
-  else std::cout<<"out\n";
-
-  return 0;
 }

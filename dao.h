@@ -182,6 +182,7 @@ class CustomerInfoDao: public DataBase{
     ~CustomerInfoDao(){};
     bool put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
     bool fetch(std::string where, CustomerInfo &customer_info_from_db);
+    bool fetch(std::string where, std::vector<CustomerInfo> &customers_info_from_db);
     bool update(std::string set_attr, std::string where);
 };
 
@@ -203,6 +204,7 @@ class DeviceInfoDao: public DataBase{
     ~DeviceInfoDao(){};
     bool put(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
     bool fetch(std::string where, DeviceInfo &device_info_from_db);
+    bool fetch(std::string where, std::vector<DeviceInfo> &devices_info_from_db);
     bool update(std::string set_attr, std::string where);
 };
 
@@ -221,6 +223,7 @@ class VenderInfoDao: public DataBase{
     ~VenderInfoDao(){};
     bool put(int l_id, std::string name, std::string phone_num, std::string e_mail_addr);
     bool fetch(std::string where, VenderInfo &vender_info_from_db);
+    bool fetch(std::string where, std::vector<VenderInfo> &venders_info_from_db);
     bool update(std::string set_attr, std::string where);
 };
 
@@ -239,6 +242,7 @@ class ServiceInfoDao: public DataBase{
     ~ServiceInfoDao(){};
     bool put(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
     bool fetch(std::string where, ServiceInfo &service_info_from_db);
+    bool fetch(std::string where, std::vector<ServiceInfo> &services_info_from_db);
     bool update(std::string set_attr, std::string where);
 };
 
@@ -258,6 +262,7 @@ class RelationshipDao: public DataBase{
     ~RelationshipDao(){};
     bool put(int d_id, int s_id, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
     bool fetch(std::string where, Relationship &relationship_from_db);
+    bool fetch(std::string where, std::vector<Relationship> &relationships_from_db);
     bool update(std::string set_attr, std::string where);
 };
 #endif
