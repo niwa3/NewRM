@@ -261,6 +261,7 @@ class RelationshipDao: public DataBase{
     RelationshipDao(std::string dbname, std::string user, std::string password);
     ~RelationshipDao(){};
     bool put(int d_id, int s_id, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
+    bool put_all(std::vector<Relationship> relationship);
     bool fetch(std::string where, Relationship &relationship_from_db);
     bool fetch(std::string where, std::vector<Relationship> &relationships_from_db);
     bool update(std::string set_attr, std::string where);
