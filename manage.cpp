@@ -169,6 +169,28 @@ std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_c_id(int c_id)
   else return dev_info_from_db;
 }
 
+std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_d_id(int d_id)
+{
+  std::vector<DeviceInfo> dev_info_from_db;
+  if (d_dao->fetch("id="+std::to_string(d_id), dev_info_from_db)){return dev_info_from_db;}
+  else return dev_info_from_db;
+}
+
+std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_device_name(std::string device_name)
+{
+  std::vector<DeviceInfo> dev_info_from_db;
+  if (d_dao->fetch("device_name='"+device_name+"'", dev_info_from_db)){return dev_info_from_db;}
+  else return dev_info_from_db;
+}
+
+std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_for_matching(DATATYPE data_type, int privacy_standard, int interval)
+{
+  std::vector<DeviceInfo> dev_info_from_db;
+  if (d_dao->fetch("data_type="+std::to_string((int)data_type)+" and required_privacy_standard<="+std::to_string(privacy_standard)+" and interval<="+std::to_string(interval), dev_info_from_db)){return dev_info_from_db;}
+  else return dev_info_from_db;
+}
+
+
 bool DeviceManageFuncs::update_Dinfo_by_d_id(int d_id, std::string set_attr){
   return d_dao->update(set_attr, "id = " + std::to_string(d_id));
 }
@@ -276,6 +298,21 @@ std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_v_id(int v_id)
   else return ser_info_from_db;
 }
 
+std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_s_id(int s_id)
+{
+  std::vector<ServiceInfo> ser_info_from_db;
+  if (s_dao->fetch("id="+std::to_string(s_id), ser_info_from_db)){return ser_info_from_db;}
+  else return ser_info_from_db;
+}
+
+std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_service_name(std::string service_name)
+{
+  std::vector<ServiceInfo> ser_info_from_db;
+  if (s_dao->fetch("v_id='"+service_name+"'", ser_info_from_db)){return ser_info_from_db;}
+  else return ser_info_from_db;
+}
+
+
 std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_for_matching(DATATYPE data_type, int privacy_standard, int interval)
 {
   std::vector<ServiceInfo> ser_info_from_db;
@@ -323,13 +360,22 @@ RelationshipManageFuncs::RelationshipManageFuncs(std::string filename)
 
 bool RelationshipManageFuncs::register_Relation(
     int d_id,
+    std::string device_name,
     int s_id,
+    std::string service_name,
     ANONYMITYMETHOD anonymity_method,
     int privacy_standard,
     int interval,
     std::string location)
 {
-  if(r_dao->put(d_id, s_id, anonymity_method, privacy_standard, interval, location))return true;
+  if(r_dao->put(d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location))return true;
+  else return false;
+}
+
+bool RelationshipManageFuncs::register_Relation(
+    std::vector<Relationship> new_relationships)
+{
+  if(r_dao->put_all(new_relationships))return true;
   else return false;
 }
 

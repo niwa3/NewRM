@@ -121,7 +121,9 @@ class Relationship{
     Relationship(){
       this->r_id = 0;
       this->d_id = 0;
+      this->device_name = {0};
       this->s_id = 0;
+      this->service_name = {0};
       this->anonymity_method = ANONYMITYMETHOD::NONE;
       this->privacy_standard = 0;
       this->interval = 0;
@@ -130,7 +132,9 @@ class Relationship{
     ~Relationship(){};
     int r_id;
     int d_id;
+    std::string device_name;
     int s_id;
+    std::string service_name;
     ANONYMITYMETHOD anonymity_method;
     int privacy_standard;
     int interval;
@@ -260,7 +264,7 @@ class RelationshipDao: public DataBase{
   public:
     RelationshipDao(std::string dbname, std::string user, std::string password);
     ~RelationshipDao(){};
-    bool put(int d_id, int s_id, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
+    bool put(int d_id, std::string device_name, int s_id, std::string service_name, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
     bool put_all(std::vector<Relationship> relationship);
     bool fetch(std::string where, Relationship &relationship_from_db);
     bool fetch(std::string where, std::vector<Relationship> &relationships_from_db);

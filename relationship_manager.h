@@ -2,6 +2,7 @@
 #define __INCLUDED_RM_FUNC_H__
 
 #include "manage.h"
+#include "relation_creater.h"
 
 /* リレーションシップマネージャ内の関数を定義するファイル
  * CustomerとVendorに分けてそれぞれの関数を定義する．
