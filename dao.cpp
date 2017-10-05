@@ -606,7 +606,9 @@ RelationshipDao::RelationshipDao(
 
 bool RelationshipDao::put(
     int d_id,
+    std::string device_name,
     int s_id,
+    std::string service_name,
     ANONYMITYMETHOD anonymity_method,
     int privacy_standard,
     int interval,
@@ -616,9 +618,11 @@ bool RelationshipDao::put(
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_RELATIONSHIP;
     INSERT_RELATIONSHIP = "INSERT INTO relationship"
-      "(d_id, s_id, anonymity_method, privacy_standard, interval, location)"
+      "(d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location)"
       " VALUES (" + std::to_string(d_id) +
+      "," + _T->quote(device_name) +
       "," + std::to_string(s_id) +
+      "," + _T->quote(service_name) +
       "," + std::to_string(static_cast<int>(anonymity_method)) +
       "," + std::to_string(privacy_standard) +
       "," + std::to_string(interval) +
@@ -642,18 +646,20 @@ bool RelationshipDao::put_all(
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_RELATIONSHIP;
     INSERT_RELATIONSHIP = "INSERT INTO relationship"
-      "(d_id, s_id, anonymity_method, privacy_standard, interval, location)"
+      "(d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location)"
       " VALUES ";
     for(std::vector<Relationship>::iterator r_itr=relationship.begin(); r_itr!=relationship.end(); r_itr++){
       INSERT_RELATIONSHIP += 
         "(" + std::to_string(r_itr->d_id) +
+      "," + _T->quote(r_itr->device_name) +
         "," + std::to_string(r_itr->s_id) +
+      "," + _T->quote(r_itr->service_name) +
         "," + std::to_string(static_cast<int>(r_itr->anonymity_method)) +
         "," + std::to_string(r_itr->privacy_standard) +
         "," + std::to_string(r_itr->interval) +
         "," + _T->quote(r_itr->location) +
         ")";
-      if(r_itr!=relationship.end()) INSERT_RELATIONSHIP +=", ";
+      if(r_itr!=(relationship.end()-1)) INSERT_RELATIONSHIP +=", ";
     }
     INSERT_RELATIONSHIP += ";";
           _T.get()->exec(INSERT_RELATIONSHIP);
@@ -673,7 +679,7 @@ bool RelationshipDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_RELATIONSHIP;
-    SELECT_RELATIONSHIP = "SELECT id, d_id, s_id, anonymity_method, privacy_standard, interval, location FROM relationship WHERE "
+    SELECT_RELATIONSHIP = "SELECT id, d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location FROM relationship WHERE "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_RELATIONSHIP);
@@ -684,7 +690,9 @@ bool RelationshipDao::fetch(
     pqxx::result::iterator itr_result_info;
     itr_result_info = result_from_db.begin();
     relationship_from_db.d_id = itr_result_info["d_id"].as<int>();
+    relationship_from_db.device_name = itr_result_info["device_name"].as<std::string>();
     relationship_from_db.s_id = itr_result_info["s_id"].as<int>();
+    relationship_from_db.service_name = itr_result_info["service_name"].as<std::string>();
     relationship_from_db.r_id = itr_result_info["id"].as<int>();
     relationship_from_db.anonymity_method = static_cast<ANONYMITYMETHOD>(itr_result_info["anonymity_method"].as<int>());
     relationship_from_db.privacy_standard = itr_result_info["privacy_standard"].as<int>();
@@ -705,7 +713,7 @@ bool RelationshipDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_RELATIONSHIP;
-    SELECT_RELATIONSHIP = "SELECT id, d_id, s_id, anonymity_method, privacy_standard, interval, location FROM relationship WHERE "
+    SELECT_RELATIONSHIP = "SELECT id, d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location FROM relationship WHERE "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_RELATIONSHIP);
@@ -716,7 +724,9 @@ bool RelationshipDao::fetch(
     for(pqxx::result::iterator itr_result_info=result_from_db.begin(); itr_result_info!=result_from_db.end(); itr_result_info++){
       Relationship relationship_from_db = Relationship();
       relationship_from_db.d_id = itr_result_info["d_id"].as<int>();
+      relationship_from_db.device_name = itr_result_info["device_name"].as<std::string>();
       relationship_from_db.s_id = itr_result_info["s_id"].as<int>();
+      relationship_from_db.service_name = itr_result_info["service_name"].as<std::string>();
       relationship_from_db.r_id = itr_result_info["id"].as<int>();
       relationship_from_db.anonymity_method = static_cast<ANONYMITYMETHOD>(itr_result_info["anonymity_method"].as<int>());
       relationship_from_db.privacy_standard = itr_result_info["privacy_standard"].as<int>();

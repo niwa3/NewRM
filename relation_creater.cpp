@@ -15,7 +15,5 @@ std::vector<Relationship> RelationCreater::create_relationship_from_device(Devic
     tmp_relationship.location = device_info.location;
     new_relationships.push_back(tmp_relationship);
   }
-  //now
-  std::vector<Relationship> r;
-  return r;
+  return new_relationships;
 }
