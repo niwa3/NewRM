@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response api_version="20150630">
+    <total_hit_count>377</total_hit_count>
+    <hit_per_page>10</hit_per_page>
+    <page_offset>1</page_offset>
+    <rest order="0">
+        <id>e995380</id>
+        <update_date>2017-10-02 11:53:39</update_date>
+        <name>日高屋 青砥店</name>
+        <name_kana>ヒダカヤ アオトテン</name_kana>
+        <latitude>35.742383</latitude>
+        <longitude>139.858689</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995380/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995380/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/14vcr26s0000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995380&amp;q=6</qrcode>
+        </image_url>
+        <address>〒125-0062 東京都葛飾区青戸3-37-2</address>
+        <tel>03-5680-4884</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime>月～木・日 10:30～翌2:00(L.O.1:30)&lt;BR&gt;金・土・祝前日 10:30～翌4:00</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>京成本線</line>
+            <station>青砥駅</station>
+            <station_exit></station_exit>
+            <walk>1</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF13</prefcode>
+            <prefname>東京都</prefname>
+            <areacode_s>AREAS2246</areacode_s>
+            <areaname_s>亀有・青砥</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="1">
+        <id>e995738</id>
+        <update_date>2017-10-02 11:54:30</update_date>
+        <name>日高屋 平井南口店</name>
+        <name_kana>ヒダカヤ ヒライミナミグチテン</name_kana>
+        <latitude>35.702806</latitude>
+        <longitude>139.846606</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995738/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995738/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/jdtcrbx00000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995738&amp;q=6</qrcode>
+        </image_url>
+        <address>〒132-0035 東京都江戸川区平井3-30-6</address>
+        <tel>03-5836-6460</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime>月～日 10:00～翌3:00(L.O.2:30)</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>ＪＲ総武線</line>
+            <station>平井駅</station>
+            <station_exit>南口</station_exit>
+            <walk>1</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF13</prefcode>
+            <prefname>東京都</prefname>
+            <areacode_s>AREAS2232</areacode_s>
+            <areaname_s>新小岩</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="2">
+        <id>e995557</id>
+        <update_date>2017-10-02 11:54:59</update_date>
+        <name>日高屋 秋津店</name>
+        <name_kana>ヒダカヤ アキツテン</name_kana>
+        <latitude>35.774750</latitude>
+        <longitude>139.499003</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995557/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995557/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/nmx4acer0000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995557&amp;q=6</qrcode>
+        </image_url>
+        <address>〒189-0001 東京都東村山市秋津町5-8-1</address>
+        <tel>042-390-4332</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime>月～土 10:00～翌1:30&lt;BR&gt;日・祝日 10:00～24:45(L.O.24:30)</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>西武池袋線</line>
+            <station>秋津駅</station>
+            <station_exit>南口</station_exit>
+            <walk>1</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF13</prefcode>
+            <prefname>東京都</prefname>
+            <areacode_s>AREAS2284</areacode_s>
+            <areaname_s>東村山</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="3">
+        <id>e995505</id>
+        <update_date>2017-10-02 11:54:29</update_date>
+        <name>日高屋 経堂農大通店</name>
+        <name_kana>ヒダカヤ キョウドウノウダイドオリテン</name_kana>
+        <latitude>35.646861</latitude>
+        <longitude>139.639989</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995505/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995505/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/ez9se60x0000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995505&amp;q=6</qrcode>
+        </image_url>
+        <address>〒156-0052 東京都世田谷区経堂1-21-21 ショップ経堂103</address>
+        <tel>03-5426-2752</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime>月～土 10:30～翌2:30&lt;BR&gt;日・祝日 10:30～翌1:30</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>小田急小田原線</line>
+            <station>経堂駅</station>
+            <station_exit>南口</station_exit>
+            <walk>4</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF13</prefcode>
+            <prefname>東京都</prefname>
+            <areacode_s>AREAS2215</areacode_s>
+            <areaname_s>豪徳寺・経堂</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="4">
+        <id>e995319</id>
+        <update_date>2017-10-02 11:34:57</update_date>
+        <name>日高屋 川越宮元町店</name>
+        <name_kana>ヒダカヤ カワゴエミヤモトチョウテン</name_kana>
+        <latitude>35.928739</latitude>
+        <longitude>139.491792</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995319/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995319/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/grvnt21w0000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995319&amp;q=6</qrcode>
+        </image_url>
+        <address>〒350-0838 埼玉県川越市宮元町65-3</address>
+        <tel>049-227-0290</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime> 10:00～翌2:30</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>西武新宿線</line>
+            <station>本川越駅</station>
+            <station_exit></station_exit>
+            <walk>30</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF11</prefcode>
+            <prefname>埼玉県</prefname>
+            <areacode_s>AREAS2434</areacode_s>
+            <areaname_s>川越</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="5">
+        <id>gf5x408</id>
+        <update_date>2017-10-02 12:07:24</update_date>
+        <name>日高屋 アクロスモール新鎌ヶ谷店</name>
+        <name_kana>ヒダカヤ アクロスモールシンカマガヤテン</name_kana>
+        <latitude>35.777664</latitude>
+        <longitude>140.004511</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/hw4zk6m10000/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/gf5x408/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/hw4zk6m10000/t_0n5c.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=gf5x408&amp;q=6</qrcode>
+        </image_url>
+        <address>〒273-0107 千葉県鎌ケ谷市新鎌ケ谷2-12-1</address>
+        <tel>047-446-1878</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime> 10:00～翌2:00</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>新京成線</line>
+            <station>新鎌ヶ谷駅</station>
+            <station_exit></station_exit>
+            <walk>4</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF12</prefcode>
+            <prefname>千葉県</prefname>
+            <areacode_s>AREAS2552</areacode_s>
+            <areaname_s>鎌ヶ谷</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="6">
+        <id>e995749</id>
+        <update_date>2017-10-02 11:52:43</update_date>
+        <name>日高屋 新所沢東口店</name>
+        <name_kana>ヒダカヤ シントコロザワヒガシグチテン</name_kana>
+        <latitude>35.803897</latitude>
+        <longitude>139.459214</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995749/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995749/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/mr9fwkme0000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995749&amp;q=6</qrcode>
+        </image_url>
+        <address>〒359-0044 埼玉県所沢市松葉町1-1</address>
+        <tel>04-2991-1777</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime>月～日 10:30～翌2:00(L.O.1:30)</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>西武新宿線</line>
+            <station>新所沢駅</station>
+            <station_exit>東口</station_exit>
+            <walk>1</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF11</prefcode>
+            <prefname>埼玉県</prefname>
+            <areacode_s>AREAS2432</areacode_s>
+            <areaname_s>所沢</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="7">
+        <id>e995543</id>
+        <update_date>2017-10-02 11:54:09</update_date>
+        <name>日高屋 中村橋店</name>
+        <name_kana>ヒダカヤ ナカムラバシテン</name_kana>
+        <latitude>35.733353</latitude>
+        <longitude>139.641575</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995543/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995543/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/1njcgdt10000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995543&amp;q=6</qrcode>
+        </image_url>
+        <address>〒176-0023 東京都練馬区中村北3-23-5 NGビル1F</address>
+        <tel>03-3990-8601</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime>月～日 10:00～翌2:00(L.O.1:30)</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>西武池袋線</line>
+            <station>中村橋駅</station>
+            <station_exit></station_exit>
+            <walk>1</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF13</prefcode>
+            <prefname>東京都</prefname>
+            <areacode_s>AREAS2222</areacode_s>
+            <areaname_s>練馬</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="8">
+        <id>e995758</id>
+        <update_date>2017-10-02 11:55:21</update_date>
+        <name>日高屋 大宮三橋2丁目店</name>
+        <name_kana>ヒダカヤ オオミヤサンバシニチョウメテン</name_kana>
+        <latitude>35.898594</latitude>
+        <longitude>139.603194</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/e995758/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995758/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/bgwycm7x0000/t_003q.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995758&amp;q=6</qrcode>
+        </image_url>
+        <address>〒330-0856 埼玉県さいたま市大宮区三橋2-340</address>
+        <tel>048-650-2072</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime>月～木・日・祝日 10:30～翌2:00&lt;BR&gt;金・土・祝前日 10:30～翌3:00</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line></line>
+            <station></station>
+            <station_exit></station_exit>
+            <walk></walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF11</prefcode>
+            <prefname>埼玉県</prefname>
+            <areacode_s>AREAS2402</areacode_s>
+            <areaname_s>大宮西口</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+    <rest order="9">
+        <id>e995872</id>
+        <update_date>2017-10-02 12:06:34</update_date>
+        <name>日高屋 稲毛海岸南口店</name>
+        <name_kana>ヒダカヤ イナゲカイガンミナミグチテン</name_kana>
+        <latitude>35.625783</latitude>
+        <longitude>140.077867</longitude>
+        <category>熱烈中華食堂</category>
+        <url>https://r.gnavi.co.jp/jghage840000/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url>
+        <url_mobile>http://mobile.gnavi.co.jp/shop/e995872/?ak=rASsDergtV8S69Tk9X2brhL%2F1gtvxrMnO8baWO08X7E%3D</url_mobile>
+        <coupon_url>
+            <pc></pc>
+            <mobile></mobile>
+        </coupon_url>
+        <image_url>
+            <shop_image1>https://uds.gnst.jp/rest/img/jghage840000/t_0000.jpg</shop_image1>
+            <shop_image2></shop_image2>
+            <qrcode>https://c-r.gnst.jp/tool/qr/?id=e995872&amp;q=6</qrcode>
+        </image_url>
+        <address>〒261-0004 千葉県千葉市美浜区高洲3-23-2</address>
+        <tel>043-279-7626</tel>
+        <tel_sub></tel_sub>
+        <fax></fax>
+        <opentime> 11:00～翌2:00</opentime>
+        <holiday>年中無休</holiday>
+        <access>
+            <line>ＪＲ京葉線</line>
+            <station>稲毛海岸駅</station>
+            <station_exit>南口</station_exit>
+            <walk>1</walk>
+            <note></note>
+        </access>
+        <parking_lots></parking_lots>
+        <pr>
+            <pr_short>本物の味、納得のお値段、そして充実したメニュー</pr_short>
+            <pr_long>当店は、国民食といわれるラーメンを中心に、栄養価の高い炒め物などの定食類を、全店均一の高い品質で、しかも低価格で提供しています。&lt;BR&gt;そして、常にお客様のニーズに対応したメニュー展開で、駅前立地を活かしたアルコール類・おつまみなども充実させています。</pr_long>
+        </pr>
+        <code>
+            <areacode>AREA110</areacode>
+            <areaname>関東</areaname>
+            <prefcode>PREF12</prefcode>
+            <prefname>千葉県</prefname>
+            <areacode_s>AREAS2508</areacode_s>
+            <areaname_s>海浜幕張</areaname_s>
+            <category_code_l order="0">RSFST08000</category_code_l>
+            <category_name_l order="0">ラーメン・麺料理</category_name_l>
+            <category_code_s order="0">RSFST08011</category_code_s>
+            <category_name_s order="0">ラーメン・麺料理 その他</category_name_s>
+            <category_code_l order="1">RSFST14000</category_code_l>
+            <category_name_l order="1">中華</category_name_l>
+            <category_code_s order="1">RSFST14008</category_code_s>
+            <category_name_s order="1">餃子</category_name_s>
+        </code>
+        <budget>700</budget>
+        <party></party>
+        <lunch>600</lunch>
+        <credit_card></credit_card>
+        <e_money></e_money>
+        <flags>
+            <mobile_site>1</mobile_site>
+            <mobile_coupon>0</mobile_coupon>
+            <pc_coupon>0</pc_coupon>
+        </flags>
+    </rest>
+</response>

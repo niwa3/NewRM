@@ -14,8 +14,8 @@ class CustomerFunc{
     CustomerFunc(){};
     ~CustomerFunc(){};
     bool reg_new_device(int c_id, std::string device_name, int default_pricacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
-    bool show_device();
-    bool del_device();
+    std::vector<DeviceInfo> show_device(int c_id);
+    bool del_device(int d_id);
     bool show_relationship();
     bool mod_relationship();
     bool del_relationship();
@@ -25,8 +25,8 @@ class VendorFunc{
   public:
     VendorFunc(){};
     ~VendorFunc(){};
-    bool reg_service();
-    bool show_service();
+    bool reg_new_service(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
+    std::vector<ServiceInfo> show_service(int v_id);
     bool del_service();
     bool show_relationship();
     bool del_relationship();

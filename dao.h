@@ -167,6 +167,7 @@ class LoginInfoDao: public DataBase{
     bool put(std::string login, std::string hashed_pass, std::string salt, USERTYPE user_type );
     bool fetch(std::string where, LoginInfo &login_info_from_db);
     bool update(std::string set_attr, std::string where);
+    bool del(std::string where);
 };
 
 /*
@@ -188,6 +189,7 @@ class CustomerInfoDao: public DataBase{
     bool fetch(std::string where, CustomerInfo &customer_info_from_db);
     bool fetch(std::string where, std::vector<CustomerInfo> &customers_info_from_db);
     bool update(std::string set_attr, std::string where);
+    bool del(std::string where);
 };
 
 /*
@@ -210,6 +212,7 @@ class DeviceInfoDao: public DataBase{
     bool fetch(std::string where, DeviceInfo &device_info_from_db);
     bool fetch(std::string where, std::vector<DeviceInfo> &devices_info_from_db);
     bool update(std::string set_attr, std::string where);
+    bool del(std::string where);
 };
 
 /*
@@ -229,6 +232,7 @@ class VenderInfoDao: public DataBase{
     bool fetch(std::string where, VenderInfo &vender_info_from_db);
     bool fetch(std::string where, std::vector<VenderInfo> &venders_info_from_db);
     bool update(std::string set_attr, std::string where);
+    bool del(std::string where);
 };
 
 /*
@@ -248,6 +252,7 @@ class ServiceInfoDao: public DataBase{
     bool fetch(std::string where, ServiceInfo &service_info_from_db);
     bool fetch(std::string where, std::vector<ServiceInfo> &services_info_from_db);
     bool update(std::string set_attr, std::string where);
+    bool del(std::string where);
 };
 
 /*
@@ -269,5 +274,6 @@ class RelationshipDao: public DataBase{
     bool fetch(std::string where, Relationship &relationship_from_db);
     bool fetch(std::string where, std::vector<Relationship> &relationships_from_db);
     bool update(std::string set_attr, std::string where);
+    bool del(std::string where);
 };
 #endif

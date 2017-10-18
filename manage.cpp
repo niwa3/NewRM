@@ -29,6 +29,7 @@ LoginManageFuncs::LoginManageFuncs(std::string filename)
   l_dao.reset(new LoginInfoDao(dbname,user,password));
 }
 
+
 bool LoginManageFuncs::register_Linfo(
     std::string login,
     std::string password,
@@ -42,12 +43,14 @@ bool LoginManageFuncs::register_Linfo(
   else return false;
 }
 
+
 LoginInfo LoginManageFuncs::fetch_Linfo_by_login(std::string login)
 {
   LoginInfo login_info_from_db = LoginInfo();
   if (l_dao->fetch("login='"+login+"'", login_info_from_db)){return login_info_from_db;}
   else return login_info_from_db;
 }
+
 
 LoginInfo LoginManageFuncs::fetch_Linfo_by_l_id(int l_id)
 {
@@ -56,8 +59,14 @@ LoginInfo LoginManageFuncs::fetch_Linfo_by_l_id(int l_id)
   else return login_info_from_db;
 }
 
+
 bool LoginManageFuncs::update_Linfo_by_l_id(int l_id, std::string set_attr){
-  return l_dao->update(set_attr, "l_id = "+l_id);
+  return l_dao->update(set_attr, "id = "+l_id);
+}
+
+
+bool LoginManageFuncs::delete_Linfo_by_l_id(int l_id){
+  return l_dao->del("id = "+std::to_string(l_id));
 }
 //=======================================
 
@@ -116,6 +125,9 @@ bool CustomerManageFuncs::update_Cinfo_by_c_id(int c_id, std::string set_attr){
   return c_dao->update(set_attr, "id = " + std::to_string(c_id));
 }
 
+bool CustomerManageFuncs::delete_Cinfo_by_c_id(int c_id){
+  return c_dao->del("id = "+std::to_string(c_id));
+}
 //=========================================
 
 //============DeviceManageFuncs============
@@ -169,16 +181,16 @@ std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_c_id(int c_id)
   else return dev_info_from_db;
 }
 
-std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_d_id(int d_id)
+DeviceInfo DeviceManageFuncs::fetch_Dinfo_by_d_id(int d_id)
 {
-  std::vector<DeviceInfo> dev_info_from_db;
+  DeviceInfo dev_info_from_db;
   if (d_dao->fetch("id="+std::to_string(d_id), dev_info_from_db)){return dev_info_from_db;}
   else return dev_info_from_db;
 }
 
-std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_device_name(std::string device_name)
+DeviceInfo DeviceManageFuncs::fetch_Dinfo_by_device_name(std::string device_name)
 {
-  std::vector<DeviceInfo> dev_info_from_db;
+  DeviceInfo dev_info_from_db;
   if (d_dao->fetch("device_name='"+device_name+"'", dev_info_from_db)){return dev_info_from_db;}
   else return dev_info_from_db;
 }
@@ -186,7 +198,7 @@ std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_by_device_name(std::strin
 std::vector<DeviceInfo> DeviceManageFuncs::fetch_Dinfo_for_matching(DATATYPE data_type, int privacy_standard, int interval)
 {
   std::vector<DeviceInfo> dev_info_from_db;
-  if (d_dao->fetch("data_type="+std::to_string((int)data_type)+" and required_privacy_standard<="+std::to_string(privacy_standard)+" and interval<="+std::to_string(interval), dev_info_from_db)){return dev_info_from_db;}
+  if (d_dao->fetch("data_type="+std::to_string((int)data_type)+" and default_privacy_standard<="+std::to_string(privacy_standard)+" and interval<="+std::to_string(interval), dev_info_from_db)){return dev_info_from_db;}
   else return dev_info_from_db;
 }
 
@@ -195,6 +207,9 @@ bool DeviceManageFuncs::update_Dinfo_by_d_id(int d_id, std::string set_attr){
   return d_dao->update(set_attr, "id = " + std::to_string(d_id));
 }
 
+bool DeviceManageFuncs::delete_Dinfo_by_d_id(int d_id){
+  return d_dao->del("id = "+std::to_string(d_id));
+}
 //=========================================
 
 
@@ -247,6 +262,10 @@ std::vector<VenderInfo> VenderManageFuncs::fetch_Vinfo_by_l_id(int l_id)
 bool VenderManageFuncs::update_Vinfo_by_v_id(int v_id, std::string set_attr){
   return v_dao->update(set_attr, "id = " + std::to_string(v_id));
 }
+
+bool VenderManageFuncs::delete_Vinfo_by_v_id(int v_id){
+  return v_dao->del("id = "+std::to_string(v_id));
+}
 //=========================================
 
 //============ServiceManageFuncs============
@@ -298,17 +317,17 @@ std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_v_id(int v_id)
   else return ser_info_from_db;
 }
 
-std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_s_id(int s_id)
+ServiceInfo ServiceManageFuncs::fetch_Sinfo_by_s_id(int s_id)
 {
-  std::vector<ServiceInfo> ser_info_from_db;
+  ServiceInfo ser_info_from_db;
   if (s_dao->fetch("id="+std::to_string(s_id), ser_info_from_db)){return ser_info_from_db;}
   else return ser_info_from_db;
 }
 
-std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_service_name(std::string service_name)
+ServiceInfo ServiceManageFuncs::fetch_Sinfo_by_service_name(std::string service_name)
 {
-  std::vector<ServiceInfo> ser_info_from_db;
-  if (s_dao->fetch("v_id='"+service_name+"'", ser_info_from_db)){return ser_info_from_db;}
+  ServiceInfo ser_info_from_db;
+  if (s_dao->fetch("service_name='"+service_name+"'", ser_info_from_db)){return ser_info_from_db;}
   else return ser_info_from_db;
 }
 
@@ -324,6 +343,9 @@ bool ServiceManageFuncs::update_Sinfo_by_s_id(int s_id, std::string set_attr){
   return s_dao->update(set_attr, "id = " + std::to_string(s_id));
 }
 
+bool ServiceManageFuncs::delete_Sinfo_by_s_id(int s_id){
+  return s_dao->del("id = "+std::to_string(s_id));
+}
 //=========================================
 
 
@@ -395,4 +417,8 @@ std::vector<Relationship> RelationshipManageFuncs::fetch_Relation_by_s_id(int s_
 
 bool RelationshipManageFuncs::update_Relation_by_r_id(int r_id, std::string set_attr){
   return r_dao->update(set_attr, "id = " + std::to_string(r_id));
+}
+
+bool RelationshipManageFuncs::delete_Relation_by_r_id(int r_id){
+  return r_dao->del("id = "+std::to_string(r_id));
 }
