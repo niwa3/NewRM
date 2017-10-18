@@ -22,7 +22,7 @@ CREATE TABLE Vender_Info(id serial primary key not null, created_at timestamp no
 create trigger update_tri before update on Vender_Info for each row execute procedure set_update_time();
 
 //create device_info table
-CREATE TABLE Device_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, c_id integer not null unique references Custmer_Info(id), device_name varchar(255) unique not null, default_privacy_standard integer not null, device_type integer not null, data_type integer not null, interval integer not null, location varchar(255) not null);
+CREATE TABLE Device_Info(id serial primary key not null, created_at timestamp not null default current_timestamp, updated_at timestamp not null default current_timestamp, c_id integer not null references Custmer_Info(id), device_name varchar(255) unique not null, default_privacy_standard integer not null, device_type integer not null, data_type integer not null, interval integer not null, location varchar(255) not null);
 
 create trigger update_tri before update on Device_Info for each row execute procedure set_update_time();
 

@@ -20,6 +20,7 @@ DataBase::DataBase(
   }
 }
 
+
 DataBase::~DataBase(){ 
   if(_conn){
     if(_conn.get()->is_open()) _conn.get()->disconnect();
@@ -28,15 +29,15 @@ DataBase::~DataBase(){
 //====================================
 
 
-
 //===========class LoginInfoDao=======
 LoginInfoDao::LoginInfoDao(
     std::string dbname, 
-    std::string user, 
+    std::string user,
     std::string password
     )
   : DataBase(dbname, user, password){
 }
+
 
 bool LoginInfoDao::put(
     std::string login,
@@ -54,6 +55,7 @@ bool LoginInfoDao::put(
       + _T.get()->quote(salt) + ", "
       + std::to_string((int)user_type) + ");";
 
+    pqxx::result result_from_db;
     _T.get()->exec(INSERT_LOGIN_INFO);
     _T.get()->commit();
     return true;
@@ -63,6 +65,7 @@ bool LoginInfoDao::put(
     return false;
   }
 }
+
 
 bool LoginInfoDao::fetch(
     std::string where, 
@@ -95,8 +98,34 @@ bool LoginInfoDao::fetch(
   }
 }
 
+
 bool LoginInfoDao::update(std::string set_attr, std::string where)
-{ try{ _T.reset(new pqxx::work(*_conn.get())); std::string UPDATE; UPDATE = "UPDATE login_info SET " + set_attr + " WHERE " + where + ";"; _T.get()->exec(UPDATE); _T.get()->commit();
+{
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string UPDATE;
+    UPDATE = "UPDATE login_info SET " + set_attr + " WHERE " + where + ";";
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(UPDATE);
+    _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+bool LoginInfoDao::del(std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string DELETE_LOGIN_INFO;
+    DELETE_LOGIN_INFO = "DELETE FROM login_info WHERE " + where;
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(DELETE_LOGIN_INFO);
+    _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
     return true;
   }
   catch(const pqxx::pqxx_exception &e){
@@ -107,7 +136,6 @@ bool LoginInfoDao::update(std::string set_attr, std::string where)
 //====================================
 
 
-
 //========class CustomerInfoDao=======
 CustomerInfoDao::CustomerInfoDao(
     std::string dbname,
@@ -115,6 +143,7 @@ CustomerInfoDao::CustomerInfoDao(
     std::string password)
 : DataBase(dbname, user, password){
 }
+
 
 bool CustomerInfoDao::put(
     int l_id,
@@ -147,6 +176,7 @@ bool CustomerInfoDao::put(
   }
 }
 
+
 bool CustomerInfoDao::fetch(
     std::string where,
     CustomerInfo &customer_info_from_db){
@@ -178,6 +208,7 @@ bool CustomerInfoDao::fetch(
     return false;
   }
 };
+
 
 bool CustomerInfoDao::fetch(
     std::string where,
@@ -221,8 +252,28 @@ bool CustomerInfoDao::update(
     _T.reset(new pqxx::work(*_conn.get()));
     std::string UPDATE;
     UPDATE = "UPDATE customer_info SET " + set_attr + " WHERE " + where + ";";
-    _T.get()->exec(UPDATE);
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(UPDATE);
     _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+
+bool CustomerInfoDao::del(std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string DELETE_CUSTOMER_INFO;
+    DELETE_CUSTOMER_INFO = "DELETE FROM customer_info WHERE " + where;
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(DELETE_CUSTOMER_INFO);
+    _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
     return true;
   }
   catch(const pqxx::pqxx_exception &e){
@@ -232,6 +283,7 @@ bool CustomerInfoDao::update(
 }
 //====================================
 
+
 //===========DeviceInfoDao============
 DeviceInfoDao::DeviceInfoDao(
     std::string dbname,
@@ -239,6 +291,7 @@ DeviceInfoDao::DeviceInfoDao(
     std::string password)
 : DataBase(dbname, user, password){
 }
+
 
 bool DeviceInfoDao::put(
     int c_id,
@@ -273,6 +326,7 @@ bool DeviceInfoDao::put(
   }
 }
 
+
 bool DeviceInfoDao::fetch(
     std::string where,
     DeviceInfo &device_info_from_db){
@@ -305,6 +359,7 @@ bool DeviceInfoDao::fetch(
     return false;
   }
 };
+
 
 bool DeviceInfoDao::fetch(
     std::string where,
@@ -349,8 +404,28 @@ bool DeviceInfoDao::update(
     _T.reset(new pqxx::work(*_conn.get()));
     std::string UPDATE;
     UPDATE = "UPDATE device_info SET " + set_attr + " WHERE " + where + ";";
-    _T.get()->exec(UPDATE);
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(UPDATE);
     _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+
+bool DeviceInfoDao::del(std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string DELETE_DEVICE_INFO;
+    DELETE_DEVICE_INFO = "DELETE FROM device_info WHERE " + where;
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(DELETE_DEVICE_INFO);
+    _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
     return true;
   }
   catch(const pqxx::pqxx_exception &e){
@@ -368,6 +443,7 @@ VenderInfoDao::VenderInfoDao(
     std::string password)
 : DataBase(dbname, user, password){
 }
+
 
 bool VenderInfoDao::put(
     int l_id,
@@ -394,6 +470,7 @@ bool VenderInfoDao::put(
     return false;
   }
 }
+
 
 bool VenderInfoDao::fetch(
     std::string where,
@@ -424,6 +501,7 @@ bool VenderInfoDao::fetch(
     return false;
   }
 };
+
 
 bool VenderInfoDao::fetch(
     std::string where,
@@ -465,8 +543,28 @@ bool VenderInfoDao::update(
     _T.reset(new pqxx::work(*_conn.get()));
     std::string UPDATE;
     UPDATE = "UPDATE vender_info SET " + set_attr + " WHERE " + where + ";";
-    _T.get()->exec(UPDATE);
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(UPDATE);
     _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+
+bool VenderInfoDao::del(std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string DELETE_VENDER_INFO;
+    DELETE_VENDER_INFO = "DELETE FROM vender_info WHERE " + where;
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(DELETE_VENDER_INFO);
+    _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
     return true;
   }
   catch(const pqxx::pqxx_exception &e){
@@ -484,6 +582,7 @@ ServiceInfoDao::ServiceInfoDao(
     std::string password)
 : DataBase(dbname, user, password){
 }
+
 
 bool ServiceInfoDao::put(
     int v_id,
@@ -513,6 +612,7 @@ bool ServiceInfoDao::put(
     return false;
   }
 }
+
 
 bool ServiceInfoDao::fetch(
     std::string where,
@@ -544,6 +644,7 @@ bool ServiceInfoDao::fetch(
     return false;
   }
 };
+
 
 bool ServiceInfoDao::fetch(
     std::string where,
@@ -578,6 +679,7 @@ bool ServiceInfoDao::fetch(
   }
 };
 
+
 bool ServiceInfoDao::update(
     std::string set_attr,
     std::string where){
@@ -585,8 +687,28 @@ bool ServiceInfoDao::update(
     _T.reset(new pqxx::work(*_conn.get()));
     std::string UPDATE;
     UPDATE = "UPDATE service_info SET " + set_attr + " WHERE " + where + ";";
-    _T.get()->exec(UPDATE);
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(UPDATE);
     _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+
+bool ServiceInfoDao::del(std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string DELETE_SERVICE_INFO;
+    DELETE_SERVICE_INFO = "DELETE FROM service_info WHERE " + where;
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(DELETE_SERVICE_INFO);
+    _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
     return true;
   }
   catch(const pqxx::pqxx_exception &e){
@@ -596,6 +718,7 @@ bool ServiceInfoDao::update(
 }
 //====================================
 
+
 //===========RelationshipDao============
 RelationshipDao::RelationshipDao(
     std::string dbname,
@@ -603,6 +726,7 @@ RelationshipDao::RelationshipDao(
     std::string password)
 : DataBase(dbname, user, password){
 }
+
 
 bool RelationshipDao::put(
     int d_id,
@@ -639,10 +763,12 @@ bool RelationshipDao::put(
   }
 }
 
+
 bool RelationshipDao::put_all(
     std::vector<Relationship> relationship
     ){
   try{
+    if(relationship.empty()) return false;
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_RELATIONSHIP;
     INSERT_RELATIONSHIP = "INSERT INTO relationship"
@@ -707,6 +833,7 @@ bool RelationshipDao::fetch(
   }
 };
 
+
 bool RelationshipDao::fetch(
     std::string where,
     std::vector<Relationship> &relationships_from_db){
@@ -751,8 +878,28 @@ bool RelationshipDao::update(
     _T.reset(new pqxx::work(*_conn.get()));
     std::string UPDATE;
     UPDATE = "UPDATE relationship SET " + set_attr + " WHERE " + where + ";";
-    _T.get()->exec(UPDATE);
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(UPDATE);
     _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
+    return true;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    return false;
+  }
+}
+
+
+bool RelationshipDao::del(std::string where){
+  try{
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string DELETE_RELATIONSHIP;
+    DELETE_RELATIONSHIP = "DELETE FROM relationship WHERE " + where;
+    pqxx::result result_from_db;
+    result_from_db = _T.get()->exec(DELETE_RELATIONSHIP);
+    _T.get()->commit();
+    if(result_from_db.affected_rows()==0) return false;
     return true;
   }
   catch(const pqxx::pqxx_exception &e){
@@ -761,4 +908,3 @@ bool RelationshipDao::update(
   }
 }
 //====================================
-
