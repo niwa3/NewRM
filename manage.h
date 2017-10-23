@@ -85,6 +85,8 @@ class RelationshipManageFuncs{
     std::vector<Relationship> fetch_Relation_by_s_id(int s_id);
     bool update_Relation_by_r_id(int r_id, std::string set_attr);
     bool delete_Relation_by_r_id(int r_id);
+    bool delete_Relation_by_d_id(int d_id);
+    bool delete_Relation_by_s_id(int s_id);
   private:
     std::unique_ptr<RelationshipDao> r_dao;
 };
