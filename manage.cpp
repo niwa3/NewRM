@@ -422,3 +422,11 @@ bool RelationshipManageFuncs::update_Relation_by_r_id(int r_id, std::string set_
 bool RelationshipManageFuncs::delete_Relation_by_r_id(int r_id){
   return r_dao->del("id = "+std::to_string(r_id));
 }
+
+bool RelationshipManageFuncs::delete_Relation_by_d_id(int d_id){
+  return r_dao->del("d_id = "+std::to_string(d_id));
+}
+
+bool RelationshipManageFuncs::delete_Relation_by_s_id(int s_id){
+  return r_dao->del("s_id = "+std::to_string(s_id));
+}

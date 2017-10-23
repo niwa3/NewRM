@@ -31,7 +31,7 @@ DataBase::~DataBase(){
 
 //===========class LoginInfoDao=======
 LoginInfoDao::LoginInfoDao(
-    std::string dbname, 
+    std::string dbname,
     std::string user,
     std::string password
     )
@@ -68,7 +68,7 @@ bool LoginInfoDao::put(
 
 
 bool LoginInfoDao::fetch(
-    std::string where, 
+    std::string where,
     LoginInfo &info_from_db)
 {
   try{

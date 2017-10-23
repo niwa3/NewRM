@@ -9,18 +9,24 @@ bool RelationshipManager::CustomerFunc::reg_new_device(
     DATATYPE data_type,
     int interval, std::string location)
 {
-
   DeviceManageFuncs dmf("cmdb.conf");
-  if(dmf.register_Dinfo(c_id, device_name, default_pricacy_standard, device_type, data_type, interval, location)){
+  if(dmf.register_Dinfo(c_id, device_name,
+                        default_pricacy_standard,
+                        device_type, data_type,
+                        interval,
+                        location))
+  {
     RelationshipManageFuncs rmf("db.conf");
     RelationCreater rc;
-    if(rmf.register_Relation(rc.create_relationship_from_device(dmf.fetch_Dinfo_by_device_name(device_name)))){
+    if(rmf.register_Relation(rc.create_relationship_from_device(
+            dmf.fetch_Dinfo_by_device_name(device_name)
+            )))
+    {
       return true;
     }
     else return false;
   }
   else return false;
-
 }
 
 
@@ -31,12 +37,21 @@ std::vector<DeviceInfo> RelationshipManager::CustomerFunc::show_device(int c_id)
 }
 
 
-//先にリレーションシップを消さないと外部参照制約によってエラー吐く
 bool RelationshipManager::CustomerFunc::del_device(int d_id){
   DeviceManageFuncs dmf("cmdb.conf");
   RelationshipManageFuncs rmf("cmdb.conf");
 
-  return dmf.delete_Dinfo_by_d_id(d_id);
+  if(rmf.delete_Relation_by_d_id(d_id))
+    return dmf.delete_Dinfo_by_d_id(d_id);
+  else
+    return false;
+}
+
+
+std::vector<Relationship> RelationshipManager::CustomerFunc::show_relationship_by_d_id(int d_id){
+  RelationshipManageFuncs rmf("cmdb.conf");
+  std::vector<Relationship> relationships = rmf.fetch_Relation_by_d_id(d_id);
+  return relationships;
 }
 //===========================================
 
@@ -70,4 +85,21 @@ std::vector<ServiceInfo> RelationshipManager::VendorFunc::show_service(int v_id)
   return services;
 }
 
+
+bool RelationshipManager::VendorFunc::del_service(int s_id){
+  ServiceManageFuncs smf("cmdb.conf");
+  RelationshipManageFuncs rmf("cmdb.conf");
+
+  if(rmf.delete_Relation_by_s_id(s_id))
+    return smf.delete_Sinfo_by_s_id(s_id);
+  else
+    return false;
+}
+
+
+std::vector<Relationship> RelationshipManager::VendorFunc::show_relationship_by_s_id(int s_id){
+  RelationshipManageFuncs rmf("cmdb.conf");
+  std::vector<Relationship> relationships = rmf.fetch_Relation_by_s_id(s_id);
+  return relationships;
+}
 //===========================================
