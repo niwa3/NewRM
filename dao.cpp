@@ -39,7 +39,7 @@ LoginInfoDao::LoginInfoDao(
 }
 
 
-bool LoginInfoDao::put(
+int LoginInfoDao::put(
     std::string login,
     std::string hashed_pass,
     std::string salt,
@@ -53,16 +53,17 @@ bool LoginInfoDao::put(
       + _T.get()->quote(login) + ","
       + _T.get()->quote(hashed_pass)+ ","
       + _T.get()->quote(salt) + ", "
-      + std::to_string((int)user_type) + ");";
+      + std::to_string((int)user_type) + ") returning id;";
 
     pqxx::result result_from_db;
-    _T.get()->exec(INSERT_LOGIN_INFO);
+    std::cout<<INSERT_LOGIN_INFO<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_LOGIN_INFO);
     _T.get()->commit();
-    return true;
+    return result_from_db.begin()["id"].as<int>();
   }
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
-    return false;
+    return -1;
   }
 }
 
@@ -74,7 +75,7 @@ bool LoginInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_LOGIN_INFO;
-    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt, user_type FROM login_info WHERE "
+    SELECT_LOGIN_INFO = "SELECT id, login, passwd, salt, user_type FROM login_info "
       + where + ";";
     pqxx::result login_info_from_db;
     login_info_from_db=_T.get()->exec(SELECT_LOGIN_INFO);
@@ -145,7 +146,7 @@ CustomerInfoDao::CustomerInfoDao(
 }
 
 
-bool CustomerInfoDao::put(
+int CustomerInfoDao::put(
     int l_id,
     std::string last_name,
     std::string first_name,
@@ -164,15 +165,17 @@ bool CustomerInfoDao::put(
       ", " + _T.get()->quote(birthday) +
       "," + _T.get()->quote(phone_num) +
       "," + _T.get()->quote(e_mail_addr) +
-      ");";
-    _T.get()->exec(INSERT_CUSTOMER_INFO);
+      ") returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_CUSTOMER_INFO<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_CUSTOMER_INFO);
     _T.get()->commit();
-    return true;
+    return result_from_db.begin()["id"].as<int>();
   }
 
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
-    return false;
+    return -1;
   }
 }
 
@@ -183,7 +186,7 @@ bool CustomerInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_CUSTOMER_INFO;
-    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info WHERE "
+    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_CUSTOMER_INFO);
@@ -216,7 +219,7 @@ bool CustomerInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_CUSTOMER_INFO;
-    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info WHERE "
+    SELECT_CUSTOMER_INFO = "SELECT id, l_id, last_name, first_name, birthday, phone_num, e_mail_addr FROM customer_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_CUSTOMER_INFO);
@@ -293,7 +296,7 @@ DeviceInfoDao::DeviceInfoDao(
 }
 
 
-bool DeviceInfoDao::put(
+int DeviceInfoDao::put(
     int c_id,
     std::string device_name,
     int default_privacy_standard,
@@ -314,15 +317,17 @@ bool DeviceInfoDao::put(
       "," + std::to_string(default_privacy_standard) +
       "," + std::to_string(interval) +
       "," + _T.get()->quote(location) +
-      ");";
-    _T.get()->exec(INSERT_DEVICE_INFO);
+      ") returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_DEVICE_INFO<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_DEVICE_INFO);
     _T.get()->commit();
-    return true;
+    return result_from_db.begin()["id"].as<int>();
   }
 
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
-    return false;
+    return -1;
   }
 }
 
@@ -333,7 +338,7 @@ bool DeviceInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_DEVICE_INFO;
-    SELECT_DEVICE_INFO = "SELECT id, c_id, device_name, device_type, data_type, default_privacy_standard, interval, location FROM device_info WHERE "
+    SELECT_DEVICE_INFO = "SELECT id, c_id, device_name, device_type, data_type, default_privacy_standard, interval, location FROM device_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_DEVICE_INFO);
@@ -367,7 +372,7 @@ bool DeviceInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_DEVICE_INFO;
-    SELECT_DEVICE_INFO = "SELECT id, c_id, device_name, device_type, data_type, default_privacy_standard, interval, location FROM device_info WHERE "
+    SELECT_DEVICE_INFO = "SELECT id, c_id, device_name, device_type, data_type, default_privacy_standard, interval, location FROM device_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_DEVICE_INFO);
@@ -445,7 +450,7 @@ VenderInfoDao::VenderInfoDao(
 }
 
 
-bool VenderInfoDao::put(
+int VenderInfoDao::put(
     int l_id,
     std::string name,
     std::string phone_num,
@@ -460,14 +465,16 @@ bool VenderInfoDao::put(
       "," + _T.get()->quote(name) +
       "," + _T.get()->quote(phone_num) +
       "," + _T.get()->quote(e_mail_addr) +
-      ");";
-    _T.get()->exec(INSERT_VENDER_INFO);
+      ") returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_VENDER_INFO<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_VENDER_INFO);
     _T.get()->commit();
-    return true;
+    return result_from_db.begin()["id"].as<int>();
   }
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
-    return false;
+    return -1;
   }
 }
 
@@ -478,7 +485,7 @@ bool VenderInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_VENDER_INFO;
-    SELECT_VENDER_INFO = "SELECT id, l_id, name, phone_num, e_mail_addr FROM vender_info WHERE "
+    SELECT_VENDER_INFO = "SELECT id, l_id, name, phone_num, e_mail_addr FROM vender_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_VENDER_INFO);
@@ -509,7 +516,7 @@ bool VenderInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_VENDER_INFO;
-    SELECT_VENDER_INFO = "SELECT id, l_id, name, phone_num, e_mail_addr FROM vender_info WHERE "
+    SELECT_VENDER_INFO = "SELECT id, l_id, name, phone_num, e_mail_addr FROM vender_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_VENDER_INFO);
@@ -584,7 +591,7 @@ ServiceInfoDao::ServiceInfoDao(
 }
 
 
-bool ServiceInfoDao::put(
+int ServiceInfoDao::put(
     int v_id,
     std::string service_name,
     int required_privacy_standard,
@@ -601,15 +608,17 @@ bool ServiceInfoDao::put(
       "," + std::to_string(static_cast<int>(data_type)) +
       "," + std::to_string(required_privacy_standard) +
       "," + std::to_string(interval) +
-      ");";
-    _T.get()->exec(INSERT_SERVICE_INFO);
+      ") returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_SERVICE_INFO<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_SERVICE_INFO);
     _T.get()->commit();
-    return true;
+    return result_from_db.begin()["id"].as<int>();
   }
 
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
-    return false;
+    return -1;
   }
 }
 
@@ -620,7 +629,7 @@ bool ServiceInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_SERVICE_INFO;
-    SELECT_SERVICE_INFO = "SELECT id, v_id, service_name, data_type, required_privacy_standard, interval FROM service_info WHERE "
+    SELECT_SERVICE_INFO = "SELECT id, v_id, service_name, data_type, required_privacy_standard, interval FROM service_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_SERVICE_INFO);
@@ -652,7 +661,7 @@ bool ServiceInfoDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_SERVICE_INFO;
-    SELECT_SERVICE_INFO = "SELECT id, v_id, service_name, data_type, required_privacy_standard, interval FROM service_info WHERE "
+    SELECT_SERVICE_INFO = "SELECT id, v_id, service_name, data_type, required_privacy_standard, interval FROM service_info "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_SERVICE_INFO);
@@ -728,7 +737,7 @@ RelationshipDao::RelationshipDao(
 }
 
 
-bool RelationshipDao::put(
+int RelationshipDao::put(
     int d_id,
     std::string device_name,
     int s_id,
@@ -751,24 +760,29 @@ bool RelationshipDao::put(
       "," + std::to_string(privacy_standard) +
       "," + std::to_string(interval) +
       "," + _T->quote(location) +
-      ");";
-    _T.get()->exec(INSERT_RELATIONSHIP);
+      ") returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_RELATIONSHIP<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_RELATIONSHIP);
     _T.get()->commit();
-    return true;
+    return result_from_db.begin()["id"].as<int>();
   }
 
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
-    return false;
+    return -1;
   }
 }
 
 
-bool RelationshipDao::put_all(
+std::vector<int> RelationshipDao::put_all(
     std::vector<Relationship> relationship
     ){
   try{
-    if(relationship.empty()) return false;
+    if(relationship.empty()){
+      std::vector<int> null_return;
+      return null_return;
+    }
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_RELATIONSHIP;
     INSERT_RELATIONSHIP = "INSERT INTO relationship"
@@ -787,14 +801,21 @@ bool RelationshipDao::put_all(
         ")";
       if(r_itr!=(relationship.end()-1)) INSERT_RELATIONSHIP +=", ";
     }
-    INSERT_RELATIONSHIP += ";";
-          _T.get()->exec(INSERT_RELATIONSHIP);
+    INSERT_RELATIONSHIP += " returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_RELATIONSHIP<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_RELATIONSHIP);
     _T.get()->commit();
-    return true;
+    std::vector<int> returned_id;
+    for(pqxx::result::iterator r_itr=result_from_db.begin(); r_itr!=result_from_db.end(); r_itr++){
+      returned_id.push_back(r_itr["id"].as<int>());
+    }
+    return returned_id;
   }
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
-    return false;
+    std::vector<int> returned_id;
+    return returned_id;
   }
 }
 
@@ -805,7 +826,7 @@ bool RelationshipDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_RELATIONSHIP;
-    SELECT_RELATIONSHIP = "SELECT id, d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location FROM relationship WHERE "
+    SELECT_RELATIONSHIP = "SELECT r.id, r.d_id, r.device_name, r.s_id, r.service_name, r.anonymity_method, r.privacy_standard, r.interval, r.location FROM relationship r "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_RELATIONSHIP);
@@ -840,7 +861,7 @@ bool RelationshipDao::fetch(
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string SELECT_RELATIONSHIP;
-    SELECT_RELATIONSHIP = "SELECT id, d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location FROM relationship WHERE "
+    SELECT_RELATIONSHIP = "SELECT r.id, r.d_id, r.device_name, r.s_id, r.service_name, r.anonymity_method, r.privacy_standard, r.interval, r.location FROM relationship r "
       + where + ";";
     pqxx::result result_from_db;
     result_from_db =_T.get()->exec(SELECT_RELATIONSHIP);
