@@ -164,7 +164,9 @@ class LoginInfoDao: public DataBase{
   public:
     LoginInfoDao(std::string dbname, std::string user, std::string password);
     ~LoginInfoDao(){};
-    bool put(std::string login, std::string hashed_pass, std::string salt, USERTYPE user_type );
+    //if put succeeded, it returns id that assigned automatically.
+    //if put did not succeed, it returns -1 as fail.
+    int put(std::string login, std::string hashed_pass, std::string salt, USERTYPE user_type );
     bool fetch(std::string where, LoginInfo &login_info_from_db);
     bool update(std::string set_attr, std::string where);
     bool del(std::string where);
@@ -185,7 +187,7 @@ class CustomerInfoDao: public DataBase{
   public:
     CustomerInfoDao(std::string dbname, std::string user, std::string password);
     ~CustomerInfoDao(){};
-    bool put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
+    int put(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
     bool fetch(std::string where, CustomerInfo &customer_info_from_db);
     bool fetch(std::string where, std::vector<CustomerInfo> &customers_info_from_db);
     bool update(std::string set_attr, std::string where);
@@ -208,7 +210,7 @@ class DeviceInfoDao: public DataBase{
   public:
     DeviceInfoDao(std::string dbname, std::string user, std::string password);
     ~DeviceInfoDao(){};
-    bool put(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
+    int put(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
     bool fetch(std::string where, DeviceInfo &device_info_from_db);
     bool fetch(std::string where, std::vector<DeviceInfo> &devices_info_from_db);
     bool update(std::string set_attr, std::string where);
@@ -228,7 +230,7 @@ class VenderInfoDao: public DataBase{
   public:
     VenderInfoDao(std::string dbname, std::string user, std::string password);
     ~VenderInfoDao(){};
-    bool put(int l_id, std::string name, std::string phone_num, std::string e_mail_addr);
+    int put(int l_id, std::string name, std::string phone_num, std::string e_mail_addr);
     bool fetch(std::string where, VenderInfo &vender_info_from_db);
     bool fetch(std::string where, std::vector<VenderInfo> &venders_info_from_db);
     bool update(std::string set_attr, std::string where);
@@ -248,7 +250,7 @@ class ServiceInfoDao: public DataBase{
   public:
     ServiceInfoDao(std::string dbname, std::string user, std::string password);
     ~ServiceInfoDao(){};
-    bool put(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
+    int put(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
     bool fetch(std::string where, ServiceInfo &service_info_from_db);
     bool fetch(std::string where, std::vector<ServiceInfo> &services_info_from_db);
     bool update(std::string set_attr, std::string where);
@@ -269,8 +271,8 @@ class RelationshipDao: public DataBase{
   public:
     RelationshipDao(std::string dbname, std::string user, std::string password);
     ~RelationshipDao(){};
-    bool put(int d_id, std::string device_name, int s_id, std::string service_name, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
-    bool put_all(std::vector<Relationship> relationship);
+    int put(int d_id, std::string device_name, int s_id, std::string service_name, ANONYMITYMETHOD anonymity_method, int privacy_standard, int interval, std::string location);
+    std::vector<int> put_all(std::vector<Relationship> relationship);
     bool fetch(std::string where, Relationship &relationship_from_db);
     bool fetch(std::string where, std::vector<Relationship> &relationships_from_db);
     bool update(std::string set_attr, std::string where);
