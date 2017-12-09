@@ -13,7 +13,7 @@
 #include <iomanip>
 #include <ctime>
 //#include "type.h"
-#include "sha256.h"
+#include "../utility/sha256.h"
 
 enum class USERTYPE { NONE, CUSTOMER, VENDER };
 enum class DEVICETYPE { NONE, SENSOR, ACTUATOR };
