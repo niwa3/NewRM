@@ -20,6 +20,7 @@ std::vector<Relationship> RelationCreater::create_relationship_from_device(Devic
   return new_relationships;
 }
 
+
 std::vector<Relationship> RelationCreater::create_relationship_from_service(ServiceInfo service_info){
   DeviceManageFuncs dmf("db.conf");
   std::vector<DeviceInfo> matched_devices = dmf.fetch_Dinfo_for_matching(service_info.data_type, service_info.required_privacy_standard, service_info.interval);
@@ -38,3 +39,7 @@ std::vector<Relationship> RelationCreater::create_relationship_from_service(Serv
   }
   return new_relationships;
 }
+
+
+//std::vector<Relationship> RelationCreater::update_relationship_from_device(DeviceInfo device_info){
+//}

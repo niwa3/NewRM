@@ -1,8 +1,8 @@
 #ifndef __INCLUDED_RM_FUNC_H__
 #define __INCLUDED_RM_FUNC_H__
 
-#include "manage.h"
-#include "relation_creater.h"
+#include "manage/manage.h"
+//#include "relation_creater.h"
 
 /* リレーションシップマネージャ内の関数を定義するファイル
  * CustomerとVenderに分けてそれぞれの関数を定義する．
@@ -17,10 +17,11 @@ class CustomerFunc{
     int create_customer(int l_id, std::string last_name, std::string first_name, std::string birthday, std::string phone_num, std::string e_mail_addr);
     bool reg_new_device(int c_id, std::string device_name, int default_pricacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
     std::vector<DeviceInfo> show_device(int c_id);
+    bool mod_device(DeviceInfo device);
     bool del_device(int d_id);
     std::vector<Relationship> show_relationship_by_d_id(int d_id);
     std::vector<Relationship> show_relationship_by_c_id(int c_id);
-    bool mod_relationship();
+    bool mod_relationship(Relationship modified_relationshp);
     bool del_relationship();
 };
 

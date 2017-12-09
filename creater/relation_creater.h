@@ -1,7 +1,7 @@
 #ifndef __INCLUDED_RELATION_CREATER_H__
 #define __INCLUDED_RELATION_CREATER_H__
 
-#include "manage.h"
+#include "manage/manage.h"
 #include <vector>
 
 class RelationCreater{

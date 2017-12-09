@@ -1,4 +1,4 @@
-#include "./define.h"
+#include "define/define.h"
 
 const int PriLvl::MAXLVL=3;
 const int PriLvl::MINLVL=0;
