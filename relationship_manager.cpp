@@ -146,6 +146,17 @@ bool RelationshipManager::CustomerFunc::mod_relationship(Relationship modified_r
       SET_ATTR
     );
 }
+
+
+bool RelationshipManager::CustomerFunc::del_relationship(std::vector<Relationship> vec_rs){
+  RelationshipManageFuncs rmf(CMDB_CONF);
+  std::vector<int> vec_id;
+  for(Relationship rs: vec_rs){
+    vec_id.push_back(rs.r_id);
+  }
+  return
+    rmf.delete_Relation_by_r_id(vec_id);
+}
 //===========================================
 
 
@@ -215,4 +226,16 @@ std::vector<Relationship> RelationshipManager::VenderFunc::show_relationship_by_
   std::vector<Relationship> relationships = rmf.fetch_Relation_by_v_id(v_id);
   return relationships;
 }
+
+
+bool RelationshipManager::VenderFunc::del_relationship(std::vector<Relationship> vec_rs){
+  RelationshipManageFuncs rmf(CMDB_CONF);
+  std::vector<int> vec_id;
+  for(Relationship rs: vec_rs){
+    vec_id.push_back(rs.r_id);
+  }
+  return
+    rmf.delete_Relation_by_r_id(vec_id);
+}
+
 //===========================================

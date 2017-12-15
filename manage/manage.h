@@ -87,6 +87,7 @@ class RelationshipManageFuncs{
     std::vector<Relationship> fetch_Relation_by_v_id(int v_id);
     bool update_Relation_by_r_id(int r_id, std::string set_attr);
     bool delete_Relation_by_r_id(int r_id);
+    bool delete_Relation_by_r_id(std::vector<int> r_id);
     bool delete_Relation_by_d_id(int d_id);
     bool delete_Relation_by_s_id(int s_id);
   private:

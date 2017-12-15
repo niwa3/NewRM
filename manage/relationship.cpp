@@ -89,6 +89,21 @@ bool RelationshipManageFuncs::delete_Relation_by_r_id(int r_id){
   return r_dao->del("id = "+std::to_string(r_id));
 }
 
+bool RelationshipManageFuncs::delete_Relation_by_r_id(std::vector<int> r_id){
+  int num = r_id.size();
+  if(num == 1){
+  return r_dao->del("id = "+std::to_string(*r_id.begin()));
+  }
+  std::string DEL_LIST = "id IN (";
+  int i = 1;
+  for(int id: r_id){
+    DEL_LIST += std::to_string(id) + (i != num ? "," : "");
+    i++;
+  }
+  DEL_LIST += ")";
+  return r_dao->del(DEL_LIST);
+}
+
 bool RelationshipManageFuncs::delete_Relation_by_d_id(int d_id){
   return r_dao->del("d_id = "+std::to_string(d_id));
 }

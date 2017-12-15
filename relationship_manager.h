@@ -6,6 +6,8 @@
 
 /* リレーションシップマネージャ内の関数を定義するファイル
  * CustomerとVenderに分けてそれぞれの関数を定義する．
+ * rs = relationship
+ * vec = vector
  */
 namespace RelationshipManager{
 
@@ -22,7 +24,7 @@ class CustomerFunc{
     std::vector<Relationship> show_relationship_by_d_id(int d_id);
     std::vector<Relationship> show_relationship_by_c_id(int c_id);
     bool mod_relationship(Relationship modified_relationshp);
-    bool del_relationship();
+    bool del_relationship(std::vector<Relationship> vec_rs);
 };
 
 class VenderFunc{
@@ -35,7 +37,7 @@ class VenderFunc{
     bool del_service(int s_id);
     std::vector<Relationship> show_relationship_by_s_id(int s_id);
     std::vector<Relationship> show_relationship_by_v_id(int v_id);
-    bool del_relationship();
+    bool del_relationship(std::vector<Relationship> vec_rs);
 };
 
 }
