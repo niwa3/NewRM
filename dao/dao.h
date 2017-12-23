@@ -211,6 +211,7 @@ class DeviceInfoDao: public DataBase{
     DeviceInfoDao(std::string dbname, std::string user, std::string password);
     ~DeviceInfoDao(){};
     int put(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
+    std::vector<int> put(std::vector<DeviceInfo> vec_device);
     bool fetch(std::string where, DeviceInfo &device_info_from_db);
     bool fetch(std::string where, std::vector<DeviceInfo> &devices_info_from_db);
     bool update(std::string set_attr, std::string where);

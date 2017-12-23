@@ -38,6 +38,7 @@ class DeviceManageFuncs{
     DeviceManageFuncs(std::string filename);
     ~DeviceManageFuncs(){};
     int register_Dinfo(int c_id, std::string device_name, int default_privacy_standard, DEVICETYPE device_type, DATATYPE data_type, int interval, std::string location);
+    std::vector<int> register_Dinfo(std::vector<DeviceInfo> vec_device);
     std::vector<DeviceInfo> fetch_Dinfo_by_c_id(int c_id);
     DeviceInfo fetch_Dinfo_by_d_id(int d_id);
     DeviceInfo fetch_Dinfo_by_device_name(std::string device_name);
