@@ -252,6 +252,7 @@ class ServiceInfoDao: public DataBase{
     ServiceInfoDao(std::string dbname, std::string user, std::string password);
     ~ServiceInfoDao(){};
     int put(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
+    std::vector<int> put(std::vector<ServiceInfo> vec_service);
     bool fetch(std::string where, ServiceInfo &service_info_from_db);
     bool fetch(std::string where, std::vector<ServiceInfo> &services_info_from_db);
     bool update(std::string set_attr, std::string where);

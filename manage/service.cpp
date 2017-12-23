@@ -32,6 +32,7 @@ ServiceManageFuncs::ServiceManageFuncs(std::string filename)
   s_dao.reset(new ServiceInfoDao(dbname,user,password));
 }
 
+
 int ServiceManageFuncs::register_Sinfo(
     int v_id,
     std::string service_name,
@@ -41,6 +42,14 @@ int ServiceManageFuncs::register_Sinfo(
 {
   return s_dao->put(v_id, service_name, required_privacy_standard, data_type, interval);
 }
+
+
+std::vector<int> ServiceManageFuncs::register_Sinfo(
+    std::vector<ServiceInfo> vec_service)
+{
+  return s_dao->put(vec_service);
+}
+
 
 std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_by_v_id(int v_id)
 {
@@ -55,6 +64,7 @@ ServiceInfo ServiceManageFuncs::fetch_Sinfo_by_s_id(int s_id)
   if (s_dao->fetch("where id="+std::to_string(s_id), ser_info_from_db)){return ser_info_from_db;}
   else return ser_info_from_db;
 }
+
 
 ServiceInfo ServiceManageFuncs::fetch_Sinfo_by_service_name(std::string service_name)
 {
@@ -71,9 +81,11 @@ std::vector<ServiceInfo> ServiceManageFuncs::fetch_Sinfo_for_matching(DATATYPE d
   else return ser_info_from_db;
 }
 
+
 bool ServiceManageFuncs::update_Sinfo_by_s_id(int s_id, std::string set_attr){
   return s_dao->update(set_attr, "id = " + std::to_string(s_id));
 }
+
 
 bool ServiceManageFuncs::delete_Sinfo_by_s_id(int s_id){
   return s_dao->del("id = "+std::to_string(s_id));

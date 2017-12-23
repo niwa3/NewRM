@@ -2,21 +2,19 @@
 #include "relationship_manager.h"
 
 int main(){
-  std::vector<DeviceInfo> vec_device;
+  std::vector<ServiceInfo> vec_service;
   int i = 0;
   while(i<10){
     i++;
-    DeviceInfo device;
-    device.c_id = 19;
-    device.device_name = "http://gateway19/sensor" + std::to_string(i);
-    device.device_type = DEVICETYPE::SENSOR;
-    device.data_type = DATATYPE::POWER;
-    device.default_privacy_standard = 1;
-    device.interval = 100;
-    device.location = "http://gateway19";
-    vec_device.push_back(device);
+    ServiceInfo service;
+    service.v_id = 1;
+    service.service_name = "http://vendor1/service" + std::to_string(i);
+    service.data_type = DATATYPE::POWER;
+    service.required_privacy_standard = 3;
+    service.interval = 100;
+    vec_service.push_back(service);
   }
-  RelationshipManager::CustomerFunc cf;
-  cf.reg_new_device(vec_device);
+  RelationshipManager::VenderFunc vf;
+  vf.reg_new_service(vec_service);
   return 0;
 }
