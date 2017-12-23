@@ -16,7 +16,7 @@ std::vector<Relationship> create_relationship_from_device(DeviceInfo device_info
     tmp_relationship.device_name = device_info.device_name;
     tmp_relationship.s_id = ms_itr->s_id;
     tmp_relationship.service_name = ms_itr->service_name;
-    tmp_relationship.anonymity_method = ANONYMITYMETHOD::FLAT;
+    tmp_relationship.anonymity_method = ANONYMITYMETHOD::FLAT;//ここは、現状固定値を振っている。データの種類によって手法を変えるべし。
     tmp_relationship.privacy_standard = device_info.default_privacy_standard;
     tmp_relationship.interval = ms_itr->interval;
     tmp_relationship.location = device_info.location;
@@ -36,7 +36,7 @@ std::vector<Relationship> create_relationship_from_service(ServiceInfo service_i
     tmp_relationship.device_name = md_itr->device_name;
     tmp_relationship.s_id = service_info.s_id;
     tmp_relationship.service_name = service_info.service_name;
-    tmp_relationship.anonymity_method = ANONYMITYMETHOD::FLAT;
+    tmp_relationship.anonymity_method = ANONYMITYMETHOD::FLAT;//同上
     tmp_relationship.privacy_standard = md_itr->default_privacy_standard;
     tmp_relationship.interval = service_info.interval;
     tmp_relationship.location = md_itr->location;
@@ -67,23 +67,35 @@ bool RelationshipManager::CustomerFunc::reg_new_device(
     int default_privacy_standard,
     DEVICETYPE device_type,
     DATATYPE data_type,
-    int interval, std::string location)
+    int interval,
+    std::string location)
 {
   DeviceManageFuncs dmf(CMDB_CONF);
   int d_id =
     dmf.register_Dinfo(
-      c_id, device_name,
+      c_id,
+      device_name,
       default_privacy_standard,
-      device_type, data_type,
+      device_type,
+      data_type,
       interval,
       location
     );
   if(d_id != -1)
   {
+    DeviceInfo d_info;
+    d_info.c_id = c_id;
+    d_info.d_id = d_id;
+    d_info.device_name = device_name;
+    d_info.default_privacy_standard = default_privacy_standard;
+    d_info.device_type = device_type;
+    d_info.data_type = data_type;
+    d_info.interval = interval;
+    d_info.location = location;
     RelationshipManageFuncs rmf(DB_CONF);
     if(!rmf.register_Relation(
-        RelationCreater::create_relationship_from_device(
-          dmf.fetch_Dinfo_by_d_id(d_id)
+          RelationCreater::create_relationship_from_device(
+            d_info
           )
         ).empty()
       )
@@ -96,6 +108,34 @@ bool RelationshipManager::CustomerFunc::reg_new_device(
 }
 
 
+bool RelationshipManager::CustomerFunc::reg_new_device(
+    std::vector<DeviceInfo> vec_device)
+{
+  DeviceManageFuncs dmf(CMDB_CONF);
+  std::vector<int> vec_d_id =
+    dmf.register_Dinfo(
+        vec_device
+    );
+
+  if(vec_d_id.size()==0)
+    return false;
+  int i = 0;
+  for(int d_id : vec_d_id)
+  {
+    DeviceInfo device = vec_device[i];
+    device.d_id = d_id;
+    RelationshipManageFuncs rmf(DB_CONF);
+    rmf.register_Relation(
+      RelationCreater::create_relationship_from_device(
+        device
+      )
+    );
+    i++;
+  }
+  return true;
+}
+
+
 std::vector<DeviceInfo> RelationshipManager::CustomerFunc::show_device(int c_id){
   DeviceManageFuncs dmf(CMDB_CONF);
   std::vector<DeviceInfo> devices = dmf.fetch_Dinfo_by_c_id(c_id);
@@ -105,6 +145,8 @@ std::vector<DeviceInfo> RelationshipManager::CustomerFunc::show_device(int c_id)
 
 bool RelationshipManager::CustomerFunc::mod_device(DeviceInfo device){
   DeviceManageFuncs dmf(CMDB_CONF);
+  //ToDo#5
+  //ここに、デバイスを変更した際にリレーションシップの変更を行う
   return true;
 }
 
@@ -200,6 +242,12 @@ std::vector<ServiceInfo> RelationshipManager::VenderFunc::show_service(int v_id)
   ServiceManageFuncs smf(CMDB_CONF);
   std::vector<ServiceInfo> services = smf.fetch_Sinfo_by_v_id(v_id);
   return services;
+}
+
+
+bool RelationshipManager::VenderFunc::mod_service(ServiceInfo service){
+  //ToDo#5
+  return true;
 }
 
 

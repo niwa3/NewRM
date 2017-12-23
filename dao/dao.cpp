@@ -332,6 +332,51 @@ int DeviceInfoDao::put(
 }
 
 
+std::vector<int> DeviceInfoDao::put(
+    std::vector<DeviceInfo> vec_device
+    ){
+  try{
+    if(vec_device.empty()){
+      std::vector<int> null_return;
+      return null_return;
+    }
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_DEVICES;
+    INSERT_DEVICES = "INSERT INTO device_info"
+      "(c_id, device_name, device_type, data_type, default_privacy_standard, interval, location)"
+      " VALUES ";
+    size_t i = 0;
+    for(DeviceInfo device : vec_device){
+      INSERT_DEVICES +=
+        "(" + std::to_string(device.c_id) +
+        "," + _T->quote(device.device_name) +
+        "," + std::to_string(static_cast<int>(device.device_type)) +
+        "," + std::to_string(static_cast<int>(device.data_type)) +
+        "," + std::to_string(device.default_privacy_standard) +
+        "," + std::to_string(device.interval) +
+        "," + _T.get()->quote(device.location) +
+        ")";
+      i++;
+      if(i!=(vec_device.size())) INSERT_DEVICES +=", ";
+    }
+    INSERT_DEVICES += " returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_DEVICES<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_DEVICES);
+    _T.get()->commit();
+    std::vector<int> returned_id;
+    for(pqxx::result::iterator r_itr=result_from_db.begin(); r_itr!=result_from_db.end(); r_itr++){
+      returned_id.push_back(r_itr["id"].as<int>());
+    }
+    return returned_id;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    std::vector<int> returned_id;
+    return returned_id;
+  }
+}
+
 bool DeviceInfoDao::fetch(
     std::string where,
     DeviceInfo &device_info_from_db){
