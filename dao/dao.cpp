@@ -8,14 +8,15 @@ DataBase::DataBase(
     )
 {
   try{
-  std::string CONNECT_CONF="dbname='"+dbname;
-  CONNECT_CONF+="' user='"+user;
-  CONNECT_CONF+="' password='"+password+"'";
-  _conn.reset(new pqxx::connection(CONNECT_CONF));
-  if(_conn.get()->is_open()){
-      std::cout<<"Database "<<_conn.get()->dbname()<<" opened." <<std::endl;
+    std::string CONNECT_CONF="dbname='"+dbname;
+    CONNECT_CONF+="' user='"+user;
+    CONNECT_CONF+="' password='"+password+"'";
+    _conn.reset(new pqxx::connection(CONNECT_CONF));
+    if(_conn.get()->is_open()){
+        std::cout<<"Database "<<_conn.get()->dbname()<<" opened." <<std::endl;
+    }
   }
-  }catch(const pqxx::pqxx_exception &e){
+  catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
   }
 }
@@ -334,7 +335,7 @@ int DeviceInfoDao::put(
 
 std::vector<int> DeviceInfoDao::put(
     std::vector<DeviceInfo> vec_device
-    ){
+){
   try{
     if(vec_device.empty()){
       std::vector<int> null_return;
@@ -642,7 +643,7 @@ int ServiceInfoDao::put(
     int required_privacy_standard,
     DATATYPE data_type,
     int interval
-    ){
+){
   try{
     _T.reset(new pqxx::work(*_conn.get()));
     std::string INSERT_SERVICE_INFO;
@@ -660,10 +661,53 @@ int ServiceInfoDao::put(
     _T.get()->commit();
     return result_from_db.begin()["id"].as<int>();
   }
-
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
     return -1;
+  }
+}
+
+
+std::vector<int> ServiceInfoDao::put(
+  std::vector<ServiceInfo> vec_service
+){
+  try{
+    if(vec_service.empty()){
+      std::vector<int> null_return;
+      return null_return;
+    }
+    _T.reset(new pqxx::work(*_conn.get()));
+    std::string INSERT_SERVICES;
+    INSERT_SERVICES = "INSERT INTO service_info"
+      "(v_id, service_name, data_type, required_privacy_standard, interval)"
+      " VALUES ";
+    size_t i = 0;
+    for(ServiceInfo service : vec_service){
+      INSERT_SERVICES +=
+        "(" + std::to_string(service.v_id) +
+        "," + _T->quote(service.service_name) +
+        "," + std::to_string(static_cast<int>(service.data_type)) +
+        "," + std::to_string(service.required_privacy_standard) +
+        "," + std::to_string(service.interval) +
+        ")";
+      i++;
+      if(i!=(vec_service.size())) INSERT_SERVICES += ", ";
+    }
+    INSERT_SERVICES += " returning id;";
+    pqxx::result result_from_db;
+    std::cout<<INSERT_SERVICES<<std::endl;
+    result_from_db = _T.get()->exec(INSERT_SERVICES);
+    _T.get()->commit();
+    std::vector<int> returned_id;
+    for(pqxx::result::iterator r_itr=result_from_db.begin(); r_itr!=result_from_db.end(); r_itr++){
+      returned_id.push_back(r_itr["id"].as<int>());
+    }
+    return returned_id;
+  }
+  catch(const pqxx::pqxx_exception &e){
+    std::cerr<<e.base().what()<<std::endl;
+    std::vector<int> returned_id;
+    return returned_id;
   }
 }
 
@@ -812,7 +856,6 @@ int RelationshipDao::put(
     _T.get()->commit();
     return result_from_db.begin()["id"].as<int>();
   }
-
   catch(const pqxx::pqxx_exception &e){
     std::cerr<<e.base().what()<<std::endl;
     return -1;

@@ -238,6 +238,31 @@ bool RelationshipManager::VenderFunc::reg_new_service(
 };
 
 
+bool RelationshipManager::VenderFunc::reg_new_service(
+    std::vector<ServiceInfo> vec_service)
+{
+  ServiceManageFuncs ser_m(CMDB_CONF);
+  std::vector<int> vec_s_id = ser_m.register_Sinfo(vec_service);
+
+  if(vec_s_id.size()==0)
+    return false;
+  int i = 0;
+  for(int s_id : vec_s_id)
+  {
+    ServiceInfo service = vec_service[i];
+    service.s_id = s_id;
+    RelationshipManageFuncs rmf(DB_CONF);
+    rmf.register_Relation(
+      RelationCreater::create_relationship_from_service(
+        service
+      )
+    );
+    i++;
+  }
+  return true;
+};
+
+
 std::vector<ServiceInfo> RelationshipManager::VenderFunc::show_service(int v_id){
   ServiceManageFuncs smf(CMDB_CONF);
   std::vector<ServiceInfo> services = smf.fetch_Sinfo_by_v_id(v_id);
