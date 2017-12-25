@@ -4,3 +4,5 @@ httprequest
 *.bak
 *.o
 test
+tags
+test_case.text
