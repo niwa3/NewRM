@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<%#include "logininfo.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Login Info</h1>
+
+<%== linkTo("Create a new Login Info", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>Login</th>
+    <th>Passwd</th>
+    <th>Salt</th>
+    <th>User Type</th>
+  </tr>
+<% tfetch(QList<LoginInfo>, loginInfoList); %>
+<% for (const auto &i : loginInfoList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.login() %></td>
+    <td><%= i.passwd() %></td>
+    <td><%= i.salt() %></td>
+    <td><%= i.userType() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

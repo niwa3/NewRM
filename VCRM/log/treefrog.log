@@ -1,0 +1,680 @@
+2017-12-25 08:54:16 INFO  [547] TreeFrog Framework version 1.20.0
+2017-12-25 08:54:16 INFO  [547] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-25 08:54:16 INFO  [547] TreeFrog application servers started up.
+2017-12-25 09:00:30 INFO  [547] TreeFrog application servers shutting down
+2017-12-25 09:00:30 INFO  [547] TreeFrog application servers shutdown completed
+2017-12-25 09:06:20 INFO  [78] TreeFrog Framework version 1.20.0
+2017-12-25 09:06:20 INFO  [78] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-25 09:06:20 INFO  [78] TreeFrog application servers started up.
+2017-12-25 09:06:34 INFO  [78] TreeFrog application servers shutting down
+2017-12-25 09:06:34 INFO  [78] TreeFrog application servers shutdown completed
+2017-12-25 09:08:27 INFO  [97] TreeFrog Framework version 1.20.0
+2017-12-25 09:08:27 INFO  [97] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-25 09:08:27 INFO  [97] TreeFrog application servers started up.
+2017-12-25 09:09:24 WARN  [226] Invalid descriptor (disconnected) : -1
+2017-12-25 09:47:55 INFO  [97] TreeFrog application servers shutting down
+2017-12-25 09:47:55 INFO  [97] TreeFrog application servers shutdown completed
+2017-12-27 15:15:42 INFO  [6911] TreeFrog Framework version 1.20.0
+2017-12-27 15:15:42 INFO  [6911] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-27 15:15:42 INFO  [6911] TreeFrog application servers started up.
+2017-12-27 15:18:50 WARN  [7022] Invalid descriptor (disconnected) : -1
+2017-12-27 15:21:48 INFO  [6911] TreeFrog application servers shutting down
+2017-12-27 15:21:48 INFO  [6911] TreeFrog application servers shutdown completed
+2017-12-27 15:21:50 INFO  [7099] TreeFrog Framework version 1.20.0
+2017-12-27 15:21:50 INFO  [7099] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-27 15:21:50 INFO  [7099] TreeFrog application servers started up.
+2017-12-27 15:25:00 INFO  [7099] TreeFrog application servers shutting down
+2017-12-27 15:25:00 INFO  [7099] TreeFrog application servers shutdown completed
+2017-12-27 15:25:02 INFO  [7278] TreeFrog Framework version 1.20.0
+2017-12-27 15:25:02 INFO  [7278] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-27 15:25:02 INFO  [7278] TreeFrog application servers started up.
+2017-12-27 15:25:56 INFO  [7278] TreeFrog application servers shutting down
+2017-12-27 15:25:57 INFO  [7278] TreeFrog application servers shutdown completed
+2017-12-27 15:25:59 INFO  [7424] TreeFrog Framework version 1.20.0
+2017-12-27 15:25:59 INFO  [7424] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-27 15:25:59 INFO  [7424] TreeFrog application servers started up.
+2017-12-27 15:27:34 INFO  [7424] TreeFrog application servers shutting down
+2017-12-27 15:27:34 INFO  [7424] TreeFrog application servers shutdown completed
+2017-12-27 15:27:36 INFO  [7567] TreeFrog Framework version 1.20.0
+2017-12-27 15:27:36 INFO  [7567] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-27 15:27:36 INFO  [7567] TreeFrog application servers started up.
+2017-12-27 15:28:38 INFO  [7567] TreeFrog application servers shutting down
+2017-12-27 15:28:38 INFO  [7567] TreeFrog application servers shutdown completed
+2017-12-27 15:28:39 INFO  [7690] TreeFrog Framework version 1.20.0
+2017-12-27 15:28:39 INFO  [7690] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-27 15:28:39 INFO  [7690] TreeFrog application servers started up.
+2017-12-27 15:31:46 INFO  [7690] TreeFrog application servers shutting down
+2017-12-27 15:31:47 INFO  [7690] TreeFrog application servers shutdown completed
+2017-12-27 15:31:50 INFO  [7837] TreeFrog Framework version 1.20.0
+2017-12-27 15:31:50 INFO  [7837] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-27 15:31:50 INFO  [7837] TreeFrog application servers started up.
+2017-12-27 15:32:32 WARN  [7982] Invalid descriptor (disconnected) : -1
+2017-12-29 09:20:14 INFO  [7837] TreeFrog application servers shutting down
+2017-12-29 09:20:15 INFO  [7837] TreeFrog application servers shutdown completed
+2017-12-29 09:20:19 INFO  [12997] TreeFrog Framework version 1.20.0
+2017-12-29 09:20:19 INFO  [12997] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-29 09:20:19 INFO  [12997] TreeFrog application servers started up.
+2017-12-29 09:20:40 WARN  [13092] Invalid descriptor (disconnected) : -1
+2017-12-29 09:20:50 WARN  [13103] Invalid descriptor (disconnected) : -1
+2017-12-29 09:20:50 WARN  [13101] Invalid descriptor (disconnected) : -1
+2017-12-29 09:20:50 WARN  [13102] Invalid descriptor (disconnected) : -1
+2017-12-29 09:24:18 INFO  [12997] TreeFrog application servers shutting down
+2017-12-29 09:24:18 INFO  [12997] TreeFrog application servers shutdown completed
+2017-12-29 09:24:20 INFO  [13129] TreeFrog Framework version 1.20.0
+2017-12-29 09:24:20 INFO  [13129] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-29 09:24:20 INFO  [13129] TreeFrog application servers started up.
+2017-12-29 09:24:40 WARN  [13229] Invalid descriptor (disconnected) : -1
+2017-12-29 09:24:40 WARN  [13230] Invalid descriptor (disconnected) : -1
+2017-12-29 09:24:50 WARN  [13243] Invalid descriptor (disconnected) : -1
+2017-12-29 09:24:50 WARN  [13244] Invalid descriptor (disconnected) : -1
+2017-12-29 09:31:23 INFO  [13129] TreeFrog application servers shutting down
+2017-12-29 09:31:24 INFO  [13129] TreeFrog application servers shutdown completed
+2017-12-29 09:31:43 INFO  [13300] TreeFrog Framework version 1.20.0
+2017-12-29 09:31:43 INFO  [13300] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-29 09:31:43 INFO  [13300] TreeFrog application servers started up.
+2017-12-29 09:36:03 INFO  [13300] TreeFrog application servers shutting down
+2017-12-29 09:36:03 INFO  [13300] TreeFrog application servers shutdown completed
+2017-12-29 09:42:49 INFO  [13666] TreeFrog Framework version 1.20.0
+2017-12-29 09:42:49 INFO  [13666] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2017-12-29 09:42:49 INFO  [13666] TreeFrog application servers started up.
+2017-12-31 07:48:34 WARN  [19297] Invalid descriptor (disconnected) : -1
+2017-12-31 07:48:34 WARN  [19298] Invalid descriptor (disconnected) : -1
+2018-01-01 14:09:30 INFO  [13666] TreeFrog application servers shutting down
+2018-01-01 14:09:30 INFO  [13666] TreeFrog application servers shutdown completed
+2018-01-01 14:09:50 INFO  [22944] TreeFrog Framework version 1.20.0
+2018-01-01 14:09:50 INFO  [22944] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-01 14:09:50 INFO  [22944] TreeFrog application servers started up.
+2018-01-01 14:09:52 INFO  [22944] TreeFrog application servers shutting down
+2018-01-01 14:09:52 INFO  [22944] TreeFrog application servers shutdown completed
+2018-01-01 16:09:49 INFO  [24126] TreeFrog Framework version 1.20.0
+2018-01-01 16:09:49 INFO  [24126] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-01 16:09:49 INFO  [24126] TreeFrog application servers started up.
+2018-01-01 16:10:03 WARN  [24231] Invalid descriptor (disconnected) : -1
+2018-01-01 16:10:13 WARN  [24244] Invalid descriptor (disconnected) : -1
+2018-01-01 16:10:13 WARN  [24245] Invalid descriptor (disconnected) : -1
+2018-01-01 16:10:13 WARN  [24246] Invalid descriptor (disconnected) : -1
+2018-01-01 16:11:49 INFO  [24126] TreeFrog application servers shutting down
+2018-01-01 16:11:49 INFO  [24126] TreeFrog application servers shutdown completed
+2018-01-01 16:13:40 INFO  [24615] TreeFrog Framework version 1.20.0
+2018-01-01 16:13:40 INFO  [24615] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-01 16:13:40 INFO  [24615] TreeFrog application servers started up.
+2018-01-01 16:13:54 WARN  [24730] Reading a socket timed out after 10 seconds. Descriptor:-1
+2018-01-01 16:13:54 WARN  [24731] Reading a socket timed out after 10 seconds. Descriptor:17
+2018-01-01 16:38:48 INFO  [24615] TreeFrog application servers shutting down
+2018-01-01 16:38:48 INFO  [24615] TreeFrog application servers shutdown completed
+2018-01-03 12:54:11 INFO  [31020] TreeFrog Framework version 1.20.0
+2018-01-03 12:54:11 INFO  [31020] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 12:54:11 INFO  [31020] TreeFrog application servers started up.
+2018-01-03 12:54:20 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:20 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:21 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:23 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:25 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:31 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:38 WARN  [31767] Invalid descriptor (disconnected) : -1
+2018-01-03 12:54:41 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:41 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:41 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:54:47 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:55:17 WARN  [31020] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:55:21 INFO  [31020] TreeFrog application servers shutting down
+2018-01-03 12:55:22 INFO  [31020] TreeFrog application servers shutdown completed
+2018-01-03 12:58:47 INFO  [32370] TreeFrog Framework version 1.20.0
+2018-01-03 12:58:47 INFO  [32370] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 12:58:47 INFO  [32370] TreeFrog application servers started up.
+2018-01-03 12:59:03 WARN  [32370] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:59:03 WARN  [32370] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:59:03 WARN  [32370] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:59:08 WARN  [32370] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 12:59:38 WARN  [32370] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:00:21 INFO  [32370] TreeFrog application servers shutting down
+2018-01-03 13:00:22 INFO  [32370] TreeFrog application servers shutdown completed
+2018-01-03 13:03:27 INFO  [882] TreeFrog Framework version 1.20.0
+2018-01-03 13:03:27 INFO  [882] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:03:27 INFO  [882] TreeFrog application servers started up.
+2018-01-03 13:03:44 WARN  [882] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:03:44 WARN  [882] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:03:44 WARN  [882] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:03:46 WARN  [882] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:03:46 WARN  [882] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:03:51 WARN  [882] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:03:55 INFO  [882] TreeFrog application servers shutting down
+2018-01-03 13:03:55 INFO  [882] TreeFrog application servers shutdown completed
+2018-01-03 13:07:05 INFO  [1661] TreeFrog Framework version 1.20.0
+2018-01-03 13:07:05 INFO  [1661] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:07:05 INFO  [1661] TreeFrog application servers started up.
+2018-01-03 13:07:10 WARN  [1661] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:07:11 WARN  [1661] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:07:14 WARN  [1661] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:07:14 WARN  [1661] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:07:20 INFO  [1661] TreeFrog application servers shutting down
+2018-01-03 13:07:20 INFO  [1661] TreeFrog application servers shutdown completed
+2018-01-03 13:11:02 INFO  [2415] TreeFrog Framework version 1.20.0
+2018-01-03 13:11:02 INFO  [2415] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:11:02 INFO  [2415] TreeFrog application servers started up.
+2018-01-03 13:11:23 WARN  [2508] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-03 13:13:04 INFO  [2415] TreeFrog application servers shutting down
+2018-01-03 13:13:05 INFO  [2415] TreeFrog application servers shutdown completed
+2018-01-03 13:14:04 INFO  [2582] TreeFrog Framework version 1.20.0
+2018-01-03 13:14:04 INFO  [2582] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:14:04 INFO  [2582] TreeFrog application servers started up.
+2018-01-03 13:14:19 INFO  [2582] TreeFrog application servers shutting down
+2018-01-03 13:14:20 WARN  [2679] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-03 13:14:20 INFO  [2582] TreeFrog application servers shutdown completed
+2018-01-03 13:18:20 INFO  [2923] TreeFrog Framework version 1.20.0
+2018-01-03 13:18:20 INFO  [2923] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:18:20 INFO  [2923] TreeFrog application servers started up.
+2018-01-03 13:18:28 WARN  [2923] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:18:28 WARN  [2923] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:18:28 WARN  [2923] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:18:32 INFO  [2923] TreeFrog application servers shutting down
+2018-01-03 13:18:32 INFO  [2923] TreeFrog application servers shutdown completed
+2018-01-03 13:20:18 INFO  [3366] TreeFrog Framework version 1.20.0
+2018-01-03 13:20:18 INFO  [3366] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:20:18 INFO  [3366] TreeFrog application servers started up.
+2018-01-03 13:20:21 WARN  [3366] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:20:21 WARN  [3366] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:20:22 WARN  [3366] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:20:22 WARN  [3366] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:20:26 INFO  [3366] TreeFrog application servers shutting down
+2018-01-03 13:20:26 INFO  [3366] TreeFrog application servers shutdown completed
+2018-01-03 13:24:05 INFO  [4108] TreeFrog Framework version 1.20.0
+2018-01-03 13:24:05 INFO  [4108] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:24:05 INFO  [4108] TreeFrog application servers started up.
+2018-01-03 13:24:10 WARN  [4108] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:24:10 WARN  [4108] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:24:13 INFO  [4108] TreeFrog application servers shutting down
+2018-01-03 13:24:14 INFO  [4108] TreeFrog application servers shutdown completed
+2018-01-03 13:29:38 INFO  [4519] TreeFrog Framework version 1.20.0
+2018-01-03 13:29:38 INFO  [4519] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:29:38 INFO  [4519] TreeFrog application servers started up.
+2018-01-03 13:29:42 WARN  [4519] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:29:42 WARN  [4519] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:29:45 INFO  [4519] TreeFrog application servers shutting down
+2018-01-03 13:29:46 INFO  [4519] TreeFrog application servers shutdown completed
+2018-01-03 13:33:25 INFO  [4893] TreeFrog Framework version 1.20.0
+2018-01-03 13:33:25 INFO  [4893] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:33:25 INFO  [4893] TreeFrog application servers started up.
+2018-01-03 13:33:32 WARN  [4893] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:33:32 WARN  [4893] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper9createXmlI12CustomerInfoEE12QDomDocumentT_
+
+2018-01-03 13:33:36 INFO  [4893] TreeFrog application servers shutting down
+2018-01-03 13:33:36 INFO  [4893] TreeFrog application servers shutdown completed
+2018-01-03 13:45:47 INFO  [5305] TreeFrog Framework version 1.20.0
+2018-01-03 13:45:47 INFO  [5305] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:45:47 INFO  [5305] TreeFrog application servers started up.
+2018-01-03 13:45:57 WARN  [5391] Invalid descriptor (disconnected) : -1
+2018-01-03 13:46:30 INFO  [5305] TreeFrog application servers shutting down
+2018-01-03 13:46:30 INFO  [5305] TreeFrog application servers shutdown completed
+2018-01-03 13:47:07 INFO  [5461] TreeFrog Framework version 1.20.0
+2018-01-03 13:47:07 INFO  [5461] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:47:07 INFO  [5461] TreeFrog application servers started up.
+2018-01-03 13:47:17 WARN  [5558] Invalid descriptor (disconnected) : -1
+2018-01-03 13:48:11 INFO  [5461] TreeFrog application servers shutting down
+2018-01-03 13:48:11 INFO  [5461] TreeFrog application servers shutdown completed
+2018-01-03 13:48:17 INFO  [5619] TreeFrog Framework version 1.20.0
+2018-01-03 13:48:17 INFO  [5619] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:48:17 INFO  [5619] TreeFrog application servers started up.
+2018-01-03 13:48:27 WARN  [5729] Invalid descriptor (disconnected) : -1
+2018-01-03 13:48:43 INFO  [5619] TreeFrog application servers shutting down
+2018-01-03 13:48:44 INFO  [5619] TreeFrog application servers shutdown completed
+2018-01-03 13:48:48 INFO  [5787] TreeFrog Framework version 1.20.0
+2018-01-03 13:48:48 INFO  [5787] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:48:48 INFO  [5787] TreeFrog application servers started up.
+2018-01-03 13:48:57 WARN  [5879] Invalid descriptor (disconnected) : -1
+2018-01-03 13:50:07 INFO  [5787] TreeFrog application servers shutting down
+2018-01-03 13:50:08 INFO  [5787] TreeFrog application servers shutdown completed
+2018-01-03 13:50:49 INFO  [5951] TreeFrog Framework version 1.20.0
+2018-01-03 13:50:49 INFO  [5951] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 13:50:49 INFO  [5951] TreeFrog application servers started up.
+2018-01-03 13:50:58 WARN  [6051] Invalid descriptor (disconnected) : -1
+2018-01-03 13:51:08 WARN  [6069] Reading a socket timed out after 10 seconds. Descriptor:-1
+2018-01-03 13:51:08 WARN  [6070] Reading a socket timed out after 10 seconds. Descriptor:-1
+2018-01-03 14:02:45 INFO  [5951] TreeFrog application servers shutting down
+2018-01-03 14:02:45 INFO  [5951] TreeFrog application servers shutdown completed
+2018-01-03 14:33:05 INFO  [6424] TreeFrog Framework version 1.20.0
+2018-01-03 14:33:05 INFO  [6424] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 14:33:05 INFO  [6424] TreeFrog application servers started up.
+2018-01-03 14:33:10 WARN  [6530] Invalid descriptor (disconnected) : -1
+2018-01-03 14:34:48 INFO  [6424] TreeFrog application servers shutting down
+2018-01-03 14:34:48 INFO  [6424] TreeFrog application servers shutdown completed
+2018-01-03 14:34:54 INFO  [6594] TreeFrog Framework version 1.20.0
+2018-01-03 14:34:54 INFO  [6594] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 14:34:54 INFO  [6594] TreeFrog application servers started up.
+2018-01-03 14:35:00 WARN  [6698] Invalid descriptor (disconnected) : -1
+2018-01-03 14:47:28 INFO  [6594] TreeFrog application servers shutting down
+2018-01-03 14:47:28 INFO  [6594] TreeFrog application servers shutdown completed
+2018-01-03 14:49:49 INFO  [6980] TreeFrog Framework version 1.20.0
+2018-01-03 14:49:49 INFO  [6980] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-03 14:49:49 INFO  [6980] TreeFrog application servers started up.
+2018-01-03 14:50:01 WARN  [7078] Invalid descriptor (disconnected) : -1
+2018-01-03 14:50:26 WARN  [7093] Invalid descriptor (disconnected) : -1
+2018-01-03 14:50:28 INFO  [6980] TreeFrog application servers shutting down
+2018-01-03 14:50:28 INFO  [6980] TreeFrog application servers shutdown completed
+2018-01-04 14:54:20 INFO  [10258] TreeFrog Framework version 1.20.0
+2018-01-04 14:54:20 INFO  [10258] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-04 14:54:20 INFO  [10258] TreeFrog application servers started up.
+2018-01-04 14:54:31 WARN  [10378] Invalid descriptor (disconnected) : -1
+2018-01-04 14:54:41 WARN  [10391] Invalid descriptor (disconnected) : -1
+2018-01-04 15:11:22 INFO  [10258] TreeFrog application servers shutting down
+2018-01-04 15:11:23 INFO  [10258] TreeFrog application servers shutdown completed
+2018-01-04 15:16:23 INFO  [10694] TreeFrog Framework version 1.20.0
+2018-01-04 15:16:23 INFO  [10694] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-04 15:16:23 INFO  [10694] TreeFrog application servers started up.
+2018-01-04 15:16:26 WARN  [10797] Invalid descriptor (disconnected) : -1
+2018-01-06 06:45:24 INFO  [10694] TreeFrog application servers shutting down
+2018-01-06 06:45:24 INFO  [10694] TreeFrog application servers shutdown completed
+2018-01-06 06:54:15 INFO  [15821] TreeFrog Framework version 1.20.0
+2018-01-06 06:54:15 INFO  [15821] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 06:54:15 INFO  [15821] TreeFrog application servers started up.
+2018-01-06 06:54:25 WARN  [15927] Invalid descriptor (disconnected) : -1
+2018-01-06 06:54:35 WARN  [15935] Invalid descriptor (disconnected) : -1
+2018-01-06 06:54:55 WARN  [15943] Invalid descriptor (disconnected) : -1
+2018-01-06 06:55:15 WARN  [15957] Invalid descriptor (disconnected) : -1
+2018-01-06 11:48:53 INFO  [15821] TreeFrog application servers shutting down
+2018-01-06 11:48:54 INFO  [15821] TreeFrog application servers shutdown completed
+2018-01-06 12:01:49 INFO  [16845] TreeFrog Framework version 1.20.0
+2018-01-06 12:01:49 INFO  [16845] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 12:01:49 INFO  [16845] TreeFrog application servers started up.
+2018-01-06 12:02:07 WARN  [16942] Invalid descriptor (disconnected) : -1
+2018-01-06 13:05:26 INFO  [16845] TreeFrog application servers shutting down
+2018-01-06 13:05:27 INFO  [16845] TreeFrog application servers shutdown completed
+2018-01-06 13:07:46 INFO  [17206] TreeFrog Framework version 1.20.0
+2018-01-06 13:07:46 INFO  [17206] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 13:07:46 INFO  [17206] TreeFrog application servers started up.
+2018-01-06 13:07:49 WARN  [17309] Invalid descriptor (disconnected) : -1
+2018-01-06 13:07:49 WARN  [17310] Invalid descriptor (disconnected) : -1
+2018-01-06 13:07:49 WARN  [17311] Invalid descriptor (disconnected) : -1
+2018-01-06 13:07:49 WARN  [17312] Invalid descriptor (disconnected) : -1
+2018-01-06 13:07:59 WARN  [17316] Invalid descriptor (disconnected) : -1
+2018-01-06 13:07:59 WARN  [17317] Invalid descriptor (disconnected) : -1
+2018-01-06 13:08:29 WARN  [17325] Invalid descriptor (disconnected) : -1
+2018-01-06 13:08:29 WARN  [17326] Invalid descriptor (disconnected) : -1
+2018-01-06 13:10:00 INFO  [17206] TreeFrog application servers shutting down
+2018-01-06 13:10:00 INFO  [17206] TreeFrog application servers shutdown completed
+2018-01-06 13:10:07 INFO  [17390] TreeFrog Framework version 1.20.0
+2018-01-06 13:10:07 INFO  [17390] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 13:10:07 INFO  [17390] TreeFrog application servers started up.
+2018-01-06 13:12:05 INFO  [17390] TreeFrog application servers shutting down
+2018-01-06 13:12:05 INFO  [17390] TreeFrog application servers shutdown completed
+2018-01-06 13:12:11 INFO  [17535] TreeFrog Framework version 1.20.0
+2018-01-06 13:12:11 INFO  [17535] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 13:12:11 INFO  [17535] TreeFrog application servers started up.
+2018-01-06 13:12:16 ERROR [17637] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:12:16 ERROR [17637] Aborted at 1515244336 (unix time) try "date -d @1515244336" if you are using GNU date
+SIGABRT (@0x4484) received by PID 17540 (TID 17637) ; stack trace:
+PC: @     0x7f60f84d2067  (unknown)
+    @     0x7f60f9079890  (unknown)
+    @     0x7f60f84d2067  (unknown)
+    @     0x7f60f84d3448  (unknown)
+    @     0x7f60f93124d8  (unknown)
+    @     0x7f60f930d254  (unknown)
+    @     0x7f60f46a59fc  QMap<>::firstKey()
+    @     0x7f60f46a3b97  CustomerInfoController::show()
+    @     0x7f60f46b51dd  CustomerInfoController::qt_static_metacall()
+    @     0x7f60f956ad72  (unknown)
+    @     0x7f60fa7fe92a  (unknown)
+    @     0x7f60fa80349b  (unknown)
+    @     0x7f60fa809fce  (unknown)
+    @     0x7f60f9323d2e  (unknown)
+    @     0x7f60f9072064  start_thread
+    @     0x7f60f858562d  (unknown)
+    @                0x0  (unknown)
+
+2018-01-06 13:12:16 ERROR [17535] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:12:16 ERROR [17535] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:12:16 ERROR [17730] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:12:16 ERROR [17535] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:12:16 ERROR [17535] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:12:16 ERROR [17819] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:12:16 ERROR [17535] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:12:16 ERROR [17535] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:12:21 ERROR [17910] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:12:22 ERROR [17535] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:12:22 ERROR [17535] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:12:22 ERROR [18016] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:12:22 ERROR [17535] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:12:22 ERROR [17535] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:12:52 ERROR [18132] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:12:52 ERROR [17535] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:12:52 ERROR [17535] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:13:08 INFO  [17535] TreeFrog application servers shutting down
+2018-01-06 13:13:09 INFO  [17535] TreeFrog application servers shutdown completed
+2018-01-06 13:13:41 INFO  [18283] TreeFrog Framework version 1.20.0
+2018-01-06 13:13:41 INFO  [18283] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 13:13:41 INFO  [18283] TreeFrog application servers started up.
+2018-01-06 13:13:43 ERROR [18384] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:13:44 ERROR [18283] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:13:44 ERROR [18283] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:13:44 ERROR [18499] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:13:44 ERROR [18283] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:13:44 ERROR [18283] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:13:46 ERROR [18599] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:13:46 ERROR [18599] Aborted at 1515244426 (unix time) try "date -d @1515244426" if you are using GNU date
+SIGABRT (@0x4849) received by PID 18505 (TID 18599) ; stack trace:
+PC: @     0x7fb2fec1f067  (unknown)
+    @     0x7fb2ff7c6890  (unknown)
+    @     0x7fb2fec1f067  (unknown)
+    @     0x7fb2fec20448  (unknown)
+    @     0x7fb2ffa5f4d8  (unknown)
+    @     0x7fb2ffa5a254  (unknown)
+    @     0x7fb2fadf29fc  QMap<>::firstKey()
+    @     0x7fb2fadf0b97  CustomerInfoController::show()
+    @     0x7fb2fae021dd  CustomerInfoController::qt_static_metacall()
+    @     0x7fb2ffcb7d72  (unknown)
+    @     0x7fb300f4b92a  (unknown)
+    @     0x7fb300f5049b  (unknown)
+    @     0x7fb300f56fce  (unknown)
+    @     0x7fb2ffa70d2e  (unknown)
+    @     0x7fb2ff7bf064  start_thread
+    @     0x7fb2fecd262d  (unknown)
+    @                0x0  (unknown)
+
+2018-01-06 13:13:46 ERROR [18283] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:13:46 ERROR [18283] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:13:47 ERROR [18708] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-06 13:13:47 ERROR [18283] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-06 13:13:47 ERROR [18283] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-06 13:13:55 INFO  [18283] TreeFrog application servers shutting down
+2018-01-06 13:13:55 INFO  [18283] TreeFrog application servers shutdown completed
+2018-01-06 13:17:23 INFO  [18819] TreeFrog Framework version 1.20.0
+2018-01-06 13:17:23 INFO  [18819] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 13:17:23 INFO  [18819] TreeFrog application servers started up.
+2018-01-06 13:17:25 INFO  [18819] TreeFrog application servers shutting down
+2018-01-06 13:17:25 INFO  [18819] TreeFrog application servers shutdown completed
+2018-01-06 13:58:15 INFO  [19094] TreeFrog Framework version 1.20.0
+2018-01-06 13:58:15 INFO  [19094] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 13:58:15 INFO  [19094] TreeFrog application servers started up.
+2018-01-06 13:58:24 WARN  [19201] Invalid descriptor (disconnected) : -1
+2018-01-06 13:59:04 WARN  [19208] Invalid descriptor (disconnected) : -1
+2018-01-06 14:04:32 INFO  [19094] TreeFrog application servers shutting down
+2018-01-06 14:04:32 INFO  [19094] TreeFrog application servers shutdown completed
+2018-01-06 14:04:37 INFO  [19287] TreeFrog Framework version 1.20.0
+2018-01-06 14:04:37 INFO  [19287] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-06 14:04:37 INFO  [19287] TreeFrog application servers started up.
+2018-01-06 14:04:45 WARN  [19390] Invalid descriptor (disconnected) : -1
+2018-01-06 14:04:55 WARN  [19402] Invalid descriptor (disconnected) : -1
+2018-01-06 14:05:05 WARN  [19415] Invalid descriptor (disconnected) : -1
+2018-01-06 14:05:15 WARN  [19428] Invalid descriptor (disconnected) : -1
+2018-01-06 14:05:25 WARN  [19440] Reading a socket timed out after 10 seconds. Descriptor:-1
+2018-01-06 14:05:35 WARN  [19459] Invalid descriptor (disconnected) : -1
+2018-01-07 14:56:42 INFO  [19287] TreeFrog application servers shutting down
+2018-01-07 14:56:43 INFO  [19287] TreeFrog application servers shutdown completed
+2018-01-07 15:22:04 INFO  [22765] TreeFrog Framework version 1.20.0
+2018-01-07 15:22:04 INFO  [22765] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-07 15:22:04 INFO  [22765] TreeFrog application servers started up.
+2018-01-07 15:22:36 WARN  [22865] Invalid descriptor (disconnected) : -1
+2018-01-07 15:22:46 WARN  [22879] Invalid descriptor (disconnected) : -1
+2018-01-07 15:24:00 INFO  [22765] TreeFrog application servers shutting down
+2018-01-07 15:24:01 INFO  [22765] TreeFrog application servers shutdown completed
+2018-01-07 15:26:22 INFO  [23166] TreeFrog Framework version 1.20.0
+2018-01-07 15:26:22 INFO  [23166] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-07 15:26:22 INFO  [23166] TreeFrog application servers started up.
+2018-01-07 15:26:26 WARN  [23270] Invalid descriptor (disconnected) : -1
+2018-01-07 15:58:00 INFO  [23166] TreeFrog application servers shutting down
+2018-01-07 15:58:00 INFO  [23166] TreeFrog application servers shutdown completed
+2018-01-09 02:36:34 INFO  [27750] TreeFrog Framework version 1.20.0
+2018-01-09 02:36:34 INFO  [27750] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 02:36:34 INFO  [27750] TreeFrog application servers started up.
+2018-01-09 02:36:57 WARN  [27855] Invalid descriptor (disconnected) : -1
+2018-01-09 02:37:07 WARN  [27869] Invalid descriptor (disconnected) : -1
+2018-01-09 02:37:17 WARN  [27882] Invalid descriptor (disconnected) : -1
+2018-01-09 02:37:27 WARN  [27889] Invalid descriptor (disconnected) : -1
+2018-01-09 02:41:45 INFO  [27750] TreeFrog application servers shutting down
+2018-01-09 02:41:45 INFO  [27750] TreeFrog application servers shutdown completed
+2018-01-09 02:42:11 INFO  [27959] TreeFrog Framework version 1.20.0
+2018-01-09 02:42:11 INFO  [27959] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 02:42:11 INFO  [27959] TreeFrog application servers started up.
+2018-01-09 02:42:17 WARN  [28071] Invalid descriptor (disconnected) : -1
+2018-01-09 02:42:37 WARN  [28083] Invalid descriptor (disconnected) : -1
+2018-01-09 02:44:37 WARN  [28099] Invalid descriptor (disconnected) : -1
+2018-01-09 05:05:42 INFO  [27959] TreeFrog application servers shutting down
+2018-01-09 05:05:42 INFO  [27959] TreeFrog application servers shutdown completed
+2018-01-09 05:20:55 INFO  [28434] TreeFrog Framework version 1.20.0
+2018-01-09 05:20:55 INFO  [28434] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 05:20:55 INFO  [28434] TreeFrog application servers started up.
+2018-01-09 05:21:28 WARN  [28546] unsupported content-type: application/xml
+2018-01-09 05:33:14 WARN  [28624] unsupported content-type: application/xml
+2018-01-09 05:36:07 INFO  [28434] TreeFrog application servers shutting down
+2018-01-09 05:36:07 INFO  [28434] TreeFrog application servers shutdown completed
+2018-01-09 05:36:19 INFO  [28712] TreeFrog Framework version 1.20.0
+2018-01-09 05:36:19 INFO  [28712] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 05:36:19 INFO  [28712] TreeFrog application servers started up.
+2018-01-09 05:36:26 WARN  [28820] unsupported content-type: application/xml
+2018-01-09 05:37:13 WARN  [28826] unsupported content-type: application/xml
+2018-01-09 05:40:02 INFO  [28712] TreeFrog application servers shutting down
+2018-01-09 05:40:03 INFO  [28712] TreeFrog application servers shutdown completed
+2018-01-09 05:40:08 INFO  [28884] TreeFrog Framework version 1.20.0
+2018-01-09 05:40:08 INFO  [28884] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 05:40:08 INFO  [28884] TreeFrog application servers started up.
+2018-01-09 05:40:18 WARN  [28983] unsupported content-type: application/xml
+2018-01-09 05:40:18 ERROR [28983] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-09 05:40:18 ERROR [28884] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-09 05:40:18 ERROR [28884] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-09 05:40:46 WARN  [29066] unsupported content-type: application/xml
+2018-01-09 05:40:46 ERROR [29066] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-09 05:40:46 ERROR [28884] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-09 05:40:46 ERROR [28884] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-09 05:41:38 INFO  [28884] TreeFrog application servers shutting down
+2018-01-09 05:41:38 INFO  [28884] TreeFrog application servers shutdown completed
+2018-01-09 05:41:59 INFO  [29239] TreeFrog Framework version 1.20.0
+2018-01-09 05:41:59 INFO  [29239] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 05:41:59 INFO  [29239] TreeFrog application servers started up.
+2018-01-09 05:42:04 WARN  [29335] unsupported content-type: application/xml
+2018-01-09 05:42:04 ERROR [29335] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h, line 405 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-09 05:42:04 ERROR [29239] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-09 05:42:04 ERROR [29239] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-09 05:42:16 INFO  [29239] TreeFrog application servers shutting down
+2018-01-09 05:42:16 INFO  [29239] TreeFrog application servers shutdown completed
+2018-01-09 05:50:50 INFO  [29642] TreeFrog Framework version 1.20.0
+2018-01-09 05:50:50 INFO  [29642] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 05:50:50 INFO  [29642] TreeFrog application servers started up.
+2018-01-09 05:50:55 WARN  [29746] unsupported content-type: application/xml
+2018-01-09 05:51:06 INFO  [29642] TreeFrog application servers shutting down
+2018-01-09 05:51:07 INFO  [29642] TreeFrog application servers shutdown completed
+2018-01-09 05:52:15 INFO  [29760] TreeFrog Framework version 1.20.0
+2018-01-09 05:52:15 INFO  [29760] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 05:52:15 INFO  [29760] TreeFrog application servers started up.
+2018-01-09 05:52:17 WARN  [29863] unsupported content-type: text/xml
+2018-01-09 05:52:26 INFO  [29760] TreeFrog application servers shutting down
+2018-01-09 05:52:26 INFO  [29760] TreeFrog application servers shutdown completed
+2018-01-09 06:02:07 INFO  [29895] TreeFrog Framework version 1.20.0
+2018-01-09 06:02:07 INFO  [29895] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 06:02:07 INFO  [29895] TreeFrog application servers started up.
+2018-01-09 06:02:14 WARN  [29987] unsupported content-type: application/xml
+2018-01-09 06:02:56 INFO  [29895] TreeFrog application servers shutting down
+2018-01-09 06:02:56 INFO  [29895] TreeFrog application servers shutdown completed
+2018-01-09 06:03:04 INFO  [30040] TreeFrog Framework version 1.20.0
+2018-01-09 06:03:04 INFO  [30040] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 06:03:04 INFO  [30040] TreeFrog application servers started up.
+2018-01-09 06:03:10 WARN  [30137] unsupported content-type: application/xml
+2018-01-09 06:03:59 INFO  [30040] TreeFrog application servers shutting down
+2018-01-09 06:04:00 INFO  [30040] TreeFrog application servers shutdown completed
+2018-01-09 06:09:26 INFO  [30202] TreeFrog Framework version 1.20.0
+2018-01-09 06:09:26 INFO  [30202] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 06:09:26 INFO  [30202] TreeFrog application servers started up.
+2018-01-09 06:09:32 WARN  [30313] unsupported content-type: application/xml
+2018-01-09 06:11:59 INFO  [30202] TreeFrog application servers shutting down
+2018-01-09 06:11:59 INFO  [30202] TreeFrog application servers shutdown completed
+2018-01-09 06:13:41 INFO  [30426] TreeFrog Framework version 1.20.0
+2018-01-09 06:13:41 INFO  [30426] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 06:13:41 INFO  [30426] TreeFrog application servers started up.
+2018-01-09 06:13:54 WARN  [30535] unsupported content-type: application/xml
+2018-01-09 06:15:16 INFO  [30426] TreeFrog application servers shutting down
+2018-01-09 06:15:17 INFO  [30426] TreeFrog application servers shutdown completed
+2018-01-09 06:15:22 INFO  [30589] TreeFrog Framework version 1.20.0
+2018-01-09 06:15:22 INFO  [30589] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 06:15:22 INFO  [30589] TreeFrog application servers started up.
+2018-01-09 06:15:25 WARN  [30686] unsupported content-type: application/xml
+2018-01-09 06:15:27 WARN  [30690] unsupported content-type: application/xml
+2018-01-09 06:15:44 INFO  [30589] TreeFrog application servers shutting down
+2018-01-09 06:15:44 INFO  [30589] TreeFrog application servers shutdown completed
+2018-01-09 06:23:19 INFO  [30758] TreeFrog Framework version 1.20.0
+2018-01-09 06:23:19 INFO  [30758] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 06:23:19 INFO  [30758] TreeFrog application servers started up.
+2018-01-09 06:23:20 WARN  [30863] unsupported content-type: application/xml
+2018-01-09 07:13:33 INFO  [30758] TreeFrog application servers shutting down
+2018-01-09 07:13:33 INFO  [30758] TreeFrog application servers shutdown completed
+2018-01-09 07:13:39 INFO  [31015] TreeFrog Framework version 1.20.0
+2018-01-09 07:13:39 INFO  [31015] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 07:13:39 INFO  [31015] TreeFrog application servers started up.
+2018-01-09 07:13:46 WARN  [31123] unsupported content-type: application/xml
+2018-01-09 07:33:24 INFO  [31015] TreeFrog application servers shutting down
+2018-01-09 07:33:25 INFO  [31015] TreeFrog application servers shutdown completed
+2018-01-09 07:37:44 INFO  [31274] TreeFrog Framework version 1.20.0
+2018-01-09 07:37:44 INFO  [31274] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 07:37:44 INFO  [31274] TreeFrog application servers started up.
+2018-01-09 07:37:53 WARN  [31380] unsupported content-type: application/xml
+2018-01-09 07:38:07 INFO  [31274] TreeFrog application servers shutting down
+2018-01-09 07:38:07 INFO  [31274] TreeFrog application servers shutdown completed
+2018-01-09 16:22:53 INFO  [32527] TreeFrog Framework version 1.20.0
+2018-01-09 16:22:53 INFO  [32527] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 16:22:53 INFO  [32527] TreeFrog application servers started up.
+2018-01-09 16:25:51 INFO  [32527] TreeFrog application servers shutting down
+2018-01-09 16:25:51 INFO  [32527] TreeFrog application servers shutdown completed
+2018-01-09 16:27:27 INFO  [32651] TreeFrog Framework version 1.20.0
+2018-01-09 16:27:27 INFO  [32651] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-09 16:27:27 INFO  [32651] TreeFrog application servers started up.
+2018-01-10 08:22:56 INFO  [32651] TreeFrog application servers shutting down
+2018-01-10 08:22:56 INFO  [32651] TreeFrog application servers shutdown completed
+2018-01-10 08:23:06 INFO  [2242] TreeFrog Framework version 1.20.0
+2018-01-10 08:23:06 INFO  [2242] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 08:23:06 INFO  [2242] TreeFrog application servers started up.
+2018-01-10 08:27:10 WARN  [2367] unsupported content-type: application/xml
+2018-01-10 08:27:10 WARN  [2367] QIODevice::read: device not open (io/qiodevice.cpp:820 qint64 QIODevice::read(char*, qint64))
+2018-01-10 08:29:56 INFO  [2242] TreeFrog application servers shutting down
+2018-01-10 08:29:56 INFO  [2242] TreeFrog application servers shutdown completed
+2018-01-10 08:30:02 INFO  [2425] TreeFrog Framework version 1.20.0
+2018-01-10 08:30:02 INFO  [2425] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 08:30:02 INFO  [2425] TreeFrog application servers started up.
+2018-01-10 08:30:08 WARN  [2526] unsupported content-type: application/xml
+2018-01-10 08:37:59 INFO  [2425] TreeFrog application servers shutting down
+2018-01-10 08:38:00 INFO  [2425] TreeFrog application servers shutdown completed
+2018-01-10 08:41:47 INFO  [2675] TreeFrog Framework version 1.20.0
+2018-01-10 08:41:47 INFO  [2675] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 08:41:47 INFO  [2675] TreeFrog application servers started up.
+2018-01-10 08:41:51 WARN  [2769] unsupported content-type: application/xml
+2018-01-10 08:42:25 WARN  [2774] unsupported content-type: application/xml
+2018-01-10 08:47:43 INFO  [2675] TreeFrog application servers shutting down
+2018-01-10 08:47:43 INFO  [2675] TreeFrog application servers shutdown completed
+2018-01-10 08:48:57 INFO  [2864] TreeFrog Framework version 1.20.0
+2018-01-10 08:48:57 INFO  [2864] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 08:48:57 INFO  [2864] TreeFrog application servers started up.
+2018-01-10 08:48:59 WARN  [2964] unsupported content-type: application/xml
+2018-01-10 08:48:59 WARN  [2964] QIODevice::read: device not open (io/qiodevice.cpp:820 qint64 QIODevice::read(char*, qint64))
+2018-01-10 08:49:04 WARN  [2970] unsupported content-type: application/xml
+2018-01-10 08:49:04 WARN  [2970] QIODevice::read: device not open (io/qiodevice.cpp:820 qint64 QIODevice::read(char*, qint64))
+2018-01-10 08:51:06 INFO  [2864] TreeFrog application servers shutting down
+2018-01-10 08:51:07 INFO  [2864] TreeFrog application servers shutdown completed
+2018-01-10 08:51:12 INFO  [3028] TreeFrog Framework version 1.20.0
+2018-01-10 08:51:12 INFO  [3028] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 08:51:12 INFO  [3028] TreeFrog application servers started up.
+2018-01-10 08:51:15 WARN  [3121] unsupported content-type: application/xml
+2018-01-10 08:51:15 WARN  [3121] QIODevice::read: device not open (io/qiodevice.cpp:820 qint64 QIODevice::read(char*, qint64))
+2018-01-10 08:51:18 WARN  [3127] unsupported content-type: application/xml
+2018-01-10 08:51:18 WARN  [3127] QIODevice::read: device not open (io/qiodevice.cpp:820 qint64 QIODevice::read(char*, qint64))
+2018-01-10 08:51:19 WARN  [3133] unsupported content-type: application/xml
+2018-01-10 08:51:19 WARN  [3133] QIODevice::read: device not open (io/qiodevice.cpp:820 qint64 QIODevice::read(char*, qint64))
+2018-01-10 08:51:20 INFO  [3028] TreeFrog application servers shutting down
+2018-01-10 08:51:21 INFO  [3028] TreeFrog application servers shutdown completed
+2018-01-10 08:57:37 INFO  [3197] TreeFrog Framework version 1.20.0
+2018-01-10 08:57:37 INFO  [3197] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 08:57:37 INFO  [3197] TreeFrog application servers started up.
+2018-01-10 08:57:39 WARN  [3305] unsupported content-type: application/xml
+2018-01-10 08:57:44 WARN  [3309] unsupported content-type: application/xml
+2018-01-10 08:58:20 INFO  [3197] TreeFrog application servers shutting down
+2018-01-10 08:58:20 INFO  [3197] TreeFrog application servers shutdown completed
+2018-01-10 09:01:08 INFO  [3443] TreeFrog Framework version 1.20.0
+2018-01-10 09:01:08 INFO  [3443] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:01:08 INFO  [3443] TreeFrog application servers started up.
+2018-01-10 09:01:11 WARN  [3537] unsupported content-type: application/xml
+2018-01-10 09:01:37 INFO  [3443] TreeFrog application servers shutting down
+2018-01-10 09:01:37 INFO  [3443] TreeFrog application servers shutdown completed
+2018-01-10 09:01:51 INFO  [3589] TreeFrog Framework version 1.20.0
+2018-01-10 09:01:51 INFO  [3589] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:01:51 INFO  [3589] TreeFrog application servers started up.
+2018-01-10 09:01:53 WARN  [3685] unsupported content-type: application/xml
+2018-01-10 09:20:14 INFO  [3589] TreeFrog application servers shutting down
+2018-01-10 09:20:14 INFO  [3589] TreeFrog application servers shutdown completed
+2018-01-10 09:22:42 INFO  [3849] TreeFrog Framework version 1.20.0
+2018-01-10 09:22:42 INFO  [3849] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:22:42 INFO  [3849] TreeFrog application servers started up.
+2018-01-10 09:22:45 WARN  [3952] unsupported content-type: application/xml
+2018-01-10 09:23:57 WARN  [3958] unsupported content-type: application/xml
+2018-01-10 09:24:02 INFO  [3849] TreeFrog application servers shutting down
+2018-01-10 09:24:02 INFO  [3849] TreeFrog application servers shutdown completed
+2018-01-10 09:25:03 INFO  [3995] TreeFrog Framework version 1.20.0
+2018-01-10 09:25:03 INFO  [3995] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:25:03 INFO  [3995] TreeFrog application servers started up.
+2018-01-10 09:25:07 WARN  [4091] unsupported content-type: application/xml
+2018-01-10 09:25:09 WARN  [4096] unsupported content-type: application/xml
+2018-01-10 09:26:46 INFO  [3995] TreeFrog application servers shutting down
+2018-01-10 09:26:46 INFO  [3995] TreeFrog application servers shutdown completed
+2018-01-10 09:29:53 INFO  [4233] TreeFrog Framework version 1.20.0
+2018-01-10 09:29:53 INFO  [4233] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:29:53 INFO  [4233] TreeFrog application servers started up.
+2018-01-10 09:29:55 WARN  [4325] unsupported content-type: application/xml
+2018-01-10 09:29:58 INFO  [4233] TreeFrog application servers shutting down
+2018-01-10 09:29:58 INFO  [4233] TreeFrog application servers shutdown completed
+2018-01-10 09:30:59 INFO  [4380] TreeFrog Framework version 1.20.0
+2018-01-10 09:30:59 INFO  [4380] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:30:59 INFO  [4380] TreeFrog application servers started up.
+2018-01-10 09:31:01 WARN  [4489] unsupported content-type: application/xml
+2018-01-10 09:31:03 WARN  [4493] unsupported content-type: application/xml
+2018-01-10 09:31:06 INFO  [4380] TreeFrog application servers shutting down
+2018-01-10 09:31:06 INFO  [4380] TreeFrog application servers shutdown completed
+2018-01-10 09:34:05 INFO  [4554] TreeFrog Framework version 1.20.0
+2018-01-10 09:34:05 INFO  [4554] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:34:05 INFO  [4554] TreeFrog application servers started up.
+2018-01-10 09:34:08 WARN  [4657] unsupported content-type: application/xml
+2018-01-10 09:36:04 INFO  [4554] TreeFrog application servers shutting down
+2018-01-10 09:36:04 INFO  [4554] TreeFrog application servers shutdown completed
+2018-01-10 09:36:11 INFO  [4713] TreeFrog Framework version 1.20.0
+2018-01-10 09:36:11 INFO  [4713] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:36:11 INFO  [4713] TreeFrog application servers started up.
+2018-01-10 09:36:14 WARN  [4816] unsupported content-type: application/xml
+2018-01-10 09:40:25 INFO  [4713] TreeFrog application servers shutting down
+2018-01-10 09:40:25 INFO  [4713] TreeFrog application servers shutdown completed
+2018-01-10 09:40:31 INFO  [4875] TreeFrog Framework version 1.20.0
+2018-01-10 09:40:31 INFO  [4875] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 09:40:31 INFO  [4875] TreeFrog application servers started up.
+2018-01-10 09:40:33 WARN  [4981] unsupported content-type: application/xml
+2018-01-10 09:41:58 WARN  [4988] unsupported content-type: application/xml

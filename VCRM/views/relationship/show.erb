@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<%#include "relationship.h" %>
+<% tfetch(Relationship, relationship); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Relationship</h1>
+<dt>ID</dt><dd><%= relationship.id() %></dd><br />
+<dt>Created at</dt><dd><%= relationship.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= relationship.updatedAt() %></dd><br />
+<dt>D ID</dt><dd><%= relationship.dId() %></dd><br />
+<dt>Device Name</dt><dd><%= relationship.deviceName() %></dd><br />
+<dt>S ID</dt><dd><%= relationship.sId() %></dd><br />
+<dt>Service Name</dt><dd><%= relationship.serviceName() %></dd><br />
+<dt>Anonymity Method</dt><dd><%= relationship.anonymityMethod() %></dd><br />
+<dt>Privacy Standard</dt><dd><%= relationship.privacyStandard() %></dd><br />
+<dt>Interval</dt><dd><%= relationship.interval() %></dd><br />
+<dt>Location</dt><dd><%= relationship.location() %></dd><br />
+
+<%== linkTo("Edit", urla("save", relationship.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

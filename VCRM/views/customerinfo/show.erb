@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<%#include "customerinfo.h" %>
+<% tfetch(CustomerInfo, customerInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Customer Info</h1>
+<dt>ID</dt><dd><%= customerInfo.id() %></dd><br />
+<dt>Created at</dt><dd><%= customerInfo.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= customerInfo.updatedAt() %></dd><br />
+<dt>L ID</dt><dd><%= customerInfo.lId() %></dd><br />
+<dt>Last Name</dt><dd><%= customerInfo.lastName() %></dd><br />
+<dt>First Name</dt><dd><%= customerInfo.firstName() %></dd><br />
+<dt>Birthday</dt><dd><%= customerInfo.birthday() %></dd><br />
+<dt>E Mail Addr</dt><dd><%= customerInfo.eMailAddr() %></dd><br />
+<dt>Phone Num</dt><dd><%= customerInfo.phoneNum() %></dd><br />
+
+<%== linkTo("Edit", urla("save", customerInfo.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

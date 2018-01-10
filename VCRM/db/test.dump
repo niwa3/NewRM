@@ -1,0 +1,1161 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+ALTER TABLE ONLY public.vender_info DROP CONSTRAINT vender_info_l_id_fkey;
+ALTER TABLE ONLY public.service_info DROP CONSTRAINT service_info_v_id_fkey;
+ALTER TABLE ONLY public.relationship DROP CONSTRAINT relationship_service_name_fkey;
+ALTER TABLE ONLY public.relationship DROP CONSTRAINT relationship_s_id_fkey;
+ALTER TABLE ONLY public.relationship DROP CONSTRAINT relationship_device_name_fkey;
+ALTER TABLE ONLY public.relationship DROP CONSTRAINT relationship_d_id_fkey;
+ALTER TABLE ONLY public.device_info DROP CONSTRAINT device_info_c_id_fkey;
+ALTER TABLE ONLY public.customer_info DROP CONSTRAINT consumer_info_l_id_fkey;
+DROP TRIGGER update_tri ON public.relationship;
+DROP TRIGGER update_tri ON public.service_info;
+DROP TRIGGER update_tri ON public.device_info;
+DROP TRIGGER update_tri ON public.vender_info;
+DROP TRIGGER update_tri ON public.customer_info;
+DROP INDEX public.s_id_index;
+DROP INDEX public.d_id_index;
+ALTER TABLE ONLY public.vender_info DROP CONSTRAINT vender_info_pkey;
+ALTER TABLE ONLY public.vender_info DROP CONSTRAINT vender_info_l_id_key;
+ALTER TABLE ONLY public.users DROP CONSTRAINT users_username_key;
+ALTER TABLE ONLY public.service_info DROP CONSTRAINT service_info_service_name_key;
+ALTER TABLE ONLY public.service_info DROP CONSTRAINT service_info_pkey;
+ALTER TABLE ONLY public.server DROP CONSTRAINT server_relationid_key;
+ALTER TABLE ONLY public.relationship DROP CONSTRAINT relationship_pkey;
+ALTER TABLE ONLY public.relation DROP CONSTRAINT relation_relationid_key;
+ALTER TABLE ONLY public.node DROP CONSTRAINT node_nodeid_key;
+ALTER TABLE ONLY public.login_info DROP CONSTRAINT login_info_pkey;
+ALTER TABLE ONLY public.login_info DROP CONSTRAINT login_info_login_key;
+ALTER TABLE ONLY public.device_info DROP CONSTRAINT device_info_pkey;
+ALTER TABLE ONLY public.device_info DROP CONSTRAINT device_info_device_name_key;
+ALTER TABLE ONLY public.customer_info DROP CONSTRAINT consumer_info_pkey;
+ALTER TABLE ONLY public.customer_info DROP CONSTRAINT consumer_info_l_id_key;
+ALTER TABLE public.vender_info ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.service_info ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.relationship ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.login_info ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.device_info ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.customer_info ALTER COLUMN id DROP DEFAULT;
+DROP SEQUENCE public.vender_info_id_seq;
+DROP TABLE public.vender_info;
+DROP TABLE public.users;
+DROP TABLE public.test_table;
+DROP SEQUENCE public.service_info_id_seq;
+DROP TABLE public.service_info;
+DROP TABLE public.service;
+DROP TABLE public.server;
+DROP SEQUENCE public.relationship_id_seq;
+DROP TABLE public.relationship;
+DROP TABLE public.relation;
+DROP TABLE public.node;
+DROP SEQUENCE public.login_info_id_seq;
+DROP TABLE public.login_info;
+DROP SEQUENCE public.device_info_id_seq;
+DROP TABLE public.device_info;
+DROP SEQUENCE public.customer_info_id_seq;
+DROP TABLE public.customer_info;
+DROP TABLE public.cpptest;
+DROP FUNCTION public.set_update_time();
+DROP EXTENSION plpgsql;
+DROP SCHEMA public;
+--
+-- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA public;
+
+
+ALTER SCHEMA public OWNER TO postgres;
+
+--
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+--
+-- Name: set_update_time(); Type: FUNCTION; Schema: public; Owner: testuser
+--
+
+CREATE FUNCTION set_update_time() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+  begin
+  new.updated_at := 'now';
+  return new;
+  end;
+$$;
+
+
+ALTER FUNCTION public.set_update_time() OWNER TO testuser;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: cpptest; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE cpptest (
+    name integer,
+    valus double precision
+);
+
+
+ALTER TABLE public.cpptest OWNER TO testuser;
+
+--
+-- Name: customer_info; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE customer_info (
+    id integer NOT NULL,
+    created_at timestamp without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp without time zone DEFAULT now() NOT NULL,
+    l_id integer NOT NULL,
+    last_name character varying(64) NOT NULL,
+    first_name character varying(64) NOT NULL,
+    birthday timestamp without time zone NOT NULL,
+    e_mail_addr character varying(64) NOT NULL,
+    phone_num character varying(255)
+);
+
+
+ALTER TABLE public.customer_info OWNER TO testuser;
+
+--
+-- Name: customer_info_id_seq; Type: SEQUENCE; Schema: public; Owner: testuser
+--
+
+CREATE SEQUENCE customer_info_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.customer_info_id_seq OWNER TO testuser;
+
+--
+-- Name: customer_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: testuser
+--
+
+ALTER SEQUENCE customer_info_id_seq OWNED BY customer_info.id;
+
+
+--
+-- Name: device_info; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE device_info (
+    id integer NOT NULL,
+    created_at timestamp without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp without time zone DEFAULT now() NOT NULL,
+    c_id integer NOT NULL,
+    device_name character varying(64) NOT NULL,
+    default_privacy_standard integer NOT NULL,
+    device_type integer NOT NULL,
+    data_type integer NOT NULL,
+    "interval" integer NOT NULL,
+    location character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.device_info OWNER TO testuser;
+
+--
+-- Name: device_info_id_seq; Type: SEQUENCE; Schema: public; Owner: testuser
+--
+
+CREATE SEQUENCE device_info_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.device_info_id_seq OWNER TO testuser;
+
+--
+-- Name: device_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: testuser
+--
+
+ALTER SEQUENCE device_info_id_seq OWNED BY device_info.id;
+
+
+--
+-- Name: login_info; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE login_info (
+    id integer NOT NULL,
+    created_at timestamp without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp without time zone DEFAULT now() NOT NULL,
+    login character varying(64) NOT NULL,
+    passwd character varying(64) NOT NULL,
+    salt character varying(64) NOT NULL,
+    user_type integer NOT NULL
+);
+
+
+ALTER TABLE public.login_info OWNER TO testuser;
+
+--
+-- Name: login_info_id_seq; Type: SEQUENCE; Schema: public; Owner: testuser
+--
+
+CREATE SEQUENCE login_info_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.login_info_id_seq OWNER TO testuser;
+
+--
+-- Name: login_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: testuser
+--
+
+ALTER SEQUENCE login_info_id_seq OWNED BY login_info.id;
+
+
+--
+-- Name: node; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE node (
+    nodeid character varying(64),
+    userid character varying(64),
+    privacy_lvl integer,
+    node_type character varying(16),
+    data_type character varying(16),
+    "interval" integer,
+    location character varying(64)
+);
+
+
+ALTER TABLE public.node OWNER TO testuser;
+
+--
+-- Name: relation; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE relation (
+    relationid integer,
+    serviceid character varying(64),
+    nodeid character varying(64),
+    privacy_lvl integer,
+    anonymization_method character varying(16),
+    "interval" integer,
+    location character varying(64),
+    valid boolean,
+    maxprivacy_lvl integer
+);
+
+
+ALTER TABLE public.relation OWNER TO testuser;
+
+--
+-- Name: relationship; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE relationship (
+    id integer NOT NULL,
+    created_at timestamp without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp without time zone DEFAULT now() NOT NULL,
+    d_id integer NOT NULL,
+    device_name character varying(255) NOT NULL,
+    s_id integer NOT NULL,
+    service_name character varying(255) NOT NULL,
+    anonymity_method integer NOT NULL,
+    privacy_standard integer NOT NULL,
+    "interval" integer NOT NULL,
+    location character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.relationship OWNER TO testuser;
+
+--
+-- Name: relationship_id_seq; Type: SEQUENCE; Schema: public; Owner: testuser
+--
+
+CREATE SEQUENCE relationship_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.relationship_id_seq OWNER TO testuser;
+
+--
+-- Name: relationship_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: testuser
+--
+
+ALTER SEQUENCE relationship_id_seq OWNED BY relationship.id;
+
+
+--
+-- Name: server; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE server (
+    relationid integer,
+    serviceid character varying(64),
+    nodeid character varying(64),
+    privacy_lvl integer,
+    anonymization_method character varying(16),
+    "interval" integer
+);
+
+
+ALTER TABLE public.server OWNER TO testuser;
+
+--
+-- Name: service; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE service (
+    serviceid character varying(64),
+    venderid character varying(64),
+    privacy_lvl integer,
+    data_type character varying(16),
+    "interval" integer
+);
+
+
+ALTER TABLE public.service OWNER TO testuser;
+
+--
+-- Name: service_info; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE service_info (
+    id integer NOT NULL,
+    created_at timestamp without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp without time zone DEFAULT now() NOT NULL,
+    v_id integer NOT NULL,
+    service_name character varying(64) NOT NULL,
+    required_privacy_standard integer NOT NULL,
+    data_type integer NOT NULL,
+    "interval" integer NOT NULL
+);
+
+
+ALTER TABLE public.service_info OWNER TO testuser;
+
+--
+-- Name: service_info_id_seq; Type: SEQUENCE; Schema: public; Owner: testuser
+--
+
+CREATE SEQUENCE service_info_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.service_info_id_seq OWNER TO testuser;
+
+--
+-- Name: service_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: testuser
+--
+
+ALTER SEQUENCE service_info_id_seq OWNED BY service_info.id;
+
+
+--
+-- Name: test_table; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE test_table (
+    word character varying(64)
+);
+
+
+ALTER TABLE public.test_table OWNER TO testuser;
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE users (
+    username character varying(64),
+    password character varying(64),
+    salt character varying(16),
+    userid character varying(64)
+);
+
+
+ALTER TABLE public.users OWNER TO testuser;
+
+--
+-- Name: vender_info; Type: TABLE; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE TABLE vender_info (
+    id integer NOT NULL,
+    created_at timestamp without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp without time zone DEFAULT now() NOT NULL,
+    l_id integer NOT NULL,
+    name character varying(64) NOT NULL,
+    phone_num character varying(255) NOT NULL,
+    e_mail_addr character varying(64) NOT NULL
+);
+
+
+ALTER TABLE public.vender_info OWNER TO testuser;
+
+--
+-- Name: vender_info_id_seq; Type: SEQUENCE; Schema: public; Owner: testuser
+--
+
+CREATE SEQUENCE vender_info_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.vender_info_id_seq OWNER TO testuser;
+
+--
+-- Name: vender_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: testuser
+--
+
+ALTER SEQUENCE vender_info_id_seq OWNED BY vender_info.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY customer_info ALTER COLUMN id SET DEFAULT nextval('customer_info_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY device_info ALTER COLUMN id SET DEFAULT nextval('device_info_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY login_info ALTER COLUMN id SET DEFAULT nextval('login_info_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY relationship ALTER COLUMN id SET DEFAULT nextval('relationship_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY service_info ALTER COLUMN id SET DEFAULT nextval('service_info_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY vender_info ALTER COLUMN id SET DEFAULT nextval('vender_info_id_seq'::regclass);
+
+
+--
+-- Data for Name: cpptest; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY cpptest (name, valus) FROM stdin;
+3	2.29999999999999982
+\.
+
+
+--
+-- Data for Name: customer_info; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY customer_info (id, created_at, updated_at, l_id, last_name, first_name, birthday, e_mail_addr, phone_num) FROM stdin;
+18	2017-08-18 18:36:18.445381	2017-08-18 18:36:18.445381	12	pu	ryo	2013-01-01 00:00:00	jfsljfal@klsjdfal	09064445904
+19	2017-10-24 11:16:41.844407	2017-10-24 11:16:41.844407	13	ando	tamako	1992-09-09 00:00:00	jskdj@example.com	90928108270
+20	2017-10-24 11:30:06.118241	2017-10-24 11:30:06.118241	14	tadamatsu	kimura	1992-09-09 00:00:00	jskdj@example.com	90928108270
+22	2017-10-24 13:20:24.629073	2017-10-24 13:20:24.629073	16	mikihiko	yoshida	1992-09-09 00:00:00	jskdj@example.com	90928108270
+23	2017-10-24 13:23:38.573093	2017-10-24 13:23:38.573093	17	meguwin	motonobu	1992-09-09 00:00:00	jskdj@example.com	90928108270
+\.
+
+
+--
+-- Name: customer_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: testuser
+--
+
+SELECT pg_catalog.setval('customer_info_id_seq', 23, true);
+
+
+--
+-- Data for Name: device_info; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY device_info (id, created_at, updated_at, c_id, device_name, default_privacy_standard, device_type, data_type, "interval", location) FROM stdin;
+14	2017-10-23 12:55:36.524765	2017-10-23 16:16:15.823494	18	http://senser1	1	1	1	100	http://gateway1
+15	2017-10-23 12:56:09.058638	2017-10-23 16:16:27.031118	18	http://senser2	1	1	1	100	http://gateway1
+16	2017-10-24 11:16:41.852751	2017-10-24 11:16:41.852751	19	http://senser3	1	1	1	100	http://gateway1
+17	2017-10-24 11:30:06.126606	2017-10-24 11:30:06.126606	20	http://senser4	1	1	1	100	http://gateway1
+19	2017-10-24 13:20:24.637159	2017-10-24 13:20:24.637159	22	http://senser5	1	1	1	100	http://gateway2
+20	2017-10-24 13:23:38.581291	2017-10-24 13:23:38.581291	23	http://senser6	1	1	1	100	http://gateway2
+31	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor1	1	1	1	100	http://gateway19
+32	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor2	1	1	1	100	http://gateway19
+33	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor3	1	1	1	100	http://gateway19
+34	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor4	1	1	1	100	http://gateway19
+35	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor5	1	1	1	100	http://gateway19
+36	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor6	1	1	1	100	http://gateway19
+37	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor7	1	1	1	100	http://gateway19
+38	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor8	1	1	1	100	http://gateway19
+39	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor9	1	1	1	100	http://gateway19
+40	2017-12-23 15:54:17.326354	2017-12-23 15:54:17.326354	19	http://gateway19/sensor10	1	1	1	100	http://gateway19
+\.
+
+
+--
+-- Name: device_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: testuser
+--
+
+SELECT pg_catalog.setval('device_info_id_seq', 40, true);
+
+
+--
+-- Data for Name: login_info; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY login_info (id, created_at, updated_at, login, passwd, salt, user_type) FROM stdin;
+12	2017-08-18 18:36:18.424703	2017-08-18 18:36:18.424703	pupupu	DA25964AD506A2C5363BAF42D8647DA20A69088D590322B3ACB660395EDC2467	0A23E903607658A9	1
+13	2017-10-24 11:16:41.820165	2017-10-24 11:16:41.820165	tommy	C8A070DACA823004FBD670EBB8A63057B637072A08786CC137F189FC4F918FB4	E9C5FFEF7B4B5491	1
+14	2017-10-24 11:30:06.102619	2017-10-24 11:30:06.102619	kim	1946F8C44055F493372EBFD074F4A59CC032FDDFA052AB36B6DB732B9F795138	D0FF9AE962B2DF15	1
+16	2017-10-24 13:20:24.602476	2017-10-24 13:20:24.602476	miki	E86CC938EEF22CAE7A2BA2596DE9BE43DF3082DCBD5B0FE161ED26F888E6480A	9A647EB23D30356E	1
+17	2017-10-24 13:23:38.545052	2017-10-24 13:23:38.545052	megu	F77E2640B92E056A2C9AB2AE4DC946E3C244B471496A8AE875C2CE95980AF915	233D22B58E391FA1	1
+\.
+
+
+--
+-- Name: login_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: testuser
+--
+
+SELECT pg_catalog.setval('login_info_id_seq', 17, true);
+
+
+--
+-- Data for Name: node; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY node (nodeid, userid, privacy_lvl, node_type, data_type, "interval", location) FROM stdin;
+http://GW/sensor0	u00001	1	sensor	power	60	https://10.24.129.39:12345
+http://GW/sensor1	u00002	1	sensor	power	60	https://10.24.129.206:12345
+http://GW/sensor2	u00003	1	sensor	power	60	https://10.24.128.249:12345
+http://GW/sensor3	u00001	1	sensor	power	60	https://10.24.129.39:12345
+http://GW/sensor4	u00002	1	sensor	power	60	https://10.24.129.206:12345
+http://GW/sensor5	u00003	1	sensor	power	60	https://10.24.128.249:12345
+http://GW/sensor6	u00001	1	sensor	power	60	https://10.24.129.39:12345
+http://GW/sensor7	u00002	1	sensor	power	60	https://10.24.129.206:12345
+http://GW/sensor8	u00003	1	sensor	power	60	https://10.24.128.249:12345
+\.
+
+
+--
+-- Data for Name: relation; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY relation (relationid, serviceid, nodeid, privacy_lvl, anonymization_method, "interval", location, valid, maxprivacy_lvl) FROM stdin;
+\.
+
+
+--
+-- Data for Name: relationship; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY relationship (id, created_at, updated_at, d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, "interval", location) FROM stdin;
+46	2017-12-23 15:54:17.358492	2017-12-23 15:54:17.358492	31	http://gateway19/sensor1	2	http://service2	2	1	300	http://gateway19
+47	2017-12-23 15:54:17.358492	2017-12-23 15:54:17.358492	31	http://gateway19/sensor1	4	http://service3	2	1	300	http://gateway19
+48	2017-12-23 15:54:17.358492	2017-12-23 15:54:17.358492	31	http://gateway19/sensor1	5	http://service4	2	1	300	http://gateway19
+49	2017-12-23 15:54:17.374232	2017-12-23 15:54:17.374232	32	http://gateway19/sensor2	2	http://service2	2	1	300	http://gateway19
+50	2017-12-23 15:54:17.374232	2017-12-23 15:54:17.374232	32	http://gateway19/sensor2	4	http://service3	2	1	300	http://gateway19
+51	2017-12-23 15:54:17.374232	2017-12-23 15:54:17.374232	32	http://gateway19/sensor2	5	http://service4	2	1	300	http://gateway19
+52	2017-12-23 15:54:17.390132	2017-12-23 15:54:17.390132	33	http://gateway19/sensor3	2	http://service2	2	1	300	http://gateway19
+53	2017-12-23 15:54:17.390132	2017-12-23 15:54:17.390132	33	http://gateway19/sensor3	4	http://service3	2	1	300	http://gateway19
+54	2017-12-23 15:54:17.390132	2017-12-23 15:54:17.390132	33	http://gateway19/sensor3	5	http://service4	2	1	300	http://gateway19
+55	2017-12-23 15:54:17.406219	2017-12-23 15:54:17.406219	34	http://gateway19/sensor4	2	http://service2	2	1	300	http://gateway19
+56	2017-12-23 15:54:17.406219	2017-12-23 15:54:17.406219	34	http://gateway19/sensor4	4	http://service3	2	1	300	http://gateway19
+57	2017-12-23 15:54:17.406219	2017-12-23 15:54:17.406219	34	http://gateway19/sensor4	5	http://service4	2	1	300	http://gateway19
+58	2017-12-23 15:54:17.422964	2017-12-23 15:54:17.422964	35	http://gateway19/sensor5	2	http://service2	2	1	300	http://gateway19
+59	2017-12-23 15:54:17.422964	2017-12-23 15:54:17.422964	35	http://gateway19/sensor5	4	http://service3	2	1	300	http://gateway19
+60	2017-12-23 15:54:17.422964	2017-12-23 15:54:17.422964	35	http://gateway19/sensor5	5	http://service4	2	1	300	http://gateway19
+61	2017-12-23 15:54:17.439559	2017-12-23 15:54:17.439559	36	http://gateway19/sensor6	2	http://service2	2	1	300	http://gateway19
+62	2017-12-23 15:54:17.439559	2017-12-23 15:54:17.439559	36	http://gateway19/sensor6	4	http://service3	2	1	300	http://gateway19
+63	2017-12-23 15:54:17.439559	2017-12-23 15:54:17.439559	36	http://gateway19/sensor6	5	http://service4	2	1	300	http://gateway19
+64	2017-12-23 15:54:17.456317	2017-12-23 15:54:17.456317	37	http://gateway19/sensor7	2	http://service2	2	1	300	http://gateway19
+65	2017-12-23 15:54:17.456317	2017-12-23 15:54:17.456317	37	http://gateway19/sensor7	4	http://service3	2	1	300	http://gateway19
+66	2017-12-23 15:54:17.456317	2017-12-23 15:54:17.456317	37	http://gateway19/sensor7	5	http://service4	2	1	300	http://gateway19
+67	2017-12-23 15:54:17.472097	2017-12-23 15:54:17.472097	38	http://gateway19/sensor8	2	http://service2	2	1	300	http://gateway19
+68	2017-12-23 15:54:17.472097	2017-12-23 15:54:17.472097	38	http://gateway19/sensor8	4	http://service3	2	1	300	http://gateway19
+69	2017-12-23 15:54:17.472097	2017-12-23 15:54:17.472097	38	http://gateway19/sensor8	5	http://service4	2	1	300	http://gateway19
+70	2017-12-23 15:54:17.488821	2017-12-23 15:54:17.488821	39	http://gateway19/sensor9	2	http://service2	2	1	300	http://gateway19
+71	2017-12-23 15:54:17.488821	2017-12-23 15:54:17.488821	39	http://gateway19/sensor9	4	http://service3	2	1	300	http://gateway19
+72	2017-12-23 15:54:17.488821	2017-12-23 15:54:17.488821	39	http://gateway19/sensor9	5	http://service4	2	1	300	http://gateway19
+73	2017-12-23 15:54:17.5054	2017-12-23 15:54:17.5054	40	http://gateway19/sensor10	2	http://service2	2	1	300	http://gateway19
+74	2017-12-23 15:54:17.5054	2017-12-23 15:54:17.5054	40	http://gateway19/sensor10	4	http://service3	2	1	300	http://gateway19
+75	2017-12-23 15:54:17.5054	2017-12-23 15:54:17.5054	40	http://gateway19/sensor10	5	http://service4	2	1	300	http://gateway19
+76	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	14	http://senser1	7	http://vendor1/service1	2	1	100	http://gateway1
+77	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	15	http://senser2	7	http://vendor1/service1	2	1	100	http://gateway1
+78	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	16	http://senser3	7	http://vendor1/service1	2	1	100	http://gateway1
+79	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	17	http://senser4	7	http://vendor1/service1	2	1	100	http://gateway1
+80	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	19	http://senser5	7	http://vendor1/service1	2	1	100	http://gateway2
+81	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	20	http://senser6	7	http://vendor1/service1	2	1	100	http://gateway2
+82	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	31	http://gateway19/sensor1	7	http://vendor1/service1	2	1	100	http://gateway19
+83	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	32	http://gateway19/sensor2	7	http://vendor1/service1	2	1	100	http://gateway19
+84	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	33	http://gateway19/sensor3	7	http://vendor1/service1	2	1	100	http://gateway19
+85	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	34	http://gateway19/sensor4	7	http://vendor1/service1	2	1	100	http://gateway19
+86	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	35	http://gateway19/sensor5	7	http://vendor1/service1	2	1	100	http://gateway19
+87	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	36	http://gateway19/sensor6	7	http://vendor1/service1	2	1	100	http://gateway19
+88	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	37	http://gateway19/sensor7	7	http://vendor1/service1	2	1	100	http://gateway19
+89	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	38	http://gateway19/sensor8	7	http://vendor1/service1	2	1	100	http://gateway19
+90	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	39	http://gateway19/sensor9	7	http://vendor1/service1	2	1	100	http://gateway19
+91	2017-12-23 17:05:44.30241	2017-12-23 17:05:44.30241	40	http://gateway19/sensor10	7	http://vendor1/service1	2	1	100	http://gateway19
+92	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	14	http://senser1	8	http://vendor1/service2	2	1	100	http://gateway1
+93	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	15	http://senser2	8	http://vendor1/service2	2	1	100	http://gateway1
+94	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	16	http://senser3	8	http://vendor1/service2	2	1	100	http://gateway1
+95	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	17	http://senser4	8	http://vendor1/service2	2	1	100	http://gateway1
+96	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	19	http://senser5	8	http://vendor1/service2	2	1	100	http://gateway2
+97	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	20	http://senser6	8	http://vendor1/service2	2	1	100	http://gateway2
+98	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	31	http://gateway19/sensor1	8	http://vendor1/service2	2	1	100	http://gateway19
+99	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	32	http://gateway19/sensor2	8	http://vendor1/service2	2	1	100	http://gateway19
+100	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	33	http://gateway19/sensor3	8	http://vendor1/service2	2	1	100	http://gateway19
+101	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	34	http://gateway19/sensor4	8	http://vendor1/service2	2	1	100	http://gateway19
+102	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	35	http://gateway19/sensor5	8	http://vendor1/service2	2	1	100	http://gateway19
+103	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	36	http://gateway19/sensor6	8	http://vendor1/service2	2	1	100	http://gateway19
+104	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	37	http://gateway19/sensor7	8	http://vendor1/service2	2	1	100	http://gateway19
+105	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	38	http://gateway19/sensor8	8	http://vendor1/service2	2	1	100	http://gateway19
+106	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	39	http://gateway19/sensor9	8	http://vendor1/service2	2	1	100	http://gateway19
+107	2017-12-23 17:05:44.326835	2017-12-23 17:05:44.326835	40	http://gateway19/sensor10	8	http://vendor1/service2	2	1	100	http://gateway19
+108	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	14	http://senser1	9	http://vendor1/service3	2	1	100	http://gateway1
+109	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	15	http://senser2	9	http://vendor1/service3	2	1	100	http://gateway1
+110	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	16	http://senser3	9	http://vendor1/service3	2	1	100	http://gateway1
+111	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	17	http://senser4	9	http://vendor1/service3	2	1	100	http://gateway1
+112	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	19	http://senser5	9	http://vendor1/service3	2	1	100	http://gateway2
+113	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	20	http://senser6	9	http://vendor1/service3	2	1	100	http://gateway2
+114	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	31	http://gateway19/sensor1	9	http://vendor1/service3	2	1	100	http://gateway19
+115	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	32	http://gateway19/sensor2	9	http://vendor1/service3	2	1	100	http://gateway19
+116	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	33	http://gateway19/sensor3	9	http://vendor1/service3	2	1	100	http://gateway19
+117	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	34	http://gateway19/sensor4	9	http://vendor1/service3	2	1	100	http://gateway19
+118	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	35	http://gateway19/sensor5	9	http://vendor1/service3	2	1	100	http://gateway19
+119	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	36	http://gateway19/sensor6	9	http://vendor1/service3	2	1	100	http://gateway19
+120	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	37	http://gateway19/sensor7	9	http://vendor1/service3	2	1	100	http://gateway19
+121	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	38	http://gateway19/sensor8	9	http://vendor1/service3	2	1	100	http://gateway19
+122	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	39	http://gateway19/sensor9	9	http://vendor1/service3	2	1	100	http://gateway19
+123	2017-12-23 17:05:44.351185	2017-12-23 17:05:44.351185	40	http://gateway19/sensor10	9	http://vendor1/service3	2	1	100	http://gateway19
+124	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	14	http://senser1	10	http://vendor1/service4	2	1	100	http://gateway1
+125	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	15	http://senser2	10	http://vendor1/service4	2	1	100	http://gateway1
+126	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	16	http://senser3	10	http://vendor1/service4	2	1	100	http://gateway1
+127	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	17	http://senser4	10	http://vendor1/service4	2	1	100	http://gateway1
+128	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	19	http://senser5	10	http://vendor1/service4	2	1	100	http://gateway2
+129	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	20	http://senser6	10	http://vendor1/service4	2	1	100	http://gateway2
+130	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	31	http://gateway19/sensor1	10	http://vendor1/service4	2	1	100	http://gateway19
+131	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	32	http://gateway19/sensor2	10	http://vendor1/service4	2	1	100	http://gateway19
+132	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	33	http://gateway19/sensor3	10	http://vendor1/service4	2	1	100	http://gateway19
+133	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	34	http://gateway19/sensor4	10	http://vendor1/service4	2	1	100	http://gateway19
+134	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	35	http://gateway19/sensor5	10	http://vendor1/service4	2	1	100	http://gateway19
+135	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	36	http://gateway19/sensor6	10	http://vendor1/service4	2	1	100	http://gateway19
+136	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	37	http://gateway19/sensor7	10	http://vendor1/service4	2	1	100	http://gateway19
+137	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	38	http://gateway19/sensor8	10	http://vendor1/service4	2	1	100	http://gateway19
+138	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	39	http://gateway19/sensor9	10	http://vendor1/service4	2	1	100	http://gateway19
+139	2017-12-23 17:05:44.36736	2017-12-23 17:05:44.36736	40	http://gateway19/sensor10	10	http://vendor1/service4	2	1	100	http://gateway19
+140	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	14	http://senser1	11	http://vendor1/service5	2	1	100	http://gateway1
+141	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	15	http://senser2	11	http://vendor1/service5	2	1	100	http://gateway1
+142	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	16	http://senser3	11	http://vendor1/service5	2	1	100	http://gateway1
+143	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	17	http://senser4	11	http://vendor1/service5	2	1	100	http://gateway1
+144	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	19	http://senser5	11	http://vendor1/service5	2	1	100	http://gateway2
+145	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	20	http://senser6	11	http://vendor1/service5	2	1	100	http://gateway2
+146	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	31	http://gateway19/sensor1	11	http://vendor1/service5	2	1	100	http://gateway19
+147	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	32	http://gateway19/sensor2	11	http://vendor1/service5	2	1	100	http://gateway19
+148	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	33	http://gateway19/sensor3	11	http://vendor1/service5	2	1	100	http://gateway19
+149	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	34	http://gateway19/sensor4	11	http://vendor1/service5	2	1	100	http://gateway19
+150	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	35	http://gateway19/sensor5	11	http://vendor1/service5	2	1	100	http://gateway19
+151	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	36	http://gateway19/sensor6	11	http://vendor1/service5	2	1	100	http://gateway19
+152	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	37	http://gateway19/sensor7	11	http://vendor1/service5	2	1	100	http://gateway19
+153	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	38	http://gateway19/sensor8	11	http://vendor1/service5	2	1	100	http://gateway19
+154	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	39	http://gateway19/sensor9	11	http://vendor1/service5	2	1	100	http://gateway19
+155	2017-12-23 17:05:44.383922	2017-12-23 17:05:44.383922	40	http://gateway19/sensor10	11	http://vendor1/service5	2	1	100	http://gateway19
+156	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	14	http://senser1	12	http://vendor1/service6	2	1	100	http://gateway1
+157	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	15	http://senser2	12	http://vendor1/service6	2	1	100	http://gateway1
+158	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	16	http://senser3	12	http://vendor1/service6	2	1	100	http://gateway1
+159	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	17	http://senser4	12	http://vendor1/service6	2	1	100	http://gateway1
+160	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	19	http://senser5	12	http://vendor1/service6	2	1	100	http://gateway2
+161	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	20	http://senser6	12	http://vendor1/service6	2	1	100	http://gateway2
+162	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	31	http://gateway19/sensor1	12	http://vendor1/service6	2	1	100	http://gateway19
+163	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	32	http://gateway19/sensor2	12	http://vendor1/service6	2	1	100	http://gateway19
+164	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	33	http://gateway19/sensor3	12	http://vendor1/service6	2	1	100	http://gateway19
+165	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	34	http://gateway19/sensor4	12	http://vendor1/service6	2	1	100	http://gateway19
+166	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	35	http://gateway19/sensor5	12	http://vendor1/service6	2	1	100	http://gateway19
+167	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	36	http://gateway19/sensor6	12	http://vendor1/service6	2	1	100	http://gateway19
+168	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	37	http://gateway19/sensor7	12	http://vendor1/service6	2	1	100	http://gateway19
+169	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	38	http://gateway19/sensor8	12	http://vendor1/service6	2	1	100	http://gateway19
+170	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	39	http://gateway19/sensor9	12	http://vendor1/service6	2	1	100	http://gateway19
+171	2017-12-23 17:05:44.400147	2017-12-23 17:05:44.400147	40	http://gateway19/sensor10	12	http://vendor1/service6	2	1	100	http://gateway19
+172	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	14	http://senser1	13	http://vendor1/service7	2	1	100	http://gateway1
+173	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	15	http://senser2	13	http://vendor1/service7	2	1	100	http://gateway1
+174	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	16	http://senser3	13	http://vendor1/service7	2	1	100	http://gateway1
+175	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	17	http://senser4	13	http://vendor1/service7	2	1	100	http://gateway1
+176	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	19	http://senser5	13	http://vendor1/service7	2	1	100	http://gateway2
+177	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	20	http://senser6	13	http://vendor1/service7	2	1	100	http://gateway2
+178	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	31	http://gateway19/sensor1	13	http://vendor1/service7	2	1	100	http://gateway19
+179	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	32	http://gateway19/sensor2	13	http://vendor1/service7	2	1	100	http://gateway19
+180	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	33	http://gateway19/sensor3	13	http://vendor1/service7	2	1	100	http://gateway19
+181	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	34	http://gateway19/sensor4	13	http://vendor1/service7	2	1	100	http://gateway19
+182	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	35	http://gateway19/sensor5	13	http://vendor1/service7	2	1	100	http://gateway19
+183	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	36	http://gateway19/sensor6	13	http://vendor1/service7	2	1	100	http://gateway19
+184	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	37	http://gateway19/sensor7	13	http://vendor1/service7	2	1	100	http://gateway19
+185	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	38	http://gateway19/sensor8	13	http://vendor1/service7	2	1	100	http://gateway19
+186	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	39	http://gateway19/sensor9	13	http://vendor1/service7	2	1	100	http://gateway19
+187	2017-12-23 17:05:44.417358	2017-12-23 17:05:44.417358	40	http://gateway19/sensor10	13	http://vendor1/service7	2	1	100	http://gateway19
+188	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	14	http://senser1	14	http://vendor1/service8	2	1	100	http://gateway1
+189	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	15	http://senser2	14	http://vendor1/service8	2	1	100	http://gateway1
+190	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	16	http://senser3	14	http://vendor1/service8	2	1	100	http://gateway1
+191	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	17	http://senser4	14	http://vendor1/service8	2	1	100	http://gateway1
+192	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	19	http://senser5	14	http://vendor1/service8	2	1	100	http://gateway2
+193	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	20	http://senser6	14	http://vendor1/service8	2	1	100	http://gateway2
+194	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	31	http://gateway19/sensor1	14	http://vendor1/service8	2	1	100	http://gateway19
+195	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	32	http://gateway19/sensor2	14	http://vendor1/service8	2	1	100	http://gateway19
+196	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	33	http://gateway19/sensor3	14	http://vendor1/service8	2	1	100	http://gateway19
+197	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	34	http://gateway19/sensor4	14	http://vendor1/service8	2	1	100	http://gateway19
+198	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	35	http://gateway19/sensor5	14	http://vendor1/service8	2	1	100	http://gateway19
+199	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	36	http://gateway19/sensor6	14	http://vendor1/service8	2	1	100	http://gateway19
+200	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	37	http://gateway19/sensor7	14	http://vendor1/service8	2	1	100	http://gateway19
+201	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	38	http://gateway19/sensor8	14	http://vendor1/service8	2	1	100	http://gateway19
+202	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	39	http://gateway19/sensor9	14	http://vendor1/service8	2	1	100	http://gateway19
+203	2017-12-23 17:05:44.434013	2017-12-23 17:05:44.434013	40	http://gateway19/sensor10	14	http://vendor1/service8	2	1	100	http://gateway19
+204	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	14	http://senser1	15	http://vendor1/service9	2	1	100	http://gateway1
+205	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	15	http://senser2	15	http://vendor1/service9	2	1	100	http://gateway1
+206	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	16	http://senser3	15	http://vendor1/service9	2	1	100	http://gateway1
+207	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	17	http://senser4	15	http://vendor1/service9	2	1	100	http://gateway1
+208	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	19	http://senser5	15	http://vendor1/service9	2	1	100	http://gateway2
+209	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	20	http://senser6	15	http://vendor1/service9	2	1	100	http://gateway2
+210	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	31	http://gateway19/sensor1	15	http://vendor1/service9	2	1	100	http://gateway19
+211	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	32	http://gateway19/sensor2	15	http://vendor1/service9	2	1	100	http://gateway19
+212	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	33	http://gateway19/sensor3	15	http://vendor1/service9	2	1	100	http://gateway19
+213	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	34	http://gateway19/sensor4	15	http://vendor1/service9	2	1	100	http://gateway19
+214	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	35	http://gateway19/sensor5	15	http://vendor1/service9	2	1	100	http://gateway19
+215	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	36	http://gateway19/sensor6	15	http://vendor1/service9	2	1	100	http://gateway19
+216	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	37	http://gateway19/sensor7	15	http://vendor1/service9	2	1	100	http://gateway19
+217	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	38	http://gateway19/sensor8	15	http://vendor1/service9	2	1	100	http://gateway19
+218	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	39	http://gateway19/sensor9	15	http://vendor1/service9	2	1	100	http://gateway19
+219	2017-12-23 17:05:44.450013	2017-12-23 17:05:44.450013	40	http://gateway19/sensor10	15	http://vendor1/service9	2	1	100	http://gateway19
+220	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	14	http://senser1	16	http://vendor1/service10	2	1	100	http://gateway1
+221	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	15	http://senser2	16	http://vendor1/service10	2	1	100	http://gateway1
+222	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	16	http://senser3	16	http://vendor1/service10	2	1	100	http://gateway1
+223	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	17	http://senser4	16	http://vendor1/service10	2	1	100	http://gateway1
+224	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	19	http://senser5	16	http://vendor1/service10	2	1	100	http://gateway2
+225	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	20	http://senser6	16	http://vendor1/service10	2	1	100	http://gateway2
+226	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	31	http://gateway19/sensor1	16	http://vendor1/service10	2	1	100	http://gateway19
+227	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	32	http://gateway19/sensor2	16	http://vendor1/service10	2	1	100	http://gateway19
+228	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	33	http://gateway19/sensor3	16	http://vendor1/service10	2	1	100	http://gateway19
+229	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	34	http://gateway19/sensor4	16	http://vendor1/service10	2	1	100	http://gateway19
+230	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	35	http://gateway19/sensor5	16	http://vendor1/service10	2	1	100	http://gateway19
+231	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	36	http://gateway19/sensor6	16	http://vendor1/service10	2	1	100	http://gateway19
+232	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	37	http://gateway19/sensor7	16	http://vendor1/service10	2	1	100	http://gateway19
+233	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	38	http://gateway19/sensor8	16	http://vendor1/service10	2	1	100	http://gateway19
+234	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	39	http://gateway19/sensor9	16	http://vendor1/service10	2	1	100	http://gateway19
+235	2017-12-23 17:05:44.465842	2017-12-23 17:05:44.465842	40	http://gateway19/sensor10	16	http://vendor1/service10	2	1	100	http://gateway19
+\.
+
+
+--
+-- Name: relationship_id_seq; Type: SEQUENCE SET; Schema: public; Owner: testuser
+--
+
+SELECT pg_catalog.setval('relationship_id_seq', 235, true);
+
+
+--
+-- Data for Name: server; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY server (relationid, serviceid, nodeid, privacy_lvl, anonymization_method, "interval") FROM stdin;
+\.
+
+
+--
+-- Data for Name: service; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY service (serviceid, venderid, privacy_lvl, data_type, "interval") FROM stdin;
+\.
+
+
+--
+-- Data for Name: service_info; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY service_info (id, created_at, updated_at, v_id, service_name, required_privacy_standard, data_type, "interval") FROM stdin;
+2	2017-10-06 16:00:39.727627	2017-10-06 16:00:39.727627	1	http://service2	3	1	300
+4	2017-10-06 16:06:42.016882	2017-10-06 16:06:42.016882	1	http://service3	3	1	300
+5	2017-10-06 16:08:10.651926	2017-10-06 16:08:10.651926	1	http://service4	3	1	300
+7	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service1	3	1	100
+8	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service2	3	1	100
+9	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service3	3	1	100
+10	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service4	3	1	100
+11	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service5	3	1	100
+12	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service6	3	1	100
+13	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service7	3	1	100
+14	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service8	3	1	100
+15	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service9	3	1	100
+16	2017-12-23 17:05:44.26503	2017-12-23 17:05:44.26503	1	http://vendor1/service10	3	1	100
+\.
+
+
+--
+-- Name: service_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: testuser
+--
+
+SELECT pg_catalog.setval('service_info_id_seq', 16, true);
+
+
+--
+-- Data for Name: test_table; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY test_table (word) FROM stdin;
+hello
+!
+by
+niwa
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY users (username, password, salt, userid) FROM stdin;
+alice1	FB15F0EAA120AD7B0512C9DDBD100CB232C2134DCB1471F2B2C328264B84F43B	3D08EBD47B75D6D8	u00001
+alice2	16C0EC677FEBA5DFF9410C5DDF01F78A83E4FBE8A8118E7D03E8511EA5F7442B	6D7CBC8F553314F0	u00002
+alice3	229117444F0E95FF7C91318BDAA3340C90AFA7F37D8730885C67CE005F24E06F	3974D33914E74B18	u00003
+alice4	84E4B4D970B0EDCE7D2F4B4C59427EB91F1A7700EC0BC9C9875BB0650CE12AF3	3288405F69D0E131	u00004
+alice5	158BD8C3D45433ADA29DE78E3E8054876C7DDF6A267462259BEE959EA5E8F9B2	3E56BEB77AEF2ECE	u00005
+alice6	CBAF1E3558CD7D27D0ABC04513AF89FBB15AEF031DA524C7C3567D8C019D35C4	39CEE012563CEB8E	u00006
+alice7	3E18360D1D6D7A7689B86FB2CFE2C9113AAFAAD0CFE07AD650F7E3025693DB1A	3AD343DA1A67F386	u00007
+alice8	B6BF9A5705D750CCD412FDCC5DBD0C28AC9966682B5F82677B6F510EF3AF8704	ECBEC4DC4370D9E4	u00008
+alice9	31DACF18C761A196FBADEE0877C571B4E72C7186981920CD04214BAE04A9A60C	C70FFA15DE3FA15E	u00009
+bob1	1E1CD23F407276F4226113D8A3AACAE791B3B3641AA6354E77759767E92D6525	DEC1D96C398A1A41	v00001
+bob2	A89D5E596903FFDE584FE337897EDFCE14DD5BACD4FFAD7AC7D43FC706CACBE3	52A9B2DAB504323A	v00002
+bob3	FC0F913AF71F76F1DA249B87AB4252F4CE7772CD7129E12B7EBAA9947A55E26B	B8608ED2794BF9E2	v00003
+bob4	6A0CEE696E9DFE9B562CEFA9631B468CA53E01D543B2EE40FA319A5DE2AF7154	35831685611DC3C8	v00004
+bob5	F7BA3A6D3EF20912358EC2AA4688CB44286536E0B26A79623DE256BE4C1C641E	8A70308D54CBA35D	v00005
+bob6	2A264C51DF4413B69BB8F2688532D2DC071A28F3E358504E2E8ED90DE3FCA0F0	CFB8695096EFE7DC	v00006
+bob7	5BD5D3A4B457403111EBED72079A1CDAC133C5F1947C22CA83707130F9F03505	EED1C1C2D7DD29F0	v00007
+bob8	ED4803A11E9AF47A865B406115F634B9BD93B9106E326CEBEEBA39BC4846354A	9DD02593022F75D6	v00008
+bob9	FD9E013C36AB346DC81C798AAD0FE0376676293DDD1B8E2A42CC602E6540C925	2BEE23A7EC71BF75	v00009
+\.
+
+
+--
+-- Data for Name: vender_info; Type: TABLE DATA; Schema: public; Owner: testuser
+--
+
+COPY vender_info (id, created_at, updated_at, l_id, name, phone_num, e_mail_addr) FROM stdin;
+1	2017-09-20 16:53:39.361577	2017-09-20 16:53:39.361577	12	tech & tech	01209090898	tech@go.com
+\.
+
+
+--
+-- Name: vender_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: testuser
+--
+
+SELECT pg_catalog.setval('vender_info_id_seq', 1, true);
+
+
+--
+-- Name: consumer_info_l_id_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY customer_info
+    ADD CONSTRAINT consumer_info_l_id_key UNIQUE (l_id);
+
+
+--
+-- Name: consumer_info_pkey; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY customer_info
+    ADD CONSTRAINT consumer_info_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: device_info_device_name_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY device_info
+    ADD CONSTRAINT device_info_device_name_key UNIQUE (device_name);
+
+
+--
+-- Name: device_info_pkey; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY device_info
+    ADD CONSTRAINT device_info_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: login_info_login_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY login_info
+    ADD CONSTRAINT login_info_login_key UNIQUE (login);
+
+
+--
+-- Name: login_info_pkey; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY login_info
+    ADD CONSTRAINT login_info_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: node_nodeid_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY node
+    ADD CONSTRAINT node_nodeid_key UNIQUE (nodeid);
+
+
+--
+-- Name: relation_relationid_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY relation
+    ADD CONSTRAINT relation_relationid_key UNIQUE (relationid);
+
+
+--
+-- Name: relationship_pkey; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY relationship
+    ADD CONSTRAINT relationship_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: server_relationid_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY server
+    ADD CONSTRAINT server_relationid_key UNIQUE (relationid);
+
+
+--
+-- Name: service_info_pkey; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY service_info
+    ADD CONSTRAINT service_info_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: service_info_service_name_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY service_info
+    ADD CONSTRAINT service_info_service_name_key UNIQUE (service_name);
+
+
+--
+-- Name: users_username_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_username_key UNIQUE (username);
+
+
+--
+-- Name: vender_info_l_id_key; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY vender_info
+    ADD CONSTRAINT vender_info_l_id_key UNIQUE (l_id);
+
+
+--
+-- Name: vender_info_pkey; Type: CONSTRAINT; Schema: public; Owner: testuser; Tablespace: 
+--
+
+ALTER TABLE ONLY vender_info
+    ADD CONSTRAINT vender_info_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: d_id_index; Type: INDEX; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE INDEX d_id_index ON relationship USING btree (d_id);
+
+
+--
+-- Name: s_id_index; Type: INDEX; Schema: public; Owner: testuser; Tablespace: 
+--
+
+CREATE INDEX s_id_index ON relationship USING btree (s_id);
+
+
+--
+-- Name: update_tri; Type: TRIGGER; Schema: public; Owner: testuser
+--
+
+CREATE TRIGGER update_tri BEFORE UPDATE ON customer_info FOR EACH ROW EXECUTE PROCEDURE set_update_time();
+
+
+--
+-- Name: update_tri; Type: TRIGGER; Schema: public; Owner: testuser
+--
+
+CREATE TRIGGER update_tri BEFORE UPDATE ON vender_info FOR EACH ROW EXECUTE PROCEDURE set_update_time();
+
+
+--
+-- Name: update_tri; Type: TRIGGER; Schema: public; Owner: testuser
+--
+
+CREATE TRIGGER update_tri BEFORE UPDATE ON device_info FOR EACH ROW EXECUTE PROCEDURE set_update_time();
+
+
+--
+-- Name: update_tri; Type: TRIGGER; Schema: public; Owner: testuser
+--
+
+CREATE TRIGGER update_tri BEFORE UPDATE ON service_info FOR EACH ROW EXECUTE PROCEDURE set_update_time();
+
+
+--
+-- Name: update_tri; Type: TRIGGER; Schema: public; Owner: testuser
+--
+
+CREATE TRIGGER update_tri BEFORE UPDATE ON relationship FOR EACH ROW EXECUTE PROCEDURE set_update_time();
+
+
+--
+-- Name: consumer_info_l_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY customer_info
+    ADD CONSTRAINT consumer_info_l_id_fkey FOREIGN KEY (l_id) REFERENCES login_info(id);
+
+
+--
+-- Name: device_info_c_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY device_info
+    ADD CONSTRAINT device_info_c_id_fkey FOREIGN KEY (c_id) REFERENCES customer_info(id);
+
+
+--
+-- Name: relationship_d_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY relationship
+    ADD CONSTRAINT relationship_d_id_fkey FOREIGN KEY (d_id) REFERENCES device_info(id);
+
+
+--
+-- Name: relationship_device_name_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY relationship
+    ADD CONSTRAINT relationship_device_name_fkey FOREIGN KEY (device_name) REFERENCES device_info(device_name);
+
+
+--
+-- Name: relationship_s_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY relationship
+    ADD CONSTRAINT relationship_s_id_fkey FOREIGN KEY (s_id) REFERENCES service_info(id);
+
+
+--
+-- Name: relationship_service_name_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY relationship
+    ADD CONSTRAINT relationship_service_name_fkey FOREIGN KEY (service_name) REFERENCES service_info(service_name);
+
+
+--
+-- Name: service_info_v_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY service_info
+    ADD CONSTRAINT service_info_v_id_fkey FOREIGN KEY (v_id) REFERENCES vender_info(id);
+
+
+--
+-- Name: vender_info_l_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: testuser
+--
+
+ALTER TABLE ONLY vender_info
+    ADD CONSTRAINT vender_info_l_id_fkey FOREIGN KEY (l_id) REFERENCES login_info(id);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+

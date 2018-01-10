@@ -1,0 +1,373 @@
+2017-12-25 09:08:49  [203] [BEGIN] [databaseId:0]
+2017-12-25 09:08:49  [203] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2017-12-25 09:08:49  [203] [COMMIT] [databaseId:0]
+2017-12-25 09:09:06  [217] [BEGIN] [databaseId:0]
+2017-12-25 09:09:06  [217] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2017-12-25 09:09:06  [217] [COMMIT] [databaseId:0]
+2017-12-27 15:18:59  [7025] [BEGIN] [databaseId:0]
+2017-12-27 15:18:59  [7025] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2017-12-27 15:18:59  [7025] [COMMIT] [databaseId:0]
+2017-12-27 15:19:07  [7025] [BEGIN] [databaseId:0]
+2017-12-27 15:19:07  [7025] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2017-12-27 15:19:07  [7025] [COMMIT] [databaseId:0]
+2017-12-27 15:19:24  [7045] [BEGIN] [databaseId:0]
+2017-12-27 15:19:24  [7045] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2017-12-27 15:19:24  [7045] [COMMIT] [databaseId:0]
+2017-12-27 15:19:37  [7056] [BEGIN] [databaseId:0]
+2017-12-27 15:19:37  [7056] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:19:37  [7056] [COMMIT] [databaseId:0]
+2017-12-27 15:19:54  [7065] [BEGIN] [databaseId:0]
+2017-12-27 15:19:54  [7065] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2017-12-27 15:19:54  [7065] [COMMIT] [databaseId:0]
+2017-12-27 15:20:01  [7065] [BEGIN] [databaseId:0]
+2017-12-27 15:20:01  [7065] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:20:01  [7065] [COMMIT] [databaseId:0]
+2017-12-27 15:20:10  [7065] [BEGIN] [databaseId:0]
+2017-12-27 15:20:10  [7065] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:20:10  [7065] [COMMIT] [databaseId:0]
+2017-12-27 15:21:56  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:21:56  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:21:56  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:21:57  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:21:57  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:21:57  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:22:02  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:22:02  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:22:02  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:22:08  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:22:08  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:22:08  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:22:10  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:22:10  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:22:10  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:22:15  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:22:15  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=17 LIMIT 1
+2017-12-27 15:22:15  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:22:20  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:22:20  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=19 LIMIT 1
+2017-12-27 15:22:20  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:22:28  [7205] [BEGIN] [databaseId:0]
+2017-12-27 15:22:28  [7205] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:22:28  [7205] [COMMIT] [databaseId:0]
+2017-12-27 15:25:14  [7385] [BEGIN] [databaseId:0]
+2017-12-27 15:25:14  [7385] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=13 LIMIT 1
+2017-12-27 15:25:14  [7385] [COMMIT] [databaseId:0]
+2017-12-27 15:25:17  [7385] [BEGIN] [databaseId:0]
+2017-12-27 15:25:17  [7385] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=13 LIMIT 1
+2017-12-27 15:25:17  [7385] [COMMIT] [databaseId:0]
+2017-12-27 15:25:22  [7385] [BEGIN] [databaseId:0]
+2017-12-27 15:25:22  [7385] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=12 LIMIT 1
+2017-12-27 15:25:22  [7385] [COMMIT] [databaseId:0]
+2017-12-27 15:25:26  [7385] [BEGIN] [databaseId:0]
+2017-12-27 15:25:26  [7385] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:25:26  [7385] [COMMIT] [databaseId:0]
+2017-12-27 15:26:03  [7533] [BEGIN] [databaseId:0]
+2017-12-27 15:26:03  [7533] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:26:03  [7533] [COMMIT] [databaseId:0]
+2017-12-27 15:26:05  [7533] [BEGIN] [databaseId:0]
+2017-12-27 15:26:05  [7533] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:26:05  [7533] [COMMIT] [databaseId:0]
+2017-12-27 15:26:06  [7533] [BEGIN] [databaseId:0]
+2017-12-27 15:26:06  [7533] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:26:06  [7533] [COMMIT] [databaseId:0]
+2017-12-27 15:27:40  [7658] [BEGIN] [databaseId:0]
+2017-12-27 15:27:40  [7658] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:27:40  [7658] [COMMIT] [databaseId:0]
+2017-12-27 15:27:41  [7658] [BEGIN] [databaseId:0]
+2017-12-27 15:27:41  [7658] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:27:41  [7658] [COMMIT] [databaseId:0]
+2017-12-27 15:27:44  [7658] [BEGIN] [databaseId:0]
+2017-12-27 15:27:44  [7658] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=12 LIMIT 1
+2017-12-27 15:27:44  [7658] [COMMIT] [databaseId:0]
+2017-12-27 15:28:46  [7793] [BEGIN] [databaseId:0]
+2017-12-27 15:28:46  [7793] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=12 LIMIT 1
+2017-12-27 15:28:46  [7793] [COMMIT] [databaseId:0]
+2017-12-27 15:28:55  [7793] [BEGIN] [databaseId:0]
+2017-12-27 15:28:55  [7793] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:28:55  [7793] [COMMIT] [databaseId:0]
+2017-12-27 15:28:57  [7793] [BEGIN] [databaseId:0]
+2017-12-27 15:28:57  [7793] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:28:57  [7793] [COMMIT] [databaseId:0]
+2017-12-27 15:28:57  [7793] [BEGIN] [databaseId:0]
+2017-12-27 15:28:57  [7793] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:28:57  [7793] [COMMIT] [databaseId:0]
+2017-12-27 15:31:56  [7942] [BEGIN] [databaseId:0]
+2017-12-27 15:31:56  [7942] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:31:56  [7942] [COMMIT] [databaseId:0]
+2017-12-27 15:31:59  [7942] [BEGIN] [databaseId:0]
+2017-12-27 15:31:59  [7942] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:31:59  [7942] [COMMIT] [databaseId:0]
+2017-12-27 15:32:03  [7942] [BEGIN] [databaseId:0]
+2017-12-27 15:32:03  [7942] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-27 15:32:03  [7942] [COMMIT] [databaseId:0]
+2017-12-27 15:32:11  [7942] [BEGIN] [databaseId:0]
+2017-12-27 15:32:11  [7942] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-27 15:32:11  [7942] [COMMIT] [databaseId:0]
+2017-12-27 15:32:17  [7942] [BEGIN] [databaseId:0]
+2017-12-27 15:32:17  [7942] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2017-12-27 15:32:17  [7942] [COMMIT] [databaseId:0]
+2017-12-29 09:20:49  [13100] [BEGIN] [databaseId:0]
+2017-12-29 09:20:50  [13100] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2017-12-29 09:20:50  [13100] [COMMIT] [databaseId:0]
+2017-12-29 09:24:40  [13231] [BEGIN] [databaseId:0]
+2017-12-29 09:24:40  [13231] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-29 09:24:40  [13231] [COMMIT] [databaseId:0]
+2017-12-29 09:24:47  [13242] [BEGIN] [databaseId:0]
+2017-12-29 09:24:47  [13242] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-29 09:24:47  [13242] [COMMIT] [databaseId:0]
+2017-12-29 09:24:57  [13258] [BEGIN] [databaseId:0]
+2017-12-29 09:24:57  [13258] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-29 09:24:57  [13258] [COMMIT] [databaseId:0]
+2017-12-29 09:31:50  [13407] [BEGIN] [databaseId:0]
+2017-12-29 09:31:50  [13407] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-29 09:31:50  [13407] [COMMIT] [databaseId:0]
+2017-12-29 09:32:01  [13418] [BEGIN] [databaseId:0]
+2017-12-29 09:32:01  [13418] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-29 09:32:01  [13418] [COMMIT] [databaseId:0]
+2017-12-29 09:32:07  [13427] [BEGIN] [databaseId:0]
+2017-12-29 09:32:07  [13427] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=12 LIMIT 1
+2017-12-29 09:32:07  [13427] [COMMIT] [databaseId:0]
+2017-12-29 09:32:11  [13427] [BEGIN] [databaseId:0]
+2017-12-29 09:32:11  [13427] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2017-12-29 09:32:11  [13427] [COMMIT] [databaseId:0]
+2017-12-29 09:32:15  [13443] [BEGIN] [databaseId:0]
+2017-12-29 09:32:15  [13443] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=12 LIMIT 1
+2017-12-29 09:32:15  [13443] [COMMIT] [databaseId:0]
+2017-12-29 09:32:22  [13443] [BEGIN] [databaseId:0]
+2017-12-29 09:32:22  [13443] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=0 LIMIT 1
+2017-12-29 09:32:22  [13443] [COMMIT] [databaseId:0]
+2017-12-29 09:42:54  [13766] [BEGIN] [databaseId:0]
+2017-12-29 09:42:54  [13766] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2017-12-29 09:42:54  [13766] [COMMIT] [databaseId:0]
+2018-01-01 16:10:00  [24230] [BEGIN] [databaseId:0]
+2018-01-01 16:10:00  [24230] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2018-01-01 16:10:00  [24230] [COMMIT] [databaseId:0]
+2018-01-01 16:13:52  [24729] [BEGIN] [databaseId:0]
+2018-01-01 16:13:52  [24729] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2018-01-01 16:13:52  [24729] [COMMIT] [databaseId:0]
+2018-01-01 16:13:55  [24750] [BEGIN] [databaseId:0]
+2018-01-01 16:13:55  [24750] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2018-01-01 16:13:55  [24750] [COMMIT] [databaseId:0]
+2018-01-01 16:14:03  [24750] [BEGIN] [databaseId:0]
+2018-01-01 16:14:03  [24750] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=18 LIMIT 1
+2018-01-01 16:14:03  [24750] [COMMIT] [databaseId:0]
+2018-01-01 16:14:06  [24766] [BEGIN] [databaseId:0]
+2018-01-01 16:14:06  [24766] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-01 16:14:06  [24766] [COMMIT] [databaseId:0]
+2018-01-01 16:14:28  [24776] [BEGIN] [databaseId:0]
+2018-01-01 16:14:28  [24776] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=14 LIMIT 1
+2018-01-01 16:14:28  [24776] [COMMIT] [databaseId:0]
+2018-01-01 16:14:36  [24785] [BEGIN] [databaseId:0]
+2018-01-01 16:14:36  [24785] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-01 16:14:36  [24785] [COMMIT] [databaseId:0]
+2018-01-01 16:14:40  [24785] [BEGIN] [databaseId:0]
+2018-01-01 16:14:40  [24785] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-01 16:14:40  [24785] [COMMIT] [databaseId:0]
+2018-01-03 12:54:20  [31122] [BEGIN] [databaseId:0]
+2018-01-03 12:54:20  [31122] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:54:20  [31226] [BEGIN] [databaseId:0]
+2018-01-03 12:54:20  [31226] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:54:21  [31333] [BEGIN] [databaseId:0]
+2018-01-03 12:54:21  [31333] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:54:23  [31447] [BEGIN] [databaseId:0]
+2018-01-03 12:54:23  [31447] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:54:25  [31556] [BEGIN] [databaseId:0]
+2018-01-03 12:54:25  [31556] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:54:31  [31660] [BEGIN] [databaseId:0]
+2018-01-03 12:54:31  [31660] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:54:33  [31766] [BEGIN] [databaseId:0]
+2018-01-03 12:54:33  [31766] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2018-01-03 12:54:33  [31766] [COMMIT] [databaseId:0]
+2018-01-03 12:54:41  [31778] [BEGIN] [databaseId:0]
+2018-01-03 12:54:41  [31778] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-03 12:54:41  [31882] [BEGIN] [databaseId:0]
+2018-01-03 12:54:41  [31882] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-03 12:54:41  [31982] [BEGIN] [databaseId:0]
+2018-01-03 12:54:41  [31982] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-03 12:54:47  [32092] [BEGIN] [databaseId:0]
+2018-01-03 12:54:47  [32092] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-03 12:55:17  [32197] [BEGIN] [databaseId:0]
+2018-01-03 12:55:17  [32197] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-03 12:59:03  [32474] [BEGIN] [databaseId:0]
+2018-01-03 12:59:03  [32474] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:59:03  [32570] [BEGIN] [databaseId:0]
+2018-01-03 12:59:03  [32570] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:59:03  [32659] [BEGIN] [databaseId:0]
+2018-01-03 12:59:03  [32659] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:59:08  [32761] [BEGIN] [databaseId:0]
+2018-01-03 12:59:08  [32761] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 12:59:38  [400] [BEGIN] [databaseId:0]
+2018-01-03 12:59:38  [400] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 13:03:44  [990] [BEGIN] [databaseId:0]
+2018-01-03 13:03:44  [990] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:03:44  [1095] [BEGIN] [databaseId:0]
+2018-01-03 13:03:44  [1095] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:03:44  [1197] [BEGIN] [databaseId:0]
+2018-01-03 13:03:44  [1197] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:03:46  [1291] [BEGIN] [databaseId:0]
+2018-01-03 13:03:46  [1291] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:03:46  [1398] [BEGIN] [databaseId:0]
+2018-01-03 13:03:46  [1398] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:03:51  [1505] [BEGIN] [databaseId:0]
+2018-01-03 13:03:51  [1505] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:07:10  [1761] [BEGIN] [databaseId:0]
+2018-01-03 13:07:10  [1761] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:07:11  [1866] [BEGIN] [databaseId:0]
+2018-01-03 13:07:11  [1866] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:07:14  [1973] [BEGIN] [databaseId:0]
+2018-01-03 13:07:14  [1973] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:07:14  [2080] [BEGIN] [databaseId:0]
+2018-01-03 13:07:14  [2080] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:11:13  [2507] [BEGIN] [databaseId:0]
+2018-01-03 13:11:13  [2507] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:11:13  [2507] [COMMIT] [databaseId:0]
+2018-01-03 13:14:10  [2678] [BEGIN] [databaseId:0]
+2018-01-03 13:14:10  [2678] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:14:10  [2678] [COMMIT] [databaseId:0]
+2018-01-03 13:18:28  [3018] [BEGIN] [databaseId:0]
+2018-01-03 13:18:28  [3018] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:18:28  [3123] [BEGIN] [databaseId:0]
+2018-01-03 13:18:28  [3123] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:18:28  [3221] [BEGIN] [databaseId:0]
+2018-01-03 13:18:28  [3221] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:20:21  [3459] [BEGIN] [databaseId:0]
+2018-01-03 13:20:21  [3459] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:20:21  [3551] [BEGIN] [databaseId:0]
+2018-01-03 13:20:21  [3551] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:20:22  [3647] [BEGIN] [databaseId:0]
+2018-01-03 13:20:22  [3647] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:20:22  [3754] [BEGIN] [databaseId:0]
+2018-01-03 13:20:22  [3754] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:24:10  [4209] [BEGIN] [databaseId:0]
+2018-01-03 13:24:10  [4209] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:24:10  [4302] [BEGIN] [databaseId:0]
+2018-01-03 13:24:10  [4302] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:29:42  [4625] [BEGIN] [databaseId:0]
+2018-01-03 13:29:42  [4625] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:29:42  [4733] [BEGIN] [databaseId:0]
+2018-01-03 13:29:42  [4733] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:33:32  [4994] [BEGIN] [databaseId:0]
+2018-01-03 13:33:32  [4994] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:33:32  [5096] [BEGIN] [databaseId:0]
+2018-01-03 13:33:32  [5096] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:45:52  [5390] [BEGIN] [databaseId:0]
+2018-01-03 13:45:52  [5390] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:45:52  [5390] [COMMIT] [databaseId:0]
+2018-01-03 13:47:10  [5557] [BEGIN] [databaseId:0]
+2018-01-03 13:47:10  [5557] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:47:10  [5557] [COMMIT] [databaseId:0]
+2018-01-03 13:48:21  [5728] [BEGIN] [databaseId:0]
+2018-01-03 13:48:21  [5728] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:48:21  [5728] [COMMIT] [databaseId:0]
+2018-01-03 13:48:50  [5878] [BEGIN] [databaseId:0]
+2018-01-03 13:48:50  [5878] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:48:50  [5878] [COMMIT] [databaseId:0]
+2018-01-03 13:50:51  [6050] [BEGIN] [databaseId:0]
+2018-01-03 13:50:51  [6050] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=15 LIMIT 1
+2018-01-03 13:50:51  [6050] [COMMIT] [databaseId:0]
+2018-01-03 13:50:57  [6050] [BEGIN] [databaseId:0]
+2018-01-03 13:50:57  [6050] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 13:50:57  [6050] [COMMIT] [databaseId:0]
+2018-01-03 14:33:08  [6531] [BEGIN] [databaseId:0]
+2018-01-03 14:33:08  [6531] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 14:33:08  [6531] [COMMIT] [databaseId:0]
+2018-01-03 14:34:56  [6697] [BEGIN] [databaseId:0]
+2018-01-03 14:34:56  [6697] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 14:34:56  [6697] [COMMIT] [databaseId:0]
+2018-01-03 14:49:56  [7079] [BEGIN] [databaseId:0]
+2018-01-03 14:49:56  [7079] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-03 14:49:56  [7079] [COMMIT] [databaseId:0]
+2018-01-03 14:50:23  [7092] [BEGIN] [databaseId:0]
+2018-01-03 14:50:23  [7092] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-03 14:50:23  [7092] [COMMIT] [databaseId:0]
+2018-01-04 14:54:24  [10377] [BEGIN] [databaseId:0]
+2018-01-04 14:54:24  [10377] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-04 14:54:24  [10377] [COMMIT] [databaseId:0]
+2018-01-04 14:54:33  [10390] [BEGIN] [databaseId:0]
+2018-01-04 14:54:33  [10390] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=14 LIMIT 1
+2018-01-04 14:54:33  [10390] [COMMIT] [databaseId:0]
+2018-01-04 15:16:26  [10798] [BEGIN] [databaseId:0]
+2018-01-04 15:16:26  [10798] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=14 LIMIT 1
+2018-01-04 15:16:26  [10798] [COMMIT] [databaseId:0]
+2018-01-06 06:54:52  [15942] [BEGIN] [databaseId:0]
+2018-01-06 06:54:52  [15942] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=14 LIMIT 1
+2018-01-06 06:54:52  [15942] [COMMIT] [databaseId:0]
+2018-01-06 06:55:07  [15956] [BEGIN] [databaseId:0]
+2018-01-06 06:55:08  [15956] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."id"=18 LIMIT 1
+2018-01-06 06:55:08  [15956] [COMMIT] [databaseId:0]
+2018-01-06 12:02:06  [16943] [BEGIN] [databaseId:0]
+2018-01-06 12:02:06  [16943] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0
+2018-01-06 12:02:06  [16943] [COMMIT] [databaseId:0]
+2018-01-06 13:58:56  [19207] [BEGIN] [databaseId:0]
+2018-01-06 13:58:56  [19207] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=18 LIMIT 1
+2018-01-06 13:58:56  [19207] [COMMIT] [databaseId:0]
+2018-01-06 13:59:01  [19207] [BEGIN] [databaseId:0]
+2018-01-06 13:59:01  [19207] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-06 13:59:01  [19207] [COMMIT] [databaseId:0]
+2018-01-06 14:04:44  [19391] [BEGIN] [databaseId:0]
+2018-01-06 14:04:44  [19391] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-06 14:04:44  [19391] [COMMIT] [databaseId:0]
+2018-01-06 14:04:50  [19401] [BEGIN] [databaseId:0]
+2018-01-06 14:04:50  [19401] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-06 14:04:50  [19401] [COMMIT] [databaseId:0]
+2018-01-06 14:05:03  [19414] [BEGIN] [databaseId:0]
+2018-01-06 14:05:03  [19414] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-06 14:05:03  [19414] [COMMIT] [databaseId:0]
+2018-01-06 14:05:06  [19427] [BEGIN] [databaseId:0]
+2018-01-06 14:05:06  [19427] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=13 LIMIT 1
+2018-01-06 14:05:06  [19427] [COMMIT] [databaseId:0]
+2018-01-06 14:05:15  [19439] [BEGIN] [databaseId:0]
+2018-01-06 14:05:15  [19439] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=18 LIMIT 1
+2018-01-06 14:05:15  [19439] [COMMIT] [databaseId:0]
+2018-01-06 14:05:19  [19439] [BEGIN] [databaseId:0]
+2018-01-06 14:05:19  [19439] SELECT "id","created_at","updated_at","l_id","last_name","first_name","birthday","e_mail_addr","phone_num" FROM "customer_info" t0 WHERE t0."l_id"=12 LIMIT 1
+2018-01-06 14:05:19  [19439] [COMMIT] [databaseId:0]
+2018-01-07 15:22:27  [22866] [BEGIN] [databaseId:0]
+2018-01-07 15:22:27  [22866] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."id"=12 LIMIT 1
+2018-01-07 15:22:27  [22866] [COMMIT] [databaseId:0]
+2018-01-07 15:26:25  [23269] [BEGIN] [databaseId:0]
+2018-01-07 15:26:25  [23269] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-07 15:26:25  [23269] [COMMIT] [databaseId:0]
+2018-01-09 02:36:51  [27856] [BEGIN] [databaseId:0]
+2018-01-09 02:36:51  [27856] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-09 02:36:51  [27856] [COMMIT] [databaseId:0]
+2018-01-09 02:37:01  [27868] [BEGIN] [databaseId:0]
+2018-01-09 02:37:01  [27868] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-09 02:37:01  [27868] [COMMIT] [databaseId:0]
+2018-01-09 02:37:19  [27888] [BEGIN] [databaseId:0]
+2018-01-09 02:37:19  [27888] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-09 02:37:19  [27888] [COMMIT] [databaseId:0]
+2018-01-09 02:42:11  [28062] [BEGIN] [databaseId:0]
+2018-01-09 02:42:11  [28062] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."data_type"=1 AND t0."required_privacy_standard">=3 AND t0."interval">=300
+2018-01-09 02:42:11  [28062] [COMMIT] [databaseId:0]
+2018-01-09 02:42:13  [28062] [BEGIN] [databaseId:0]
+2018-01-09 02:42:13  [28062] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."data_type"=1 AND t0."required_privacy_standard">=3 AND t0."interval">=300
+2018-01-09 02:42:13  [28062] [COMMIT] [databaseId:0]
+2018-01-09 02:42:35  [28082] [BEGIN] [databaseId:0]
+2018-01-09 02:42:35  [28082] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-09 02:42:35  [28082] [COMMIT] [databaseId:0]
+2018-01-09 02:44:36  [28100] [BEGIN] [databaseId:0]
+2018-01-09 02:44:36  [28100] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."data_type"=1 AND t0."required_privacy_standard">=3 AND t0."interval">=300
+2018-01-09 02:44:36  [28100] [COMMIT] [databaseId:0]
+2018-01-09 05:21:28  [28546] [BEGIN] [databaseId:0]
+2018-01-09 05:21:28  [28546] (Query failed) [ERROR:  null value in column "service_name" violates not-null constraint
+DETAIL:  Failing row contains (17, 2018-01-09 05:21:28.963, 2018-01-09 05:21:28.963, 0, null, 0, 0, 0).
+(23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-09 05:21:28.963', '2018-01-09 05:21:28.963', 0, NULL, 0, 0, 0)
+2018-01-09 05:21:28  [28546] [COMMIT Failed] [databaseId:0]
+2018-01-09 05:24:49  [28565] [BEGIN] [databaseId:0]
+2018-01-09 05:24:49  [28565] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=0
+2018-01-09 05:24:49  [28565] [COMMIT] [databaseId:0]
+2018-01-09 05:24:51  [28575] [BEGIN] [databaseId:0]
+2018-01-09 05:24:51  [28575] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=0
+2018-01-09 05:24:51  [28575] [COMMIT] [databaseId:0]
+2018-01-09 05:25:58  [28587] [BEGIN] [databaseId:0]
+2018-01-09 05:25:59  [28587] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-09 05:25:59  [28587] [COMMIT] [databaseId:0]
+2018-01-09 05:30:51  [28608] [BEGIN] [databaseId:0]
+2018-01-09 05:30:51  [28608] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-09 05:30:51  [28608] [COMMIT] [databaseId:0]
+2018-01-09 05:33:14  [28624] [BEGIN] [databaseId:0]
+2018-01-09 05:33:14  [28624] (Query failed) [ERROR:  null value in column "service_name" violates not-null constraint
+DETAIL:  Failing row contains (18, 2018-01-09 05:33:14.43, 2018-01-09 05:33:14.43, 0, null, 0, 0, 0).
+(23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-09 05:33:14.430', '2018-01-09 05:33:14.430', 0, NULL, 0, 0, 0)
+2018-01-09 05:33:14  [28624] [COMMIT Failed] [databaseId:0]

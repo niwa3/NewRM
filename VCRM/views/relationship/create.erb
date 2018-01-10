@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<%#include "relationship.h" %>
+<% tfetch(QVariantMap, relationship); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Relationship</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>D ID<br /><input name="relationship[dId]" value="<%= relationship["dId"] %>" /></label>
+  </p>
+  <p>
+    <label>Device Name<br /><input name="relationship[deviceName]" value="<%= relationship["deviceName"] %>" /></label>
+  </p>
+  <p>
+    <label>S ID<br /><input name="relationship[sId]" value="<%= relationship["sId"] %>" /></label>
+  </p>
+  <p>
+    <label>Service Name<br /><input name="relationship[serviceName]" value="<%= relationship["serviceName"] %>" /></label>
+  </p>
+  <p>
+    <label>Anonymity Method<br /><input name="relationship[anonymityMethod]" value="<%= relationship["anonymityMethod"] %>" /></label>
+  </p>
+  <p>
+    <label>Privacy Standard<br /><input name="relationship[privacyStandard]" value="<%= relationship["privacyStandard"] %>" /></label>
+  </p>
+  <p>
+    <label>Interval<br /><input name="relationship[interval]" value="<%= relationship["interval"] %>" /></label>
+  </p>
+  <p>
+    <label>Location<br /><input name="relationship[location]" value="<%= relationship["location"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>
