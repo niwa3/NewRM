@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<%#include "deviceinfo.h" %>
+<% tfetch(DeviceInfo, deviceInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Device Info</h1>
+<dt>ID</dt><dd><%= deviceInfo.id() %></dd><br />
+<dt>Created at</dt><dd><%= deviceInfo.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= deviceInfo.updatedAt() %></dd><br />
+<dt>C ID</dt><dd><%= deviceInfo.cId() %></dd><br />
+<dt>Device Name</dt><dd><%= deviceInfo.deviceName() %></dd><br />
+<dt>Default Privacy Standard</dt><dd><%= deviceInfo.defaultPrivacyStandard() %></dd><br />
+<dt>Device Type</dt><dd><%= deviceInfo.deviceType() %></dd><br />
+<dt>Data Type</dt><dd><%= deviceInfo.dataType() %></dd><br />
+<dt>Interval</dt><dd><%= deviceInfo.interval() %></dd><br />
+<dt>Location</dt><dd><%= deviceInfo.location() %></dd><br />
+
+<%== linkTo("Edit", urla("save", deviceInfo.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

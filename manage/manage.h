@@ -68,7 +68,7 @@ class ServiceManageFuncs{
     int register_Sinfo(int v_id, std::string service_name, int required_privacy_standard, DATATYPE data_type, int interval);
     std::vector<int> register_Sinfo(std::vector<ServiceInfo> vec_service);
     std::vector<ServiceInfo> fetch_Sinfo_by_v_id(int v_id);
-    ServiceInfo fetch_Sinfo_by_s_id(int v_id);
+    ServiceInfo fetch_Sinfo_by_s_id(int s_id);
     ServiceInfo fetch_Sinfo_by_service_name(std::string service_name);
     std::vector<ServiceInfo> fetch_Sinfo_for_matching(DATATYPE data_type, int privacy_standard, int interval);
     bool update_Sinfo_by_s_id(int s_id, std::string set_attr);

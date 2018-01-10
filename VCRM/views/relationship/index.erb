@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<%#include "relationship.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Relationship</h1>
+
+<%== linkTo("Create a new Relationship", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>D ID</th>
+    <th>Device Name</th>
+    <th>S ID</th>
+    <th>Service Name</th>
+    <th>Anonymity Method</th>
+    <th>Privacy Standard</th>
+    <th>Interval</th>
+    <th>Location</th>
+  </tr>
+<% tfetch(QList<Relationship>, relationshipList); %>
+<% for (const auto &i : relationshipList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.dId() %></td>
+    <td><%= i.deviceName() %></td>
+    <td><%= i.sId() %></td>
+    <td><%= i.serviceName() %></td>
+    <td><%= i.anonymityMethod() %></td>
+    <td><%= i.privacyStandard() %></td>
+    <td><%= i.interval() %></td>
+    <td><%= i.location() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

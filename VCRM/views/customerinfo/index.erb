@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<%#include "customerinfo.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Customer Info</h1>
+
+<%== linkTo("Create a new Customer Info", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>L ID</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Birthday</th>
+    <th>E Mail Addr</th>
+    <th>Phone Num</th>
+  </tr>
+<% tfetch(QList<CustomerInfo>, customerInfoList); %>
+<% for (const auto &i : customerInfoList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.lId() %></td>
+    <td><%= i.lastName() %></td>
+    <td><%= i.firstName() %></td>
+    <td><%= i.birthday() %></td>
+    <td><%= i.eMailAddr() %></td>
+    <td><%= i.phoneNum() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

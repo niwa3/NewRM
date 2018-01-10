@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%#include "serviceinfo.h" %>
+<% tfetch(QVariantMap, serviceInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Service Info</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>V ID<br /><input name="serviceInfo[vId]" value="<%= serviceInfo["vId"] %>" /></label>
+  </p>
+  <p>
+    <label>Service Name<br /><input name="serviceInfo[serviceName]" value="<%= serviceInfo["serviceName"] %>" /></label>
+  </p>
+  <p>
+    <label>Required Privacy Standard<br /><input name="serviceInfo[requiredPrivacyStandard]" value="<%= serviceInfo["requiredPrivacyStandard"] %>" /></label>
+  </p>
+  <p>
+    <label>Data Type<br /><input name="serviceInfo[dataType]" value="<%= serviceInfo["dataType"] %>" /></label>
+  </p>
+  <p>
+    <label>Interval<br /><input name="serviceInfo[interval]" value="<%= serviceInfo["interval"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

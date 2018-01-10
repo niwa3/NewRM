@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<%#include "relationship.h" %>
+<% tfetch(QVariantMap, relationship); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Editing Relationship</h1>
+
+<%== formTag(urla("save", relationship["id"]), Tf::Post) %>
+  <p>
+    <label>ID<br /><input type="text" name="relationship[id]" value="<%= relationship["id"] %>" readonly="readonly" /></label>
+  </p>
+  <p>
+    <label>D ID<br /><input type="text" name="relationship[dId]" value="<%= relationship["dId"] %>" /></label>
+  </p>
+  <p>
+    <label>Device Name<br /><input type="text" name="relationship[deviceName]" value="<%= relationship["deviceName"] %>" /></label>
+  </p>
+  <p>
+    <label>S ID<br /><input type="text" name="relationship[sId]" value="<%= relationship["sId"] %>" /></label>
+  </p>
+  <p>
+    <label>Service Name<br /><input type="text" name="relationship[serviceName]" value="<%= relationship["serviceName"] %>" /></label>
+  </p>
+  <p>
+    <label>Anonymity Method<br /><input type="text" name="relationship[anonymityMethod]" value="<%= relationship["anonymityMethod"] %>" /></label>
+  </p>
+  <p>
+    <label>Privacy Standard<br /><input type="text" name="relationship[privacyStandard]" value="<%= relationship["privacyStandard"] %>" /></label>
+  </p>
+  <p>
+    <label>Interval<br /><input type="text" name="relationship[interval]" value="<%= relationship["interval"] %>" /></label>
+  </p>
+  <p>
+    <label>Location<br /><input type="text" name="relationship[location]" value="<%= relationship["location"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>
+
+<%== linkTo("Show", urla("show", relationship["id"])) %> |
+<%== linkTo("Back", urla("index")) %>
+</body>
+</html>

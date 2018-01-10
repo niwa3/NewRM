@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<%#include "serviceinfo.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Service Info</h1>
+
+<%== linkTo("Create a new Service Info", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>V ID</th>
+    <th>Service Name</th>
+    <th>Required Privacy Standard</th>
+    <th>Data Type</th>
+    <th>Interval</th>
+  </tr>
+<% tfetch(QList<ServiceInfo>, serviceInfoList); %>
+<% for (const auto &i : serviceInfoList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.vId() %></td>
+    <td><%= i.serviceName() %></td>
+    <td><%= i.requiredPrivacyStandard() %></td>
+    <td><%= i.dataType() %></td>
+    <td><%= i.interval() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

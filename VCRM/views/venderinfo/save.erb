@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%#include "venderinfo.h" %>
+<% tfetch(QVariantMap, venderInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Editing Vender Info</h1>
+
+<%== formTag(urla("save", venderInfo["id"]), Tf::Post) %>
+  <p>
+    <label>ID<br /><input type="text" name="venderInfo[id]" value="<%= venderInfo["id"] %>" readonly="readonly" /></label>
+  </p>
+  <p>
+    <label>L ID<br /><input type="text" name="venderInfo[lId]" value="<%= venderInfo["lId"] %>" /></label>
+  </p>
+  <p>
+    <label>Name<br /><input type="text" name="venderInfo[name]" value="<%= venderInfo["name"] %>" /></label>
+  </p>
+  <p>
+    <label>Phone Num<br /><input type="text" name="venderInfo[phoneNum]" value="<%= venderInfo["phoneNum"] %>" /></label>
+  </p>
+  <p>
+    <label>E Mail Addr<br /><input type="text" name="venderInfo[eMailAddr]" value="<%= venderInfo["eMailAddr"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>
+
+<%== linkTo("Show", urla("show", venderInfo["id"])) %> |
+<%== linkTo("Back", urla("index")) %>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<%#include "customerinfo.h" %>
+<% tfetch(QVariantMap, customerInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Editing Customer Info</h1>
+
+<%== formTag(urla("save", customerInfo["id"]), Tf::Post) %>
+  <p>
+    <label>ID<br /><input type="text" name="customerInfo[id]" value="<%= customerInfo["id"] %>" readonly="readonly" /></label>
+  </p>
+  <p>
+    <label>L ID<br /><input type="text" name="customerInfo[lId]" value="<%= customerInfo["lId"] %>" /></label>
+  </p>
+  <p>
+    <label>Last Name<br /><input type="text" name="customerInfo[lastName]" value="<%= customerInfo["lastName"] %>" /></label>
+  </p>
+  <p>
+    <label>First Name<br /><input type="text" name="customerInfo[firstName]" value="<%= customerInfo["firstName"] %>" /></label>
+  </p>
+  <p>
+    <label>Birthday<br /><input type="text" name="customerInfo[birthday]" value="<%= customerInfo["birthday"] %>" /></label>
+  </p>
+  <p>
+    <label>E Mail Addr<br /><input type="text" name="customerInfo[eMailAddr]" value="<%= customerInfo["eMailAddr"] %>" /></label>
+  </p>
+  <p>
+    <label>Phone Num<br /><input type="text" name="customerInfo[phoneNum]" value="<%= customerInfo["phoneNum"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Save" />
+  </p>
+</form>
+
+<%== linkTo("Show", urla("show", customerInfo["id"])) %> |
+<%== linkTo("Back", urla("index")) %>
+</body>
+</html>

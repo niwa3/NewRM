@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<%#include "serviceinfo.h" %>
+<% tfetch(ServiceInfo, serviceInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Service Info</h1>
+<dt>ID</dt><dd><%= serviceInfo.id() %></dd><br />
+<dt>Created at</dt><dd><%= serviceInfo.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= serviceInfo.updatedAt() %></dd><br />
+<dt>V ID</dt><dd><%= serviceInfo.vId() %></dd><br />
+<dt>Service Name</dt><dd><%= serviceInfo.serviceName() %></dd><br />
+<dt>Required Privacy Standard</dt><dd><%= serviceInfo.requiredPrivacyStandard() %></dd><br />
+<dt>Data Type</dt><dd><%= serviceInfo.dataType() %></dd><br />
+<dt>Interval</dt><dd><%= serviceInfo.interval() %></dd><br />
+
+<%== linkTo("Edit", urla("save", serviceInfo.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

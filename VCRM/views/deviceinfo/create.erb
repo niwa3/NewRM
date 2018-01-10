@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<%#include "deviceinfo.h" %>
+<% tfetch(QVariantMap, deviceInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Device Info</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>C ID<br /><input name="deviceInfo[cId]" value="<%= deviceInfo["cId"] %>" /></label>
+  </p>
+  <p>
+    <label>Device Name<br /><input name="deviceInfo[deviceName]" value="<%= deviceInfo["deviceName"] %>" /></label>
+  </p>
+  <p>
+    <label>Default Privacy Standard<br /><input name="deviceInfo[defaultPrivacyStandard]" value="<%= deviceInfo["defaultPrivacyStandard"] %>" /></label>
+  </p>
+  <p>
+    <label>Device Type<br /><input name="deviceInfo[deviceType]" value="<%= deviceInfo["deviceType"] %>" /></label>
+  </p>
+  <p>
+    <label>Data Type<br /><input name="deviceInfo[dataType]" value="<%= deviceInfo["dataType"] %>" /></label>
+  </p>
+  <p>
+    <label>Interval<br /><input name="deviceInfo[interval]" value="<%= deviceInfo["interval"] %>" /></label>
+  </p>
+  <p>
+    <label>Location<br /><input name="deviceInfo[location]" value="<%= deviceInfo["location"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>

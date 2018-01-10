@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<%#include "deviceinfo.h" %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+
+<h1>Listing Device Info</h1>
+
+<%== linkTo("Create a new Device Info", urla("create")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>C ID</th>
+    <th>Device Name</th>
+    <th>Default Privacy Standard</th>
+    <th>Device Type</th>
+    <th>Data Type</th>
+    <th>Interval</th>
+    <th>Location</th>
+  </tr>
+<% tfetch(QList<DeviceInfo>, deviceInfoList); %>
+<% for (const auto &i : deviceInfoList) { %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.cId() %></td>
+    <td><%= i.deviceName() %></td>
+    <td><%= i.defaultPrivacyStandard() %></td>
+    <td><%= i.deviceType() %></td>
+    <td><%= i.dataType() %></td>
+    <td><%= i.interval() %></td>
+    <td><%= i.location() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("save", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+</body>
+</html>

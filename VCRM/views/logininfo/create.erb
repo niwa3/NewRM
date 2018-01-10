@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<%#include "logininfo.h" %>
+<% tfetch(QVariantMap, loginInfo); %>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+</head>
+<body>
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>New Login Info</h1>
+
+<%== formTag(urla("create"), Tf::Post) %>
+  <p>
+    <label>Login<br /><input name="loginInfo[login]" value="<%= loginInfo["login"] %>" /></label>
+  </p>
+  <p>
+    <label>Passwd<br /><input name="loginInfo[passwd]" value="<%= loginInfo["passwd"] %>" /></label>
+  </p>
+  <p>
+    <label>Salt<br /><input name="loginInfo[salt]" value="<%= loginInfo["salt"] %>" /></label>
+  </p>
+  <p>
+    <label>User Type<br /><input name="loginInfo[userType]" value="<%= loginInfo["userType"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<%== linkTo("Back", urla("index")) %>
+
+</body>
+</html>
