@@ -18,3 +18,5 @@ HEADERS += applicationhelper.h
 SOURCES += applicationhelper.cpp
 HEADERS += xmlhelper.h
 SOURCES += xmlhelper.cpp
+HEADERS += curlhelper.h
+SOURCES += curlhelper.cpp

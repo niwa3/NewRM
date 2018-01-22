@@ -51,6 +51,7 @@ void ServiceInfoController::create()
       ServiceInfo serviceQuery;
       ServiceInfo service = serviceQuery.create(serviceInfoMapList.first());
       if (service.isNull()) {
+        //serviceInfoをデータベースに登録できなかった場合
         renderText("Error: failed to create");
         break;
       }
@@ -61,13 +62,30 @@ void ServiceInfoController::create()
           service.interval()
       );
       if (deviceList.isEmpty()){
+        /*
+         * マッチするデバイスがない場合リレーションシップは作られず，
+         * サービス情報のみを返す
+         */
         renderXml(xmlHelp.createXml(service));
         break;
       }
       QList<QVariantMap> relationshipList =
           appHelp.createRelationMap(service, deviceList);
       Relationship relationQuery;
+      //リレーションシップの登録
       QList<Relationship> createdRelations = relationQuery.create(relationshipList);
+      //配布用のXMLを作成し，curlを用いて配布を行う
+      XmlHelper helpForDist;
+      CurlHelper request;
+      if (
+        !request.sendRelationshipList(
+          QUrl("http://slave:8800/relationship/insert/"),
+          helpForDist.createXmlForDist(createdRelations)
+        )
+      ) {
+        renderErrorResponse(400);
+        break;
+      }
       renderXml(
         xmlHelp.createInfoListXml(
           service,
@@ -78,6 +96,9 @@ void ServiceInfoController::create()
       ServiceInfo query;
       QList<ServiceInfo> serviceInfoList = query.create(serviceInfoMapList);
       if (serviceInfoList.isEmpty()) {
+        /*
+         * 一つでもserviceInfoをデータベースに登録できなかった場合エラーを返す
+         */
         renderText("Error: failed to create");
         break;
       }
@@ -89,6 +110,10 @@ void ServiceInfoController::create()
             service.interval()
         );
         if (deviceList.isEmpty()){
+          /*
+           * マッチするデバイスがない場合は，空のリレーションシップリストを渡し，
+           * そのサービスについてのXMLにはサービス情報のみを加える
+           */
           xmlHelp.createInfoListXml(
             service,
             QList<Relationship>()
@@ -99,6 +124,18 @@ void ServiceInfoController::create()
             appHelp.createRelationMap(service, deviceList);
         Relationship relationQuery;
         QList<Relationship> createdRelations = relationQuery.create(relationshipList);
+        //配布用のXMLを作成し，curlを用いて配布を行う
+        XmlHelper helpForDist;
+        CurlHelper request;
+        if (
+          !request.sendRelationshipList(
+            QUrl("http://slave:8800/relationship/insert/"),
+            helpForDist.createXmlForDist(createdRelations)
+          )
+        ) {
+          renderErrorResponse(400);
+          break;
+        }
         xmlHelp.createInfoListXml(
           service,
           createdRelations

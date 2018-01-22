@@ -29,11 +29,13 @@ void RelationshipController::create()
     QList<QVariantMap> relationMapList =
         help.parseXml("relationship", this->_rawBody);
     if (relationMapList.isEmpty()){//パースできなければエラー
-      renderText("Error: invalid xml");
+      tError("can not parse");
+      renderErrorResponse(400);
     } else if (relationMapList.length()==1){//relationが一つのとき
       Relationship relationQuery;
       Relationship relation = relationQuery.create(relationMapList.first());
       if (relation.isNull()) {
+        tError("can not insert");
         renderErrorResponse(400);
         break;
       }
@@ -61,7 +63,7 @@ void RelationshipController::insert()
 {
   switch (httpRequest().method()) {
   case Tf::Get:
-    render();
+    renderText("please use POST");
     break;
 
   case Tf::Post: {

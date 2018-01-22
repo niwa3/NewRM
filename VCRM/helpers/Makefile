@@ -46,9 +46,11 @@ OBJECTS_DIR   = .obj/
 ####### Files
 
 SOURCES       = applicationhelper.cpp \
-		xmlhelper.cpp 
+		xmlhelper.cpp \
+		curlhelper.cpp 
 OBJECTS       = .obj/applicationhelper.o \
-		.obj/xmlhelper.o
+		.obj/xmlhelper.o \
+		.obj/curlhelper.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -108,7 +110,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		helpers.pro applicationhelper.cpp \
-		xmlhelper.cpp
+		xmlhelper.cpp \
+		curlhelper.cpp
 QMAKE_TARGET  = helper
 DESTDIR       = ../lib/#avoid trailing-slash linebreak
 TARGET        = libhelper.so.1.0.0
@@ -303,7 +306,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .obj/helper1.0.0 || mkdir -p .obj/helper1.0.0
-	$(COPY_FILE) --parents $(DIST) .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.h xmlhelper.h .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.cpp xmlhelper.cpp .obj/helper1.0.0/ && (cd `dirname .obj/helper1.0.0` && $(TAR) helper1.0.0.tar helper1.0.0 && $(COMPRESS) helper1.0.0.tar) && $(MOVE) `dirname .obj/helper1.0.0`/helper1.0.0.tar.gz . && $(DEL_FILE) -r .obj/helper1.0.0
+	$(COPY_FILE) --parents $(DIST) .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.h xmlhelper.h curlhelper.h .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.cpp xmlhelper.cpp curlhelper.cpp .obj/helper1.0.0/ && (cd `dirname .obj/helper1.0.0` && $(TAR) helper1.0.0.tar helper1.0.0 && $(COMPRESS) helper1.0.0.tar) && $(MOVE) `dirname .obj/helper1.0.0`/helper1.0.0.tar.gz . && $(DEL_FILE) -r .obj/helper1.0.0
 
 
 clean:compiler_clean 
@@ -346,7 +349,9 @@ compiler_clean:
 		../models/venderinfo.h \
 		../models/deviceinfo.h \
 		../models/serviceinfo.h \
-		../models/relationship.h
+		../models/relationship.h \
+		curlhelper.h \
+		xmlhelper.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/applicationhelper.o applicationhelper.cpp
 
 .obj/xmlhelper.o: xmlhelper.cpp xmlhelper.h \
@@ -356,6 +361,9 @@ compiler_clean:
 		../models/serviceinfo.h \
 		../models/relationship.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/xmlhelper.o xmlhelper.cpp
+
+.obj/curlhelper.o: curlhelper.cpp curlhelper.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/curlhelper.o curlhelper.cpp
 
 ####### Install
 
