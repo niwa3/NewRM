@@ -18,7 +18,7 @@ CXXFLAGS      = -m64 -pipe -g -std=c++0x -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I. -I../models -I../models/sqlobjects -isystem /usr/include/treefrog -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtXml -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I.obj
 LINK          = g++
 LFLAGS        = -m64 -shared -Wl,-soname,libhelper.so.1
-LIBS          = $(SUBLIBS) -L../lib -lmodel -Wl,-rpath,. -Wl,-rpath,/usr/lib -L/usr/lib -ltreefrog -lrt -lQt5Qml -lQt5Xml -lQt5Sql -lQt5Network -lQt5Core -lpthread 
+LIBS          = $(SUBLIBS) -L../lib -lmodel -lcurl -Wl,-rpath,. -Wl,-rpath,/usr/lib -L/usr/lib -ltreefrog -lrt -lQt5Qml -lQt5Xml -lQt5Sql -lQt5Network -lQt5Core -lpthread 
 AR            = ar cqs
 RANLIB        = 
 QMAKE         = /usr/lib/x86_64-linux-gnu/qt5/bin/qmake
@@ -45,8 +45,10 @@ OBJECTS_DIR   = .obj/
 
 ####### Files
 
-SOURCES       = applicationhelper.cpp 
-OBJECTS       = .obj/applicationhelper.o
+SOURCES       = applicationhelper.cpp \
+		xmlhelper.cpp 
+OBJECTS       = .obj/applicationhelper.o \
+		.obj/xmlhelper.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -105,7 +107,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		helpers.pro applicationhelper.cpp
+		helpers.pro applicationhelper.cpp \
+		xmlhelper.cpp
 QMAKE_TARGET  = helper
 DESTDIR       = ../lib/#avoid trailing-slash linebreak
 TARGET        = libhelper.so.1.0.0
@@ -300,7 +303,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .obj/helper1.0.0 || mkdir -p .obj/helper1.0.0
-	$(COPY_FILE) --parents $(DIST) .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.h .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.cpp .obj/helper1.0.0/ && (cd `dirname .obj/helper1.0.0` && $(TAR) helper1.0.0.tar helper1.0.0 && $(COMPRESS) helper1.0.0.tar) && $(MOVE) `dirname .obj/helper1.0.0`/helper1.0.0.tar.gz . && $(DEL_FILE) -r .obj/helper1.0.0
+	$(COPY_FILE) --parents $(DIST) .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.h xmlhelper.h .obj/helper1.0.0/ && $(COPY_FILE) --parents applicationhelper.cpp xmlhelper.cpp .obj/helper1.0.0/ && (cd `dirname .obj/helper1.0.0` && $(TAR) helper1.0.0.tar helper1.0.0 && $(COMPRESS) helper1.0.0.tar) && $(MOVE) `dirname .obj/helper1.0.0`/helper1.0.0.tar.gz . && $(DEL_FILE) -r .obj/helper1.0.0
 
 
 clean:compiler_clean 
@@ -345,6 +348,14 @@ compiler_clean:
 		../models/serviceinfo.h \
 		../models/relationship.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/applicationhelper.o applicationhelper.cpp
+
+.obj/xmlhelper.o: xmlhelper.cpp xmlhelper.h \
+		../models/customerinfo.h \
+		../models/venderinfo.h \
+		../models/deviceinfo.h \
+		../models/serviceinfo.h \
+		../models/relationship.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/xmlhelper.o xmlhelper.cpp
 
 ####### Install
 

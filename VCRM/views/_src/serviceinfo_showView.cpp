@@ -2,6 +2,8 @@
 #include <TreeFrogView>
 #include "serviceinfo.h" 
 #include "applicationhelper.h"
+#include "curlhelper.h"
+#include "xmlhelper.h"
 
 class T_VIEW_EXPORT serviceinfo_showView : public TActionView
 {

@@ -52,3 +52,111 @@
 2018-01-10 09:36:14 DEBUG [4816] renderXml
 2018-01-10 09:40:33 DEBUG [4981] renderXml
 2018-01-10 09:41:58 DEBUG [4988] renderXml
+2018-01-11 07:39:33 DEBUG [8710] 0
+2018-01-11 07:41:58 DEBUG [8880] 1
+2018-01-11 07:41:58 DEBUG [8880] 0
+2018-01-11 08:19:04 DEBUG [9169] 5
+2018-01-11 08:19:04 DEBUG [9169] vId
+2018-01-11 08:19:04 DEBUG [9169] serviceName
+2018-01-11 08:19:04 DEBUG [9169] dataType
+2018-01-11 08:19:04 DEBUG [9169] requredPrivacyStandard
+2018-01-11 08:19:04 DEBUG [9169] interval
+2018-01-11 08:19:50 WARN  [9184] Has rendered already: ServiceInfoController#show
+2018-01-12 08:28:47 DEBUG [12470] 2
+2018-01-12 08:28:47 DEBUG [12470] vId
+2018-01-12 08:28:47 DEBUG [12470] serviceName
+2018-01-12 08:30:42 DEBUG [12486] 5
+2018-01-12 08:30:42 DEBUG [12486] vId
+2018-01-12 08:30:42 DEBUG [12486] serviceName
+2018-01-12 08:30:42 DEBUG [12486] dataType
+2018-01-12 08:30:42 DEBUG [12486] requiredPrivacyStandard
+2018-01-12 08:30:42 DEBUG [12486] interval
+2018-01-12 08:31:33 WARN  [12609] Has rendered already: ServiceInfoController#show
+2018-01-12 08:31:33 WARN  [12609] Has rendered already: ServiceInfoController#show
+2018-01-12 09:06:00 WARN  [13233] Has rendered already: ServiceInfoController#show
+2018-01-12 09:06:00 WARN  [13233] Has rendered already: ServiceInfoController#show
+2018-01-12 09:06:04 WARN  [13233] Has rendered already: ServiceInfoController#show
+2018-01-12 09:06:04 WARN  [13233] Has rendered already: ServiceInfoController#show
+2018-01-13 02:41:16 ERROR [15572] Error: the xml is not valid
+2018-01-13 02:41:21 ERROR [15577] Error: the xml is not valid
+2018-01-13 02:44:48 ERROR [15606] Error: the xml is not valid
+2018-01-13 02:44:49 ERROR [15611] Error: the xml is not valid
+2018-01-13 02:54:44 WARN  [15634] Has rendered already: ServiceInfoController#show
+2018-01-13 07:09:20 WARN  [16897] Has rendered already: ServiceInfoController#show
+2018-01-15 06:07:40 WARN  [22736] Has rendered already: ServiceInfoController#show
+2018-01-15 07:33:52 ERROR [23388] Error: the xml is not valid
+2018-01-15 08:13:41 ERROR [23655] Error: the xml is not valid
+2018-01-15 08:15:07 ERROR [23664] Error: the xml is not valid
+2018-01-15 08:23:19 WARN  [23917] Has rendered already: ServiceInfoController#create
+2018-01-15 08:25:47 DEBUG [24097] 1
+2018-01-15 08:25:47 DEBUG [24097] 1
+2018-01-15 08:25:47 WARN  [24097] Has rendered already: ServiceInfoController#create
+2018-01-15 08:26:23 DEBUG [24110] 1
+2018-01-15 08:26:23 DEBUG [24110] 1
+2018-01-15 08:26:23 WARN  [24110] Has rendered already: ServiceInfoController#create
+2018-01-15 08:26:36 DEBUG [24122] 1
+2018-01-15 08:26:36 DEBUG [24122] 1
+2018-01-15 08:26:36 WARN  [24122] Has rendered already: ServiceInfoController#create
+2018-01-15 08:28:30 ERROR [24303] Error: the xml is not valid
+2018-01-15 08:29:56 DEBUG [24325] -1
+2018-01-15 08:29:56 WARN  [24325] Has rendered already: ServiceInfoController#create
+2018-01-15 08:34:00 DEBUG [24499] -1
+2018-01-15 08:34:00 WARN  [24499] Has rendered already: ServiceInfoController#create
+2018-01-15 08:35:06 DEBUG [24666] 1
+2018-01-15 08:36:58 DEBUG [24841] -1
+2018-01-15 08:48:52 DEBUG [25029] -1
+2018-01-15 08:50:47 DEBUG [25058] -1
+2018-01-15 09:10:11 DEBUG [25264] -1
+2018-01-15 09:43:41 DEBUG [25735] 1
+2018-01-15 09:51:38 DEBUG [25775] 1
+2018-01-16 05:41:27 DEBUG [28451] query: INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning service_info.*
+2018-01-16 05:41:27 DEBUG [28451] number of affected rows: 1
+2018-01-16 05:57:30 DEBUG [28675] number of affected rows: 1
+2018-01-16 06:20:35 DEBUG [29141] batch: 0
+2018-01-16 06:20:35 DEBUG [29141] number of affected rows: 1
+2018-01-16 09:30:27 DEBUG [29694] number of affected rows: 1
+2018-01-16 09:50:38 DEBUG [29940] error: ERROR:  syntax error at or near "("
+LINE 1: EXECUTE  (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NU...
+                 ^
+(42601) QPSQL: Unable to create query
+2018-01-18 08:46:38 DEBUG [5422] here
+2018-01-18 08:47:14 DEBUG [5649] here
+2018-01-18 08:51:42 DEBUG [6179] here1
+2018-01-18 08:54:12 DEBUG [6423] here1
+2018-01-18 08:57:37 DEBUG [6735] here1
+2018-01-18 08:58:06 DEBUG [6986] here1
+2018-01-18 09:04:08 DEBUG [7265] here1
+2018-01-18 09:04:08 DEBUG [7265] 0
+2018-01-18 09:10:06 DEBUG [7715] here1
+2018-01-18 09:10:06 DEBUG [7715] 16
+2018-01-18 09:10:06 DEBUG [7715] here2
+2018-01-18 09:10:06 DEBUG [7715] here2
+2018-01-18 09:24:53 DEBUG [9070] here
+2018-01-18 09:24:53 DEBUG [9070] here0
+2018-01-18 09:27:21 DEBUG [9359] here0
+2018-01-18 09:32:44 DEBUG [9647] here0
+2018-01-18 09:44:32 DEBUG [9745] here0
+2018-01-18 09:46:23 DEBUG [9917] here0
+2018-01-18 09:49:36 DEBUG [10106] here0
+2018-01-18 09:57:13 DEBUG [10305] here0
+2018-01-18 09:58:38 DEBUG [10472] here0
+2018-01-18 09:59:23 DEBUG [10638] here0
+2018-01-18 10:01:16 DEBUG [10805] here1
+2018-01-18 10:01:16 DEBUG [10805] here2
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here3
+2018-01-18 10:01:16 DEBUG [10805] here4

@@ -3,6 +3,10 @@
 
 #include "applicationcontroller.h"
 
+#include <QtXml/QDomNodeList>
+#include <QtXml/QDomNamedNodeMap>
+#include <QtXml/QDomNode>
+#include <QtXml/QDomAttr>
 
 class T_CONTROLLER_EXPORT ServiceInfoController : public ApplicationController
 {
@@ -11,7 +15,7 @@ public:
     ServiceInfoController() : ApplicationController() {}
 
 public slots:
-    //void index();
+    void index();
     void show();
     void create();
     void save(const QString &id);

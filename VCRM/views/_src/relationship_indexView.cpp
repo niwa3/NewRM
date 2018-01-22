@@ -2,6 +2,8 @@
 #include <TreeFrogView>
 #include "relationship.h" 
 #include "applicationhelper.h"
+#include "curlhelper.h"
+#include "xmlhelper.h"
 
 class T_VIEW_EXPORT relationship_indexView : public TActionView
 {

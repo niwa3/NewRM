@@ -15,7 +15,7 @@
 void CustomerInfoController::index()
 {
     auto customerInfoList = CustomerInfo::getAll();
-    ApplicationHelper help;
+    XmlHelper help;
     auto cusXml = help.createXmlFromList<CustomerInfo>(customerInfoList);
     renderXml(cusXml);
 }
@@ -31,12 +31,12 @@ void CustomerInfoController::show()
     this->_setParams();
     if (this->_params.contains("lId")){
         auto customerInfo = CustomerInfo::getByLid(_params["lId"].toInt());
-        ApplicationHelper help;
+        XmlHelper help;
         auto cusXml = help.createXml<CustomerInfo>(customerInfo);
         renderXml(cusXml);
     } else if (this->_params.contains("id")){
         auto customerInfo = CustomerInfo::get(_params["id"].toInt());
-        ApplicationHelper help;
+        XmlHelper help;
         auto cusXml = help.createXml<CustomerInfo>(customerInfo);
         renderXml(cusXml);
     } else {

@@ -5,35 +5,35 @@
 
 #include <treefrog/TActionController>
 
-#include "applicationhelper.h"
+#include "../helpers/applicationhelper.h"
+#include "../helpers/xmlhelper.h"
 
 
 //Declare and define of privacy lvl
 struct PriLvl{
-  static const int MAXLVL;
-  static const int MINLVL;
-  static const int HIGH;
-  static const int MID;
-  static const int LOW;
-  static const int NONE;
+  static const int MAXLVL = 3;
+  static const int MINLVL = 0;
+  static const int HIGH = 3;
+  static const int MID = 2;
+  static const int LOW = 1;
+  static const int NONE = 0;
 };
 
 //Declare and define of device type
 struct DeviceType{
-  static const int SENSOR;
-  static const int ACTUATOR;
-  static const int NONE;
+  static const int SENSOR = 1;
+  static const int ACTUATOR = 2;
+  static const int NONE = 0;
 };
 
 //Declare and define of data type
 struct DataType{
-  static const int POWER;
-  static const int TEMP;
-  static const int CO2;
-  static const int WIND;
-  static const int NONE;
+  static const int POWER = 1;
+  static const int TEMP = 2;
+  static const int CO2 = 3;
+  static const int WIND = 4;
+  static const int NONE = 0;
 };
-
 
 
 class T_CONTROLLER_EXPORT ApplicationController : public TActionController

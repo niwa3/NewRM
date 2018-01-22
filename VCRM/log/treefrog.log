@@ -678,3 +678,723 @@ PC: @     0x7fb2fec1f067  (unknown)
 2018-01-10 09:40:31 INFO  [4875] TreeFrog application servers started up.
 2018-01-10 09:40:33 WARN  [4981] unsupported content-type: application/xml
 2018-01-10 09:41:58 WARN  [4988] unsupported content-type: application/xml
+2018-01-10 17:11:22 INFO  [4875] TreeFrog application servers shutting down
+2018-01-10 17:11:22 INFO  [4875] TreeFrog application servers shutdown completed
+2018-01-10 17:39:34 INFO  [6174] TreeFrog Framework version 1.20.0
+2018-01-10 17:39:34 INFO  [6174] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-10 17:39:34 INFO  [6174] TreeFrog application servers started up.
+2018-01-11 06:29:36 WARN  [7810] unsupported content-type: application/xml
+2018-01-11 07:17:38 INFO  [6174] TreeFrog application servers shutting down
+2018-01-11 07:17:39 INFO  [6174] TreeFrog application servers shutdown completed
+2018-01-11 07:27:47 INFO  [8179] TreeFrog Framework version 1.20.0
+2018-01-11 07:27:47 INFO  [8179] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-11 07:27:47 INFO  [8179] TreeFrog application servers started up.
+2018-01-11 07:27:54 WARN  [8284] unsupported content-type: application/xml
+2018-01-11 07:27:57 INFO  [8179] TreeFrog application servers shutting down
+2018-01-11 07:27:57 INFO  [8179] TreeFrog application servers shutdown completed
+2018-01-11 07:36:41 INFO  [8319] TreeFrog Framework version 1.20.0
+2018-01-11 07:36:41 INFO  [8319] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-11 07:36:41 INFO  [8319] TreeFrog application servers started up.
+2018-01-11 07:36:43 INFO  [8319] TreeFrog application servers shutting down
+2018-01-11 07:36:43 INFO  [8319] TreeFrog application servers shutdown completed
+2018-01-11 07:37:15 INFO  [8435] TreeFrog Framework version 1.20.0
+2018-01-11 07:37:15 INFO  [8435] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-11 07:37:15 INFO  [8435] TreeFrog application servers started up.
+2018-01-11 07:37:26 WARN  [8542] unsupported content-type: application/xml
+2018-01-11 07:38:00 INFO  [8435] TreeFrog application servers shutting down
+2018-01-11 07:38:00 INFO  [8435] TreeFrog application servers shutdown completed
+2018-01-11 07:39:30 INFO  [8605] TreeFrog Framework version 1.20.0
+2018-01-11 07:39:30 INFO  [8605] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-11 07:39:30 INFO  [8605] TreeFrog application servers started up.
+2018-01-11 07:39:33 WARN  [8710] unsupported content-type: application/xml
+2018-01-11 07:39:40 INFO  [8605] TreeFrog application servers shutting down
+2018-01-11 07:39:41 INFO  [8605] TreeFrog application servers shutdown completed
+2018-01-11 07:41:50 INFO  [8774] TreeFrog Framework version 1.20.0
+2018-01-11 07:41:50 INFO  [8774] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-11 07:41:50 INFO  [8774] TreeFrog application servers started up.
+2018-01-11 07:41:58 WARN  [8880] unsupported content-type: application/xml
+2018-01-11 07:42:11 INFO  [8774] TreeFrog application servers shutting down
+2018-01-11 07:42:11 INFO  [8774] TreeFrog application servers shutdown completed
+2018-01-11 08:18:58 INFO  [9060] TreeFrog Framework version 1.20.0
+2018-01-11 08:18:58 INFO  [9060] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-11 08:18:58 INFO  [9060] TreeFrog application servers started up.
+2018-01-11 08:19:04 WARN  [9169] unsupported content-type: application/xml
+2018-01-11 08:20:00 WARN  [9185] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-11 08:21:06 INFO  [9060] TreeFrog application servers shutting down
+2018-01-11 08:21:06 INFO  [9060] TreeFrog application servers shutdown completed
+2018-01-12 08:28:14 INFO  [12344] TreeFrog Framework version 1.20.0
+2018-01-12 08:28:14 INFO  [12344] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-12 08:28:14 INFO  [12344] TreeFrog application servers started up.
+2018-01-12 08:28:47 WARN  [12470] unsupported content-type: application/xml
+2018-01-12 08:30:42 WARN  [12486] unsupported content-type: application/xml
+2018-01-12 08:30:49 INFO  [12344] TreeFrog application servers shutting down
+2018-01-12 08:30:50 INFO  [12344] TreeFrog application servers shutdown completed
+2018-01-12 08:31:18 INFO  [12505] TreeFrog Framework version 1.20.0
+2018-01-12 08:31:18 INFO  [12505] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-12 08:31:18 INFO  [12505] TreeFrog application servers started up.
+2018-01-12 08:31:37 INFO  [12505] TreeFrog application servers shutting down
+2018-01-12 08:31:43 WARN  [12610] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-12 08:31:43 WARN  [12611] Reading a socket timed out after 10 seconds. Descriptor:17
+2018-01-12 08:31:43 WARN  [12612] Reading a socket timed out after 10 seconds. Descriptor:19
+2018-01-12 08:31:43 INFO  [12505] TreeFrog application servers shutdown completed
+2018-01-12 09:02:43 INFO  [12988] TreeFrog Framework version 1.20.0
+2018-01-12 09:02:43 INFO  [12988] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-12 09:02:43 INFO  [12988] TreeFrog application servers started up.
+2018-01-12 09:02:47 WARN  [13091] unsupported content-type: application/xml
+2018-01-12 09:02:54 WARN  [13103] unsupported content-type: application/xml
+2018-01-12 09:02:57 INFO  [12988] TreeFrog application servers shutting down
+2018-01-12 09:02:58 INFO  [12988] TreeFrog application servers shutdown completed
+2018-01-12 09:05:57 INFO  [13127] TreeFrog Framework version 1.20.0
+2018-01-12 09:05:57 INFO  [13127] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-12 09:05:57 INFO  [13127] TreeFrog application servers started up.
+2018-01-12 09:06:10 WARN  [13235] Reading a socket timed out after 10 seconds. Descriptor:17
+2018-01-12 09:06:10 WARN  [13234] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-12 09:06:31 WARN  [13254] unsupported content-type: application/xml
+2018-01-12 09:28:45 WARN  [13318] unsupported content-type: application/xml
+2018-01-13 02:38:12 INFO  [13127] TreeFrog application servers shutting down
+2018-01-13 02:38:12 INFO  [13127] TreeFrog application servers shutdown completed
+2018-01-13 02:38:20 INFO  [15452] TreeFrog Framework version 1.20.0
+2018-01-13 02:38:20 INFO  [15452] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-13 02:38:20 INFO  [15452] TreeFrog application servers started up.
+2018-01-13 02:38:38 WARN  [15553] Reading a socket timed out after 10 seconds. Descriptor:13
+2018-01-13 02:38:39 WARN  [15557] Invalid descriptor (disconnected) : -1
+2018-01-13 02:38:39 WARN  [15558] Invalid descriptor (disconnected) : -1
+2018-01-13 02:41:16 WARN  [15572] unsupported content-type: application/xml
+2018-01-13 02:41:21 WARN  [15577] unsupported content-type: application/xml
+2018-01-13 02:42:25 WARN  [15584] unsupported content-type: application/xml
+2018-01-13 02:44:39 WARN  [15600] unsupported content-type: application/xml
+2018-01-13 02:44:48 WARN  [15606] unsupported content-type: application/xml
+2018-01-13 02:44:49 WARN  [15611] unsupported content-type: application/xml
+2018-01-13 02:54:44 WARN  [15635] Invalid descriptor (disconnected) : -1
+2018-01-13 02:54:44 WARN  [15636] Invalid descriptor (disconnected) : -1
+2018-01-13 02:54:54 WARN  [15644] Invalid descriptor (disconnected) : -1
+2018-01-13 02:54:54 WARN  [15645] Invalid descriptor (disconnected) : -1
+2018-01-13 06:29:22 INFO  [15452] TreeFrog application servers shutting down
+2018-01-13 06:29:22 INFO  [15452] TreeFrog application servers shutdown completed
+2018-01-13 07:00:08 INFO  [16594] TreeFrog Framework version 1.20.0
+2018-01-13 07:00:08 INFO  [16594] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-13 07:00:08 INFO  [16594] TreeFrog application servers started up.
+2018-01-13 07:00:31 WARN  [16700] unsupported content-type: application/xml
+2018-01-13 07:08:31 INFO  [16594] TreeFrog application servers shutting down
+2018-01-13 07:08:31 INFO  [16594] TreeFrog application servers shutdown completed
+2018-01-13 07:08:37 INFO  [16767] TreeFrog Framework version 1.20.0
+2018-01-13 07:08:37 INFO  [16767] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-13 07:08:37 INFO  [16767] TreeFrog application servers started up.
+2018-01-13 07:08:40 WARN  [16869] unsupported content-type: application/xml
+2018-01-13 07:46:26 INFO  [16767] TreeFrog application servers shutting down
+2018-01-13 07:46:27 INFO  [16767] TreeFrog application servers shutdown completed
+2018-01-13 07:46:59 INFO  [17060] TreeFrog Framework version 1.20.0
+2018-01-13 07:46:59 INFO  [17060] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-13 07:46:59 INFO  [17060] TreeFrog application servers started up.
+2018-01-13 07:47:26 WARN  [17162] unsupported content-type: application/xml
+2018-01-15 06:52:07 INFO  [17060] TreeFrog application servers shutting down
+2018-01-15 06:52:08 INFO  [17060] TreeFrog application servers shutdown completed
+2018-01-15 07:33:49 INFO  [23276] TreeFrog Framework version 1.20.0
+2018-01-15 07:33:49 INFO  [23276] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 07:33:49 INFO  [23276] TreeFrog application servers started up.
+2018-01-15 07:33:52 WARN  [23388] unsupported content-type: application/xml
+2018-01-15 08:12:52 WARN  [23470] unsupported content-type: application/xml
+2018-01-15 08:13:04 INFO  [23276] TreeFrog application servers shutting down
+2018-01-15 08:13:04 INFO  [23276] TreeFrog application servers shutdown completed
+2018-01-15 08:13:12 INFO  [23529] TreeFrog Framework version 1.20.0
+2018-01-15 08:13:12 INFO  [23529] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:13:12 INFO  [23529] TreeFrog application servers started up.
+2018-01-15 08:13:15 WARN  [23633] unsupported content-type: application/xml
+2018-01-15 08:13:15 WARN  [23633] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:13:41 WARN  [23655] unsupported content-type: application/xml
+2018-01-15 08:15:07 WARN  [23664] unsupported content-type: application/xml
+2018-01-15 08:19:33 WARN  [23678] unsupported content-type: application/xml
+2018-01-15 08:19:33 WARN  [23678] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:19:49 WARN  [23691] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-15 08:19:55 WARN  [23722] unsupported content-type: application/xml
+2018-01-15 08:19:55 WARN  [23722] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:22:50 INFO  [23529] TreeFrog application servers shutting down
+2018-01-15 08:22:50 INFO  [23529] TreeFrog application servers shutdown completed
+2018-01-15 08:23:17 INFO  [23814] TreeFrog Framework version 1.20.0
+2018-01-15 08:23:17 INFO  [23814] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:23:17 INFO  [23814] TreeFrog application servers started up.
+2018-01-15 08:23:19 WARN  [23917] unsupported content-type: application/xml
+2018-01-15 08:23:19 WARN  [23917] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:25:31 INFO  [23814] TreeFrog application servers shutting down
+2018-01-15 08:25:31 INFO  [23814] TreeFrog application servers shutdown completed
+2018-01-15 08:25:46 INFO  [24005] TreeFrog Framework version 1.20.0
+2018-01-15 08:25:46 INFO  [24005] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:25:46 INFO  [24005] TreeFrog application servers started up.
+2018-01-15 08:25:47 WARN  [24097] unsupported content-type: application/xml
+2018-01-15 08:25:47 WARN  [24097] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:26:23 WARN  [24110] unsupported content-type: application/xml
+2018-01-15 08:26:23 WARN  [24110] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:26:36 WARN  [24122] unsupported content-type: application/xml
+2018-01-15 08:26:36 WARN  [24122] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:27:05 WARN  [24134] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-15 08:27:57 INFO  [24005] TreeFrog application servers shutting down
+2018-01-15 08:27:58 INFO  [24005] TreeFrog application servers shutdown completed
+2018-01-15 08:28:03 INFO  [24197] TreeFrog Framework version 1.20.0
+2018-01-15 08:28:03 INFO  [24197] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:28:03 INFO  [24197] TreeFrog application servers started up.
+2018-01-15 08:28:30 WARN  [24303] unsupported content-type: application/xml
+2018-01-15 08:29:10 WARN  [24309] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-15 08:29:56 WARN  [24325] unsupported content-type: application/xml
+2018-01-15 08:29:56 WARN  [24325] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:33:41 INFO  [24197] TreeFrog application servers shutting down
+2018-01-15 08:33:42 INFO  [24197] TreeFrog application servers shutdown completed
+2018-01-15 08:33:57 INFO  [24393] TreeFrog Framework version 1.20.0
+2018-01-15 08:33:57 INFO  [24393] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:33:57 INFO  [24393] TreeFrog application servers started up.
+2018-01-15 08:34:00 WARN  [24499] unsupported content-type: application/xml
+2018-01-15 08:34:00 WARN  [24499] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:34:36 INFO  [24393] TreeFrog application servers shutting down
+2018-01-15 08:34:36 INFO  [24393] TreeFrog application servers shutdown completed
+2018-01-15 08:34:58 INFO  [24560] TreeFrog Framework version 1.20.0
+2018-01-15 08:34:58 INFO  [24560] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:34:58 INFO  [24560] TreeFrog application servers started up.
+2018-01-15 08:35:06 WARN  [24666] unsupported content-type: application/xml
+2018-01-15 08:35:28 WARN  [24678] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-15 08:36:28 INFO  [24560] TreeFrog application servers shutting down
+2018-01-15 08:36:28 INFO  [24560] TreeFrog application servers shutdown completed
+2018-01-15 08:36:34 INFO  [24741] TreeFrog Framework version 1.20.0
+2018-01-15 08:36:34 INFO  [24741] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:36:34 INFO  [24741] TreeFrog application servers started up.
+2018-01-15 08:36:58 WARN  [24841] unsupported content-type: application/xml
+2018-01-15 08:36:58 WARN  [24841] Unable to free statement: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ (../../../sql/drivers/psql/qsql_psql.cpp:315 void QPSQLResultPrivate::deallocatePreparedStmt())
+2018-01-15 08:48:22 INFO  [24741] TreeFrog application servers shutting down
+2018-01-15 08:48:22 INFO  [24741] TreeFrog application servers shutdown completed
+2018-01-15 08:48:48 INFO  [24937] TreeFrog Framework version 1.20.0
+2018-01-15 08:48:48 INFO  [24937] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 08:48:48 INFO  [24937] TreeFrog application servers started up.
+2018-01-15 08:48:52 WARN  [25029] unsupported content-type: application/xml
+2018-01-15 08:49:10 WARN  [25041] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-15 08:50:47 WARN  [25058] unsupported content-type: application/xml
+2018-01-15 09:10:00 INFO  [24937] TreeFrog application servers shutting down
+2018-01-15 09:10:01 INFO  [24937] TreeFrog application servers shutdown completed
+2018-01-15 09:10:08 INFO  [25156] TreeFrog Framework version 1.20.0
+2018-01-15 09:10:08 INFO  [25156] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 09:10:08 INFO  [25156] TreeFrog application servers started up.
+2018-01-15 09:10:11 WARN  [25264] unsupported content-type: application/xml
+2018-01-15 09:16:06 WARN  [25289] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-15 09:26:51 INFO  [25156] TreeFrog application servers shutting down
+2018-01-15 09:26:52 INFO  [25156] TreeFrog application servers shutdown completed
+2018-01-15 09:34:23 INFO  [25428] TreeFrog Framework version 1.20.0
+2018-01-15 09:34:23 INFO  [25428] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 09:34:23 INFO  [25428] TreeFrog application servers started up.
+2018-01-15 09:34:26 WARN  [25526] unsupported content-type: application/xml
+2018-01-15 09:34:59 WARN  [25537] unsupported content-type: application/xml
+2018-01-15 09:35:20 WARN  [25548] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-15 09:40:48 INFO  [25428] TreeFrog application servers shutting down
+2018-01-15 09:40:49 INFO  [25428] TreeFrog application servers shutdown completed
+2018-01-15 09:43:37 INFO  [25637] TreeFrog Framework version 1.20.0
+2018-01-15 09:43:37 INFO  [25637] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-15 09:43:37 INFO  [25637] TreeFrog application servers started up.
+2018-01-15 09:43:41 WARN  [25735] unsupported content-type: application/xml
+2018-01-15 09:44:03 WARN  [25746] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-15 09:51:38 WARN  [25775] unsupported content-type: application/xml
+2018-01-15 09:51:57 WARN  [25786] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-16 04:53:12 INFO  [25637] TreeFrog application servers shutting down
+2018-01-16 04:53:12 INFO  [25637] TreeFrog application servers shutdown completed
+2018-01-16 05:39:26 INFO  [28330] TreeFrog Framework version 1.20.0
+2018-01-16 05:39:26 INFO  [28330] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-16 05:39:26 INFO  [28330] TreeFrog application servers started up.
+2018-01-16 05:41:27 WARN  [28451] unsupported content-type: application/xml
+2018-01-16 05:41:46 WARN  [28463] Invalid descriptor (disconnected) : -1
+2018-01-16 05:57:00 INFO  [28330] TreeFrog application servers shutting down
+2018-01-16 05:57:00 INFO  [28330] TreeFrog application servers shutdown completed
+2018-01-16 05:57:06 INFO  [28553] TreeFrog Framework version 1.20.0
+2018-01-16 05:57:06 INFO  [28553] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-16 05:57:06 INFO  [28553] TreeFrog application servers started up.
+2018-01-16 05:57:30 WARN  [28675] unsupported content-type: application/xml
+2018-01-16 06:12:16 INFO  [28553] TreeFrog application servers shutting down
+2018-01-16 06:12:17 INFO  [28553] TreeFrog application servers shutdown completed
+2018-01-16 06:20:06 INFO  [29023] TreeFrog Framework version 1.20.0
+2018-01-16 06:20:06 INFO  [29023] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-16 06:20:06 INFO  [29023] TreeFrog application servers started up.
+2018-01-16 06:20:24 WARN  [29128] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-16 06:20:35 WARN  [29141] unsupported content-type: application/xml
+2018-01-16 09:29:29 INFO  [29023] TreeFrog application servers shutting down
+2018-01-16 09:29:29 INFO  [29023] TreeFrog application servers shutdown completed
+2018-01-16 09:29:58 INFO  [29576] TreeFrog Framework version 1.20.0
+2018-01-16 09:29:58 INFO  [29576] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-16 09:29:58 INFO  [29576] TreeFrog application servers started up.
+2018-01-16 09:30:23 WARN  [29682] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-16 09:30:27 WARN  [29694] unsupported content-type: application/xml
+2018-01-16 09:30:46 WARN  [29706] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-16 09:49:19 INFO  [29576] TreeFrog application servers shutting down
+2018-01-16 09:49:19 INFO  [29576] TreeFrog application servers shutdown completed
+2018-01-16 09:50:30 INFO  [29829] TreeFrog Framework version 1.20.0
+2018-01-16 09:50:30 INFO  [29829] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-16 09:50:30 INFO  [29829] TreeFrog application servers started up.
+2018-01-16 09:50:38 WARN  [29940] unsupported content-type: application/xml
+2018-01-17 07:25:35 INFO  [29829] TreeFrog application servers shutting down
+2018-01-17 07:25:35 INFO  [29829] TreeFrog application servers shutdown completed
+2018-01-17 07:26:29 INFO  [32587] TreeFrog Framework version 1.20.0
+2018-01-17 07:26:29 INFO  [32587] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-17 07:26:29 INFO  [32587] TreeFrog application servers started up.
+2018-01-17 07:26:31 WARN  [32684] unsupported content-type: application/xml
+2018-01-17 07:26:44 WARN  [32699] Invalid descriptor (disconnected) : -1
+2018-01-17 07:34:40 INFO  [32587] TreeFrog application servers shutting down
+2018-01-17 07:34:40 INFO  [32587] TreeFrog application servers shutdown completed
+2018-01-17 07:34:53 INFO  [306] TreeFrog Framework version 1.20.0
+2018-01-17 07:34:53 INFO  [306] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-17 07:34:53 INFO  [306] TreeFrog application servers started up.
+2018-01-17 07:35:12 WARN  [410] unsupported content-type: application/xml
+2018-01-17 14:05:23 INFO  [306] TreeFrog application servers shutting down
+2018-01-17 14:05:24 INFO  [306] TreeFrog application servers shutdown completed
+2018-01-18 08:29:18 INFO  [4242] TreeFrog Framework version 1.20.0
+2018-01-18 08:29:18 INFO  [4242] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:29:18 INFO  [4242] TreeFrog application servers started up.
+2018-01-18 08:29:43 WARN  [4345] unsupported content-type: application/xml
+2018-01-18 08:29:44 ERROR [4345] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:29:44 ERROR [4345] Aborted at 1516264184 (unix time) try "date -d @1516264184" if you are using GNU date
+SIGABRT (@0x1097) received by PID 4247 (TID 4345) ; stack trace:
+PC: @     0x7f47bb6fb067  (unknown)
+    @     0x7f47bc2a2890  (unknown)
+    @     0x7f47bb6fb067  (unknown)
+    @     0x7f47bb6fc448  (unknown)
+    @     0x7f47bc53b4d8  (unknown)
+    @     0x7f47bc536254  (unknown)
+    @     0x7f47b3bb780e  QList<>::last()
+    @     0x7f47b3bb59f8  Relationship::create()
+    @     0x7f47b80d7de6  ServiceInfoController::create()
+    @     0x7f47b80dec24  ServiceInfoController::qt_static_metacall()
+    @     0x7f47bc793d72  (unknown)
+    @     0x7f47bda2792a  (unknown)
+    @     0x7f47bda2c49b  (unknown)
+    @     0x7f47bda32fce  (unknown)
+    @     0x7f47bc54cd2e  (unknown)
+    @     0x7f47bc29b064  start_thread
+    @     0x7f47bb7ae62d  (unknown)
+    @                0x0  (unknown)
+
+2018-01-18 08:29:44 ERROR [4242] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:29:44 ERROR [4242] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:30:02 WARN  [4447] unsupported content-type: application/xml
+2018-01-18 08:30:02 ERROR [4447] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:30:03 ERROR [4242] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:30:03 ERROR [4242] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:30:24 WARN  [4558] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-18 08:30:42 WARN  [4570] unsupported content-type: application/xml
+2018-01-18 08:30:42 ERROR [4570] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:30:42 ERROR [4242] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:30:42 ERROR [4242] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:31:09 INFO  [4242] TreeFrog application servers shutting down
+2018-01-18 08:31:10 INFO  [4242] TreeFrog application servers shutdown completed
+2018-01-18 08:31:32 INFO  [4680] TreeFrog Framework version 1.20.0
+2018-01-18 08:31:32 INFO  [4680] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:31:32 INFO  [4680] TreeFrog application servers started up.
+2018-01-18 08:31:34 WARN  [4783] unsupported content-type: application/xml
+2018-01-18 08:31:34 ERROR [4783] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:31:34 ERROR [4680] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:31:34 ERROR [4680] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:31:47 WARN  [4891] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-18 08:31:58 WARN  [4905] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-18 08:32:17 WARN  [4918] Reading a socket timed out after 10 seconds. Descriptor:13
+2018-01-18 08:32:34 WARN  [4931] unsupported content-type: application/xml
+2018-01-18 08:32:34 ERROR [4931] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:32:35 ERROR [4680] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:32:35 ERROR [4680] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:33:32 WARN  [5042] unsupported content-type: application/xml
+2018-01-18 08:33:32 ERROR [5042] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:33:32 ERROR [4680] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:33:32 ERROR [4680] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:35:42 WARN  [5158] unsupported content-type: application/xml
+2018-01-18 08:35:42 ERROR [5158] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:35:42 ERROR [5158] Aborted at 1516264542 (unix time) try "date -d @1516264542" if you are using GNU date
+SIGABRT (@0x13bf) received by PID 5055 (TID 5158) ; stack trace:
+PC: @     0x7fb834ecf067  (unknown)
+    @     0x7fb835a76890  (unknown)
+    @     0x7fb834ecf067  (unknown)
+    @     0x7fb834ed0448  (unknown)
+    @     0x7fb835d0f4d8  (unknown)
+    @     0x7fb835d0a254  (unknown)
+    @     0x7fb830c2f80e  QList<>::last()
+    @     0x7fb830c2d9f8  Relationship::create()
+    @     0x7fb8310aade6  ServiceInfoController::create()
+    @     0x7fb8310b1c24  ServiceInfoController::qt_static_metacall()
+    @     0x7fb835f67d72  (unknown)
+    @     0x7fb8371fb92a  (unknown)
+    @     0x7fb83720049b  (unknown)
+    @     0x7fb837206fce  (unknown)
+    @     0x7fb835d20d2e  (unknown)
+    @     0x7fb835a6f064  start_thread
+    @     0x7fb834f8262d  (unknown)
+    @                0x0  (unknown)
+
+2018-01-18 08:35:42 ERROR [4680] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:35:42 ERROR [4680] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:46:28 INFO  [4680] TreeFrog application servers shutting down
+2018-01-18 08:46:28 INFO  [4680] TreeFrog application servers shutdown completed
+2018-01-18 08:46:35 INFO  [5337] TreeFrog Framework version 1.20.0
+2018-01-18 08:46:35 INFO  [5337] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:46:35 INFO  [5337] TreeFrog application servers started up.
+2018-01-18 08:46:38 WARN  [5422] unsupported content-type: application/xml
+2018-01-18 08:46:38 ERROR [5422] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:46:39 ERROR [5337] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:46:39 ERROR [5337] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:47:09 INFO  [5337] TreeFrog application servers shutting down
+2018-01-18 08:47:09 INFO  [5337] TreeFrog application servers shutdown completed
+2018-01-18 08:47:12 INFO  [5541] TreeFrog Framework version 1.20.0
+2018-01-18 08:47:12 INFO  [5541] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:47:12 INFO  [5541] TreeFrog application servers started up.
+2018-01-18 08:47:14 WARN  [5649] unsupported content-type: application/xml
+2018-01-18 08:47:14 ERROR [5649] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:47:15 ERROR [5541] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:47:15 ERROR [5541] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:47:45 INFO  [5541] TreeFrog application servers shutting down
+2018-01-18 08:47:45 INFO  [5541] TreeFrog application servers shutdown completed
+2018-01-18 08:47:53 INFO  [5821] TreeFrog Framework version 1.20.0
+2018-01-18 08:47:53 INFO  [5821] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:47:53 INFO  [5821] TreeFrog application servers started up.
+2018-01-18 08:47:56 WARN  [5920] unsupported content-type: application/xml
+2018-01-18 08:47:56 ERROR [5920] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:47:56 ERROR [5920] Aborted at 1516265276 (unix time) try "date -d @1516265276" if you are using GNU date
+SIGABRT (@0x16c2) received by PID 5826 (TID 5920) ; stack trace:
+PC: @     0x7f663142a067  (unknown)
+    @     0x7f6631fd1890  (unknown)
+    @     0x7f663142a067  (unknown)
+    @     0x7f663142b448  (unknown)
+    @     0x7f663226a4d8  (unknown)
+    @     0x7f6632265254  (unknown)
+    @     0x7f662d18a80e  QList<>::last()
+    @     0x7f662d1889f8  Relationship::create()
+    @     0x7f662d605f96  ServiceInfoController::create()
+    @     0x7f662d60ce9c  ServiceInfoController::qt_static_metacall()
+    @     0x7f66324c2d72  (unknown)
+    @     0x7f663375692a  (unknown)
+    @     0x7f663375b49b  (unknown)
+    @     0x7f6633761fce  (unknown)
+    @     0x7f663227bd2e  (unknown)
+    @     0x7f6631fca064  start_thread
+    @     0x7f66314dd62d  (unknown)
+    @                0x0  (unknown)
+
+2018-01-18 08:47:56 ERROR [5821] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:47:56 ERROR [5821] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:51:23 INFO  [5821] TreeFrog application servers shutting down
+2018-01-18 08:51:23 INFO  [5821] TreeFrog application servers shutdown completed
+2018-01-18 08:51:29 INFO  [6078] TreeFrog Framework version 1.20.0
+2018-01-18 08:51:29 INFO  [6078] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:51:29 INFO  [6078] TreeFrog application servers started up.
+2018-01-18 08:51:42 WARN  [6179] unsupported content-type: application/xml
+2018-01-18 08:51:42 ERROR [6179] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:51:43 ERROR [6078] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:51:43 ERROR [6078] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:54:04 INFO  [6078] TreeFrog application servers shutting down
+2018-01-18 08:54:04 INFO  [6078] TreeFrog application servers shutdown completed
+2018-01-18 08:54:10 INFO  [6318] TreeFrog Framework version 1.20.0
+2018-01-18 08:54:10 INFO  [6318] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:54:10 INFO  [6318] TreeFrog application servers started up.
+2018-01-18 08:54:12 WARN  [6423] unsupported content-type: application/xml
+2018-01-18 08:54:12 ERROR [6423] ASSERT: "!isEmpty()" in file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 297 (global/qglobal.cpp:2127 void qt_assert(const char*, const char*, int))
+2018-01-18 08:54:12 ERROR [6423] Aborted at 1516265652 (unix time) try "date -d @1516265652" if you are using GNU date
+SIGABRT (@0x18b3) received by PID 6323 (TID 6423) ; stack trace:
+PC: @     0x7f04442af067  (unknown)
+    @     0x7f0444e56890  (unknown)
+    @     0x7f04442af067  (unknown)
+    @     0x7f04442b0448  (unknown)
+    @     0x7f04450ef4d8  (unknown)
+    @     0x7f04450ea254  (unknown)
+    @     0x7f043bdd36d0  QList<>::last()
+    @     0x7f043bdd1974  Relationship::create()
+    @     0x7f044048af96  ServiceInfoController::create()
+    @     0x7f0440491e9c  ServiceInfoController::qt_static_metacall()
+    @     0x7f0445347d72  (unknown)
+    @     0x7f04465db92a  (unknown)
+    @     0x7f04465e049b  (unknown)
+    @     0x7f04465e6fce  (unknown)
+    @     0x7f0445100d2e  (unknown)
+    @     0x7f0444e4f064  start_thread
+    @     0x7f044436262d  (unknown)
+    @                0x0  (unknown)
+
+2018-01-18 08:54:12 ERROR [6318] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:54:12 ERROR [6318] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:54:51 WARN  [6556] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-18 08:57:27 INFO  [6318] TreeFrog application servers shutting down
+2018-01-18 08:57:28 INFO  [6318] TreeFrog application servers shutdown completed
+2018-01-18 08:57:33 INFO  [6629] TreeFrog Framework version 1.20.0
+2018-01-18 08:57:33 INFO  [6629] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:57:33 INFO  [6629] TreeFrog application servers started up.
+2018-01-18 08:57:37 WARN  [6735] unsupported content-type: application/xml
+2018-01-18 08:57:37 ERROR [6735] ASSERT failure in QList<T>::at: "index out of range", file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 479 (global/qglobal.cpp:2135 void qt_assert_x(const char*, const char*, const char*, int))
+2018-01-18 08:57:37 ERROR [6629] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:57:37 ERROR [6629] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 08:57:58 INFO  [6629] TreeFrog application servers shutting down
+2018-01-18 08:57:59 INFO  [6629] TreeFrog application servers shutdown completed
+2018-01-18 08:58:04 INFO  [6879] TreeFrog Framework version 1.20.0
+2018-01-18 08:58:04 INFO  [6879] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 08:58:04 INFO  [6879] TreeFrog application servers started up.
+2018-01-18 08:58:06 WARN  [6986] unsupported content-type: application/xml
+2018-01-18 08:58:06 ERROR [6986] ASSERT failure in QList<T>::at: "index out of range", file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 479 (global/qglobal.cpp:2135 void qt_assert_x(const char*, const char*, const char*, int))
+2018-01-18 08:58:06 ERROR [6879] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 08:58:06 ERROR [6879] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 09:01:33 INFO  [6879] TreeFrog application servers shutting down
+2018-01-18 09:01:34 INFO  [6879] TreeFrog application servers shutdown completed
+2018-01-18 09:04:05 INFO  [7164] TreeFrog Framework version 1.20.0
+2018-01-18 09:04:05 INFO  [7164] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:04:05 INFO  [7164] TreeFrog application servers started up.
+2018-01-18 09:04:08 WARN  [7265] unsupported content-type: application/xml
+2018-01-18 09:04:08 ERROR [7265] ASSERT failure in QList<T>::at: "index out of range", file /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h, line 479 (global/qglobal.cpp:2135 void qt_assert_x(const char*, const char*, const char*, int))
+2018-01-18 09:04:09 ERROR [7164] tfserver error detected(1). [/usr/bin/tadpole]
+2018-01-18 09:04:09 ERROR [7164] Detected a server crashed. exitCode:0  exitStatus:1
+2018-01-18 09:05:44 INFO  [7164] TreeFrog application servers shutting down
+2018-01-18 09:05:44 INFO  [7164] TreeFrog application servers shutdown completed
+2018-01-18 09:05:50 INFO  [7413] TreeFrog Framework version 1.20.0
+2018-01-18 09:05:50 INFO  [7413] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:05:50 INFO  [7413] TreeFrog application servers started up.
+2018-01-18 09:05:51 WARN  [7510] unsupported content-type: application/xml
+2018-01-18 09:06:06 WARN  [7523] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-18 09:09:40 INFO  [7413] TreeFrog application servers shutting down
+2018-01-18 09:09:40 INFO  [7413] TreeFrog application servers shutdown completed
+2018-01-18 09:09:46 INFO  [7605] TreeFrog Framework version 1.20.0
+2018-01-18 09:09:46 INFO  [7605] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:09:46 INFO  [7605] TreeFrog application servers started up.
+2018-01-18 09:09:52 WARN  [7691] unsupported content-type: application/xml
+2018-01-18 09:10:06 WARN  [7703] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-18 09:10:06 WARN  [7715] unsupported content-type: application/xml
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(14, http://senser1, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(14, http://senser1, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (14, http://senser1, 79, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(15, http://senser2, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(15, http://senser2, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (15, http://senser2, 79, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(16, http://senser3, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(16, http://senser3, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (16, http://senser3, 79, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(17, http://senser4, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(17, http://senser4, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (17, http://senser4, 79, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(19, http://senser5, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(19, http://senser5, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (19, http://senser5, 79, http://test0118/service1/, 1), , http://gateway2 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(20, http://senser6, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(20, http://senser6, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (20, http://senser6, 79, http://test0118/service1/, 1), , http://gateway2 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(31, http://gateway19/sensor1, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(31, http://gateway19/sensor1, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (31, http://gateway19/sensor1, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(32, http://gateway19/sensor2, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(32, http://gateway19/sensor2, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (32, http://gateway19/sensor2, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(33, http://gateway19/sensor3, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(33, http://gateway19/sensor3, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (33, http://gateway19/sensor3, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(34, http://gateway19/sensor4, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(34, http://gateway19/sensor4, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (34, http://gateway19/sensor4, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(35, http://gateway19/sensor5, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(35, http://gateway19/sensor5, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (35, http://gateway19/sensor5, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(36, http://gateway19/sensor6, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(36, http://gateway19/sensor6, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (36, http://gateway19/sensor6, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(37, http://gateway19/sensor7, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(37, http://gateway19/sensor7, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (37, http://gateway19/sensor7, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(38, http://gateway19/sensor8, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(38, http://gateway19/sensor8, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (38, http://gateway19/sensor8, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(39, http://gateway19/sensor9, 79, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(39, http://gateway19/sensor9, 79, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (39, http://gateway19/sensor9, 79, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(40, http://gateway19/sensor10, 79, http://test0118/service1/, 1)" , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: "(40, http://gateway19/sensor10, 79, http://test0118/service1/, 1)" , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7715] QString::arg: Argument missing: (40, http://gateway19/sensor10, 79, http://test0118/service1/, 1), http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:10:06 WARN  [7605] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper17createXmlFromListI4QMapI7QString8QVariantEEE12QDomDocument5QListIT_E
+
+2018-01-18 09:11:04 WARN  [7867] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-18 09:16:01 INFO  [7605] TreeFrog application servers shutting down
+2018-01-18 09:16:01 INFO  [7605] TreeFrog application servers shutdown completed
+2018-01-18 09:17:12 INFO  [8142] TreeFrog Framework version 1.20.0
+2018-01-18 09:17:12 INFO  [8142] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:17:12 INFO  [8142] TreeFrog application servers started up.
+2018-01-18 09:18:03 WARN  [8261] unsupported content-type: application/xml
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(14, http://senser1, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(14, http://senser1, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (14, http://senser1, 80, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(15, http://senser2, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(15, http://senser2, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (15, http://senser2, 80, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(16, http://senser3, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(16, http://senser3, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (16, http://senser3, 80, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(17, http://senser4, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(17, http://senser4, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (17, http://senser4, 80, http://test0118/service1/, 1), , http://gateway1 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(19, http://senser5, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(19, http://senser5, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (19, http://senser5, 80, http://test0118/service1/, 1), , http://gateway2 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(20, http://senser6, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(20, http://senser6, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (20, http://senser6, 80, http://test0118/service1/, 1), , http://gateway2 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(31, http://gateway19/sensor1, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(31, http://gateway19/sensor1, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (31, http://gateway19/sensor1, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(32, http://gateway19/sensor2, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(32, http://gateway19/sensor2, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (32, http://gateway19/sensor2, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(33, http://gateway19/sensor3, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(33, http://gateway19/sensor3, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (33, http://gateway19/sensor3, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(34, http://gateway19/sensor4, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(34, http://gateway19/sensor4, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (34, http://gateway19/sensor4, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(35, http://gateway19/sensor5, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(35, http://gateway19/sensor5, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (35, http://gateway19/sensor5, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(36, http://gateway19/sensor6, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(36, http://gateway19/sensor6, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (36, http://gateway19/sensor6, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(37, http://gateway19/sensor7, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(37, http://gateway19/sensor7, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (37, http://gateway19/sensor7, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(38, http://gateway19/sensor8, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(38, http://gateway19/sensor8, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (38, http://gateway19/sensor8, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(39, http://gateway19/sensor9, 80, http://test0118/service1/, 1), " , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(39, http://gateway19/sensor9, 80, http://test0118/service1/, 1), " , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (39, http://gateway19/sensor9, 80, http://test0118/service1/, 1), , http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(40, http://gateway19/sensor10, 80, http://test0118/service1/, 1)" , 1 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: "(40, http://gateway19/sensor10, 80, http://test0118/service1/, 1)" , 300 (tools/qstring.cpp:7283 QString QString::arg(qlonglong, int, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8261] QString::arg: Argument missing: (40, http://gateway19/sensor10, 80, http://test0118/service1/, 1), http://gateway19 (tools/qstring.cpp:7098 QString QString::arg(const QString&, int, QChar) const)
+2018-01-18 09:18:03 WARN  [8142] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper17createXmlFromListI4QMapI7QString8QVariantEEE12QDomDocument5QListIT_E
+
+2018-01-18 09:20:05 INFO  [8142] TreeFrog application servers shutting down
+2018-01-18 09:20:05 INFO  [8142] TreeFrog application servers shutdown completed
+2018-01-18 09:20:11 INFO  [8443] TreeFrog Framework version 1.20.0
+2018-01-18 09:20:11 INFO  [8443] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:20:11 INFO  [8443] TreeFrog application servers started up.
+2018-01-18 09:20:14 WARN  [8548] unsupported content-type: application/xml
+2018-01-18 09:20:14 WARN  [8443] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper17createXmlFromListI4QMapI7QString8QVariantEEE12QDomDocument5QListIT_E
+
+2018-01-18 09:22:56 INFO  [8443] TreeFrog application servers shutting down
+2018-01-18 09:22:56 INFO  [8443] TreeFrog application servers shutdown completed
+2018-01-18 09:23:39 INFO  [8713] TreeFrog Framework version 1.20.0
+2018-01-18 09:23:39 INFO  [8713] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:23:39 INFO  [8713] TreeFrog application servers started up.
+2018-01-18 09:23:43 WARN  [8811] unsupported content-type: application/xml
+2018-01-18 09:23:43 WARN  [8713] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper17createXmlFromListI4QMapI7QString8QVariantEEE12QDomDocument5QListIT_E
+
+2018-01-18 09:24:46 INFO  [8713] TreeFrog application servers shutting down
+2018-01-18 09:24:46 INFO  [8713] TreeFrog application servers shutdown completed
+2018-01-18 09:24:51 INFO  [8968] TreeFrog Framework version 1.20.0
+2018-01-18 09:24:51 INFO  [8968] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:24:51 INFO  [8968] TreeFrog application servers started up.
+2018-01-18 09:24:53 WARN  [9070] unsupported content-type: application/xml
+2018-01-18 09:24:53 WARN  [8968] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper17createXmlFromListI4QMapI7QString8QVariantEEE12QDomDocument5QListIT_E
+
+2018-01-18 09:25:50 WARN  [9177] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-18 09:27:12 INFO  [8968] TreeFrog application servers shutting down
+2018-01-18 09:27:12 INFO  [8968] TreeFrog application servers shutdown completed
+2018-01-18 09:27:16 INFO  [9254] TreeFrog Framework version 1.20.0
+2018-01-18 09:27:16 INFO  [9254] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:27:16 INFO  [9254] TreeFrog application servers started up.
+2018-01-18 09:27:21 WARN  [9359] unsupported content-type: application/xml
+2018-01-18 09:27:21 WARN  [9254] treefrog stderr: /usr/bin/tadpole: symbol lookup error: ./libcontroller.so: undefined symbol: _ZN17ApplicationHelper17createXmlFromListI4QMapI7QString8QVariantEEE12QDomDocument5QListIT_E
+
+2018-01-18 09:32:35 INFO  [9254] TreeFrog application servers shutting down
+2018-01-18 09:32:35 INFO  [9254] TreeFrog application servers shutdown completed
+2018-01-18 09:32:42 INFO  [9542] TreeFrog Framework version 1.20.0
+2018-01-18 09:32:42 INFO  [9542] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:32:42 INFO  [9542] TreeFrog application servers started up.
+2018-01-18 09:32:44 WARN  [9647] unsupported content-type: application/xml
+2018-01-18 09:33:00 WARN  [9662] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-18 09:33:10 WARN  [9675] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-18 09:37:17 WARN  [9703] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-18 09:37:31 WARN  [9718] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-18 09:44:32 WARN  [9745] unsupported content-type: application/xml
+2018-01-18 09:46:11 INFO  [9542] TreeFrog application servers shutting down
+2018-01-18 09:46:11 INFO  [9542] TreeFrog application servers shutdown completed
+2018-01-18 09:46:17 INFO  [9810] TreeFrog Framework version 1.20.0
+2018-01-18 09:46:17 INFO  [9810] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:46:17 INFO  [9810] TreeFrog application servers started up.
+2018-01-18 09:46:23 WARN  [9917] unsupported content-type: application/xml
+2018-01-18 09:49:27 INFO  [9810] TreeFrog application servers shutting down
+2018-01-18 09:49:27 INFO  [9810] TreeFrog application servers shutdown completed
+2018-01-18 09:49:33 INFO  [9984] TreeFrog Framework version 1.20.0
+2018-01-18 09:49:33 INFO  [9984] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:49:33 INFO  [9984] TreeFrog application servers started up.
+2018-01-18 09:49:36 WARN  [10106] unsupported content-type: application/xml
+2018-01-18 09:51:35 WARN  [10125] Reading a socket timed out after 10 seconds. Descriptor:14
+2018-01-18 09:57:02 INFO  [9984] TreeFrog application servers shutting down
+2018-01-18 09:57:02 INFO  [9984] TreeFrog application servers shutdown completed
+2018-01-18 09:57:07 INFO  [10197] TreeFrog Framework version 1.20.0
+2018-01-18 09:57:07 INFO  [10197] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:57:07 INFO  [10197] TreeFrog application servers started up.
+2018-01-18 09:57:13 WARN  [10305] unsupported content-type: application/xml
+2018-01-18 09:58:30 INFO  [10197] TreeFrog application servers shutting down
+2018-01-18 09:58:31 INFO  [10197] TreeFrog application servers shutdown completed
+2018-01-18 09:58:36 INFO  [10369] TreeFrog Framework version 1.20.0
+2018-01-18 09:58:36 INFO  [10369] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:58:36 INFO  [10369] TreeFrog application servers started up.
+2018-01-18 09:58:38 WARN  [10472] unsupported content-type: application/xml
+2018-01-18 09:59:15 INFO  [10369] TreeFrog application servers shutting down
+2018-01-18 09:59:16 INFO  [10369] TreeFrog application servers shutdown completed
+2018-01-18 09:59:20 INFO  [10535] TreeFrog Framework version 1.20.0
+2018-01-18 09:59:20 INFO  [10535] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 09:59:20 INFO  [10535] TreeFrog application servers started up.
+2018-01-18 09:59:23 WARN  [10638] unsupported content-type: application/xml
+2018-01-18 10:01:08 INFO  [10535] TreeFrog application servers shutting down
+2018-01-18 10:01:08 INFO  [10535] TreeFrog application servers shutdown completed
+2018-01-18 10:01:14 INFO  [10702] TreeFrog Framework version 1.20.0
+2018-01-18 10:01:14 INFO  [10702] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 10:01:14 INFO  [10702] TreeFrog application servers started up.
+2018-01-18 10:01:16 WARN  [10805] unsupported content-type: application/xml
+2018-01-18 10:01:53 WARN  [10818] Reading a socket timed out after 10 seconds. Descriptor:13
+2018-01-18 10:06:04 INFO  [10702] TreeFrog application servers shutting down
+2018-01-18 10:06:04 INFO  [10702] TreeFrog application servers shutdown completed
+2018-01-18 10:06:13 INFO  [10914] TreeFrog Framework version 1.20.0
+2018-01-18 10:06:13 INFO  [10914] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 10:06:13 INFO  [10914] TreeFrog application servers started up.
+2018-01-18 10:06:19 WARN  [11023] unsupported content-type: application/xml
+2018-01-18 10:06:19 WARN  [11023] Calling appendChild() on a null node does nothing. (dom/qdom.cpp:2606 QDomNode QDomNode::appendChild(const QDomNode&))
+2018-01-18 10:06:19 WARN  [11023] Calling appendChild() on a null node does nothing. (dom/qdom.cpp:2606 QDomNode QDomNode::appendChild(const QDomNode&))
+2018-01-18 10:06:35 WARN  [11038] Reading a socket timed out after 10 seconds. Descriptor:16
+2018-01-18 10:15:17 INFO  [10914] TreeFrog application servers shutting down
+2018-01-18 10:15:17 INFO  [10914] TreeFrog application servers shutdown completed
+2018-01-18 10:15:22 INFO  [11117] TreeFrog Framework version 1.20.0
+2018-01-18 10:15:22 INFO  [11117] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 10:15:22 INFO  [11117] TreeFrog application servers started up.
+2018-01-18 10:15:28 WARN  [11225] unsupported content-type: application/xml
+2018-01-18 10:16:01 INFO  [11117] TreeFrog application servers shutting down
+2018-01-18 10:16:02 INFO  [11117] TreeFrog application servers shutdown completed
+2018-01-18 10:16:26 INFO  [11287] TreeFrog Framework version 1.20.0
+2018-01-18 10:16:26 INFO  [11287] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-18 10:16:26 INFO  [11287] TreeFrog application servers started up.
+2018-01-18 10:16:29 WARN  [11391] unsupported content-type: application/xml
+2018-01-19 03:45:05 INFO  [11287] TreeFrog application servers shutting down
+2018-01-19 03:45:06 INFO  [11287] TreeFrog application servers shutdown completed
+2018-01-19 03:45:20 INFO  [13547] TreeFrog Framework version 1.20.0
+2018-01-19 03:45:20 INFO  [13547] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-19 03:45:20 INFO  [13547] TreeFrog application servers started up.
+2018-01-19 03:45:35 WARN  [13651] unsupported content-type: application/xml
+2018-01-19 03:47:45 WARN  [13670] Reading a socket timed out after 10 seconds. Descriptor:15
+2018-01-19 03:48:13 INFO  [13547] TreeFrog application servers shutting down
+2018-01-19 03:48:14 INFO  [13547] TreeFrog application servers shutdown completed
+2018-01-19 03:48:20 INFO  [13733] TreeFrog Framework version 1.20.0
+2018-01-19 03:48:20 INFO  [13733] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-19 03:48:20 INFO  [13733] TreeFrog application servers started up.
+2018-01-19 03:48:27 WARN  [13840] unsupported content-type: application/xml
+2018-01-19 05:16:08 INFO  [13733] TreeFrog application servers shutting down
+2018-01-19 05:16:08 INFO  [13733] TreeFrog application servers shutdown completed
+2018-01-19 05:26:01 INFO  [14370] TreeFrog Framework version 1.20.0
+2018-01-19 05:26:01 INFO  [14370] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-19 05:26:01 INFO  [14370] TreeFrog application servers started up.
+2018-01-19 05:26:06 WARN  [14474] unsupported content-type: application/xml
+2018-01-19 05:26:14 WARN  [14486] unsupported content-type: application/xml
+2018-01-19 06:46:58 INFO  [14370] TreeFrog application servers shutting down
+2018-01-19 06:46:58 INFO  [14370] TreeFrog application servers shutdown completed
+2018-01-19 06:48:55 INFO  [14774] TreeFrog Framework version 1.20.0
+2018-01-19 06:48:55 INFO  [14774] Qt 5.3.2 / Linux 3.10.0-327.36.3.el7.x86_64
+2018-01-19 06:48:55 INFO  [14774] TreeFrog application servers started up.
+2018-01-19 06:49:09 WARN  [14877] unsupported content-type: application/xml
+2018-01-21 07:40:01 INFO  [14774] TreeFrog application servers shutting down
+2018-01-21 07:40:01 INFO  [14774] TreeFrog application servers shutdown completed

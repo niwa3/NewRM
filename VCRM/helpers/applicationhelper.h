@@ -8,6 +8,8 @@
 
 #include <treefrog/TGlobal>
 #include <QtXml/QDomDocument>
+#include <QtXml/QDomNode>
+#include <QtXml/QDomNodeList>
 #include <QtXml/QDomElement>
 #include <QtXml/QDomText>
 #include <QtCore/QString>
@@ -21,19 +23,19 @@
 #include "relationship.h"
 
 
+//Declare and define of anonymitymethod
+struct ANONYMITYMETHOD{
+  static const int NONE = 0;
+  static const int NOISE = 1;
+  static const int FLAT = 2;
+};
+
+
 class T_HELPER_EXPORT ApplicationHelper
 {
   public:
-    template <class T> QDomDocument createXml(T info);
-    template <class T> QDomDocument createXmlFromList(QList<T> info);
-
+    QList<QVariantMap> createRelationMap(ServiceInfo service, QList<DeviceInfo> deviceList);
   private:
-    QDomElement _setXmlInfo(CustomerInfo info);
-    QDomElement _setXmlInfo(DeviceInfo info);
-    QDomElement _setXmlInfo(VenderInfo info);
-    QDomElement _setXmlInfo(ServiceInfo info);
-    QDomElement _setXmlInfo(Relationship info);
-    QDomElement _createXmlElement(QString elementName, QString elementText);
 };
 
 #endif // APPLICATIONHELPER_H

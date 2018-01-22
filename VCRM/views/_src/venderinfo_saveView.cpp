@@ -2,6 +2,8 @@
 #include <TreeFrogView>
 #include "venderinfo.h" 
 #include "applicationhelper.h"
+#include "curlhelper.h"
+#include "xmlhelper.h"
 
 class T_VIEW_EXPORT venderinfo_saveView : public TActionView
 {

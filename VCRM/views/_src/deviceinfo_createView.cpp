@@ -2,6 +2,8 @@
 #include <TreeFrogView>
 #include "deviceinfo.h" 
 #include "applicationhelper.h"
+#include "curlhelper.h"
+#include "xmlhelper.h"
 
 class T_VIEW_EXPORT deviceinfo_createView : public TActionView
 {

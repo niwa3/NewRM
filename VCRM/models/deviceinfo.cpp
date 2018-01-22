@@ -150,6 +150,34 @@ DeviceInfo DeviceInfo::get(int id)
     return DeviceInfo(mapper.findByPrimaryKey(id));
 }
 
+QList<DeviceInfo> DeviceInfo::getByCid(int cId)
+{
+    TSqlORMapper<DeviceInfoObject> mapper;
+    TCriteria crt(DeviceInfoObject::CId, cId);
+    QList<DeviceInfo> deviceInfoList;
+    if (mapper.find(crt) > 0) {
+        for (TSqlORMapperIterator<DeviceInfoObject> i(mapper); i.hasNext(); ) {
+            deviceInfoList.append((DeviceInfo(i.next())));
+        }
+    }
+    return deviceInfoList;
+}
+
+QList<DeviceInfo> DeviceInfo::getForMatch(int dataType, int privacyStandard, int interval)
+{
+    TSqlORMapper<DeviceInfoObject> mapper;
+    TCriteria crt(DeviceInfoObject::DataType, dataType);
+    crt.add(DeviceInfoObject::DefaultPrivacyStandard, TSql::LessEqual, privacyStandard);
+    crt.add(DeviceInfoObject::Interval, TSql::LessEqual, interval);
+    QList<DeviceInfo> deviceInfoList;
+    if (mapper.find(crt) > 0) {
+        for (TSqlORMapperIterator<DeviceInfoObject> i(mapper); i.hasNext(); ) {
+            deviceInfoList.append((DeviceInfo(i.next())));
+        }
+    }
+    return deviceInfoList;
+}
+
 int DeviceInfo::count()
 {
     TSqlORMapper<DeviceInfoObject> mapper;

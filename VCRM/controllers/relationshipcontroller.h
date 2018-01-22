@@ -14,6 +14,7 @@ public slots:
     void index();
     void show(const QString &id);
     void create();
+    void insert();
     void save(const QString &id);
     void remove(const QString &id);
 };
