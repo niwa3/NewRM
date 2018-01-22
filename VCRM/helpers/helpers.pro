@@ -8,7 +8,7 @@ DEFINES += TF_DLL
 DESTDIR = ../lib
 INCLUDEPATH += ../models/ ../models/sqlobjects/
 DEPENDPATH  += ../models/ ../models/sqlobjects/
-LIBS += -L../lib -lmodel
+LIBS += -L../lib -lmodel -lcurl
 MOC_DIR = .obj/
 OBJECTS_DIR = .obj/
 
@@ -16,3 +16,5 @@ include(../appbase.pri)
 
 HEADERS += applicationhelper.h
 SOURCES += applicationhelper.cpp
+HEADERS += xmlhelper.h
+SOURCES += xmlhelper.cpp

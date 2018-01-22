@@ -48,6 +48,8 @@ public:
     static DeviceInfo create(int cId, const QString &deviceName, int defaultPrivacyStandard, int deviceType, int dataType, int interval, const QString &location);
     static DeviceInfo create(const QVariantMap &values);
     static DeviceInfo get(int id);
+    static QList<DeviceInfo> getByCid(int cId);
+    static QList<DeviceInfo> getForMatch(int dataType, int privacyStandard, int interval);
     static int count();
     static QList<DeviceInfo> getAll();
     static QJsonArray getAllJson();

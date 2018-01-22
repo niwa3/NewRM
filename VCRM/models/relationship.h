@@ -1,13 +1,14 @@
 #ifndef RELATIONSHIP_H
 #define RELATIONSHIP_H
 
-#include <QStringList>
-#include <QDateTime>
-#include <QVariant>
-#include <QSharedDataPointer>
-#include <TGlobal>
-#include <TAbstractModel>
-
+#include <QtCore/QStringList>
+#include <QtCore/QDateTime>
+#include <QtCore/QVariant>
+#include <QtCore/QSharedDataPointer>
+#include <treefrog/TGlobal>
+#include <treefrog/TAbstractModel>
+#include <treefrog/TSqlORMapper>
+#include <treefrog/TSqlORMapperIterator>
 class TModelObject;
 class RelationshipObject;
 class QJsonArray;
@@ -49,6 +50,9 @@ public:
 
     static Relationship create(int dId, const QString &deviceName, int sId, const QString &serviceName, int anonymityMethod, int privacyStandard, int interval, const QString &location);
     static Relationship create(const QVariantMap &values);
+    static QList<Relationship> create(const QList<QVariantMap> &ralationList);
+    static Relationship insert(const QVariantMap &values);
+    static QList<Relationship> insert(const QList<QVariantMap> &relationList);
     static Relationship get(int id);
     static int count();
     static QList<Relationship> getAll();

@@ -371,3 +371,534 @@ DETAIL:  Failing row contains (17, 2018-01-09 05:21:28.963, 2018-01-09 05:21:28.
 DETAIL:  Failing row contains (18, 2018-01-09 05:33:14.43, 2018-01-09 05:33:14.43, 0, null, 0, 0, 0).
 (23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-09 05:33:14.430', '2018-01-09 05:33:14.430', 0, NULL, 0, 0, 0)
 2018-01-09 05:33:14  [28624] [COMMIT Failed] [databaseId:0]
+2018-01-11 06:29:36  [7810] [BEGIN] [databaseId:0]
+2018-01-11 06:29:36  [7810] (Query failed) [ERROR:  null value in column "service_name" violates not-null constraint
+DETAIL:  Failing row contains (19, 2018-01-11 06:29:36.548, 2018-01-11 06:29:36.548, 0, null, 0, 0, 0).
+(23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-11 06:29:36.548', '2018-01-11 06:29:36.548', 0, NULL, 0, 0, 0)
+2018-01-11 06:29:36  [7810] [COMMIT Failed] [databaseId:0]
+2018-01-11 07:27:54  [8284] [BEGIN] [databaseId:0]
+2018-01-11 07:27:54  [8284] (Query failed) [ERROR:  null value in column "service_name" violates not-null constraint
+DETAIL:  Failing row contains (20, 2018-01-11 07:27:54.225, 2018-01-11 07:27:54.225, 0, null, 0, 0, 0).
+(23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-11 07:27:54.225', '2018-01-11 07:27:54.225', 0, NULL, 0, 0, 0)
+2018-01-11 07:27:54  [8284] [COMMIT Failed] [databaseId:0]
+2018-01-11 07:37:26  [8542] [BEGIN] [databaseId:0]
+2018-01-11 07:37:26  [8542] (Query failed) [ERROR:  null value in column "service_name" violates not-null constraint
+DETAIL:  Failing row contains (21, 2018-01-11 07:37:26.339, 2018-01-11 07:37:26.339, 0, null, 0, 0, 0).
+(23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-11 07:37:26.339', '2018-01-11 07:37:26.339', 0, NULL, 0, 0, 0)
+2018-01-11 07:37:26  [8542] [COMMIT Failed] [databaseId:0]
+2018-01-11 07:39:33  [8710] [BEGIN] [databaseId:0]
+2018-01-11 07:39:33  [8710] (Query failed) [ERROR:  null value in column "service_name" violates not-null constraint
+DETAIL:  Failing row contains (22, 2018-01-11 07:39:33.942, 2018-01-11 07:39:33.942, 0, null, 0, 0, 0).
+(23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-11 07:39:33.942', '2018-01-11 07:39:33.942', 0, NULL, 0, 0, 0)
+2018-01-11 07:39:33  [8710] [COMMIT Failed] [databaseId:0]
+2018-01-11 07:41:58  [8880] [BEGIN] [databaseId:0]
+2018-01-11 07:41:58  [8880] (Query failed) [ERROR:  null value in column "service_name" violates not-null constraint
+DETAIL:  Failing row contains (23, 2018-01-11 07:41:58.475, 2018-01-11 07:41:58.475, 0, null, 0, 0, 0).
+(23502)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-11 07:41:58.475', '2018-01-11 07:41:58.475', 0, NULL, 0, 0, 0)
+2018-01-11 07:41:58  [8880] [COMMIT Failed] [databaseId:0]
+2018-01-11 08:19:04  [9169] [BEGIN] [databaseId:0]
+2018-01-11 08:19:04  [9169] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-11 08:19:04.425', '2018-01-11 08:19:04.425', 1, 'http://test/service0/', 0, 1, 300)
+2018-01-11 08:19:04  [9169] [COMMIT] [databaseId:0]
+2018-01-11 08:19:50  [9184] [BEGIN] [databaseId:0]
+2018-01-11 08:19:50  [9184] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."v_id"=1
+2018-01-11 08:19:50  [9184] [COMMIT] [databaseId:0]
+2018-01-12 08:28:47  [12470] [BEGIN] [databaseId:0]
+2018-01-12 08:28:47  [12470] (Query failed) [ERROR:  duplicate key value violates unique constraint "service_info_service_name_key"
+DETAIL:  Key (service_name)=(http://test/service0/) already exists.
+(23505)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-12 08:28:47.917', '2018-01-12 08:28:47.917', 1, 'http://test/service0/', 0, 0, 0)
+2018-01-12 08:28:47  [12470] [COMMIT Failed] [databaseId:0]
+2018-01-12 08:30:42  [12486] [BEGIN] [databaseId:0]
+2018-01-12 08:30:42  [12486] (Query failed) [ERROR:  duplicate key value violates unique constraint "service_info_service_name_key"
+DETAIL:  Key (service_name)=(http://test/service0/) already exists.
+(23505)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-12 08:30:42.355', '2018-01-12 08:30:42.355', 1, 'http://test/service0/', 3, 1, 300)
+2018-01-12 08:30:42  [12486] [COMMIT Failed] [databaseId:0]
+2018-01-12 09:02:47  [13091] [BEGIN] [databaseId:0]
+2018-01-12 09:02:47  [13091] (Query failed) [ERROR:  duplicate key value violates unique constraint "service_info_service_name_key"
+DETAIL:  Key (service_name)=(http://test/service0/) already exists.
+(23505)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-12 09:02:47.478', '2018-01-12 09:02:47.478', 1, 'http://test/service0/', 3, 1, 300)
+2018-01-12 09:02:47  [13091] [COMMIT Failed] [databaseId:0]
+2018-01-12 09:02:54  [13103] [BEGIN] [databaseId:0]
+2018-01-12 09:02:54  [13103] (Query failed) [ERROR:  duplicate key value violates unique constraint "service_info_service_name_key"
+DETAIL:  Key (service_name)=(http://test/service0/) already exists.
+(23505)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-12 09:02:54.963', '2018-01-12 09:02:54.963', 1, 'http://test/service0/', 3, 1, 300)
+2018-01-12 09:02:54  [13103] [COMMIT Failed] [databaseId:0]
+2018-01-12 09:06:11  [13233] [BEGIN] [databaseId:0]
+2018-01-12 09:06:11  [13233] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-12 09:06:11  [13233] [COMMIT] [databaseId:0]
+2018-01-12 09:06:31  [13254] [BEGIN] [databaseId:0]
+2018-01-12 09:06:31  [13254] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-12 09:06:31.915', '2018-01-12 09:06:31.915', 1, 'http://test/service1/', 3, 1, 300)
+2018-01-12 09:06:31  [13254] [COMMIT] [databaseId:0]
+2018-01-12 09:06:37  [13264] [BEGIN] [databaseId:0]
+2018-01-12 09:06:37  [13264] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-12 09:06:37  [13264] [COMMIT] [databaseId:0]
+2018-01-12 09:28:45  [13318] [BEGIN] [databaseId:0]
+2018-01-12 09:28:45  [13318] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-12 09:28:45.487', '2018-01-12 09:28:45.487', 1, 'http://test/service2/', 3, 0, 300)
+2018-01-12 09:28:45  [13318] [COMMIT] [databaseId:0]
+2018-01-13 02:42:25  [15584] [BEGIN] [databaseId:0]
+2018-01-13 02:42:25  [15584] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-13 02:42:25.838', '2018-01-13 02:42:25.838', 1, 'http://rest/service1', 3, 1, 300)
+2018-01-13 02:42:25  [15584] [COMMIT] [databaseId:0]
+2018-01-13 02:54:58  [15653] [BEGIN] [databaseId:0]
+2018-01-13 02:54:58  [15653] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-13 02:54:58  [15653] [COMMIT] [databaseId:0]
+2018-01-13 02:57:51  [15670] [BEGIN] [databaseId:0]
+2018-01-13 02:57:51  [15670] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-13 02:57:51  [15670] [COMMIT] [databaseId:0]
+2018-01-13 07:08:40  [16869] [BEGIN] [databaseId:0]
+2018-01-13 07:08:40  [16869] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-13 07:08:40.252', '2018-01-13 07:08:40.252', 1, 'http://rest/service5', 3, 1, 300)
+2018-01-13 07:08:40  [16869] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-13 07:08:40.261', '2018-01-13 07:08:40.261', 1, 'http://rest/service2', 3, 1, 300)
+2018-01-13 07:08:40  [16869] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-13 07:08:40.263', '2018-01-13 07:08:40.263', 1, 'http://rest/service3', 3, 1, 300)
+2018-01-13 07:08:40  [16869] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-13 07:08:40.264', '2018-01-13 07:08:40.264', 1, 'http://rest/service4', 3, 1, 300)
+2018-01-13 07:08:40  [16869] [COMMIT] [databaseId:0]
+2018-01-13 07:09:11  [16888] [BEGIN] [databaseId:0]
+2018-01-13 07:09:11  [16888] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-13 07:09:11  [16888] [COMMIT] [databaseId:0]
+2018-01-13 07:09:29  [16902] [BEGIN] [databaseId:0]
+2018-01-13 07:09:29  [16902] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."id"=35 LIMIT 1
+2018-01-13 07:09:29  [16902] [COMMIT] [databaseId:0]
+2018-01-13 07:47:26  [17162] [BEGIN] [databaseId:0]
+2018-01-13 07:47:26  [17162] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-13 07:47:26.869', '2018-01-13 07:47:26.869', 1, 'http://rest/service9', 3, 1, 300)
+2018-01-13 07:47:26  [17162] [COMMIT] [databaseId:0]
+2018-01-13 07:47:56  [17174] [BEGIN] [databaseId:0]
+2018-01-13 07:47:56  [17174] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-13 07:47:56  [17174] [COMMIT] [databaseId:0]
+2018-01-15 06:07:53  [22740] [BEGIN] [databaseId:0]
+2018-01-15 06:07:53  [22740] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."id"=2 LIMIT 1
+2018-01-15 06:07:53  [22740] [COMMIT] [databaseId:0]
+2018-01-15 06:07:59  [22740] [BEGIN] [databaseId:0]
+2018-01-15 06:07:59  [22740] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0 WHERE t0."id"=2 LIMIT 1
+2018-01-15 06:07:59  [22740] [COMMIT] [databaseId:0]
+2018-01-15 08:12:52  [23470] [BEGIN] [databaseId:0]
+2018-01-15 08:12:52  [23470] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-15 08:12:52.542', '2018-01-15 08:12:52.542', 1, 'http://test0115/service0/', 3, 1, 300)
+2018-01-15 08:12:52  [23470] [COMMIT] [databaseId:0]
+2018-01-15 08:13:15  [23633] [BEGIN] [databaseId:0]
+2018-01-15 08:13:15  [23633] (Query failed) [ERROR:  duplicate key value violates unique constraint "service_info_service_name_key"
+DETAIL:  Key (service_name)=(http://test0115/service0/) already exists.
+(23505)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:13:15  [23633] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:13:26  [23645] [BEGIN] [databaseId:0]
+2018-01-15 08:13:26  [23645] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:13:26  [23645] [COMMIT] [databaseId:0]
+2018-01-15 08:19:33  [23678] [BEGIN] [databaseId:0]
+2018-01-15 08:19:33  [23678] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_2"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:19:33  [23678] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:19:39  [23690] [BEGIN] [databaseId:0]
+2018-01-15 08:19:39  [23690] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:19:39  [23690] [COMMIT] [databaseId:0]
+2018-01-15 08:19:45  [23690] [BEGIN] [databaseId:0]
+2018-01-15 08:19:45  [23690] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:19:45  [23690] [COMMIT] [databaseId:0]
+2018-01-15 08:19:47  [23690] [BEGIN] [databaseId:0]
+2018-01-15 08:19:47  [23690] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:19:47  [23690] [COMMIT] [databaseId:0]
+2018-01-15 08:19:47  [23690] [BEGIN] [databaseId:0]
+2018-01-15 08:19:47  [23690] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:19:47  [23690] [COMMIT] [databaseId:0]
+2018-01-15 08:19:55  [23722] [BEGIN] [databaseId:0]
+2018-01-15 08:19:55  [23722] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_3"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:19:55  [23722] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:23:19  [23917] [BEGIN] [databaseId:0]
+2018-01-15 08:23:19  [23917] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_1"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:23:19  [23917] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:25:47  [24097] [BEGIN] [databaseId:0]
+2018-01-15 08:25:47  [24097] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_1"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:25:47  [24097] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:26:23  [24110] [BEGIN] [databaseId:0]
+2018-01-15 08:26:23  [24110] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_2"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:26:23  [24110] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:26:36  [24122] [BEGIN] [databaseId:0]
+2018-01-15 08:26:36  [24122] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_3"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:26:36  [24122] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:26:55  [24133] [BEGIN] [databaseId:0]
+2018-01-15 08:26:55  [24133] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:26:55  [24133] [COMMIT] [databaseId:0]
+2018-01-15 08:29:00  [24308] [BEGIN] [databaseId:0]
+2018-01-15 08:29:00  [24308] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:29:00  [24308] [COMMIT] [databaseId:0]
+2018-01-15 08:29:56  [24325] [BEGIN] [databaseId:0]
+2018-01-15 08:29:56  [24325] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_1"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 08:29:56  [24325] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:34:00  [24499] [BEGIN] [databaseId:0]
+2018-01-15 08:34:00  [24499] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_1"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning service_info.*
+2018-01-15 08:34:00  [24499] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:35:06  [24666] [BEGIN] [databaseId:0]
+2018-01-15 08:35:06  [24666] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning service_info.*
+2018-01-15 08:35:06  [24666] [COMMIT] [databaseId:0]
+2018-01-15 08:35:18  [24677] [BEGIN] [databaseId:0]
+2018-01-15 08:35:18  [24677] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:35:18  [24677] [COMMIT] [databaseId:0]
+2018-01-15 08:36:58  [24841] [BEGIN] [databaseId:0]
+2018-01-15 08:36:58  [24841] (Query failed) [ERROR:  wrong number of parameters for prepared statement "qpsqlpstmt_1"
+DETAIL:  Expected 5 parameters but got 10.
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning service_info.*
+2018-01-15 08:36:58  [24841] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:48:52  [25029] [BEGIN] [databaseId:0]
+2018-01-15 08:48:52  [25029] (Query failed) [ERROR:  syntax error at or near "("
+LINE 1: EXECUTE  (1, 'http://test0115/service2/', 3, 1, 300, 1, 'htt...
+                 ^
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) (?, ?, ?, ?, ?), (?, ?, ?, ?, ?) returning service_info.*
+2018-01-15 08:48:52  [25029] [COMMIT Failed] [databaseId:0]
+2018-01-15 08:49:00  [25040] [BEGIN] [databaseId:0]
+2018-01-15 08:49:00  [25040] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 08:49:00  [25040] [COMMIT] [databaseId:0]
+2018-01-15 08:50:47  [25058] [BEGIN] [databaseId:0]
+2018-01-15 08:50:47  [25058] (Query failed) [ERROR:  syntax error at or near "("
+LINE 1: EXECUTE  (1, 'http://test0115/service2/', 3, 1, 300, 1, 'htt...
+                 ^
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) (?, ?, ?, ?, ?), (?, ?, ?, ?, ?) returning service_info.*
+2018-01-15 08:50:47  [25058] [COMMIT Failed] [databaseId:0]
+2018-01-15 09:10:11  [25264] [BEGIN] [databaseId:0]
+2018-01-15 09:10:11  [25264] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 09:10:11  [25264] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)
+2018-01-15 09:10:11  [25264] [COMMIT] [databaseId:0]
+2018-01-15 09:15:56  [25288] [BEGIN] [databaseId:0]
+2018-01-15 09:15:56  [25288] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 09:15:56  [25288] [COMMIT] [databaseId:0]
+2018-01-15 09:34:26  [25526] [BEGIN] [databaseId:0]
+2018-01-15 09:34:26  [25526] [COMMIT] [databaseId:0]
+2018-01-15 09:34:59  [25537] [BEGIN] [databaseId:0]
+2018-01-15 09:34:59  [25537] [COMMIT] [databaseId:0]
+2018-01-15 09:35:10  [25547] [BEGIN] [databaseId:0]
+2018-01-15 09:35:10  [25547] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 09:35:10  [25547] [COMMIT] [databaseId:0]
+2018-01-15 09:43:41  [25735] [BEGIN] [databaseId:0]
+2018-01-15 09:43:41  [25735] [COMMIT] [databaseId:0]
+2018-01-15 09:43:53  [25745] [BEGIN] [databaseId:0]
+2018-01-15 09:43:53  [25745] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 09:43:53  [25745] [COMMIT] [databaseId:0]
+2018-01-15 09:51:38  [25775] [BEGIN] [databaseId:0]
+2018-01-15 09:51:38  [25775] [COMMIT] [databaseId:0]
+2018-01-15 09:51:47  [25785] [BEGIN] [databaseId:0]
+2018-01-15 09:51:47  [25785] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-15 09:51:47  [25785] [COMMIT] [databaseId:0]
+2018-01-16 05:39:58  [28436] [BEGIN] [databaseId:0]
+2018-01-16 05:39:58  [28436] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-16 05:39:58  [28436] [COMMIT] [databaseId:0]
+2018-01-16 05:41:27  [28451] [BEGIN] [databaseId:0]
+2018-01-16 05:41:27  [28451] [COMMIT] [databaseId:0]
+2018-01-16 05:41:43  [28462] [BEGIN] [databaseId:0]
+2018-01-16 05:41:43  [28462] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-16 05:41:43  [28462] [COMMIT] [databaseId:0]
+2018-01-16 05:57:30  [28675] [BEGIN] [databaseId:0]
+2018-01-16 05:57:30  [28675] [COMMIT] [databaseId:0]
+2018-01-16 06:20:14  [29127] [BEGIN] [databaseId:0]
+2018-01-16 06:20:14  [29127] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-16 06:20:14  [29127] [COMMIT] [databaseId:0]
+2018-01-16 06:20:35  [29141] [BEGIN] [databaseId:0]
+2018-01-16 06:20:35  [29141] [COMMIT] [databaseId:0]
+2018-01-16 09:30:13  [29681] [BEGIN] [databaseId:0]
+2018-01-16 09:30:13  [29681] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-16 09:30:13  [29681] [COMMIT] [databaseId:0]
+2018-01-16 09:30:27  [29694] [BEGIN] [databaseId:0]
+2018-01-16 09:30:27  [29694] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning *
+2018-01-16 09:30:27  [29694] [COMMIT] [databaseId:0]
+2018-01-16 09:30:36  [29705] [BEGIN] [databaseId:0]
+2018-01-16 09:30:36  [29705] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-16 09:30:36  [29705] [COMMIT] [databaseId:0]
+2018-01-16 09:50:38  [29940] [BEGIN] [databaseId:0]
+2018-01-16 09:50:38  [29940] (Query failed) [ERROR:  syntax error at or near "("
+LINE 1: EXECUTE  (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NU...
+                 ^
+(42601)] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?)(?, ?, ?, ?, ?) returning *
+2018-01-16 09:50:38  [29940] [COMMIT Failed] [databaseId:0]
+2018-01-17 07:26:31  [32684] [BEGIN] [databaseId:0]
+2018-01-17 07:26:31  [32684] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning *
+2018-01-17 07:26:31  [32684] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning *
+2018-01-17 07:26:31  [32684] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning *
+2018-01-17 07:26:31  [32684] [COMMIT] [databaseId:0]
+2018-01-17 07:26:42  [32698] [BEGIN] [databaseId:0]
+2018-01-17 07:26:42  [32698] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-17 07:26:42  [32698] [COMMIT] [databaseId:0]
+2018-01-17 07:35:12  [410] [BEGIN] [databaseId:0]
+2018-01-17 07:35:12  [410] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning *
+2018-01-17 07:35:12  [410] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning *
+2018-01-17 07:35:12  [410] INSERT INTO service_info (v_id, service_name, required_privacy_standard, data_type, interval) VALUES (?, ?, ?, ?, ?) returning *
+2018-01-17 07:35:12  [410] [COMMIT] [databaseId:0]
+2018-01-18 08:29:43  [4345] [BEGIN] [databaseId:0]
+2018-01-18 08:29:43  [4345] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:29:43.990', '2018-01-18 08:29:43.990', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:29:44  [4345] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:30:02  [4447] [BEGIN] [databaseId:0]
+2018-01-18 08:30:02  [4447] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:30:02.920', '2018-01-18 08:30:02.920', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:30:02  [4447] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:30:14  [4557] [BEGIN] [databaseId:0]
+2018-01-18 08:30:14  [4557] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 08:30:14  [4557] [COMMIT] [databaseId:0]
+2018-01-18 08:30:42  [4570] [BEGIN] [databaseId:0]
+2018-01-18 08:30:42  [4570] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:30:42.160', '2018-01-18 08:30:42.160', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:30:42  [4570] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:31:34  [4783] [BEGIN] [databaseId:0]
+2018-01-18 08:31:34  [4783] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:31:34.656', '2018-01-18 08:31:34.656', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:31:34  [4783] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:31:37  [4890] [BEGIN] [databaseId:0]
+2018-01-18 08:31:37  [4890] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 08:31:37  [4890] [COMMIT] [databaseId:0]
+2018-01-18 08:31:55  [4904] [BEGIN] [databaseId:0]
+2018-01-18 08:31:55  [4904] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0
+2018-01-18 08:31:55  [4904] [COMMIT] [databaseId:0]
+2018-01-18 08:32:07  [4916] [BEGIN] [databaseId:0]
+2018-01-18 08:32:07  [4916] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 08:32:07  [4916] [COMMIT] [databaseId:0]
+2018-01-18 08:32:34  [4931] [BEGIN] [databaseId:0]
+2018-01-18 08:32:34  [4931] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:32:34.783', '2018-01-18 08:32:34.783', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:32:34  [4931] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:33:32  [5042] [BEGIN] [databaseId:0]
+2018-01-18 08:33:32  [5042] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:33:32.025', '2018-01-18 08:33:32.025', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:33:32  [5042] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:35:42  [5158] [BEGIN] [databaseId:0]
+2018-01-18 08:35:42  [5158] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:35:42.710', '2018-01-18 08:35:42.710', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:35:42  [5158] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:46:38  [5422] [BEGIN] [databaseId:0]
+2018-01-18 08:46:38  [5422] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:46:38.761', '2018-01-18 08:46:38.761', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:46:38  [5422] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:47:14  [5649] [BEGIN] [databaseId:0]
+2018-01-18 08:47:14  [5649] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:47:14.964', '2018-01-18 08:47:14.964', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:47:14  [5649] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:47:56  [5920] [BEGIN] [databaseId:0]
+2018-01-18 08:47:56  [5920] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:47:56.116', '2018-01-18 08:47:56.116', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:47:56  [5920] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:51:42  [6179] [BEGIN] [databaseId:0]
+2018-01-18 08:51:42  [6179] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:51:42.846', '2018-01-18 08:51:42.846', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:51:42  [6179] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:54:12  [6423] [BEGIN] [databaseId:0]
+2018-01-18 08:54:12  [6423] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:54:12.565', '2018-01-18 08:54:12.565', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:54:12  [6423] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:54:41  [6555] [BEGIN] [databaseId:0]
+2018-01-18 08:54:41  [6555] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 08:54:41  [6555] [COMMIT] [databaseId:0]
+2018-01-18 08:54:48  [6555] [BEGIN] [databaseId:0]
+2018-01-18 08:54:48  [6555] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 08:54:48  [6555] [COMMIT] [databaseId:0]
+2018-01-18 08:57:37  [6735] [BEGIN] [databaseId:0]
+2018-01-18 08:57:37  [6735] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:57:37.311', '2018-01-18 08:57:37.311', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:57:37  [6735] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 08:58:06  [6986] [BEGIN] [databaseId:0]
+2018-01-18 08:58:06  [6986] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 08:58:06.354', '2018-01-18 08:58:06.354', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 08:58:06  [6986] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 09:04:08  [7265] [BEGIN] [databaseId:0]
+2018-01-18 09:04:08  [7265] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:04:08.918', '2018-01-18 09:04:08.918', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 09:04:08  [7265] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 09:05:51  [7510] [BEGIN] [databaseId:0]
+2018-01-18 09:05:51  [7510] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:05:51.720', '2018-01-18 09:05:51.720', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 09:05:51  [7510] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard">=3 AND t0."interval">=300
+2018-01-18 09:05:51  [7510] [COMMIT] [databaseId:0]
+2018-01-18 09:05:56  [7522] [BEGIN] [databaseId:0]
+2018-01-18 09:05:56  [7522] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0
+2018-01-18 09:05:56  [7522] [COMMIT] [databaseId:0]
+2018-01-18 09:06:01  [7522] [BEGIN] [databaseId:0]
+2018-01-18 09:06:01  [7522] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:06:01  [7522] [COMMIT] [databaseId:0]
+2018-01-18 09:06:04  [7522] [BEGIN] [databaseId:0]
+2018-01-18 09:06:04  [7522] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 09:06:04  [7522] [COMMIT] [databaseId:0]
+2018-01-18 09:09:52  [7691] [BEGIN] [databaseId:0]
+2018-01-18 09:09:52  [7691] (Query failed) [ERROR:  duplicate key value violates unique constraint "service_info_service_name_key"
+DETAIL:  Key (service_name)=(http://test0118/service0/) already exists.
+(23505)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:09:52.805', '2018-01-18 09:09:52.805', 1, 'http://test0118/service0/', 3, 1, 300)
+2018-01-18 09:09:52  [7691] [COMMIT Failed] [databaseId:0]
+2018-01-18 09:09:56  [7702] [BEGIN] [databaseId:0]
+2018-01-18 09:09:56  [7702] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:09:56  [7702] [COMMIT] [databaseId:0]
+2018-01-18 09:10:06  [7715] [BEGIN] [databaseId:0]
+2018-01-18 09:10:06  [7715] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:10:06.943', '2018-01-18 09:10:06.943', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:10:06  [7715] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:10:06  [7715] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO service_info (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 79, http://test0118/service1/, 1), (15, http://senser2, 79, http://test0118/service1/, 1), (16, http://senser3, 79, http://test0118/service1/, 1), (17, http://senser4, 79, http://test0118/service1/, 1), (19, http://senser5, 79, http://test0118/service1/, 1), (20, http://senser6, 79, http://test0118/service1/, 1), (31, http://gateway19/sensor1, 79, http://test0118/service1/, 1), (32, http://gateway19/sensor2, 79, http://test0118/service1/, 1), (33, http://gateway19/sensor3, 79, http://test0118/service1/, 1), (34, http://gateway19/sensor4, 79, http://test0118/service1/, 1), (35, http://gateway19/sensor5, 79, http://test0118/service1/, 1), (36, http://gateway19/sensor6, 79, http://test0118/service1/, 1), (37, http://gateway19/sensor7, 79, http://test0118/service1/, 1), (38, http://gateway19/sensor8, 79, http://test0118/service1/, 1), (39, http://gateway19/sensor9, 79, http://test0118/service1/, 1), (40, http://gateway19/sensor10, 79, http://test0118/service1/, 1) returning *
+2018-01-18 09:10:54  [7866] [BEGIN] [databaseId:0]
+2018-01-18 09:10:54  [7866] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:10:54  [7866] [COMMIT] [databaseId:0]
+2018-01-18 09:10:59  [7866] [BEGIN] [databaseId:0]
+2018-01-18 09:10:59  [7866] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 09:10:59  [7866] [COMMIT] [databaseId:0]
+2018-01-18 09:17:57  [8251] [BEGIN] [databaseId:0]
+2018-01-18 09:17:57  [8251] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:17:57  [8251] [COMMIT] [databaseId:0]
+2018-01-18 09:18:03  [8261] [BEGIN] [databaseId:0]
+2018-01-18 09:18:03  [8261] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:18:03.981', '2018-01-18 09:18:03.981', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:18:03  [8261] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:18:03  [8261] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO service_info (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 80, http://test0118/service1/, 1), (15, http://senser2, 80, http://test0118/service1/, 1), (16, http://senser3, 80, http://test0118/service1/, 1), (17, http://senser4, 80, http://test0118/service1/, 1), (19, http://senser5, 80, http://test0118/service1/, 1), (20, http://senser6, 80, http://test0118/service1/, 1), (31, http://gateway19/sensor1, 80, http://test0118/service1/, 1), (32, http://gateway19/sensor2, 80, http://test0118/service1/, 1), (33, http://gateway19/sensor3, 80, http://test0118/service1/, 1), (34, http://gateway19/sensor4, 80, http://test0118/service1/, 1), (35, http://gateway19/sensor5, 80, http://test0118/service1/, 1), (36, http://gateway19/sensor6, 80, http://test0118/service1/, 1), (37, http://gateway19/sensor7, 80, http://test0118/service1/, 1), (38, http://gateway19/sensor8, 80, http://test0118/service1/, 1), (39, http://gateway19/sensor9, 80, http://test0118/service1/, 1), (40, http://gateway19/sensor10, 80, http://test0118/service1/, 1) returning *
+2018-01-18 09:20:14  [8548] [BEGIN] [databaseId:0]
+2018-01-18 09:20:14  [8548] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:20:14.146', '2018-01-18 09:20:14.146', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:20:14  [8548] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:23:43  [8811] [BEGIN] [databaseId:0]
+2018-01-18 09:23:43  [8811] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:23:43.553', '2018-01-18 09:23:43.553', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:23:43  [8811] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:23:43  [8811] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO service_info (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 82, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 82, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 82, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 82, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 82, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 82, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 82, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 82, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 82, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 82, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 82, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 82, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 82, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gatew2018-01-18 09:24:53  [9070] [BEGIN] [databaseId:0]
+2018-01-18 09:24:53  [9070] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:24:53.688', '2018-01-18 09:24:53.688', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:24:53  [9070] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:24:53  [9070] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO service_info (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 83, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 83, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 83, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 83, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 83, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 83, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 83, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, http://gateway19/sensor10, 83, http://test0118/service1/, 1, 1, 300, http://gateway19) returning *
+2018-01-18 09:25:40  [9176] [BEGIN] [databaseId:0]
+2018-01-18 09:25:40  [9176] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:25:40  [9176] [COMMIT] [databaseId:0]
+2018-01-18 09:25:42  [9176] [BEGIN] [databaseId:0]
+2018-01-18 09:25:42  [9176] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:25:42  [9176] [COMMIT] [databaseId:0]
+2018-01-18 09:25:47  [9176] [BEGIN] [databaseId:0]
+2018-01-18 09:25:47  [9176] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 09:25:47  [9176] [COMMIT] [databaseId:0]
+2018-01-18 09:27:21  [9359] [BEGIN] [databaseId:0]
+2018-01-18 09:27:21  [9359] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:27:21.929', '2018-01-18 09:27:21.929', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:27:21  [9359] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:27:21  [9359] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO service_info (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 84, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 84, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 84, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 84, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 84, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 84, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 84, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, http://gateway19/sensor10, 84, http://test0118/service1/, 1, 1, 300, http://gateway19) returning *
+2018-01-18 09:32:44  [9647] [BEGIN] [databaseId:0]
+2018-01-18 09:32:44  [9647] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:32:44.396', '2018-01-18 09:32:44.396', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:32:44  [9647] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:32:44  [9647] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 85, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 85, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 85, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 85, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 85, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 85, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 85, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, http://gateway19/sensor10, 85, http://test0118/service1/, 1, 1, 300, http://gateway19) returning *
+2018-01-18 09:32:44  [9647] [COMMIT Failed] [databaseId:0]
+2018-01-18 09:32:50  [9661] [BEGIN] [databaseId:0]
+2018-01-18 09:32:50  [9661] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 09:32:50  [9661] [COMMIT] [databaseId:0]
+2018-01-18 09:33:00  [9674] [BEGIN] [databaseId:0]
+2018-01-18 09:33:00  [9674] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:33:00  [9674] [COMMIT] [databaseId:0]
+2018-01-18 09:33:03  [9674] [BEGIN] [databaseId:0]
+2018-01-18 09:33:03  [9674] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:33:03  [9674] [COMMIT] [databaseId:0]
+2018-01-18 09:37:07  [9702] [BEGIN] [databaseId:0]
+2018-01-18 09:37:07  [9702] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:37:07  [9702] [COMMIT] [databaseId:0]
+2018-01-18 09:37:21  [9717] [BEGIN] [databaseId:0]
+2018-01-18 09:37:21  [9717] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 09:37:21  [9717] [COMMIT] [databaseId:0]
+2018-01-18 09:44:32  [9745] [BEGIN] [databaseId:0]
+2018-01-18 09:44:32  [9745] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:44:32.454', '2018-01-18 09:44:32.454', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:44:32  [9745] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:44:32  [9745] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 86, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 86, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 86, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 86, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 86, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 86, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 86, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, http://gateway19/sensor10, 86, http://test0118/service1/, 1, 1, 300, http://gateway19) returning *
+2018-01-18 09:44:32  [9745] [COMMIT Failed] [databaseId:0]
+2018-01-18 09:46:23  [9917] [BEGIN] [databaseId:0]
+2018-01-18 09:46:23  [9917] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:46:23.272', '2018-01-18 09:46:23.272', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:46:23  [9917] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:46:23  [9917] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 87, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 87, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 87, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 87, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 87, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 87, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 87, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, http://gateway19/sensor10, 87, http://test0118/service1/, 1, 1, 300, http://gateway19) returning relationship.*
+2018-01-18 09:46:23  [9917] [COMMIT Failed] [databaseId:0]
+2018-01-18 09:49:36  [10106] [BEGIN] [databaseId:0]
+2018-01-18 09:49:36  [10106] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:49:36.607', '2018-01-18 09:49:36.607', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:49:36  [10106] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:49:36  [10106] (Query failed) [ERROR:  syntax error at end of input
+LINE 1: EXECUTE 
+                ^
+(42601)] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 88, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 88, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 88, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 88, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 88, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 88, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 88, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, http://gateway19/sensor10, 88, http://test0118/service1/, 1, 1, 300, http://gateway19)
+2018-01-18 09:49:36  [10106] [COMMIT Failed] [databaseId:0]
+2018-01-18 09:51:25  [10124] [BEGIN] [databaseId:0]
+2018-01-18 09:51:25  [10124] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 09:51:25  [10124] [COMMIT] [databaseId:0]
+2018-01-18 09:57:13  [10305] [BEGIN] [databaseId:0]
+2018-01-18 09:57:13  [10305] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:57:13.261', '2018-01-18 09:57:13.261', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:57:13  [10305] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:57:13  [10305] (Query failed) [ERROR:  syntax error at or near ":"
+LINE 1: ...acy_standard, interval, location) VALUES (14, http://senser1...
+                                                             ^
+(42601)] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 89, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 89, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 89, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 89, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 89, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 89, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 89, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, http://gateway19/sensor10, 89, http://test0118/service1/, 1, 1, 300, http://gateway19) returning relationship.*
+2018-01-18 09:57:13  [10305] [COMMIT Failed] [databaseId:0]
+2018-01-18 09:58:38  [10472] [BEGIN] [databaseId:0]
+2018-01-18 09:58:38  [10472] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:58:38.726', '2018-01-18 09:58:38.726', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:58:38  [10472] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:58:38  [10472] (Query failed) [ERROR:  syntax error at or near ":"
+LINE 1: ...acy_standard, interval, location) VALUES (14, http://senser1...
+                                                             ^
+(42601)] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, http://senser1, 90, http://test0118/service1/, 1, 1, 300, http://gateway1), (15, http://senser2, 90, http://test0118/service1/, 1, 1, 300, http://gateway1), (16, http://senser3, 90, http://test0118/service1/, 1, 1, 300, http://gateway1), (17, http://senser4, 90, http://test0118/service1/, 1, 1, 300, http://gateway1), (19, http://senser5, 90, http://test0118/service1/, 1, 1, 300, http://gateway2), (20, http://senser6, 90, http://test0118/service1/, 1, 1, 300, http://gateway2), (31, http://gateway19/sensor1, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (32, http://gateway19/sensor2, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (33, http://gateway19/sensor3, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (34, http://gateway19/sensor4, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (35, http://gateway19/sensor5, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (36, http://gateway19/sensor6, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (37, http://gateway19/sensor7, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (38, http://gateway19/sensor8, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (39, http://gateway19/sensor9, 90, http://test0118/service1/, 1, 1, 300, http://gateway19), (40, "http://gateway19/sensor10", 90, "http://test0118/service1/", 1, 1, 300, "http://gateway19") returning relationship.*
+2018-01-18 09:58:38  [10472] [COMMIT Failed] [databaseId:0]
+2018-01-18 09:59:23  [10638] [BEGIN] [databaseId:0]
+2018-01-18 09:59:23  [10638] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 09:59:23.183', '2018-01-18 09:59:23.183', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 09:59:23  [10638] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 09:59:23  [10638] (Query failed) [ERROR:  column "http://senser1" does not exist
+LINE 1: ...privacy_standard, interval, location) VALUES (14, "http://se...
+                                                             ^
+(42703)] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, "http://senser1", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway1"), (15, "http://senser2", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway1"), (16, "http://senser3", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway1"), (17, "http://senser4", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway1"), (19, "http://senser5", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway2"), (20, "http://senser6", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway2"), (31, "http://gateway19/sensor1", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (32, "http://gateway19/sensor2", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (33, "http://gateway19/sensor3", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (34, "http://gateway19/sensor4", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (35, "http://gateway19/sensor5", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (36, "http://gateway19/sensor6", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (37, "http://gateway19/sensor7", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (38, "http://gateway19/sensor8", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (39, "http://gateway19/sensor9", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19"), (40, "http://gateway19/sensor10", 91, "http://test0118/service1/", 1, 1, 300, "http://gateway19") returning relationship.*
+2018-01-18 09:59:23  [10638] [COMMIT Failed] [databaseId:0]
+2018-01-18 10:01:16  [10805] [BEGIN] [databaseId:0]
+2018-01-18 10:01:16  [10805] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 10:01:16.856', '2018-01-18 10:01:16.856', 1, 'http://test0118/service1/', 3, 1, 300)
+2018-01-18 10:01:16  [10805] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 10:01:16  [10805] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 92, 'http://test0118/service1/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-18 10:01:17  [10805] [COMMIT] [databaseId:0]
+2018-01-18 10:01:43  [10819] [BEGIN] [databaseId:0]
+2018-01-18 10:01:43  [10819] SELECT "id","created_at","updated_at","v_id","service_name","required_privacy_standard","data_type","interval" FROM "service_info" t0
+2018-01-18 10:01:43  [10819] [COMMIT] [databaseId:0]
+2018-01-18 10:01:48  [10819] [BEGIN] [databaseId:0]
+2018-01-18 10:01:48  [10819] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 10:01:48  [10819] [COMMIT] [databaseId:0]
+2018-01-18 10:06:19  [11023] [BEGIN] [databaseId:0]
+2018-01-18 10:06:19  [11023] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 10:06:19.020', '2018-01-18 10:06:19.020', 1, 'http://test0118/service2/', 3, 1, 300)
+2018-01-18 10:06:19  [11023] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 10:06:19  [11023] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 93, 'http://test0118/service2/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-18 10:06:19  [11023] [COMMIT] [databaseId:0]
+2018-01-18 10:06:25  [11037] [BEGIN] [databaseId:0]
+2018-01-18 10:06:25  [11037] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-18 10:06:25  [11037] [COMMIT] [databaseId:0]
+2018-01-18 10:15:28  [11225] [BEGIN] [databaseId:0]
+2018-01-18 10:15:28  [11225] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 10:15:28.512', '2018-01-18 10:15:28.512', 1, 'http://test0118/service3/', 3, 1, 300)
+2018-01-18 10:15:28  [11225] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 10:15:28  [11225] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 94, 'http://test0118/service3/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-18 10:15:28  [11225] [COMMIT] [databaseId:0]
+2018-01-18 10:16:29  [11391] [BEGIN] [databaseId:0]
+2018-01-18 10:16:29  [11391] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-18 10:16:29.869', '2018-01-18 10:16:29.869', 1, 'http://test0118/service4/', 3, 1, 300)
+2018-01-18 10:16:29  [11391] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-18 10:16:29  [11391] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 95, 'http://test0118/service4/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-18 10:16:29  [11391] [COMMIT] [databaseId:0]
+2018-01-19 03:45:35  [13651] [BEGIN] [databaseId:0]
+2018-01-19 03:45:35  [13651] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-19 03:45:35.523', '2018-01-19 03:45:35.523', 1, 'http://test0119/service0/', 3, 1, 300)
+2018-01-19 03:45:35  [13651] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-19 03:45:35  [13651] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 96, 'http://test0119/service0/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-19 03:45:35  [13651] [COMMIT] [databaseId:0]
+2018-01-19 03:47:35  [13669] [BEGIN] [databaseId:0]
+2018-01-19 03:47:35  [13669] SELECT "id","created_at","updated_at","d_id","device_name","s_id","service_name","anonymity_method","privacy_standard","interval","location" FROM "relationship" t0
+2018-01-19 03:47:35  [13669] [COMMIT] [databaseId:0]
+2018-01-19 03:48:27  [13840] [BEGIN] [databaseId:0]
+2018-01-19 03:48:27  [13840] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-19 03:48:27.604', '2018-01-19 03:48:27.604', 1, 'http://test0119/service1/', 3, 1, 300)
+2018-01-19 03:48:27  [13840] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-19 03:48:27  [13840] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 97, 'http://test0119/service1/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-19 03:48:27  [13840] [COMMIT] [databaseId:0]
+2018-01-19 05:26:06  [14474] [BEGIN] [databaseId:0]
+2018-01-19 05:26:06  [14474] (Query failed) [ERROR:  duplicate key value violates unique constraint "service_info_service_name_key"
+DETAIL:  Key (service_name)=(http://test0119/service1/) already exists.
+(23505)] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-19 05:26:06.781', '2018-01-19 05:26:06.781', 1, 'http://test0119/service1/', 3, 1, 300)
+2018-01-19 05:26:06  [14474] [COMMIT Failed] [databaseId:0]
+2018-01-19 05:26:14  [14486] [BEGIN] [databaseId:0]
+2018-01-19 05:26:14  [14486] INSERT INTO service_info ("created_at", "updated_at", "v_id", "service_name", "required_privacy_standard", "data_type", "interval") VALUES ('2018-01-19 05:26:14.883', '2018-01-19 05:26:14.883', 1, 'http://test0119/service2/', 3, 1, 300)
+2018-01-19 05:26:14  [14486] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-19 05:26:14  [14486] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 99, 'http://test0119/service2/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-19 05:26:14  [14486] [COMMIT] [databaseId:0]
+2018-01-19 06:49:09  [14877] [BEGIN] [databaseId:0]
+2018-01-19 06:49:09  [14877] INSERT INTO service_info(v_id, service_name, required_privacy_standard, data_type, interval)VALUES (?, ?, ?, ?, ?) returning *
+2018-01-19 06:49:09  [14877] INSERT INTO service_info(v_id, service_name, required_privacy_standard, data_type, interval)VALUES (?, ?, ?, ?, ?) returning *
+2018-01-19 06:49:09  [14877] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-19 06:49:09  [14877] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 100, 'http://test0119/service3/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-19 06:49:09  [14877] SELECT "id","created_at","updated_at","c_id","device_name","default_privacy_standard","device_type","data_type","interval","location" FROM "device_info" t0 WHERE t0."data_type"=1 AND t0."default_privacy_standard"<=3 AND t0."interval"<=300
+2018-01-19 06:49:09  [14877] INSERT INTO relationship (d_id, device_name, s_id, service_name, anonymity_method, privacy_standard, interval, location) VALUES (14, 'http://senser1', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway1'), (15, 'http://senser2', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway1'), (16, 'http://senser3', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway1'), (17, 'http://senser4', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway1'), (19, 'http://senser5', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway2'), (20, 'http://senser6', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway2'), (31, 'http://gateway19/sensor1', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (32, 'http://gateway19/sensor2', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (33, 'http://gateway19/sensor3', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (34, 'http://gateway19/sensor4', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (35, 'http://gateway19/sensor5', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (36, 'http://gateway19/sensor6', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (37, 'http://gateway19/sensor7', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (38, 'http://gateway19/sensor8', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (39, 'http://gateway19/sensor9', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19'), (40, 'http://gateway19/sensor10', 101, 'http://test0119/service4/', 1, 1, 300, 'http://gateway19') returning relationship.*
+2018-01-19 06:49:09  [14877] [COMMIT] [databaseId:0]

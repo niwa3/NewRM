@@ -411,6 +411,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		customerinfo_createView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include customerinfo_createView.cpp -o .obj/customerinfo_createView.moc
 
@@ -420,6 +422,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		customerinfo_indexView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include customerinfo_indexView.cpp -o .obj/customerinfo_indexView.moc
 
@@ -429,6 +433,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		customerinfo_saveView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include customerinfo_saveView.cpp -o .obj/customerinfo_saveView.moc
 
@@ -438,6 +444,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		customerinfo_showView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include customerinfo_showView.cpp -o .obj/customerinfo_showView.moc
 
@@ -447,6 +455,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		deviceinfo_createView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include deviceinfo_createView.cpp -o .obj/deviceinfo_createView.moc
 
@@ -456,6 +466,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		deviceinfo_indexView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include deviceinfo_indexView.cpp -o .obj/deviceinfo_indexView.moc
 
@@ -465,6 +477,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		deviceinfo_saveView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include deviceinfo_saveView.cpp -o .obj/deviceinfo_saveView.moc
 
@@ -474,6 +488,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		deviceinfo_showView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include deviceinfo_showView.cpp -o .obj/deviceinfo_showView.moc
 
@@ -484,6 +500,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		logininfo_createView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include logininfo_createView.cpp -o .obj/logininfo_createView.moc
 
@@ -494,6 +512,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		logininfo_indexView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include logininfo_indexView.cpp -o .obj/logininfo_indexView.moc
 
@@ -504,6 +524,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		logininfo_saveView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include logininfo_saveView.cpp -o .obj/logininfo_saveView.moc
 
@@ -514,6 +536,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		logininfo_showView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include logininfo_showView.cpp -o .obj/logininfo_showView.moc
 
@@ -523,6 +547,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		relationship_createView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include relationship_createView.cpp -o .obj/relationship_createView.moc
 
@@ -532,6 +558,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		relationship_indexView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include relationship_indexView.cpp -o .obj/relationship_indexView.moc
 
@@ -541,6 +569,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		relationship_saveView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include relationship_saveView.cpp -o .obj/relationship_saveView.moc
 
@@ -550,6 +580,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		relationship_showView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include relationship_showView.cpp -o .obj/relationship_showView.moc
 
@@ -559,6 +591,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		serviceinfo_createView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include serviceinfo_createView.cpp -o .obj/serviceinfo_createView.moc
 
@@ -568,6 +602,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		serviceinfo_indexView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include serviceinfo_indexView.cpp -o .obj/serviceinfo_indexView.moc
 
@@ -577,6 +613,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		serviceinfo_saveView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include serviceinfo_saveView.cpp -o .obj/serviceinfo_saveView.moc
 
@@ -586,6 +624,8 @@ compiler_moc_source_clean:
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		serviceinfo_showView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include serviceinfo_showView.cpp -o .obj/serviceinfo_showView.moc
 
@@ -595,6 +635,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		venderinfo_createView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include venderinfo_createView.cpp -o .obj/venderinfo_createView.moc
 
@@ -604,6 +646,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		venderinfo_indexView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include venderinfo_indexView.cpp -o .obj/venderinfo_indexView.moc
 
@@ -613,6 +657,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		venderinfo_saveView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include venderinfo_saveView.cpp -o .obj/venderinfo_saveView.moc
 
@@ -622,6 +668,8 @@ compiler_moc_source_clean:
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		venderinfo_showView.cpp
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/RM/VCRM/views/_src -I/RM/VCRM/helpers -I/RM/VCRM/models -I/usr/include/treefrog -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/4.9 -I/usr/include/x86_64-linux-gnu/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include venderinfo_showView.cpp -o .obj/venderinfo_showView.moc
 
@@ -641,6 +689,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/customerinfo_createView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/customerinfo_createView.o customerinfo_createView.cpp
 
@@ -650,6 +700,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/customerinfo_indexView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/customerinfo_indexView.o customerinfo_indexView.cpp
 
@@ -659,6 +711,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/customerinfo_saveView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/customerinfo_saveView.o customerinfo_saveView.cpp
 
@@ -668,6 +722,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/customerinfo_showView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/customerinfo_showView.o customerinfo_showView.cpp
 
@@ -677,6 +733,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/deviceinfo_createView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/deviceinfo_createView.o deviceinfo_createView.cpp
 
@@ -686,6 +744,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/deviceinfo_indexView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/deviceinfo_indexView.o deviceinfo_indexView.cpp
 
@@ -695,6 +755,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/deviceinfo_saveView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/deviceinfo_saveView.o deviceinfo_saveView.cpp
 
@@ -704,6 +766,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/deviceinfo_showView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/deviceinfo_showView.o deviceinfo_showView.cpp
 
@@ -714,6 +778,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/logininfo_createView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/logininfo_createView.o logininfo_createView.cpp
 
@@ -724,6 +790,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/logininfo_indexView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/logininfo_indexView.o logininfo_indexView.cpp
 
@@ -734,6 +802,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/logininfo_saveView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/logininfo_saveView.o logininfo_saveView.cpp
 
@@ -744,6 +814,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/logininfo_showView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/logininfo_showView.o logininfo_showView.cpp
 
@@ -753,6 +825,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/relationship_createView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/relationship_createView.o relationship_createView.cpp
 
@@ -762,6 +836,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/relationship_indexView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/relationship_indexView.o relationship_indexView.cpp
 
@@ -771,6 +847,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/relationship_saveView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/relationship_saveView.o relationship_saveView.cpp
 
@@ -780,6 +858,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/relationship_showView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/relationship_showView.o relationship_showView.cpp
 
@@ -789,6 +869,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/serviceinfo_createView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/serviceinfo_createView.o serviceinfo_createView.cpp
 
@@ -798,6 +880,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/serviceinfo_indexView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/serviceinfo_indexView.o serviceinfo_indexView.cpp
 
@@ -807,6 +891,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/serviceinfo_saveView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/serviceinfo_saveView.o serviceinfo_saveView.cpp
 
@@ -816,6 +902,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/venderinfo.h \
 		../../models/deviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/serviceinfo_showView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/serviceinfo_showView.o serviceinfo_showView.cpp
 
@@ -825,6 +913,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/venderinfo_createView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/venderinfo_createView.o venderinfo_createView.cpp
 
@@ -834,6 +924,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/venderinfo_indexView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/venderinfo_indexView.o venderinfo_indexView.cpp
 
@@ -843,6 +935,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/venderinfo_saveView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/venderinfo_saveView.o venderinfo_saveView.cpp
 
@@ -852,6 +946,8 @@ compiler_clean: compiler_moc_source_clean
 		../../models/deviceinfo.h \
 		../../models/serviceinfo.h \
 		../../models/relationship.h \
+		../../helpers/curlhelper.h \
+		../../helpers/xmlhelper.h \
 		.obj/venderinfo_showView.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o .obj/venderinfo_showView.o venderinfo_showView.cpp
 
