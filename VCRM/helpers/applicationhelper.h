@@ -22,6 +22,9 @@
 #include "serviceinfo.h"
 #include "relationship.h"
 
+#include "../helpers/applicationhelper.h"
+#include "../helpers/curlhelper.h"
+#include "../helpers/xmlhelper.h"
 
 //Declare and define of anonymitymethod
 struct ANONYMITYMETHOD{
