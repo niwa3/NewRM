@@ -79,7 +79,7 @@ void ServiceInfoController::create()
       CurlHelper request;
       if (
         !request.sendRelationshipList(
-          QUrl("http://slave:8800/relationship/insert/"),
+          QUrl("https://slave/relationship/insert/"),
           helpForDist.createXmlForDist(createdRelations)
         )
       ) {
