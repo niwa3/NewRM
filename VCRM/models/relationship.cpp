@@ -162,26 +162,26 @@ QList<Relationship> Relationship::create(const QList<QVariantMap> &relationshipL
   int listNum = relationshipList.length();
   for (int i = 0 ; i < listNum-1; ++i) {
     QVariantMap relationship = relationshipList.at(i);
-    VALUES += QStringLiteral("(%1, '%2', %3, '%4', %5, %6, %7, '%8'), ")
-      .arg(relationship["dId"].toInt())
-      .arg(relationship["deviceName"].toString())
-      .arg(relationship["sId"].toInt())
-      .arg(relationship["serviceName"].toString())
-      .arg(relationship["anonymityMethod"].toInt())
-      .arg(relationship["privacyStandard"].toInt())
-      .arg(relationship["interval"].toInt())
-      .arg(relationship["location"].toString());
+    VALUES += QStringLiteral("(%1, %2, %3, %4, %5, %6, %7, %8), ")
+      .arg(TSqlQuery::formatValue(relationship["dId"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["deviceName"].toString()))
+      .arg(TSqlQuery::formatValue(relationship["sId"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["serviceName"].toString()))
+      .arg(TSqlQuery::formatValue(relationship["anonymityMethod"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["privacyStandard"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["interval"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["location"].toString()));
   }
   QVariantMap lastRelationship = relationshipList.at(listNum-1);
-  VALUES += QStringLiteral("(%1, '%2', %3, '%4', %5, %6, %7, '%8')")
-    .arg(lastRelationship["dId"].toInt())
-    .arg(lastRelationship["deviceName"].toString())
-    .arg(lastRelationship["sId"].toInt())
-    .arg(lastRelationship["serviceName"].toString())
-    .arg(lastRelationship["anonymityMethod"].toInt())
-    .arg(lastRelationship["privacyStandard"].toInt())
-    .arg(lastRelationship["interval"].toInt())
-    .arg(lastRelationship["location"].toString());
+  VALUES += QStringLiteral("(%1, %2, %3, %4, %5, %6, %7, %8)")
+    .arg(TSqlQuery::formatValue(lastRelationship["dId"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["deviceName"].toString()))
+    .arg(TSqlQuery::formatValue(lastRelationship["sId"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["serviceName"].toString()))
+    .arg(TSqlQuery::formatValue(lastRelationship["anonymityMethod"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["privacyStandard"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["interval"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["location"].toString()));
   QString QUERY = 
       "INSERT INTO relationship "
       "(d_id, device_name, s_id, service_name, anonymity_method, "
@@ -203,22 +203,33 @@ QList<Relationship> Relationship::create(const QList<QVariantMap> &relationshipL
 
 Relationship Relationship::insert(const QVariantMap &values)
 {
-  RelationshipObject obj;
-  obj.id == values["id"].toInt();
-  obj.created_at == values["createdAt"].toDateTime();
-  obj.updated_at == values["updatedAt"].toDateTime();
-  obj.d_id == values["dId"];
-  obj.device_name == values["deviceName"];
-  obj.s_id == values["sId"];
-  obj.service_name == values["serviceName"];
-  obj.anonymity_method == values["anonymityMethod"];
-  obj.privacy_standard == values["privacyStandard"];
-  obj.interval == values["interval"];
-  obj.location == values["location"];
-  if (!obj.create()) {
+  TSqlQueryORMapper<RelationshipObject> mapperQuery;
+  QString VALUES;
+  VALUES += QStringLiteral("(%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11)")
+    .arg(TSqlQuery::formatValue(values["id"].toInt()))
+    .arg(TSqlQuery::formatValue(values["createdAt"].toString()))
+    .arg(TSqlQuery::formatValue(values["updatedAt"].toString()))
+    .arg(TSqlQuery::formatValue(values["dId"].toInt()))
+    .arg(TSqlQuery::formatValue(values["deviceName"].toString()))
+    .arg(TSqlQuery::formatValue(values["sId"].toInt()))
+    .arg(TSqlQuery::formatValue(values["serviceName"].toString()))
+    .arg(TSqlQuery::formatValue(values["anonymityMethod"].toInt()))
+    .arg(TSqlQuery::formatValue(values["privacyStandard"].toInt()))
+    .arg(TSqlQuery::formatValue(values["interval"].toInt()))
+    .arg(TSqlQuery::formatValue(values["location"].toString()));
+  QString QUERY = 
+      "INSERT INTO relationship "
+      "(id, created_at, updated_at, d_id, device_name, s_id, service_name, anonymity_method, "
+      "privacy_standard, interval, location) "
+      "VALUES " + VALUES + " "
+      "returning relationship.*";
+  if (!mapperQuery.exec(QUERY)) {
     return Relationship();
   }
-  return Relationship(obj);
+  TSqlQueryORMapperIterator<RelationshipObject> it(mapperQuery);
+  RelationshipObject obj = it.next();
+  Relationship createdRelationship = Relationship(obj);
+  return createdRelationship;
 }
 
 
@@ -229,32 +240,32 @@ QList<Relationship> Relationship::insert(const QList<QVariantMap> &relationshipL
   int listNum = relationshipList.length();
   for (int i = 0 ; i < listNum-1; ++i) {
     QVariantMap relationship = relationshipList.at(i);
-    VALUES += QStringLiteral("(%1, '%2', '%3', %4, '%5', %6, '%7', %8, %9, %10, '%11'), ")
-      .arg(relationship["id"].toInt())
-      .arg(relationship["createdAt"].toString())
-      .arg(relationship["updatedAt"].toString())
-      .arg(relationship["dId"].toInt())
-      .arg(relationship["deviceName"].toString())
-      .arg(relationship["sId"].toInt())
-      .arg(relationship["serviceName"].toString())
-      .arg(relationship["anonymityMethod"].toInt())
-      .arg(relationship["privacyStandard"].toInt())
-      .arg(relationship["interval"].toInt())
-      .arg(relationship["location"].toString());
+    VALUES += QStringLiteral("(%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11), ")
+      .arg(TSqlQuery::formatValue(relationship["id"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["createdAt"].toString()))
+      .arg(TSqlQuery::formatValue(relationship["updatedAt"].toString()))
+      .arg(TSqlQuery::formatValue(relationship["dId"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["deviceName"].toString()))
+      .arg(TSqlQuery::formatValue(relationship["sId"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["serviceName"].toString()))
+      .arg(TSqlQuery::formatValue(relationship["anonymityMethod"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["privacyStandard"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["interval"].toInt()))
+      .arg(TSqlQuery::formatValue(relationship["location"].toString()));
   }
   QVariantMap lastRelationship = relationshipList.at(listNum-1);
-  VALUES += QStringLiteral("(%1, '%2', '%3', %4, '%5', %6, '%7', %8, %9, %10, '%11')")
-    .arg(lastRelationship["id"].toInt())
-    .arg(lastRelationship["createdAt"].toString())
-    .arg(lastRelationship["updatedAt"].toString())
-    .arg(lastRelationship["dId"].toInt())
-    .arg(lastRelationship["deviceName"].toString())
-    .arg(lastRelationship["sId"].toInt())
-    .arg(lastRelationship["serviceName"].toString())
-    .arg(lastRelationship["anonymityMethod"].toInt())
-    .arg(lastRelationship["privacyStandard"].toInt())
-    .arg(lastRelationship["interval"].toInt())
-    .arg(lastRelationship["location"].toString());
+  VALUES += QStringLiteral("(%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11)")
+    .arg(TSqlQuery::formatValue(lastRelationship["id"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["createdAt"].toString()))
+    .arg(TSqlQuery::formatValue(lastRelationship["updatedAt"].toString()))
+    .arg(TSqlQuery::formatValue(lastRelationship["dId"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["deviceName"].toString()))
+    .arg(TSqlQuery::formatValue(lastRelationship["sId"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["serviceName"].toString()))
+    .arg(TSqlQuery::formatValue(lastRelationship["anonymityMethod"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["privacyStandard"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["interval"].toInt()))
+    .arg(TSqlQuery::formatValue(lastRelationship["location"].toString()));
   QString QUERY = 
       "INSERT INTO relationship "
       "(id, created_at, updated_at, d_id, device_name, s_id, service_name, anonymity_method, "

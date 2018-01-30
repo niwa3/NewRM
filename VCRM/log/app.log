@@ -1115,3 +1115,500 @@ size:8
  </relationship>
 </body>
 
+2018-01-23 03:40:47 DEBUG [5088] <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<serviceInfo>
+  <vId>1</vId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <dataType>1</dataType>
+  <requiredPrivacyStandard>3</requiredPrivacyStandard>
+  <interval>300</interval>
+</serviceInfo>
+</body>
+2018-01-23 03:40:48 DEBUG [6314] <body>
+ <relationship>
+  <id>748</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>14</dId>
+  <deviceName>http://senser1</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>749</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>15</dId>
+  <deviceName>http://senser2</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>750</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>16</dId>
+  <deviceName>http://senser3</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>751</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>17</dId>
+  <deviceName>http://senser4</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>752</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>19</dId>
+  <deviceName>http://senser5</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway2</location>
+ </relationship>
+ <relationship>
+  <id>753</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>20</dId>
+  <deviceName>http://senser6</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway2</location>
+ </relationship>
+ <relationship>
+  <id>754</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>31</dId>
+  <deviceName>http://gateway19/sensor1</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>755</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>32</dId>
+  <deviceName>http://gateway19/sensor2</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>756</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>33</dId>
+  <deviceName>http://gateway19/sensor3</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>757</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>34</dId>
+  <deviceName>http://gateway19/sensor4</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>758</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>35</dId>
+  <deviceName>http://gateway19/sensor5</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>759</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>36</dId>
+  <deviceName>http://gateway19/sensor6</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>760</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>37</dId>
+  <deviceName>http://gateway19/sensor7</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>761</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>38</dId>
+  <deviceName>http://gateway19/sensor8</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>762</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>39</dId>
+  <deviceName>http://gateway19/sensor9</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>763</id>
+  <createdAt>Tue Jan 23 03:40:47 2018</createdAt>
+  <updatedAt>Tue Jan 23 03:40:47 2018</updatedAt>
+  <dId>40</dId>
+  <deviceName>http://gateway19/sensor10</deviceName>
+  <sId>128</sId>
+  <serviceName>http://test0123/service0/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+</body>
+
+2018-01-23 06:40:14 DEBUG [5848] <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<serviceInfo>
+  <vId>1</vId>
+  <serviceName>http://test0123/service1/</serviceName>
+  <dataType>1</dataType>
+  <requiredPrivacyStandard>3</requiredPrivacyStandard>
+  <interval>300</interval>
+</serviceInfo>
+</body>
+2018-01-23 06:40:14 ERROR [5848] curl_easy_perform() failed.
+2018-01-23 06:41:37 DEBUG [5995] <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<serviceInfo>
+  <vId>1</vId>
+  <serviceName>http://test0123/service2/</serviceName>
+  <dataType>1</dataType>
+  <requiredPrivacyStandard>3</requiredPrivacyStandard>
+  <interval>300</interval>
+</serviceInfo>
+</body>
+2018-01-23 06:41:37 ERROR [5995] curl_easy_perform() failed.
+2018-01-23 06:44:14 DEBUG [6159] <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<serviceInfo>
+  <vId>1</vId>
+  <serviceName>http://test0123/service2/</serviceName>
+  <dataType>1</dataType>
+  <requiredPrivacyStandard>3</requiredPrivacyStandard>
+  <interval>300</interval>
+</serviceInfo>
+</body>
+2018-01-23 06:44:14 ERROR [6159] curl_easy_perform() failed.
+2018-01-23 06:44:19 DEBUG [6173] <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<serviceInfo>
+  <vId>1</vId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <dataType>1</dataType>
+  <requiredPrivacyStandard>3</requiredPrivacyStandard>
+  <interval>300</interval>
+</serviceInfo>
+</body>
+2018-01-23 06:44:19 ERROR [6173] curl_easy_perform() failed.
+2018-01-23 06:47:39 DEBUG [6323] <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<serviceInfo>
+  <vId>1</vId>
+  <serviceName>http://test0123/service2/</serviceName>
+  <dataType>1</dataType>
+  <requiredPrivacyStandard>3</requiredPrivacyStandard>
+  <interval>300</interval>
+</serviceInfo>
+</body>
+2018-01-23 06:47:39 ERROR [6323] curl_easy_perform() failed.
+2018-01-23 06:51:57 DEBUG [6476] <?xml version="1.0" encoding="UTF-8"?>
+<body>
+<serviceInfo>
+  <vId>1</vId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <dataType>1</dataType>
+  <requiredPrivacyStandard>3</requiredPrivacyStandard>
+  <interval>300</interval>
+</serviceInfo>
+</body>
+2018-01-23 06:51:57 DEBUG [8531] <body>
+ <relationship>
+  <id>780</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>14</dId>
+  <deviceName>http://senser1</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>781</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>15</dId>
+  <deviceName>http://senser2</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>782</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>16</dId>
+  <deviceName>http://senser3</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>783</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>17</dId>
+  <deviceName>http://senser4</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway1</location>
+ </relationship>
+ <relationship>
+  <id>784</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>19</dId>
+  <deviceName>http://senser5</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway2</location>
+ </relationship>
+ <relationship>
+  <id>785</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>20</dId>
+  <deviceName>http://senser6</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway2</location>
+ </relationship>
+ <relationship>
+  <id>786</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>31</dId>
+  <deviceName>http://gateway19/sensor1</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>787</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>32</dId>
+  <deviceName>http://gateway19/sensor2</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>788</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>33</dId>
+  <deviceName>http://gateway19/sensor3</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>789</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>34</dId>
+  <deviceName>http://gateway19/sensor4</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>790</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>35</dId>
+  <deviceName>http://gateway19/sensor5</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>791</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>36</dId>
+  <deviceName>http://gateway19/sensor6</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>792</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>37</dId>
+  <deviceName>http://gateway19/sensor7</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>793</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>38</dId>
+  <deviceName>http://gateway19/sensor8</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>794</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>39</dId>
+  <deviceName>http://gateway19/sensor9</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+ <relationship>
+  <id>795</id>
+  <createdAt>Tue Jan 23 06:51:57 2018</createdAt>
+  <updatedAt>Tue Jan 23 06:51:57 2018</updatedAt>
+  <dId>40</dId>
+  <deviceName>http://gateway19/sensor10</deviceName>
+  <sId>134</sId>
+  <serviceName>http://test0123/service3/</serviceName>
+  <anonymityMethod>1</anonymityMethod>
+  <privacyStandard>1</privacyStandard>
+  <interval>300</interval>
+  <location>http://gateway19</location>
+ </relationship>
+</body>
+
