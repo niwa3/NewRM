@@ -1,0 +1,3 @@
+CREATE USER testuser WITH  PASSWORD 'testpass';
+CREATE DATABASE test;
+GRANT ALL PRIVILEGES ON DATABASE testuser to test;
